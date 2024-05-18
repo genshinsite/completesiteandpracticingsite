@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>アルベド</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .combotitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    <a href="#combo">・コンボ</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">アルベド</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC9KOWJBSXU4Yy5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19"></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆5</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">片手剣</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">岩</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">白亜の申し子座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">モンド</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">野島健児</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  
+    
+  <tr>
+    <th style="text-align: center;">基礎HP</th>
+    <td style="text-align: center;">2671</td>
+    <td style="text-align: center;">3554</td>
+    <td style="text-align: center;">5317</td>
+    <td style="text-align: center;">5944</td>
+    <td style="text-align: center;">6839</td>
+    <td style="text-align: center;">7675</td>
+    <td style="text-align: center;">8579</td>
+    <td style="text-align: center;">9207</td>
+    <td style="text-align: center;">10119</td>
+    <td style="text-align: center;">10746</td>
+    <td style="text-align: center;">11669</td>
+    <td style="text-align: center;">12296</td>
+    <td style="text-align: center;">13226</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎攻撃力</th>
+    <td style="text-align: center;">51</td>
+    <td style="text-align: center;">68</td>
+    <td style="text-align: center;">101</td>
+    <td style="text-align: center;">113</td>
+    <td style="text-align: center;">130</td>
+    <td style="text-align: center;">146</td>
+    <td style="text-align: center;">163</td>
+    <td style="text-align: center;">175</td>
+    <td style="text-align: center;">192</td>
+    <td style="text-align: center;">204</td>
+    <td style="text-align: center;">222</td>
+    <td style="text-align: center;">233</td>
+    <td style="text-align: center;">251</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎防御力</th>
+    <td style="text-align: center;">177</td>
+    <td style="text-align: center;">235</td>
+    <td style="text-align: center;">352</td>
+    <td style="text-align: center;">394</td>
+    <td style="text-align: center;">453</td>
+    <td style="text-align: center;">508</td>
+    <td style="text-align: center;">568</td>
+    <td style="text-align: center;">610</td>
+    <td style="text-align: center;">670</td>
+    <td style="text-align: center;">712</td>
+    <td style="text-align: center;">773</td>
+    <td style="text-align: center;">815</td>
+    <td style="text-align: center;">876</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">岩元素ダメージ</th>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">7.2%</td>
+    <td style="text-align: center;">7.2%</td>
+    <td style="text-align: center;">14.4%</td>
+    <td style="text-align: center;">14.4%</td>
+    <td style="text-align: center;">14.4%</td>
+    <td style="text-align: center;">14.4%</td>
+    <td style="text-align: center;">21.6%</td>
+    <td style="text-align: center;">21.6%</td>
+    <td style="text-align: center;">28.8%</td>
+    <td style="text-align: center;">28.8%</td>
+    </tr></table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%8D%83%E7%B9%94/::ref/%E5%BF%83%E7%B9%94%E5%88%80%E6%B5%81.webp?rev=fb96d448f8353d8fb9217edc36359b57&t=20240317104325" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+        通常攻撃<br>
+        剣による最大5段の連続攻撃を行う。<br><br>
+        
+        重撃<br>
+        一定のスタミナを消費し、斬撃を放つ。<br><br>
+        
+        落下攻撃<br>
+        空中から落下し地面に衝撃を与える。経路上の敵を攻撃し、落下時に範囲ダメージを与える。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 80px;">5段目</th>
+    <th style="width: 80px;">重撃<br>ダメージ</th>
+    <th style="width: 150px;">重撃スタミナ消費</th>
+    <th style="width: 150px;">落下期間の<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+    
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2%</td>
+    <td style="text-align: center;">39.7%</td>
+    <td style="text-align: center;">39.7%</td>
+    <td style="text-align: center;">51.3%</td>
+    <td style="text-align: center;">53.8%</td>
+    <td style="text-align: center;">67.1%</td>
+    <td style="text-align: center;">51.2%+65.1%</td>
+    <td rowspan="9" style="text-align: center;">20.0</td>
+    <td style="text-align: center;">69.1%</td>
+    <td style="text-align: center;">138%/173%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">42.7%</td>
+    <td style="text-align: center;">42.7%</td>
+    <td style="text-align: center;">55.2%</td>
+    <td style="text-align: center;">57.9%</td>
+    <td style="text-align: center;">72.2%</td>
+    <td style="text-align: center;">55.0%+70.0%</td>
+    <td style="text-align: center;">74.3%</td>
+    <td style="text-align: center;">149%/186%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">47.0%</td>
+    <td style="text-align: center;">47.0%</td>
+    <td style="text-align: center;">60.7%</td>
+    <td style="text-align: center;">63.6%</td>
+    <td style="text-align: center;">79.4%</td>
+    <td style="text-align: center;">60.5%+77.0%</td>
+    <td style="text-align: center;">81.8%</td>
+    <td style="text-align: center;">164%/204%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">50.0%</td>
+    <td style="text-align: center;">50.0%</td>
+    <td style="text-align: center;">64.6%</td>
+    <td style="text-align: center;">67.7%</td>
+    <td style="text-align: center;">84.4%</td>
+    <td style="text-align: center;">64.4%+81.9%</td>
+    <td style="text-align: center;">87.0%</td>
+    <td style="text-align: center;">174%/217%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">53.4%</td>
+    <td style="text-align: center;">53.4%</td>
+    <td style="text-align: center;">69.0%</td>
+    <td style="text-align: center;">72.3%</td>
+    <td style="text-align: center;">90.2%</td>
+    <td style="text-align: center;">68.8%+87.5%</td>
+    <td style="text-align: center;">92.9%</td>
+    <td style="text-align: center;">186%/232%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">58.1%</td>
+    <td style="text-align: center;">58.1%</td>
+    <td style="text-align: center;">75.0%</td>
+    <td style="text-align: center;">78.7%</td>
+    <td style="text-align: center;">98.2%</td>
+    <td style="text-align: center;">74.8%+95.2%</td>
+    <td style="text-align: center;">101.1%</td>
+    <td style="text-align: center;">202%/253%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">62.8%</td>
+    <td style="text-align: center;">62.8%</td>
+    <td style="text-align: center;">81.1%</td>
+    <td style="text-align: center;">85.0%</td>
+    <td style="text-align: center;">106.1%</td>
+    <td style="text-align: center;">80.9%+102.9%</td>
+    <td style="text-align: center;">109.3%</td>
+    <td style="text-align: center;">219%/273%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">67.5%</td>
+    <td style="text-align: center;">67.5%</td>
+    <td style="text-align: center;">87.2%</td>
+    <td style="text-align: center;">91.4%</td>
+    <td style="text-align: center;">114.0%</td>
+    <td style="text-align: center;">86.9%+110.6%</td>
+    <td style="text-align: center;">117.5%</td>
+    <td style="text-align: center;">235%/293%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">72.6%</td>
+    <td style="text-align: center;">72.6%</td>
+    <td style="text-align: center;">93.8%</td>
+    <td style="text-align: center;">98.3%</td>
+    <td style="text-align: center;">122.7%</td>
+    <td style="text-align: center;">93.5%+119.0%</td>
+    <td style="text-align: center;">126.4%</td>
+    <td style="text-align: center;">253%/316%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="1000px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Talent_Abiogenesis_-_Solar_Isotoma.png?rev=03441bd1ce04b34b8b18747c739df559&t=20210206170934"width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+        陽華を錬成し、岩元素範囲ダメージを与える。<br><br>
+
+        陽華<br>
+        陽華は以下の特性を持つ：<br>
+        ・陽華を中心とするエリア内にいる敵がダメージを受けた時、陽華は刹那の花を生成し、敵に岩元素範囲ダメージを与える。ダメージ量はアルベドの防御力によって決まる。<br>
+        ・刹那の花は2秒毎に1回のみ生成できる。<br>
+        ・キャラクターが陽華の上にいる時、陽華は岩元素の力を凝結し、キャラクターを一定の高さまで持ち上げる晶台を生成する。晶台は同時に最大1つまで存在可能。<br>
+        ・アルベドによって創造された陽華は同時に最大1つまで存在可能。また、陽華は岩元素創造物とみなされる。<br><br>
+        
+        長押し<br>
+        スキルの発動位置を調整できる。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 130px;">スキルダメージ</th>
+                <th style="width: 130px;">刹那の花ダメージ</th>
+                <th style="width: 130px;">継続時間</th>
+                <th style="width: 130px;">クールタイム(CT)</th>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Lv.2</td>
+                <td style="text-align: center;">140%</td>
+                <td style="text-align: center;">防御力144%</td>
+                <td rowspan="9" style="text-align: center;">30.0s</td>
+                <td rowspan="9" style="text-align: center;">4.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.3</td>
+                <td style="text-align: center;">150%</td>
+                <td style="text-align: center;">防御力154%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.4</td>
+                <td style="text-align: center;">163%</td>
+                <td style="text-align: center;">防御力167%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.5</td>
+                <td style="text-align: center;">173%</td>
+                <td style="text-align: center;">防御力177%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.6</td>
+                <td style="text-align: center;">183%</td>
+                <td style="text-align: center;">防御力187%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.7</td>
+                <td style="text-align: center;">196%</td>
+                <td style="text-align: center;">防御力200%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.8</td>
+                <td style="text-align: center;">209%</td>
+                <td style="text-align: center;">防御力214%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.9</td>
+                <td style="text-align: center;">222%</td>
+                <td style="text-align: center;">防御力227%</td>
+  
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.10</td>
+                <td style="text-align: center;">235%</td>
+                <td style="text-align: center;">防御力240%</td>
+                </tr></table><br><br><br>
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Talent_Rite_of_Progeniture_-_Tectonic_Tide.png?rev=755b5d1d2fcef85882959eaf9bf1dbb4&t=20210206170947" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+                      <td colspan="16"><br><br>
+                        アルベドの前方に岩元素範囲ダメージを与える。<br>
+                        フィールド上にアルベドが創造した陽華が存在している場合、陽華のエリア内に7本の生滅の花を生成し、岩元素範囲ダメージを与える。<br><br>
+                        
+                        爆発と生滅の花によるダメージによって刹那の花が作られることはない。
+                        
+                        <br><br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                      </td>
+                    </tr>
+                
+                    <tr>
+                      <th style="width: 150px;">ステータス詳細</th>
+                      <th style="width: 160px;">爆発ダメージ</th>
+                      <th style="width: 160px;">生滅の花ダメージ</th>
+                      <th style="width: 150px;">クールタイム(CT)</th>
+                      <th style="width: 120px;">元素エネルギー</th>
+                    </tr>
+                
+                    <tr>
+                        <td style="text-align: center;">Lv.2</td>
+                        <td style="text-align: center;">395%</td>
+                        <td style="text-align: center;">1につき77.4%</td>
+                        <td rowspan="9" style="text-align: center;">12.0s</td>
+                        <td rowspan="9" style="text-align: center;">40</td>
+                        </tr>
+                        <tr>
+                        <td style="text-align: center;">Lv.3</td>
+                        <td style="text-align: center;">422%</td>
+                        <td style="text-align: center;">1につき82.8%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.4</td>
+                        <td style="text-align: center;">459%</td>
+                        <td style="text-align: center;">1につき95.4%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.5</td>
+                        <td style="text-align: center;">487%</td>
+                        <td style="text-align: center;">1につき95.4%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.6</td>
+                        <td style="text-align: center;">514%</td>
+                        <td style="text-align: center;">1につき100.8%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.7</td>
+                        <td style="text-align: center;">551%</td>
+                        <td style="text-align: center;">1につき108.0%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.8</td>
+                        <td style="text-align: center;">588%</td>
+                        <td style="text-align: center;">1につき115.2%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.9</td>
+                        <td style="text-align: center;">624%</td>
+                        <td style="text-align: center;">1につき122.4%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.10</td>
+                        <td style="text-align: center;">661%</td>
+                        <td style="text-align: center;">1につき129.6%</td>
+                        </tr></table><br><br><br>
+                
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Talent_Calcite_Might.png?rev=817936e54ab69afedd94056ee65f2184&t=20210206171001" width="75px" height="75px"><p class="hutaogift">&nbsp;白亜色の気迫</p></th>
+        <td colspan="16"><br><br><b>&nbsp;白亜色の気迫</b><br>&nbsp;&nbsp;
+          元素スキルの刹那の花がHP50％未満の敵にダメージを与えた場合、ダメージ量+25％<br><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Talent_Homuncular_Nature.png?rev=a7200ceac6a79d346bdfa09ab028a241&t=20210206171015" width="75px" height="75px"><p class="hutaogift">&nbsp;ホムンクルスの天智</p></th>
+        <td colspan="16"><br><br><b>&nbsp;ホムンクルスの天智</b><br>&nbsp;&nbsp;
+         元素爆発を発動した時、周囲のチーム全員の元素熟知を+125、継続時間10秒。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Talent_Flash_of_Genius_%2528Albedo%2529.png?rev=41e53a73de3edeb0d2e6e376d9596fc8&t=20210206171029" width="75px" height="75px"><p class="hutaogift">&nbsp;天才の気付き</p></th>
+        <td colspan="16"><br><br><b>&nbsp;天才の気付き</b><br>&nbsp;&nbsp;
+          武器突破素材を合成する時、10％の確率でアイテムを2倍獲得する。<br>
+         <br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Constellation_Flower_of_Eden.png?rev=8d7a1247a229a7aaf6be1d4439c025a8&t=20210206171149" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;エデンの花</b><br>&nbsp;&nbsp;
+              アルベドの元素スキルの刹那の花が放たれた時、アルベド自身の元素エネルギーが1.2回復する。<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Constellation_Opening_of_Phanerozoic.png?rev=d0a426e1c3cf2ae64c7be22b4feea40c&t=20210206171159" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;顕生の宇宙</b><br>&nbsp;&nbsp;
+              元素スキルの刹那の花が放たれた時、アルベドに生滅カウントを付与する。継続時間30秒。
+              ・元素爆発を発動する時、全ての生滅カウントを取り除く。取り除かれた数によって、爆発ダメージと生滅の花のダメージが上昇する。
+              ・生滅カウント1つにつき、アルベドの防御力30％分のダメージが上昇する。
+              生滅カウントは最大4重まで。<br><br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Constellation_Grace_of_Helios.png?rev=ad830c193fc0a60501ec47216f528bbf&t=20210206171209" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;太陽の華</b><br>&nbsp;&nbsp;元素スキルの天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Constellation_Descent_of_Divinity.png?rev=4824681272de6f22dd63b481c1985de3&t=20210206171220" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;聖なる堕落</b><br>&nbsp;&nbsp;
+              陽華のエリア内にいるキャラクターの落下攻撃ダメージ+30%。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Constellation_Tide_of_Hadaen.png?rev=7600695fed75c162d34696ee1ec7eef6&t=20210206171230" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;太古の潮</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Constellation_Dust_of_Purification.png?rev=afdf7757634ecc87220c8f407a2e1553&t=20210206171240" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;無垢なる土</b><br>&nbsp;&nbsp;
+              無垢なる土
+              陽華のエリア内にいるフィールド上のキャラクターが、結晶反応で生成されたシールド状態にある時、与えるダメージ+17%。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              アルベドは"防御力依存サブアタッカー"という立ち位置なので、メインステータスが防御力、会心率/ダメージを盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、サブアタッカーの中でも"元素スキル追加ダメージサブアタッカー"という、元素スキル発動後、控えにいてもダメージを出せるので、その際に効果を発揮する武器も視野に入れましょう。<br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E3%82%B7%E3%83%8A%E3%83%90%E3%83%BC%E3%82%B9%E3%83%94%E3%83%B3%E3%83%89%E3%83%AB_0.png.webp?rev=f13bb551449d05bc663226f69d20b1de&t=20211126232207">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E6%9C%89%E6%A5%BD%E5%BE%A1%E7%B0%BE%E5%88%87.png.webp?rev=8dcb3e6d48c394c9907c39792382f096&t=20240313210413" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E8%92%BC%E5%8F%A4%E3%81%AA%E3%82%8B%E8%87%AA%E7%94%B1%E3%81%B8%E3%81%AE%E8%AA%93%E3%81%84.png.webp?rev=c5a1f575a3442dcc954f72bf990f29fc&t=20210630221436" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E8%85%90%E6%A4%8D%E3%81%AE%E5%89%A3.png.webp?rev=02a71461ecffe36a28777433defa8d77&t=20210217012354" alt="">
+              </div></th>
+            </tr>
+            <tr></table><br><br><br>
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+
+  
+                  <tr>
+                    <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E6%A0%84%E8%8A%B1%E3%81%AE%E6%9C%9F_5.png.webp?rev=bc9973f105234c5b0f828005c9160061&t=20211124231224" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>華館夢醒形骸記</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        防御力+30%,
+                      <br>
+                      この聖遺物セットを装備したキャラクターは、以下の状況において「問答」効果を獲得する。 <br>
+                      「問答」効果:フィールド上で岩元素攻撃を敵に命中した後に1層獲得、0.3秒毎に1層のみ獲得できる。<br>
+                      待機中の場合は、3秒毎に自動で1層獲得する。重ね掛けできる「問答」は最大4層までとなり、<br>
+                      1層につき防御力+6%、岩元素ダメージ+6%。6秒毎に「問答」効果を獲得していない場合は、1層失う。
+                    </td>
+                    <td style="width: 400px;">４セット効果を駆使するので、元素スキルを発動したら千織を控えてアタッカーと一緒にダメージを出せるパーティ編成を組みましょう。</td>
+                    <td style="display: flex;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B7%E3%83%A7%E3%82%A6_s.webp?rev=9096515fcfbf33749e65d58723ca19c6&t=20240313100821">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E4%B8%87%E8%91%89_s.webp?rev=7c5488d515d48d9a661f5af5d9a18a33&t=20240313100904"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%8D%BE%E9%9B%A2_s.webp?rev=ab44a61a332174925072c553966eb001&t=20240313101433">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89_s.webp?rev=364c50e7496f4819761de2f7556fa8f2&t=20240313101314">
+                    </div></td>
+                  </tr>
+
+                  <tr>
+                    <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%BB%84%E9%87%91%E3%81%AE%E6%97%8B%E5%BE%8B%E3%81%AE%E5%A4%89%E5%A5%8F.png.webp?rev=47fefd090194213a484e98c2d3cd75f3&t=20230820021709" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>黄金の劇団</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                      元素スキルのダメージ+20%,
+                      <br>
+                      元素スキルのダメージ+25%。また、装備者が待機中の時、元素スキルのダメージがさらに+25%。この効果は装備キャラクターが登場してから2秒後に解除される <br><br>
+                    </td>
+                    <td style="width: 400px;">４セット効果を駆使するので、元素スキルを発動したら千織を控えてアタッカーと一緒にダメージを出せるパーティ編成を組みましょう。</td>
+                    <td style="display: flex;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2_s.webp?rev=1ff65dbf694ab2ebae19e0433d4d2de5&t=20231220212842" width="110px" height="110px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633" width="110px" height="110px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%83%AA%E3%83%BC%E3%83%8A_s.webp?rev=79020e2b8491927fd44b8841ae8a1674&t=20231109210243" width="110px" height="110px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89_s.webp?rev=364c50e7496f4819761de2f7556fa8f2&t=20240313101314" width="110px" height="110px">
+                    </div></td>
+                  </tr></table></div><br><br><br><br>
+
+                  <div class="combotitle">
+                    <h2 id="combo" style="text-align: left;">&nbsp;&nbsp;&nbsp;コンボ</h2>
+                  </div><br><br>
+                  <div class="combo-text">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3>&nbsp;&nbsp;&nbsp;ダメージコンボ</h3>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    ・元素スキルが「ダメージを与えたら」効果が発動されるので元素スキルから元素爆発を打つことでより多くのダメージを出すことができます。<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Talent_Abiogenesis_-_Solar_Isotoma.png?rev=03441bd1ce04b34b8b18747c739df559&t=20210206170934" alt=""><b>&rightarrow;</b><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Talent_Rite_of_Progeniture_-_Tectonic_Tide.png?rev=755b5d1d2fcef85882959eaf9bf1dbb4&t=20210206170947" alt="">
+                    </div><br><br><br><br>
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  
