@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ナヒーダ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">ナヒーダ</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC9vYkJSbldqRy5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19"></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆5</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">法器</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">草</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">知恵の主座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">スメール</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">田村ゆかり</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  
+    
+  <tr>
+    <th style="text-align: center;">基礎HP</th>
+    <td style="text-align: center;">2092</td>
+    <td style="text-align: center;">2784</td>
+    <td style="text-align: center;">4165</td>
+    <td style="text-align: center;">4656</td>
+    <td style="text-align: center;">5357</td>
+    <td style="text-align: center;">6012</td>
+    <td style="text-align: center;">6721</td>
+    <td style="text-align: center;">7212</td>
+    <td style="text-align: center;">7926</td>
+    <td style="text-align: center;">8418</td>
+    <td style="text-align: center;">9140</td>
+    <td style="text-align: center;">9632</td>
+    <td style="text-align: center;">10360</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎攻撃力</th>
+    <td style="text-align: center;">61</td>
+    <td style="text-align: center;">80</td>
+    <td style="text-align: center;">120</td>
+    <td style="text-align: center;">134</td>
+    <td style="text-align: center;">155</td>
+    <td style="text-align: center;">174</td>
+    <td style="text-align: center;">194</td>
+    <td style="text-align: center;">208</td>
+    <td style="text-align: center;">229</td>
+    <td style="text-align: center;">243</td>
+    <td style="text-align: center;">263</td>
+    <td style="text-align: center;">278</td>
+    <td style="text-align: center;">299</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎防御力</th>
+    <td style="text-align: center;">127</td>
+    <td style="text-align: center;">169</td>
+    <td style="text-align: center;">253</td>
+    <td style="text-align: center;">283</td>
+    <td style="text-align: center;">326</td>
+    <td style="text-align: center;">366</td>
+    <td style="text-align: center;">409</td>
+    <td style="text-align: center;">439</td>
+    <td style="text-align: center;">482</td>
+    <td style="text-align: center;">512</td>
+    <td style="text-align: center;">556</td>
+    <td style="text-align: center;">586</td>
+    <td style="text-align: center;">630</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">元素熟知</th>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">29</td>
+    <td style="text-align: center;">29</td>
+    <td style="text-align: center;">58</td>
+    <td style="text-align: center;">58</td>
+    <td style="text-align: center;">58</td>
+    <td style="text-align: center;">58</td>
+    <td style="text-align: center;">86</td>
+    <td style="text-align: center;">86</td>
+    <td style="text-align: center;">115</td>
+    <td style="text-align: center;">115</td>
+    </tr></table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%99%BD%E6%9C%AE/::ref/%E9%87%91%E5%8C%B1%E9%8D%BC%E8%A7%A3.webp?rev=96c74badec7745ffcce770250e9cfff7&t=20230503140032" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+        通常攻撃<br>
+        最大4段の連続攻撃を行い、草元素ダメージを与える。<br><br>
+        
+        重撃<br>
+        一定のスタミナを消費し、短い詠唱をした後、敵に草元素範囲ダメージを与える。<br><br>
+        
+        落下攻撃<br>
+        空中から落下し、地面に衝撃を与える。経路上の敵を攻撃し、落下時に草元素範囲ダメージを与える。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 80px;">重撃<br>ダメージ</th>
+    <th style="width: 150px;">重撃スタミナ消費</th>
+    <th style="width: 150px;">落下期間の<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+    
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2</td>
+    <td style="text-align: center;">43.3%</td>
+    <td style="text-align: center;">39.7%</td>
+    <td style="text-align: center;">49.3%</td>
+    <td style="text-align: center;">62.8%</td>
+    <td style="text-align: center;">141.9%</td>
+    <td rowspan="9" style="text-align: center;">50.0</td>
+    <td style="text-align: center;">61.5%</td>
+    <td style="text-align: center;">123%/153%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">46.4%</td>
+    <td style="text-align: center;">42.5%</td>
+    <td style="text-align: center;">52.8%</td>
+    <td style="text-align: center;">67.2%</td>
+    <td style="text-align: center;">151.8%</td>
+    <td style="text-align: center;">66.1%</td>
+    <td style="text-align: center;">132%/165%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">50.4%</td>
+    <td style="text-align: center;">46.2%</td>
+    <td style="text-align: center;">57.3%</td>
+    <td style="text-align: center;">73.0%</td>
+    <td style="text-align: center;">165.0%</td>
+    <td style="text-align: center;">72.7%</td>
+    <td style="text-align: center;">145%/182%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">53.4%</td>
+    <td style="text-align: center;">49.0%</td>
+    <td style="text-align: center;">60.8%</td>
+    <td style="text-align: center;">77.4%</td>
+    <td style="text-align: center;">174.9%</td>
+    <td style="text-align: center;">77.3%</td>
+    <td style="text-align: center;">155%/193%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">56.4%</td>
+    <td style="text-align: center;">51.8%</td>
+    <td style="text-align: center;">64.2%</td>
+    <td style="text-align: center;">81.8%</td>
+    <td style="text-align: center;">184.8%</td>
+    <td style="text-align: center;">82.6%</td>
+    <td style="text-align: center;">165%/206%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">60.5%</td>
+    <td style="text-align: center;">55.5%</td>
+    <td style="text-align: center;">68.8%</td>
+    <td style="text-align: center;">87.6%</td>
+    <td style="text-align: center;">198.0%</td>
+    <td style="text-align: center;">89.9%</td>
+    <td style="text-align: center;">180%/224%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">64.5%</td>
+    <td style="text-align: center;">59.2%</td>
+    <td style="text-align: center;">73.4%</td>
+    <td style="text-align: center;">93.5%</td>
+    <td style="text-align: center;">211.2%</td>
+    <td style="text-align: center;">97.1%</td>
+    <td style="text-align: center;">194%/243%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">68.5%</td>
+    <td style="text-align: center;">62.9%</td>
+    <td style="text-align: center;">78.0%</td>
+    <td style="text-align: center;">99.3%</td>
+    <td style="text-align: center;">224.4%</td>
+    <td style="text-align: center;">104.4%</td>
+    <td style="text-align: center;">209%/261%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">72.5%</td>
+    <td style="text-align: center;">66.6%</td>
+    <td style="text-align: center;">82.6%</td>
+    <td style="text-align: center;">105.1%</td>
+    <td style="text-align: center;">237.6%</td>
+    <td style="text-align: center;">112.3%</td>
+    <td style="text-align: center;">225%/281%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="1000px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80/::ref/%E6%89%80%E8%81%9E%E9%81%8D%E8%A8%88.png?rev=669900d30883b94b5fa2653e979230cb&t=20221105000209" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+        草元素範囲ダメージを与え、命中した最大8体の敵に蘊種印を付与する。<br>
+        長押しによって攻撃方法が変わる。<br><br>
+        
+        長押し<br><br>
+        
+        照準モードに入り、一定範囲内にいる一定数の敵を選定する。なお、本状態中は中断耐性がアップする。<br>
+        長押し終了時、選定された敵に草元素ダメージを与え、蘊種印を付与する。<b></b>
+        照準モードは最大5秒継続でき、最大8体の敵を選定できる。<br><br>
+        
+        蘊種印<br>
+        蘊種印状態の敵は、一定の距離内で互いにリンクするようになる。<br>
+        蘊種印状態の敵に元素反応を起こす、または該当の敵が草原核によるダメージ（烈開花、超開花を含む）を受けた後、<br>
+        ナヒーダは攻撃力と元素熟知を基に、該当の敵およびその敵とリンクしているすべての相手に滅浄三業を放ち、草元素ダメージを与える。<br>
+        滅浄三業は短時間内に1回のみ発動可能。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 130px;">一回押しダメージ</th>
+                <th style="width: 130px;">長押しダメージ</th>
+                <th style="width: 130px;">滅浄三業ダメージ<br>(攻撃力/元素熟知)</th>
+                <th style="width: 130px;">滅浄三業<br>発動間隔</th>
+                <th style="width: 130px;">蘊種印<br>継続時間</th>
+                <th style="width: 130px;">一回押し<br>クールタイム(CT)</th>
+                <th style="width: 130px;">長押し<br>クールタイム(CT)</th>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Lv.2</td>
+                <td style="text-align: center;">105.8%</td>
+                <td style="text-align: center;">140.2%</td>
+                <td style="text-align: center;">110.9%+221.9%</td>
+                <td rowspan="9" style="text-align: center;">2.5s</td>
+                <td rowspan="9" style="text-align: center;">25.0s</td>
+                <td rowspan="9" style="text-align: center;">5.0s</td>
+                <td rowspan="9" style="text-align: center;">6.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.3</td>
+                <td style="text-align: center;">113.2%</td>
+                <td style="text-align: center;">150.0%</td>
+                <td style="text-align: center;">118.7%+237.4%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.4</td>
+                <td style="text-align: center;">123.0%</td>
+                <td style="text-align: center;">163.0%</td>
+                <td style="text-align: center;">129.0%+258.0%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.5</td>
+                <td style="text-align: center;">130.4%</td>
+                <td style="text-align: center;">172.8%</td>
+                <td style="text-align: center;">136.7%+273.5%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.6</td>
+                <td style="text-align: center;">137.8%</td>
+                <td style="text-align: center;">182.6%</td>
+                <td style="text-align: center;">144.5%+289.0%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.7</td>
+                <td style="text-align: center;">147.6%</td>
+                <td style="text-align: center;">195.6%</td>
+                <td style="text-align: center;">154.8%+309.6%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.8</td>
+                <td style="text-align: center;">157.4%</td>
+                <td style="text-align: center;">208.6%</td>
+                <td style="text-align: center;">165.1%+330.2%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.9</td>
+                <td style="text-align: center;">167.3%</td>
+                <td style="text-align: center;">221.7%</td>
+                <td style="text-align: center;">175.4%+350.9%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.10</td>
+                <td style="text-align: center;">177.1%</td>
+                <td style="text-align: center;">234.7%</td>
+                <td style="text-align: center;">185.8%+371.5%</td>
+                </tr></table><br><br><br>
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80/::ref/%E5%BF%83%E6%99%AF%E5%B9%BB%E6%88%90.png?rev=6add3bdb85e48ad19b906d61d80070f6&t=20221105000159" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+                      <td colspan="16"><br><br>
+                        領域「摩耶の宮殿」を展開する。<br><br>
+
+                        領域展開時、チーム内に以下の元素タイプのキャラクターがいる場合、<br>
+                        それぞれ異なる効果を発揮する。<br>
+                        炎元素: ナヒーダが摩耶の宮殿にいる時、元素スキル「所聞遍計」の滅浄三業によるダメージがアップする。<br>
+                        雷元素: ナヒーダが摩耶の宮殿にいる時、元素スキル「所聞遍計」の滅浄三業の発動間隔を短縮する。<br>
+                        水元素: 摩耶の宮殿の継続時間を延長する。<br>
+                        
+                        領域展開時、上記元素タイプのキャラクターが2名以上いる場合、対応する効果はさらにアップする。<br>
+                        ナヒーダが待機中でも、該当チームが摩耶の宮殿範囲内にいる限り、上記の効果を受け取ることができる。
+                        <br><br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                      </td>
+                    </tr>
+                
+                    <tr>
+                      <th rowspan="2" style="width: 150px;">ステータス詳細</th>
+                      <th colspan="2" style="width: 160px;">炎:ダメージアップ</th>
+                      <th colspan="2" style="width: 160px;">雷:間隔短縮</th>
+                      <th colspan="2" style="width: 160px;">水:継続時間延長</th>
+                      <th rowspan="2" style="width: 160px;">基礎継続時間</th>
+                      <th rowspan="2" style="width: 150px;">クールタイム(CT)</th>
+                      <th rowspan="2" style="width: 120px;">元素エネルギー</th>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center; width: 100px;">1名</th>
+                        <th style="text-align: center; width: 100px;">2名</th>
+                        <th style="text-align: center; width: 100px;">1名</th>
+                        <th style="text-align: center; width: 100px;">2名</th>
+                        <th style="text-align: center; width: 100px;">1名</th>
+                        <th style="text-align: center; width: 100px;">2名</th>
+                    </tr>
+                
+                    <tr>
+                        <td style="text-align: center;">Lv.2</td>
+                        <td style="text-align: center;">16.0%</td>
+                        <td style="text-align: center;">24.0%</td>
+                        <td style="text-align: center;">0.27s</td>
+                        <td style="text-align: center;">0.40s</td>
+                        <td style="text-align: center;">3.59s</td>
+                        <td style="text-align: center;">5.39s</td>
+                        <td rowspan="9" style="text-align: center;">15.0s</td>
+                        <td rowspan="9" style="text-align: center;">13.5s</td>
+                        <td rowspan="9" style="text-align: center;">50</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.3</td>
+                        <td style="text-align: center;">17.1%</td>
+                        <td style="text-align: center;">25.7%</td>
+                        <td style="text-align: center;">0.29s</td>
+                        <td style="text-align: center;">0.43s</td>
+                        <td style="text-align: center;">3.85s</td>
+                        <td style="text-align: center;">5.77s</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.4</td>
+                        <td style="text-align: center;">18.6%</td>
+                        <td style="text-align: center;">27.9%</td>
+                        <td style="text-align: center;">0.31s</td>
+                        <td style="text-align: center;">0.47s</td>
+                        <td style="text-align: center;">4.18s</td>
+                        <td style="text-align: center;">6.27s</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.5</td>
+                        <td style="text-align: center;">19.7%</td>
+                        <td style="text-align: center;">29.6%</td>
+                        <td style="text-align: center;">0.33s</td>
+                        <td style="text-align: center;">0.52s</td>
+                        <td style="text-align: center;">4.68s</td>
+                        <td style="text-align: center;">7.02s</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.6</td>
+                        <td style="text-align: center;">20.8%</td>
+                        <td style="text-align: center;">35.7%</td>
+                        <td style="text-align: center;">0.40s</td>
+                        <td style="text-align: center;">0.60s</td>
+                        <td style="text-align: center;">5.53s</td>
+                        <td style="text-align: center;">8.03s</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.7</td>
+                        <td style="text-align: center;">22.3%</td>
+                        <td style="text-align: center;">33.5%</td>
+                        <td style="text-align: center;">0.37s</td>
+                        <td style="text-align: center;">0.56s</td>
+                        <td style="text-align: center;">5.02s</td>
+                        <td style="text-align: center;">7.52s</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.8</td>
+                        <td style="text-align: center;">23.8%</td>
+                        <td style="text-align: center;">35.7%</td>
+                        <td style="text-align: center;">0.40s</td>
+                        <td style="text-align: center;">0.60s</td>
+                        <td style="text-align: center;">5.35s</td>
+                        <td style="text-align: center;">8.03s</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.9</td>
+                        <td style="text-align: center;">25.3%</td>
+                        <td style="text-align: center;">37.9%</td>
+                        <td style="text-align: center;">0.42s</td>
+                        <td style="text-align: center;">0.63s</td>
+                        <td style="text-align: center;">5.68s</td>
+                        <td style="text-align: center;">8.53s</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.10</td>
+                        <td style="text-align: center;">26.8%</td>
+                        <td style="text-align: center;">40.2%</td>
+                        <td style="text-align: center;">0.45s</td>
+                        <td style="text-align: center;">0.67s</td>
+                        <td style="text-align: center;">6.02s</td>
+                        <td style="text-align: center;">9.03s</td>
+                        </tr></table><br><br><br>
+                
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80/::ref/%E6%B5%84%E5%96%84%E6%91%82%E5%8F%97%E6%98%8E%E8%AB%96.png?rev=a782341583f9b64e980fe406701a17f8&t=20221105000143" width="75px" height="75px"><p class="hutaogift">&nbsp;浄善摂受明論</p></th>
+        <td colspan="16"><br><br><b>&nbsp;浄善摂受明論</b><br>&nbsp;&nbsp;
+            元素爆発発動時、摩耶の宮殿は下記効果を獲得する。
+            チーム内にいる元素熟知の最も高いキャラクターを参照し、その元素熟知の25%を基にフィールド上の領域内キャラクターの元素熟知をアップする。
+            この方法でアップできる元素熟知は最大250までとなる。<br><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80/::ref/%E6%85%A7%E6%98%8E%E7%B8%81%E8%A6%9A%E6%99%BA%E8%AB%96.png?rev=e4fe39f99b47ed21b5817fea881f9fb8&t=20221105000130" width="75px" height="75px"><p class="hutaogift">&nbsp;慧明縁覚智論</p></th>
+        <td colspan="16"><br><br><b>&nbsp;慧明縁覚智論</b><br>&nbsp;&nbsp;
+            ナヒーダの元素熟知が200を超えている時、その200を超えた分の元素熟知の数値1につき、元素スキルの滅浄三業によるダメージ+0.1%、会心率+0.03%。
+            この方法でアップできる滅浄三業のダメージは最大80%、会心率は最大24%までとなる。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80/::ref/%E8%AB%B8%E7%9B%B8%E9%9A%A8%E5%BF%B5%E6%B5%84%E8%A1%8C.png?rev=4470b9f26822b93c9ebd178b2df5b2bf&t=20221105000119" width="75px" height="75px"><p class="hutaogift">&nbsp;諸相隨念浄行</p></th>
+        <td colspan="16"><br><br><b>&nbsp;諸相隨念浄行</b><br>&nbsp;&nbsp;
+            ナヒーダは元素スキルを通して、一定範囲内の一部採集物をマークすることができる。
+            他の効果もあるかもしれない…<br>
+         <br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80/::ref/%E5%BF%83%E8%AD%98%E8%98%8A%E8%94%B5%E3%81%AE%E7%A8%AE.png?rev=cbdf9f6bc6e90119dce27957563b9022&t=20221105000109" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;心識蘊蔵の種</b><br>&nbsp;&nbsp;
+                元素爆発を展開し、チーム内特定の元素タイプのキャラクター数をカウントする際、炎元素、雷元素、水元素のキャラクター数がそれぞれ+1される。<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80/::ref/%E6%AD%A3%E8%A6%9A%E5%96%84%E8%A6%8B%E3%81%AE%E6%A0%B9.png?rev=95dd4dbdb253502933e2f5c7e71d18ce&t=20221105000059" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;正覚善見の根</b><br>&nbsp;&nbsp;
+                ナヒーダ自身が付与した蘊種印状態にある敵は、下記の効果を受ける。<br>
+                ・燃焼、開花、超開花、烈開花反応によるダメージを受けると、一定の確率で会心が発生する。なお会心率は20%、会心ダメージは100%に固定される。<br>
+                ・原激化、超激化、または草激化反応を受けた後の8秒間、防御力-30%。<br><br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80/::ref/%E8%96%AB%E7%BF%92%E6%88%90%E5%B0%B1%E3%81%AE%E8%8A%BD.png?rev=a3978740c9fe5c6e78435dfdca5cdbe9&t=20221105000049" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;薫習成就の芽</b><br>&nbsp;&nbsp;元素スキルの天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80/::ref/%E6%AF%94%E9%87%8F%E7%8F%BE%E8%A1%8C%E3%81%AE%E8%8C%8E.png?rev=6c69093ccb91f6569b25d87e589a3e99&t=20221105000039" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;比量現行の茎</b><br>&nbsp;&nbsp;
+                近くに元素スキルの蘊種印状態にある敵が1/2/3/4体またはそれ以上いる時、ナヒーダの元素熟知が100/120/140/160アップする。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80/::ref/%E5%A6%99%E8%AB%A6%E7%A0%B4%E6%84%9A%E3%81%AE%E8%91%89.png?rev=9918c19383369c27f0120e965cdee8d8&t=20221105000029" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;妙諦破愚の葉</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80/::ref/%E5%A4%A7%E8%BE%AE%E5%86%86%E6%88%90%E3%81%AE%E5%AE%9F.png?rev=e0e5ba325c524d6c84cd33c7d4abd3d3&t=20221105000011" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;大辯円成の実</b><br>&nbsp;&nbsp;
+                元素爆発発動後、ナヒーダの通常攻撃や重撃が元素スキルの蘊種印状態の敵に命中すると、<br>
+                該当の敵およびその敵とリンクしているすべての相手に滅浄三業・破業障を発動し、ナヒーダの攻撃力200%と元素熟知400%分を基に、草元素ダメージを与える。<br>
+                滅浄三業・破業障によるダメージは元素スキルダメージと見なされ、0.2秒ごとに1回のみ発動可能。<br>
+                この効果は最大で10秒間継続でき、ナヒーダが滅浄三業・破業障を6回発動した後に解除される。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ナヒーダは"元素熟知依存サポーター"という立ち位置なので、メインステータスが元素熟知を盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、元素爆発、元素スキルを駆使して味方をサポートするので、その際に効果が発揮される武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E5%8D%83%E5%A4%9C%E3%81%AB%E6%B5%AE%E3%81%8B%E3%81%B6%E5%A4%A2.png.webp?rev=e1de2ec6648a395a1c9d776d271ad7dc&t=20221102170924">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202022-10-15%20133022.png.webp?rev=28e9aee9b05ad0bc3dd989bbc2d495ca&t=20221015132937" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E4%B8%87%E5%9B%BD%E8%AB%B8%E6%B5%B7%E3%81%AE%E5%9B%B3%E8%AD%9C.png.webp?rev=d52c7f08e7890c550989dc4c751cc1b8&t=20231220010530" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+  
+                <tr>
+                    <td style="text-align: center;">
+                        <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%A4%A2%E5%A2%83%E3%81%AE%E9%89%84%E8%8A%B1_5.png.webp?rev=212ae3cc99c1621153d01ce0a11d831f&t=20220826154359" width="100px" height="100px" style="margin: auto;"><p class="rine-relic"><b>金メッキの夢</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        元素熟知+80,
+                      <br>
+                      元素反応を起こした後の8秒間、装備キャラクターは、チーム内自身以外のキャラクターの元素タイプに応じて強化効果を獲得する。<br>
+                      チームに装備キャラクターと同じ元素タイプのキャラクターが1名存在する毎に攻撃力+14%、異なる元素タイプのキャラクターが1名存在する毎に元素熟知+50。<br>
+                      上記効果は、それぞれ最大でキャラクター3名までカウントされる。この効果は8秒ごとに1回のみ発動可能。装備しているキャラクターが待機している場合にも効果を発動できる。<br>
+                    </td>
+                    <td style="width: 400px;">4セット効果を駆使して戦うので、ナヒーダの元素熟知を上げるためにも異なる元素を多く含むパーティ編成を組みましょう。<br></td>
+                    <td style="display: flex; text-align: center;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B7%E9%9B%BB%E5%B0%86%E8%BB%8D_s.webp?rev=7c064efdd43177b4266dc3acd84356c0&t=20240313100241" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80_s.webp.webp?rev=ca50d1c01181d34502b4301b329847fd&t=20221102192029" width="100px" height="100px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7_s.webp?rev=3aca58306ed023b42cdc0da8e0abb6c5&t=20240313094612" width="100px" height="100px">
+                  　</td>
+                   </tr></table></div><br><br><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>セノ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">セノ</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC81QmxkMExIci5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19"></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆5</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">槍</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">雷</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">金狼座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">スメール</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">入野自由</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  
+    
+  <tr>
+    <th style="text-align: center;">基礎HP</th>
+    <td style="text-align: center;">2522</td>
+    <td style="text-align: center;">3356</td>
+    <td style="text-align: center;">5022</td>
+    <td style="text-align: center;">5614</td>
+    <td style="text-align: center;">6459</td>
+    <td style="text-align: center;">7249</td>
+    <td style="text-align: center;">8103</td>
+    <td style="text-align: center;">8695</td>
+    <td style="text-align: center;">9557</td>
+    <td style="text-align: center;">10149</td>
+    <td style="text-align: center;">11020</td>
+    <td style="text-align: center;">11613</td>
+    <td style="text-align: center;">12491</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎攻撃力</th>
+    <td style="text-align: center;">64</td>
+    <td style="text-align: center;">85</td>
+    <td style="text-align: center;">128</td>
+    <td style="text-align: center;">143</td>
+    <td style="text-align: center;">164</td>
+    <td style="text-align: center;">184</td>
+    <td style="text-align: center;">206</td>
+    <td style="text-align: center;">221</td>
+    <td style="text-align: center;">243</td>
+    <td style="text-align: center;">258</td>
+    <td style="text-align: center;">280</td>
+    <td style="text-align: center;">295</td>
+    <td style="text-align: center;">318</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎防御力</th>
+    <td style="text-align: center;">174</td>
+    <td style="text-align: center;">231</td>
+    <td style="text-align: center;">345</td>
+    <td style="text-align: center;">386</td>
+    <td style="text-align: center;">444</td>
+    <td style="text-align: center;">499</td>
+    <td style="text-align: center;">557</td>
+    <td style="text-align: center;">598</td>
+    <td style="text-align: center;">657</td>
+    <td style="text-align: center;">698</td>
+    <td style="text-align: center;">758</td>
+    <td style="text-align: center;">799</td>
+    <td style="text-align: center;">859</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">会心ダメージ</th>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">9.6%</td>
+    <td style="text-align: center;">9.6%</td>
+    <td style="text-align: center;">19.2%</td>
+    <td style="text-align: center;">19.2%</td>
+    <td style="text-align: center;">19.2%</td>
+    <td style="text-align: center;">19.2%</td>
+    <td style="text-align: center;">28.8%</td>
+    <td style="text-align: center;">28.8%</td>
+    <td style="text-align: center;">38.4%</td>
+    <td style="text-align: center;">38.4%</td>
+    </tr>
+    </table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%BB%E3%83%8E/::ref/%E4%B8%83%E8%81%96%E6%A7%8D%E8%A1%93.png?rev=7516c09bd361aded67901fd66b59d6a2&t=20221003140340" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+        通常攻撃<br>
+        最大4段の連続攻撃を行う。<br><br>
+        
+        重撃<br>
+        一定のスタミナを消費して前方に突進し、経路上の敵にダメージを与える。<br><br>
+        
+        落下攻撃<br>
+        空中から落下し、路上の敵を攻撃し、落下時に範囲ダメージを与える。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 80px;">重撃<br>ダメージ</th>
+    <th style="width: 150px;">重撃スタミナ消費</th>
+    <th style="width: 150px;">落下期間<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+    
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2%</td>
+    <td style="text-align: center;">53.3%</td>
+    <td style="text-align: center;">51.8%</td>
+    <td style="text-align: center;">31.7%+31.7%</td>
+    <td style="text-align: center;">82.1%</td>
+    <td style="text-align: center;">132.3%</td>
+    <td rowspan="9" style="text-align: center;">25.0</td>
+    <td style="text-align: center;">69.1%</td>
+    <td style="text-align: center;">138%/173%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">57.3%</td>
+    <td style="text-align: center;">55.7%</td>
+    <td style="text-align: center;">34.1%+34.1%</td>
+    <td style="text-align: center;">88.2%</td>
+    <td style="text-align: center;">142.3%</td>
+    <td style="text-align: center;">74.3%</td>
+    <td style="text-align: center;">149%/186%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">63.0%</td>
+    <td style="text-align: center;">61.3%</td>
+    <td style="text-align: center;">37.5%+37.5%</td>
+    <td style="text-align: center;">97.1%</td>
+    <td style="text-align: center;">156.5%</td>
+    <td style="text-align: center;">81.8%</td>
+    <td style="text-align: center;">164%/204%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">67.0%</td>
+    <td style="text-align: center;">65.2%</td>
+    <td style="text-align: center;">39.9%+39.9%</td>
+    <td style="text-align: center;">103.2%</td>
+    <td style="text-align: center;">166.5%</td>
+    <td style="text-align: center;">87.0%</td>
+    <td style="text-align: center;">174%/217%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">71.6%</td>
+    <td style="text-align: center;">69.7%</td>
+    <td style="text-align: center;">42.6%+42.6%</td>
+    <td style="text-align: center;">110.3%</td>
+    <td style="text-align: center;">177.9%</td>
+    <td style="text-align: center;">92.9%</td>
+    <td style="text-align: center;">186%/232%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">77.9%</td>
+    <td style="text-align: center;">75.8%</td>
+    <td style="text-align: center;">46.3%+46.3%</td>
+    <td style="text-align: center;">120.0%</td>
+    <td style="text-align: center;">193.5%</td>
+    <td style="text-align: center;">101.1%</td>
+    <td style="text-align: center;">202%/253%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">84.2%</td>
+    <td style="text-align: center;">81.9%</td>
+    <td style="text-align: center;">50.1%+50.1%</td>
+    <td style="text-align: center;">129.7%</td>
+    <td style="text-align: center;">209.2%</td>
+    <td style="text-align: center;">109.3%</td>
+    <td style="text-align: center;">219%/273%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">90.5%</td>
+    <td style="text-align: center;">88.0%</td>
+    <td style="text-align: center;">53.8%+53.8%</td>
+    <td style="text-align: center;">139.4%</td>
+    <td style="text-align: center;">224.8%</td>
+    <td style="text-align: center;">117.5%</td>
+    <td style="text-align: center;">235%/293%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">97.4%</td>
+    <td style="text-align: center;">94.7%</td>
+    <td style="text-align: center;">57.9%+57.9%</td>
+    <td style="text-align: center;">150.0%</td>
+    <td style="text-align: center;">241.9%</td>
+    <td style="text-align: center;">126.3%</td>
+    <td style="text-align: center;">253%/315%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="1000px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%BB%E3%83%8E/::ref/%E7%A7%98%E5%84%80%E3%83%BB%E5%BE%8B%E6%B7%B5%E6%B8%A1%E9%AD%82.png?rev=1a8dcd6520c4d608a0dcbd0fe0b58547&t=20221003140329" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+        経路上の敵に雷元素ダメージを与える。<br><br>
+
+        元素爆発「聖儀・狼駆憑走」の啓途誓使状態にある時、セノは冥祭を発動して驚雷の力を放ち、雷元素範囲ダメージを与える。また啓途誓使状態の継続時間を延長する。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 160px;">スキルダメージ</th>
+                <th style="width: 160px;">冥祭ダメージ</th>
+                <th style="width: 130px;">啓途誓使<br>継続時間の延長</th>
+                <th style="width: 100px;">冥祭クールタイム</th>
+                <th style="width: 100px;">クールタイム(CT)</th>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Lv.2</td>
+                <td style="text-align: center;">140.2%</td>
+                <td style="text-align: center;">168.6%</td>
+                <td rowspan="9" style="text-align: center;">4.0s</td>
+                <td rowspan="9" style="text-align: center;">7.5s</td>
+                <td rowspan="9" style="text-align: center;">3.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.3</td>
+                <td style="text-align: center;">150.0%</td>
+                <td style="text-align: center;">180.3%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.4</td>
+                <td style="text-align: center;">163.0%</td>
+                <td style="text-align: center;">196.0%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.5</td>
+                <td style="text-align: center;">172.8%</td>
+                <td style="text-align: center;">207.8%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.6</td>
+                <td style="text-align: center;">182.6%</td>
+                <td style="text-align: center;">219.5%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.7</td>
+                <td style="text-align: center;">195.6%</td>
+                <td style="text-align: center;">235.2%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.8</td>
+                <td style="text-align: center;">208.6%</td>
+                <td style="text-align: center;">250.9%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.9</td>
+                <td style="text-align: center;">221.7%</td>
+                <td style="text-align: center;">266.6%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.10</td>
+                <td style="text-align: center;">234.7%</td>
+                <td style="text-align: center;">282.2%</td>
+                </tr></table><br><br><br>
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%BB%E3%83%8E/::ref/%E8%81%96%E5%84%80%E3%83%BB%E7%8B%BC%E9%A7%86%E6%86%91%E8%B5%B0.png?rev=fb141215e0c49e851f5d1293298911f8&t=20221003140317" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+                      <td colspan="16"><br><br>
+                        神霊を憑依召喚して、「啓途誓使」と化す。<br><br>
+
+                        啓途誓使<br>
+                        ・セノの通常攻撃、重撃、落下攻撃ダメージは、元素付与によって他の元素に変化しない雷元素ダメージへと変わる。<br>
+                        ・セノの元素熟知と中断耐性がアップし、感電反応によるダメージを無効化する。<br><br>
+                        
+                        この効果はセノが退場する時に解除され、最大18秒継続できる。<br><br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                      </td>
+                    </tr>
+                
+                    <tr>
+                      <th style="width: 150px;">ステータス詳細</th>
+                      <th style="width: 80px;">1段目</th>
+                      <th style="width: 80px;">2段目</th>
+                      <th style="width: 80px;">3段目</th>
+                      <th style="width: 80px;">4段目</th>
+                      <th style="width: 80px;">5段目</th>
+                      <th style="width: 80px;">重撃<br>ダメージ</th>
+                      <th style="width: 150px;">重撃スタミナ<br>消費</th>
+                      <th style="width: 150px;">落下期間<br>ダメージ</th>
+                      <th style="width: 160px;">低空/高空<br>落下攻撃<br>ダメージ</th>
+                      <th style="width: 150px;">元素熟知アップ</th>
+                      <th style="width: 150px;">基礎継続時間</th>
+                      <th style="width: 150px;">クールタイム(CT)</th>
+                      <th style="width: 150px;"><small>元素エネルギー</small></th>
+                    </tr>
+                
+                    <tr>
+                        <td style="text-align: center;">Lv.2</td>
+                        <td style="text-align: center;">84.7%</td>
+                        <td style="text-align: center;">89.2%</td>
+                        <td style="text-align: center;">113.2%</td>
+                        <td style="text-align: center;">55.9%+55.9%</td>
+                        <td style="text-align: center;">141.5%</td>
+                        <td style="text-align: center;">109.3%</td>
+                        <td rowspan="9" style="text-align: center;">25.0</td>
+                        <td style="text-align: center;">69.1%</td>
+                        <td style="text-align: center;">138%/173%</td>
+                        <td rowspan="9" style="text-align: center;">100</td>
+                        <td rowspan="9" style="text-align: center;">10.0s</td>
+                        <td rowspan="9" style="text-align: center;">20.0s</td>
+                        <td rowspan="9" style="text-align: center;">80</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.3</td>
+                        <td style="text-align: center;">91.0%</td>
+                        <td style="text-align: center;">95.9%</td>
+                        <td style="text-align: center;">121.7%</td>
+                        <td style="text-align: center;">60.1%+60.1%</td>
+                        <td style="text-align: center;">152.1%</td>
+                        <td style="text-align: center;">117.5%</td>
+                        <td style="text-align: center;">74.3%</td>
+                        <td style="text-align: center;">149%/186%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.4</td>
+                        <td style="text-align: center;">100.1%</td>
+                        <td style="text-align: center;">105.5%</td>
+                        <td style="text-align: center;">133.8%</td>
+                        <td style="text-align: center;">66.1%+66.1%</td>
+                        <td style="text-align: center;">167.4%</td>
+                        <td style="text-align: center;">129.3%</td>
+                        <td style="text-align: center;">81.8%</td>
+                        <td style="text-align: center;">164%/204%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.5</td>
+                        <td style="text-align: center;">106.5%</td>
+                        <td style="text-align: center;">112.2%</td>
+                        <td style="text-align: center;">142.4%</td>
+                        <td style="text-align: center;">70.3%+70.3%</td>
+                        <td style="text-align: center;">178.0%</td>
+                        <td style="text-align: center;">137.5%</td>
+                        <td style="text-align: center;">87.0%</td>
+                        <td style="text-align: center;">174%/217%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.6</td>
+                        <td style="text-align: center;">113.8%</td>
+                        <td style="text-align: center;">119.9%</td>
+                        <td style="text-align: center;">152.1%</td>
+                        <td style="text-align: center;">75.1%+75.1%</td>
+                        <td style="text-align: center;">190.2%</td>
+                        <td style="text-align: center;">146.9%</td>
+                        <td style="text-align: center;">92.9%</td>
+                        <td style="text-align: center;">186%/232%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.7</td>
+                        <td style="text-align: center;">123.8%</td>
+                        <td style="text-align: center;">130.4%</td>
+                        <td style="text-align: center;">165.5%</td>
+                        <td style="text-align: center;">81.7%+81.7%</td>
+                        <td style="text-align: center;">206.9%</td>
+                        <td style="text-align: center;">159.8%</td>
+                        <td style="text-align: center;">101.1%</td>
+                        <td style="text-align: center;">202%/253%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.8</td>
+                        <td style="text-align: center;">133.8%</td>
+                        <td style="text-align: center;">141.0%</td>
+                        <td style="text-align: center;">178.9%</td>
+                        <td style="text-align: center;">88.4%+88.4%</td>
+                        <td style="text-align: center;">223.7%</td>
+                        <td style="text-align: center;">172.7%</td>
+                        <td style="text-align: center;">109.3%</td>
+                        <td style="text-align: center;">219%/273%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.9</td>
+                        <td style="text-align: center;">143.8%</td>
+                        <td style="text-align: center;">151.5%</td>
+                        <td style="text-align: center;">192.2%</td>
+                        <td style="text-align: center;">95.0%+95.0%</td>
+                        <td style="text-align: center;">240.4%</td>
+                        <td style="text-align: center;">185.7%</td>
+                        <td style="text-align: center;">117.5%</td>
+                        <td style="text-align: center;">235%/293%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.10</td>
+                        <td style="text-align: center;">154.7%</td>
+                        <td style="text-align: center;">163.0%</td>
+                        <td style="text-align: center;">206.8%</td>
+                        <td style="text-align: center;">102.2%+102.2%</td>
+                        <td style="text-align: center;">258.6%</td>
+                        <td style="text-align: center;">199.8%</td>
+                        <td style="text-align: center;">126.4%</td>
+                        <td style="text-align: center;">253%/316%</td>
+                        </tr>
+                        
+                        
+                        
+                        </table><br><br><br>
+                
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%BB%E3%83%8E/::ref/%E8%90%BD%E7%BE%BD%E3%81%AE%E8%A3%81%E6%B1%BA.png?rev=f220ffb650ad4423425c339e267a880c&t=20221003140308" width="75px" height="75px"><p class="hutaogift">&nbsp;落羽の裁決</p></th>
+        <td colspan="16"><br><br><b>&nbsp;落羽の裁決</b><br>&nbsp;&nbsp;
+            聖儀・狼駆憑走の啓途誓使状態にある時、セノは一定間隔で「末路真眼」状態に入る。<br>
+            この状態で秘儀・律淵渡魂を発動すると「裁定」効果が起こり、その時の秘儀・律淵渡魂の与えるダメージ+35%。<br>
+            同時に前方に向けて渡荒の雷を3本放ち、セノの攻撃力100%分の雷元素ダメージを与える。<br>
+            渡荒の雷によるダメージは元素スキルダメージと見なされる。<br><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%BB%E3%83%8E/::ref/%E4%B9%9D%E5%BC%93%E3%81%AE%E6%A8%A9%E8%83%BD.png?rev=8ae54eb7fd7baf14bdf9d10764631f27&t=20221003140255" width="75px" height="75px"><p class="hutaogift">&nbsp;九弓の権能</p></th>
+        <td colspan="16"><br><br><b>&nbsp;九弓の権能</b><br>&nbsp;&nbsp;
+            セノの元素熟知を基準に、自身の下記攻撃のダメージが増加する。<br>
+            ・啓途誓使状態での通常攻撃のダメージが元素熟知の150%分アップする。<br>
+            ・固有天賦「落羽の裁決」の「渡荒の雷」のダメージが元素熟知の250%分アップする。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%BB%E3%83%8E/::ref/%E6%B2%88%E9%BB%99%E3%81%AE%E6%81%B5%E8%B3%9C.png?rev=1fbdc666dfa856192cb299c120cf908c&t=20221003140244" width="75px" height="75px"><p class="hutaogift">&nbsp;沈黙の恵賜</p></th>
+        <td colspan="16"><br><br><b>&nbsp;沈黙の恵賜</b><br>&nbsp;&nbsp;
+            スメールで20時間かかる探索任務を完了した時、獲得する報酬+25%。<br>
+         <br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%BB%E3%83%8E/::ref/%E7%AB%8B%E5%84%80%E3%83%BB%E4%BF%AF%E7%9E%B0%E6%99%A6%E5%86%A5.png?rev=b1017e794499d825678f954e9855aa13&t=20221003140200" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;立儀・俯瞰晦冥</b><br>&nbsp;&nbsp;
+                聖儀・狼駆憑走を発動した時、セノの通常攻撃の攻撃速度+20%、継続時間10秒。<br>
+                秘儀・律淵渡魂を発動時、固有天賦「落羽の裁決」の「裁定」効果を起こすと、当該効果の継続時間を更新する。<br>
+                固有天賦「落羽の裁決」を解放する必要がある。<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%BB%E3%83%8E/::ref/%E4%BB%A4%E5%84%80%E3%83%BB%E6%8B%9D%E8%AC%81%E8%BF%94%E9%9C%8A.png?rev=f55bc68d792707a9bcc1cec4cd1b6065&t=20221003140147" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;令儀・拝謁返霊</b><br>&nbsp;&nbsp;
+                セノの通常攻撃が敵に命中すると、雷元素ダメージ+10%、継続時間4秒。この効果は0.1秒ごとに1回のみ発動でき、最大5層まで重ね掛け可能。<br><br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%BB%E3%83%8E/::ref/%E5%BE%8B%E5%84%80%E3%83%BB%E8%A1%8C%E5%BA%A6%E8%AA%93%E6%88%92.png?rev=a8e437e9e649930ca973c1cf38b0c210&t=20221003140135" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;律儀・行度誓戒</b><br>&nbsp;&nbsp;元素スキルの天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%BB%E3%83%8E/::ref/%E5%B7%A1%E5%84%80%E3%83%BB%E8%B2%AB%E5%BE%B9%E7%A6%81%E7%B6%B2.png?rev=b03ecb153c58eb9474decf308ac06558&t=20221003140123" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;巡儀・貫徹禁網</b><br>&nbsp;&nbsp;
+                聖儀・狼駆憑走の啓途誓使状態の時、感電、超電導、過負荷、原激化、超激化、超開花または雷元素拡散反応を起こすと、<br>
+                周囲のチーム全員（セノ自身を除く）の元素エネルギーを3回復する。<br>
+                この効果は一回の聖儀・狼駆憑走で、最大5回まで発動できる。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%BB%E3%83%8E/::ref/%E5%B9%BD%E5%84%80%E3%83%BB%E5%BE%80%E6%98%94%E6%98%9F%E8%8A%92.png?rev=b5ae5cffbc94005c1df4d43f57da8927&t=20221003140113" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;幽儀・往昔星芒</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%BB%E3%83%8E/::ref/%E7%BE%BD%E5%84%80%E3%83%BB%E8%A3%81%E8%90%BD%E9%87%A3%E8%A1%A1.png?rev=77b2320a5d2bd9e5c7fd41f70a41a5c6&t=20221003140101" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;羽儀・裁落釣衡</b><br>&nbsp;&nbsp;
+                聖儀・狼駆憑走を発動、または固有天賦「落羽の裁決」の「裁定」効果を起こした後、<br>
+                セノは4層の「豺祭」効果を獲得する。通常攻撃が敵に命中すると、「豺祭」効果を1層消費し、渡荒の雷を1本放つ。<br>
+                「豺祭」効果の継続時間は8秒、最大8層まで重ね掛け可能。聖儀・狼駆憑走の啓途誓使状態の解除後、すべての層数がクリアされる。<br>
+                この方法で0.4秒毎に最大1本の渡荒の雷を放てる。<br>
+                固有天賦「落羽の裁決」を解放する必要がある。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                セノは"アタッカー"という立ち位置なので、メインステータスが会心率/ダメージを盛ることができる武器を選びましょう。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                また、アタッカーの中でも"元素熟知依存アタッカー"という、元素熟知の値によって強さが変わるので、メインステータスが会心率/ダメージの武器がない場合は元素熟知も視野に入れましょう。<br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E9%95%B7%E6%9F%84%E6%AD%A6%E5%99%A8/::ref/%E8%B5%A4%E7%A0%82%E3%81%AE%E6%9D%96.png.webp?rev=bd5d81096077d295ccb14e7c76ae5556&t=20220928144504">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E9%95%B7%E6%9F%84%E6%AD%A6%E5%99%A8/::ref/%E8%AD%B7%E6%91%A9%E3%81%AE%E6%9D%96.png.webp?rev=b12c49bd913130c93c68a2ca98722370&t=20210224180220" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E9%95%B7%E6%9F%84%E6%AD%A6%E5%99%A8/::ref/%E5%92%8C%E7%92%9E%E9%B3%B6.jpg?rev=0595811ca6e15418de65d766853cba20&t=20201129214914" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E9%95%B7%E6%9F%84%E6%AD%A6%E5%99%A8/::ref/%E9%A2%A8%E4%BF%A1%E3%81%AE%E7%9F%9B.png.webp?rev=20bb2a0a1473187dae2f2987c4402bee&t=20220930211546" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E9%95%B7%E6%9F%84%E6%AD%A6%E5%99%A8/::ref/%E9%BB%92%E5%B2%A9%E3%81%AE%E7%AA%81%E6%A7%8D.png.webp?rev=8316d5ca41206c1c8d63e218f8fdc349&t=20240103011134" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+
+
+                <tr>
+                    <td style="text-align: center;">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%9B%B7%E9%B3%A5%E3%81%AE%E6%86%90%E3%81%BF.png.webp?rev=b765dce67f459f3fb94fed6ea5f96d80&t=20210119112854" width="100px" height="100px" style="margin: auto;"><p class="rine-relic"><b>雷のような怒り</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        雷元素ダメージ+15%,
+                      <br>
+                      過負荷、超伝導、感電、超電導、超開花反応によるダメージ+40%、超激化反応によるダメージアップ効果+20% <br>
+                      上記元素反応または原激化反応を起こすと元素スキルのクールタイム起こすと、元素スキルのクールタイム-1秒、<br>
+                      0.8秒ごとに最大１回のみ発動可能
+                    </td>
+                    <td style="width: 400px;">4セット効果を駆使して戦うので、雷元素関連反応を行えるパーティ編成を組みましょう。<br></td>
+                    <td style="display: flex; text-align: center;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%BB%E3%83%8E_s.webp?rev=920a1b856b346cd0a5241b3ef630c083&t=20240313095535" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633" width="100px" height="100px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B3%E3%83%AC%E3%82%A4_s.webp?rev=6677acb672e4dfe657d4abfb7b0c0256&t=20240313101327" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%B6%BA%E8%89%AF%E3%80%85_s.webp?rev=c6a550b496638a162f574465c9856241&t=20230526210202" width="100px" height="100px">
+                  　</td>
+                   </tr>
+
+                   <tr>
+                    <td style="text-align: center;">
+                        <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%A4%A2%E5%A2%83%E3%81%AE%E9%89%84%E8%8A%B1_5.png.webp?rev=212ae3cc99c1621153d01ce0a11d831f&t=20220826154359" width="100px" height="100px" style="margin: auto;"><p class="rine-relic"><b>金メッキの夢</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        元素熟知+80,
+                      <br>
+                      元素反応を起こした後の8秒間、装備キャラクターは、チーム内自身以外のキャラクターの元素タイプに応じて強化効果を獲得する。<br>
+                      チームに装備キャラクターと同じ元素タイプのキャラクターが1名存在する毎に攻撃力+14%、異なる元素タイプのキャラクターが1名存在する毎に元素熟知+50。<br>
+                      上記効果は、それぞれ最大でキャラクター3名までカウントされる。この効果は8秒ごとに1回のみ発動可能。装備しているキャラクターが待機している場合にも効果を発動できる。<br>
+                    </td>
+                    <td style="width: 400px;">4セット効果を駆使して戦うので、セノに攻撃力が足らない場合は同じ元素タイプをパーティ編成に、元素熟知が足らない場合は異なる元素タイプをパーティ編成に組みましょう。<br>
+                        また、セノは元素爆発の元素エネルギーが重いので<br>同元素1、異元素2をパーティ編成に組むのもいいでしょう。<br></td>
+                    <td style="display: flex; text-align: center;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%BB%E3%83%8E_s.webp?rev=920a1b856b346cd0a5241b3ef630c083&t=20240313095535" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80_s.webp.webp?rev=ca50d1c01181d34502b4301b329847fd&t=20221102192029" width="100px" height="100px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B2%E8%8F%AB_s.webp?rev=a7666b3075b8d4ed94b458ac9b608f6d&t=20240313101403" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B7%E9%9B%BB%E5%B0%86%E8%BB%8D_s.webp?rev=7c064efdd43177b4266dc3acd84356c0&t=20240313100241" width="100px" height="100px">
+                  　</td>
+                   </tr></table></div><br><br><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

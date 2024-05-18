@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>珊瑚宮心海</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">珊瑚宮心海</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC9YckdIcWN4Uy5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19"></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆5</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">法器</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">水</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">睡竜座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">稲妻</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">三森すずこ</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  
+    
+  <tr>
+    <th style="text-align: center;">基礎HP</th>
+    <td style="text-align: center;">2720</td>
+    <td style="text-align: center;">3619</td>
+    <td style="text-align: center;">5416</td>
+    <td style="text-align: center;">6055</td>
+    <td style="text-align: center;">6966</td>
+    <td style="text-align: center;">7818</td>
+    <td style="text-align: center;">8738</td>
+    <td style="text-align: center;">9377</td>
+    <td style="text-align: center;">10306</td>
+    <td style="text-align: center;">10945</td>
+    <td style="text-align: center;">11885</td>
+    <td style="text-align: center;">12524</td>
+    <td style="text-align: center;">13471</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎攻撃力</th>
+    <td style="text-align: center;">48</td>
+    <td style="text-align: center;">63</td>
+    <td style="text-align: center;">94</td>
+    <td style="text-align: center;">106</td>
+    <td style="text-align: center;">121</td>
+    <td style="text-align: center;">136</td>
+    <td style="text-align: center;">152</td>
+    <td style="text-align: center;">163</td>
+    <td style="text-align: center;">180</td>
+    <td style="text-align: center;">191</td>
+    <td style="text-align: center;">207</td>
+    <td style="text-align: center;">218</td>
+    <td style="text-align: center;">234</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎防御力</th>
+    <td style="text-align: center;">133</td>
+    <td style="text-align: center;">177</td>
+    <td style="text-align: center;">264</td>
+    <td style="text-align: center;">295</td>
+    <td style="text-align: center;">340</td>
+    <td style="text-align: center;">381</td>
+    <td style="text-align: center;">426</td>
+    <td style="text-align: center;">457</td>
+    <td style="text-align: center;">503</td>
+    <td style="text-align: center;">534</td>
+    <td style="text-align: center;">580</td>
+    <td style="text-align: center;">611</td>
+    <td style="text-align: center;">657</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">水元素ダメージ</th>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">7.2%</td>
+    <td style="text-align: center;">7.2%</td>
+    <td style="text-align: center;">14.4%</td>
+    <td style="text-align: center;">14.4%</td>
+    <td style="text-align: center;">14.4%</td>
+    <td style="text-align: center;">14.4%</td>
+    <td style="text-align: center;">21.6%</td>
+    <td style="text-align: center;">21.6%</td>
+    <td style="text-align: center;">28.8%</td>
+    <td style="text-align: center;">28.8%</td>
+    </tr></table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7/::ref/1%E6%B0%B4%E3%81%AE%E5%B8%B8%E5%BD%A2.png?rev=3d5d8ea7a2dc3e97d89f16e581ffd7c1&t=20211019211016" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+        通常攻撃<br>
+        最大3段の連続攻撃を行い、水元素ダメージを与える。<br><br>
+        
+        重撃<br>
+        一定のスタミナを消費し、短い詠唱をした後、敵に水元素範囲ダメージを与える。<br><br>
+        
+        落下攻撃<br>
+        空中から落下し、地面に衝撃を与える。経路上の敵を攻撃し、落下時に水元素範囲ダメージを与える。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">重撃<br>ダメージ</th>
+    <th style="width: 150px;">重撃スタミナ消費</th>
+    <th style="width: 150px;">落下期間の<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+    
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2%</td>
+    <td style="text-align: center;">73.5%</td>
+    <td style="text-align: center;">66.2%</td>
+    <td style="text-align: center;">101.4%</td>
+    <td style="text-align: center;">159%</td>
+    <td rowspan="9" style="text-align: center;">50.0</td>
+    <td style="text-align: center;">61.5%</td>
+    <td style="text-align: center;">123%/153%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">78.6%</td>
+    <td style="text-align: center;">70.8%</td>
+    <td style="text-align: center;">108.5%</td>
+    <td style="text-align: center;">171%</td>
+    <td style="text-align: center;">66.1%</td>
+    <td style="text-align: center;">132%/165%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">85.5%</td>
+    <td style="text-align: center;">76.9%</td>
+    <td style="text-align: center;">117.9%</td>
+    <td style="text-align: center;">185%</td>
+    <td style="text-align: center;">72.7%</td>
+    <td style="text-align: center;">145%/182%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">90.6%</td>
+    <td style="text-align: center;">81.5%</td>
+    <td style="text-align: center;">125.0%</td>
+    <td style="text-align: center;">197%</td>
+    <td style="text-align: center;">77.3%</td>
+    <td style="text-align: center;">155%/193%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">95.7%</td>
+    <td style="text-align: center;">86.2%</td>
+    <td style="text-align: center;">132.0%</td>
+    <td style="text-align: center;">208%</td>
+    <td style="text-align: center;">82.6%</td>
+    <td style="text-align: center;">165%/206%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">102.6%</td>
+    <td style="text-align: center;">92.3%</td>
+    <td style="text-align: center;">141.5%</td>
+    <td style="text-align: center;">222%</td>
+    <td style="text-align: center;">89.9%</td>
+    <td style="text-align: center;">180%/224%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">109.4%</td>
+    <td style="text-align: center;">98.5%</td>
+    <td style="text-align: center;">150.9%</td>
+    <td style="text-align: center;">237%</td>
+    <td style="text-align: center;">97.1%</td>
+    <td style="text-align: center;">194%/243%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">116.2%</td>
+    <td style="text-align: center;">104.6%</td>
+    <td style="text-align: center;">160.3%</td>
+    <td style="text-align: center;">252%</td>
+    <td style="text-align: center;">104.4%</td>
+    <td style="text-align: center;">209%/261%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">123.1%</td>
+    <td style="text-align: center;">110.8%</td>
+    <td style="text-align: center;">169.8%</td>
+    <td style="text-align: center;">267%</td>
+    <td style="text-align: center;">112.3%</td>
+    <td style="text-align: center;">225%/281%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="1000px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7/::ref/2%E6%B5%B7%E6%9C%88%E3%81%AE%E8%AA%93%E3%81%84.png?rev=346bbf8d0cab7d71657eb5e56a32e7d2&t=20211019211028" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+        発動した瞬間、珊瑚宮心海に湿潤状態を付与する。<br><br>
+
+        化海月<br>
+        一定間隔で、周囲の敵に水元素ダメージを与え、周囲のフィールド上のキャラクターのHPを回復する。<br>
+        回復量は珊瑚宮心海のHP上限によって決まる。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 130px;">回復量</th>
+                <th style="width: 130px;">波紋ダメージ</th>
+                <th style="width: 130px;">継続時間</th>
+                <th style="width: 130px;">クールタイム(CT)</th>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Lv.2</td>
+                <td style="text-align: center;">HP上限4.7%+466</td>
+                <td style="text-align: center;">117.4%</td>
+                <td rowspan="9" style="text-align: center;">12.0s</td>
+                <td rowspan="9" style="text-align: center;">20.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.3</td>
+                <td style="text-align: center;"> HP上限5.1%+512</td>
+                <td style="text-align: center;">125.6%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.4</td>
+                <td style="text-align: center;"> HP上限5.5%+561</td>
+                <td style="text-align: center;">136.5%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.5</td>
+                <td style="text-align: center;"> HP上限5.8%+614</td>
+                <td style="text-align: center;">144.7%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.6</td>
+                <td style="text-align: center;"> HP上限6.2%+671</td>
+                <td style="text-align: center;">152.9%</td>
+                
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.7</td>
+                <td style="text-align: center;"> HP上限6.6%+731</td>
+                <td style="text-align: center;">163.8%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.8</td>
+                <td style="text-align: center;"> HP上限7.0%+795</td>
+                <td style="text-align: center;">174.7%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.9</td>
+                <td style="text-align: center;"> HP上限7.5%+862</td>
+                <td style="text-align: center;">185.6%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.10</td>
+                <td style="text-align: center;"> HP上限7.9%+932</td>
+                <td style="text-align: center;">196.5%</td>
+                </tr></table><br><br><br>
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7/::ref/3%E6%B5%B7%E4%BA%BA%E3%81%AE%E7%BE%BD%E8%A1%A3.png?rev=ad6a5ff47495d6bd5320422ec990d40d&t=20211019211042" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+                      <td colspan="16"><br><br>
+                        儀来羽衣<br>
+                        ・珊瑚宮心海の通常攻撃、重撃、及び元素スキルの「化海月」によるダメージをアップさせる。<br>
+                        ダメージアップ量は珊瑚宮心海のHP上限によって決まる。<br>
+                        ・通常攻撃と重撃が敵に命中すると、周囲のチーム全員のHPを回復する。<br>
+                        HP回復量は珊瑚宮心海のHP上限によって決まる。<br>
+                        ・珊瑚宮心海の中断耐性をアップさせ、水面上での移動を可能にする。<br><br>
+                        
+                        効果は珊瑚宮心海が退場する時に解除される。
+                        <br><br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                      </td>
+                    </tr>
+                
+                    <tr>
+                      <th style="width: 150px;">ステータス詳細</th>
+                      <th style="width: 160px;">スキルダメージ</th>
+                      <th style="width: 160px;">通常攻撃<br>ダメージアップ</th>
+                      <th style="width: 160px;">重撃<br>ダメージアップ</th>
+                      <th style="width: 160px;">化海月<br>ダメージアップ</th>
+                      <th style="width: 160px;">命中回復量</th>
+                      <th style="width: 160px;">継続時間</th>
+                      <th style="width: 150px;">クールタイム(CT)</th>
+                      <th style="width: 120px;">元素エネルギー</th>
+                    </tr>
+                
+                    <tr>
+                        <td style="text-align: center;">Lv.2</td>
+                        <td style="text-align: center;"> HP上限11.2%</td>
+                        <td style="text-align: center;"> HP上限5.2%</td>
+                        <td style="text-align: center;"> HP上限7.3%</td>
+                        <td style="text-align: center;"> HP上限7.6%</td>
+                        <td style="text-align: center;"> HP上限0.87%+85</td>
+                        <td rowspan="9" style="text-align: center;">10.0s</td>
+                        <td rowspan="9" style="text-align: center;">18.0s</td>
+                        <td rowspan="9" style="text-align: center;">70</td>
+                        </tr>
+                        <tr>
+                        <td style="text-align: center;">Lv.3</td>
+                        <td style="text-align: center;"> HP上限12.0%</td>
+                        <td style="text-align: center;"> HP上限5.6%</td>
+                        <td style="text-align: center;"> HP上限7.8%</td>
+                        <td style="text-align: center;"> HP上限8.2%</td>
+                        <td style="text-align: center;"> HP上限0.93%+93</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.4</td>
+                        <td style="text-align: center;"> HP上限13.0%</td>
+                        <td style="text-align: center;"> HP上限6.1%</td>
+                        <td style="text-align: center;"> HP上限8.5%</td>
+                        <td style="text-align: center;"> HP上限8.9%</td>
+                        <td style="text-align: center;"> HP上限1.01%+102</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.5</td>
+                        <td style="text-align: center;"> HP上限13.8%</td>
+                        <td style="text-align: center;"> HP上限6.4%</td>
+                        <td style="text-align: center;"> HP上限9.0%</td>
+                        <td style="text-align: center;"> HP上限9.4%</td>
+                        <td style="text-align: center;"> HP上限1.07%+112</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.6</td>
+                        <td style="text-align: center;"> HP上限14.6%</td>
+                        <td style="text-align: center;"> HP上限6.8%</td>
+                        <td style="text-align: center;"> HP上限9.5%</td>
+                        <td style="text-align: center;"> HP上限9.9%</td>
+                        <td style="text-align: center;"> HP上限1.13%+122</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.7</td>
+                        <td style="text-align: center;"> HP上限15.6%</td>
+                        <td style="text-align: center;"> HP上限7.3%</td>
+                        <td style="text-align: center;"> HP上限10.2%</td>
+                        <td style="text-align: center;"> HP上限10.6%</td>
+                        <td style="text-align: center;"> HP上限1.21%+133</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.8</td>
+                        <td style="text-align: center;"> HP上限16.7%</td>
+                        <td style="text-align: center;"> HP上限7.7%</td>
+                        <td style="text-align: center;"> HP上限10.8%</td>
+                        <td style="text-align: center;"> HP上限11.4%</td>
+                        <td style="text-align: center;"> HP上限1.29%+144</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.9</td>
+                        <td style="text-align: center;"> HP上限17.7%</td>
+                        <td style="text-align: center;"> HP上限8.2%</td>
+                        <td style="text-align: center;"> HP上限11.5%</td>
+                        <td style="text-align: center;"> HP上限12.1%</td>
+                        <td style="text-align: center;"> HP上限1.37%+157</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.10</td>
+                        <td style="text-align: center;"> HP上限18.8%</td>
+                        <td style="text-align: center;"> HP上限8.7%</td>
+                        <td style="text-align: center;"> HP上限12.2%</td>
+                        <td style="text-align: center;"> HP上限12.8%</td>
+                        <td style="text-align: center;"> HP上限1.45%+169</td>
+                        </tr></table><br><br><br>
+                
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7/::ref/4%E8%91%9B%E7%B1%A0%E3%81%AE%E4%B8%AD%E3%81%AE%E7%8E%89%E6%AB%9B.png?rev=033dc417057a07a37b6d2ba36fa688ec&t=20211019211057" width="75px" height="75px"><p class="hutaogift">&nbsp;葛籠の中の玉櫛</p></th>
+        <td colspan="16"><br><br><b>&nbsp;葛籠の中の玉櫛</b><br>&nbsp;&nbsp;
+            海人の羽衣発動時、フィールド上に珊瑚宮心海自身の化海月が存在する場合、化海月の継続時間をリセットする。<br><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7/::ref/5%E7%9C%9F%E7%8F%A0%E3%81%AE%E5%BE%A1%E5%94%84.png?rev=eeb9f8aa308930b5c280a456ff475384&t=20211019211114" width="75px" height="75px"><p class="hutaogift">&nbsp;真珠の御唄</p></th>
+        <td colspan="16"><br><br><b>&nbsp;真珠の御唄</b><br>&nbsp;&nbsp;
+            海人の羽衣の儀来羽衣状態にある時、珊瑚宮心海のHP上限を基準にアップする通常攻撃と重撃のダメージがさらに増えるようになる。<br>
+            アップする量は珊瑚宮心海の与える治療効果の15%となる。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7/::ref/6%E6%B5%B7%E7%A5%87%E3%81%AE%E5%A7%AC%E5%90%9B.png?rev=3700b59056ffd7c4187081e6cc895444&t=20211019211126" width="75px" height="75px"><p class="hutaogift">&nbsp;海祇の姬君</p></th>
+        <td colspan="16"><br><br><b>&nbsp;海祇の姬君</b><br>&nbsp;&nbsp;
+            チーム内の自身のキャラクター全員が泳ぎに消費するスタミナ-20%。<br>
+            同じ効果を持つ固有天賦との重ね掛け不可。<br>
+         <br><br><br>
+        </td>
+      </tr>
+    
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7/::ref/7%E4%BD%99%E3%81%99%E3%81%93%E3%81%A8%E3%81%AA%E3%81%8D%E7%AD%96%E7%95%A5.png?rev=f8992339aa68aea3864e38e9f6421bf5&t=20211019211139" width="75px" height="75px"><p class="hutaogift">&nbsp;余すことなき策略</p></th>
+        <td colspan="16"><br><br><b>&nbsp;余すことなき策略</b><br>&nbsp;&nbsp;
+            珊瑚宮心海の与える治療効果+25%、会心率-100%。<br>
+         <br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7/::ref/Constellation_At_Water%2527s_Edge.png?rev=ef9062b29af20e4db474b0e74b7173c8&t=20211027220514" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;水を渓に決する</b><br>&nbsp;&nbsp;
+                海人の羽衣による「儀来羽衣」状態の時、珊瑚宮心海の通常攻撃の最後の一撃は追加で遊魚を一匹召喚し、<br>
+                珊瑚宮心海のHP上限30%分の水元素ダメージを与える。<br>
+                このダメージは通常攻撃ダメージとみなされない。<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7/::ref/Constellation_The_Clouds_Like_Waves_Rippling.png?rev=ecef1eb1c347c2a671329d103a52c8b0&t=20211027220530" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;雲海の波立ち</b><br>&nbsp;&nbsp;
+                珊瑚宮心海のHP上限を基準に、HP50%以下のキャラクターに対し、下記方式による回復量がアップする。<br>
+                ・海月の誓いの化海月：HP上限の4.5% <br>
+                ・海人の羽衣の通常攻撃と重撃：HP上限の0.6%。<br><br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7/::ref/Constellation_The_Moon%252C_A_Ship_O%2527er_the_Seas.png?rev=d12195f7fb0e6846550f41e5fb052fef&t=20211027220546" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;月舟霧渚</b><br>&nbsp;&nbsp;元素スキルの天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7/::ref/Constellation_The_Moon_Overlooks_the_Waters.png?rev=96ff0279244331824e875afbbd6b87f3&t=20211027220559" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;月に摂す千の川</b><br>&nbsp;&nbsp;
+                海人の羽衣による儀来羽衣状態の時、珊瑚宮心海の通常攻撃の攻撃速度+10%。<br>
+                そして通常攻撃が敵に命中すると、元素エネルギーを0.8ポイント回復する。<br>
+                この効果は0.2秒毎に1回のみ発動可能。。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7/::ref/Constellation_All_Streams_Flow_to_the_Sea.png?rev=71dd23b77eaed440d7e5014f9681f678&t=20211027220611" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;百川集海</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7/::ref/Constellation_Sango_Isshin.png?rev=4502951a07e1cff65d832fe8c0a298d4&t=20211027220621" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;珊瑚一心</b><br>&nbsp;&nbsp;
+                海人の羽衣による儀来羽衣状態の時、<br>
+                珊瑚宮心海の通常攻撃または重撃でHP80%以上のキャラクターに治療を行うと、<br>
+                水元素ダメージ+40%、継続時間4秒<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              珊瑚宮心海は"ヒーラー"という立ち位置なので、メインステータスがHP%を盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、ヒーラーの中でも"HP%依存ヒーラー"という、HPを盛ることで回復量が上がるので、治癒時効果を発揮する武器を選びましょう。<br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E4%B8%8D%E6%BB%85%E3%81%AE%E6%9C%88%E8%8F%AF_0.png.webp?rev=1a04f9994fae165e52bf2a644538d798&t=20210922231744">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E9%87%91%E7%8F%80%E3%83%BB%E8%A9%A6%E4%BD%9C.png.webp?rev=842027713720679a5077abfd578cecda&t=20231220010522">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E7%A2%A7%E8%90%BD%E3%81%AE%E7%93%8F.png.webp?rev=bcf7f0fdf50013686f81715ef1b49dfc&t=20230510132113" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E8%AA%93%E3%81%84%E3%81%AE%E6%98%8E%E7%9E%B3.png.webp?rev=c15f6b74a82060d5af5a9929add4f0f6&t=20220217113034" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E7%A5%AD%E7%A4%BC%E3%81%AE%E6%96%AD%E7%89%87.png.webp?rev=98a338538bb29d6626f7745e2d9b49a1&t=20201122010958" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%BD%BC%E6%96%B9%E3%81%AB%E3%81%82%E3%82%8B%E5%B0%91%E5%A5%B3%E3%81%AE%E5%BF%83_5.png.webp?rev=2d54199d2b4e06ba5cba850e79ad5dff&t=20210502011250" width="100px" height="100px"><p class="diluc-relic" style="text-align: center;"><b>愛される少女</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        与える治癒効果+15%,<br>
+                        元素スキルまたは元素爆発を発動した後の10秒間、チーム全員のうける治癒効果+20%	<br>
+                    </td>
+                    <td style="width: 400px;">４セット効果を駆使して戦うので、元素スキルを置いてから戦闘を開始しましょう。<br>また回復が必要なキャラクターとパーティ編成を組みましょう。</td>
+                    <td style="display: flex;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%83%A1%E6%A1%83_s.webp?rev=54adea76042ec54e902879a162ad1398&t=20240313094046">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%A1%8C%E7%A7%8B_s.webp?rev=99947695ce24868c42f736b737db5020&t=20240313094600"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E4%B8%87%E8%91%89_s.webp?rev=7c5488d515d48d9a661f5af5d9a18a33&t=20240313100904">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7_s.webp?rev=3aca58306ed023b42cdc0da8e0abb6c5&t=20240313094612">
+                    </div></td>
+                  </tr>
+  
+                  <tr>
+                    <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E6%B5%B7%E6%9F%93%E3%81%AE%E8%8A%B1_5.png.webp?rev=2b784a4c8f1e35692d9bcd9c40551296&t=20211124231136" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>海染硨磲</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        与える治療効果+15%,
+                      <br>
+                      この聖遺物セットを装備したキャラクターがチーム内のキャラクターに治療を行うと、<br>
+                      治療によるHP回復量(HP上限を超えた回復量も含む)を記録する海染の泡を生成する。 <br>
+                      海染の泡は3秒継続する。継続時間終了時、海染の泡は破裂し、周囲の敵に記録した回復量の90%分のダメージを与える<br>
+                      (このダメージは感電や超電導などの元素反応と同じように計算されるが、元素熟知、キャラクターLv、または元素反応のダメージアップ効果の影響は受けない)。<br>
+                       海染の泡は3.5秒毎に1回のみ生成可能。海染の泡が記録できる回復量は最大30000までとなり、HP上限超過分の回復量を含む。 <br>
+                      チーム内で、海染の泡は同時に最大1つまで存在できる。この聖遺物セットを装備したキャラクターは待機中でも、この効果を発動できる。<br>
+                    </td>
+                    <td style="width: 400px;">４セット効果を駆使して戦うので元素スキルを置いてから戦闘を開始したり、<br>
+                        元素爆発時、追加ダメージや元素反応を起こせるパーティ編成を組みましょう。</td>
+                    <td style="display: flex;"><div width="50px" height="50px"><br><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B7%E9%9B%BB%E5%B0%86%E8%BB%8D_s.webp?rev=7c064efdd43177b4266dc3acd84356c0&t=20240313100241">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80_s.webp.webp?rev=ca50d1c01181d34502b4301b329847fd&t=20221102192029"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7_s.webp?rev=3aca58306ed023b42cdc0da8e0abb6c5&t=20240313094612">
+                    </div></td>
+                  </tr>
+                  
+                  <tr>
+                    <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%9C%A8%E3%82%8A%E3%81%97%E6%97%A5%E3%81%AE%E9%81%BA%E5%A4%B1%E3%81%AE%E5%A5%91.png.webp?rev=9054d143cd402be9c41607c19bc25264&t=20231224180540" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>在りし日の歌</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                     与える治療効果+15%,
+                      <br>
+                      装備者がチームにいるキャラクターのHPを回復した時、継続時間6秒の「渇望」効果が発動し、HP回復量（HP上限を超えた回復量を含む）を記録する。<br>
+                      継続時間終了時、「渇望」効果は「かの時の潮」効果に変化する。「かの時の潮」効果発動中、フィールド上にいるチーム内の自身キャラクターの<br>
+                      通常攻撃、重撃、落下攻撃、元素スキル、元素爆発が敵に命中すると、「渇望」効果で記録した回復量の8%分を基に与えるダメージをアップする。<br>
+                      「かの時の潮」効果は、5回発動、または10秒後にクリアされる。1回の「渇望」効果が記録する回復量は最大15000ポイントまで。<br>
+                      なお、「渇望」は同時に最大1つまで存在でき、複数の装備者の与える回復量を記録可能。装備したキャラクターが待機している場合にも効果を発動できる。<br>
+                    </td>
+                    <td style="width: 400px;">４セット効果を駆使して味方の与ダメージを上昇させるので元素スキルを置いてから戦闘を開始しましょう。<br></td>
+                    <td style="display: flex;"><div width="50px" height="50px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B7%E3%83%A7%E3%82%A6_s.webp?rev=9096515fcfbf33749e65d58723ca19c6&t=20240313100821">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%96%91%E9%9B%B2_s.webp?rev=f4adef3c02ca9dd1a267d0e0e5f5d0ba&t=20240202002805"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%82%A1%E3%83%AB%E3%82%B6%E3%83%B3_s.webp?rev=c5703a902230cbd1b69adfd0961a1247&t=20221207151743">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7_s.webp?rev=3aca58306ed023b42cdc0da8e0abb6c5&t=20240313094612">
+                    </div></td>
+                  </tr></table></div><br><br><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

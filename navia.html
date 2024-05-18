@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ナヴィア</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">ナヴィア</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC9yRUNqVk1SRS5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19"></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆5</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">両手剣</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">岩</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">野薔薇座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">フォンテーヌ</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">豊崎愛生</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  
+    
+  <tr>
+    <th style="text-align: center;">基礎HP</th>
+    <td style="text-align: center;">2555</td>
+    <td style="text-align: center;">3399</td>
+    <td style="text-align: center;">5086</td>
+    <td style="text-align: center;">5686</td>
+    <td style="text-align: center;">6542</td>
+    <td style="text-align: center;">7341</td>
+    <td style="text-align: center;">8206</td>
+    <td style="text-align: center;">8806</td>
+    <td style="text-align: center;">9679</td>
+    <td style="text-align: center;">10278</td>
+    <td style="text-align: center;">11161</td>
+    <td style="text-align: center;">11761</td>
+    <td style="text-align: center;">12650</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎攻撃力</th>
+    <td style="text-align: center;">71</td>
+    <td style="text-align: center;">94</td>
+    <td style="text-align: center;">141</td>
+    <td style="text-align: center;">158</td>
+    <td style="text-align: center;">181</td>
+    <td style="text-align: center;">204</td>
+    <td style="text-align: center;">228</td>
+    <td style="text-align: center;">245</td>
+    <td style="text-align: center;">269</td>
+    <td style="text-align: center;">285</td>
+    <td style="text-align: center;">310</td>
+    <td style="text-align: center;">327</td>
+    <td style="text-align: center;">352</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎防御力</th>
+    <td style="text-align: center;">160</td>
+    <td style="text-align: center;">213</td>
+    <td style="text-align: center;">319</td>
+    <td style="text-align: center;">356</td>
+    <td style="text-align: center;">410</td>
+    <td style="text-align: center;">460</td>
+    <td style="text-align: center;">515</td>
+    <td style="text-align: center;">552</td>
+    <td style="text-align: center;">607</td>
+    <td style="text-align: center;">644</td>
+    <td style="text-align: center;">700</td>
+    <td style="text-align: center;">737</td>
+    <td style="text-align: center;">793</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">会心ダメージ</th>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">9.6%</td>
+    <td style="text-align: center;">9.6%</td>
+    <td style="text-align: center;">19.2%</td>
+    <td style="text-align: center;">19.2%</td>
+    <td style="text-align: center;">19.2%</td>
+    <td style="text-align: center;">19.2%</td>
+    <td style="text-align: center;">28.8%</td>
+    <td style="text-align: center;">28.8%</td>
+    <td style="text-align: center;">38.4%</td>
+    <td style="text-align: center;">38.4%</td>
+    </tr></table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E3%81%94%E3%82%81%E3%82%93%E3%81%82%E3%81%9D%E3%81%B0%E3%81%9B.webp?rev=289d1f9f8fbebc1e14095b1916538e7b&t=20231220225036" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+        通常攻撃<br>
+        最大5段の連続攻撃を行う。<br><br>
+        
+        重撃<br>
+        持続的にスタミナを消費し、素早い連続攻撃を発動する。<br>
+        重撃の終了時、更に強力な攻撃を1回放つ。<br><br>
+        
+        落下攻撃<br>
+        空中から落下し、路上の敵を攻撃し、落下時に範囲ダメージを与える。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 80px;">重撃<br>ダメージ</th>
+    <th style="width: 80px;">重撃終了<br>ダメージ</th>
+    <th style="width: 150px;">重撃スタミナ消費</th>
+    <th style="width: 150px;">最大継続時間</th>
+    <th style="width: 150px;">落下期間<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+    
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2</td>
+    <td style="text-align: center;">101.1%</td>
+    <td style="text-align: center;">93.5%</td>
+    <td style="text-align: center;">37.7%×3</td>
+    <td style="text-align: center;">144.3%</td>
+    <td style="text-align: center;">67.6%</td>
+    <td style="text-align: center;">122%</td>
+    <td rowspan="9" style="text-align: center;">毎秒40.0</td>
+    <td rowspan="9" style="text-align: center;">5.0s</td>
+    <td style="text-align: center;">80.7%</td>
+    <td style="text-align: center;">161%/201%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">108.7%</td>
+    <td style="text-align: center;">100.6%</td>
+    <td style="text-align: center;">40.6%×3</td>
+    <td style="text-align: center;">155.2%</td>
+    <td style="text-align: center;">72.7%</td>
+    <td style="text-align: center;">132%</td>
+    <td style="text-align: center;">86.7%</td>
+    <td style="text-align: center;">173%/217%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">119.6%</td>
+    <td style="text-align: center;">110.6%</td>
+    <td style="text-align: center;">44.6%×3</td>
+    <td style="text-align: center;">170.7%</td>
+    <td style="text-align: center;">80.0%</td>
+    <td style="text-align: center;">145%</td>
+    <td style="text-align: center;">95.4%</td>
+    <td style="text-align: center;">191%/238%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">127.2%</td>
+    <td style="text-align: center;">117.7%</td>
+    <td style="text-align: center;">47.5%×3</td>
+    <td style="text-align: center;">181.5%</td>
+    <td style="text-align: center;">85.1%</td>
+    <td style="text-align: center;">154%</td>
+    <td style="text-align: center;">101.5%</td>
+    <td style="text-align: center;">203%/253%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">135.9%</td>
+    <td style="text-align: center;">125.7%</td>
+    <td style="text-align: center;">50.7%×3</td>
+    <td style="text-align: center;">193.9%</td>
+    <td style="text-align: center;">90.9%</td>
+    <td style="text-align: center;">164%</td>
+    <td style="text-align: center;">108.4%</td>
+    <td style="text-align: center;">216%/270%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">147.9%</td>
+    <td style="text-align: center;">136.8%</td>
+    <td style="text-align: center;">55.2%×3</td>
+    <td style="text-align: center;">211.0%</td>
+    <td style="text-align: center;">98.9%</td>
+    <td style="text-align: center;">179%</td>
+    <td style="text-align: center;">118.0%</td>
+    <td style="text-align: center;">235%/294%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">159.9%</td>
+    <td style="text-align: center;">147.9%</td>
+    <td style="text-align: center;">59.6%×3</td>
+    <td style="text-align: center;">228.1%</td>
+    <td style="text-align: center;">106.9%</td>
+    <td style="text-align: center;">122%</td>
+    <td style="text-align: center;">127.5%</td>
+    <td style="text-align: center;">255%/318%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">171.8%</td>
+    <td style="text-align: center;">158.9%</td>
+    <td style="text-align: center;">64.1%×3</td>
+    <td style="text-align: center;">245.1%</td>
+    <td style="text-align: center;">114.9%</td>
+    <td style="text-align: center;">208%</td>
+    <td style="text-align: center;">137.0%</td>
+    <td style="text-align: center;">274%/342%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">184.9%</td>
+    <td style="text-align: center;">171.0%</td>
+    <td style="text-align: center;">69.0%×3</td>
+    <td style="text-align: center;">263.8%</td>
+    <td style="text-align: center;">123.6%</td>
+    <td style="text-align: center;">224%</td>
+    <td style="text-align: center;">147.4%</td>
+    <td style="text-align: center;">294%/368%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="1000px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E3%82%BB%E3%83%AC%E3%83%A2%E3%83%8B%E3%82%A2%E3%83%AB%E3%83%BB%E3%82%AF%E3%83%AA%E3%82%B9%E3%82%BF%E3%83%AB%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88.webp?rev=eeaacd023dbdd51da88fc7f83bd6562f&t=20231220225059" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+        チームにいるキャラクターが結晶反応による結晶の欠片を獲得した時、ナヴィアは「裂晶の欠片」を1個獲得する。<br>
+        「裂晶の欠片」は最大6個まで所持可能。獲得するたびに、所持している「裂晶の欠片」の継続時間を更新する。<br>
+        スキル発動時、すべての「裂晶の欠片」を消費して「ロースラ晶弾」を多数発射して、命中した敵に岩元素ダメージを与える。<br>
+        0/1/2/3個以上の「裂晶の欠片」を消費した時、発射される「ロースラ晶弾」はそれぞれ5/7/9/11発となる。<br>
+        「ロースラ晶弾」が同じ敵に命中するほど、その敵に与えるダメージがアップする。<br>
+        11発の「ロースラ晶弾」がすべて命中した時、本来の200％分のダメージを与える。<br><br>
+        
+        また、消費した「裂晶の欠片」が3個を超えている場合、超過した「裂晶の欠片」1個につき、該当の攻撃によるダメージがさらに＋15％アップする。<br><br>
+        
+        長押し<br>
+        長押しすると照準モードに入り、一定範囲内にある結晶反応で生じた結晶の欠片を持続的に吸収する。長押し終了時、一回押しの時と同じ「ロースラ晶弾」を発射する。<br><br>
+        
+        初期使用可能回数2回。<br><br>
+        
+        アルケー: ウーシア<br>
+        ナヴィアがガンブレラで射撃を行う時、迸発の刃を召喚し、ウーシアを帯びた岩元素ダメージを与える。一定時間ごとに発動が可能。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 200px;">ロースラ晶弾<br>基礎ダメージ</th>
+                <th style="width: 200px;">迸発の刃<br>ダメージ</th>
+                <th style="width: 200px;">裂晶の欠片<br>継続時間</th>
+                <th style="width: 200px;">迸発の刃<br>間隔</th>
+                <th style="width: 100px;">クールタイム</th>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Lv.2</td>
+                <td style="text-align: center;">424.4%</td>
+                <td style="text-align: center;">38.7%</td>
+                <td rowspan="9" style="text-align: center;">300.0s</td>
+                <td rowspan="9" style="text-align: center;">7.0s</td>
+                <td rowspan="9" style="text-align: center;">9.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.3</td>
+                <td style="text-align: center;">454.0%</td>
+                <td style="text-align: center;">41.4%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.4</td>
+                <td style="text-align: center;">493.5%</td>
+                <td style="text-align: center;">45.0%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.5</td>
+                <td style="text-align: center;">523.1%</td>
+                <td style="text-align: center;">47.7%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.6</td>
+                <td style="text-align: center;">552.7%</td>
+                <td style="text-align: center;">50.4%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.7</td>
+                <td style="text-align: center;">592.2%</td>
+                <td style="text-align: center;">54.0%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.8</td>
+                <td style="text-align: center;">631.7%</td>
+                <td style="text-align: center;">57.6%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.9</td>
+                <td style="text-align: center;">671.2%</td>
+                <td style="text-align: center;">61.2%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.10</td>
+                <td style="text-align: center;">710.6%</td>
+                <td style="text-align: center;">64.8%</td>
+                </tr></table><br><br><br>
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E6%99%B4%E5%A4%A9%E3%82%92%E8%A1%9D%E3%81%8F%E9%9C%B0%E5%BC%BE%E3%81%AE%E3%82%B5%E3%83%AB%E3%83%BC%E3%83%88.webp?rev=95128f2b0f486db6de4f4284218e68b6&t=20231220225124" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+                      <td colspan="16"><br><br>
+                        「金薔薇の礼砲」を召喚し、前方の敵を激しく砲撃して岩元素範囲ダメージを与える。<br>
+                        さらにその後、一定時間継続する「火力支援」を行い、一定時間ごとに近くの敵に岩元素ダメージを与える。<br>
+                        砲撃が敵に命中した時、ナヴィアは「裂晶の欠片」を1個獲得する。この効果は2.4秒毎に1回のみ発動可能
+                        <br><br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                      </td>
+                    </tr>
+                
+                    <tr>
+                      <th style="width: 150px;">ステータス詳細</th>
+                      <th style="width: 160px;">スキルダメージ</th>
+                      <th style="width: 150px;">火力支援<br>ダメージ</th>
+                      <th style="width: 150px;">火力支援<br>継続時間</th>
+                      <th style="width: 150px;">クールタイム(CT)</th>
+                      <th style="width: 120px;">元素エネルギー</th>
+                    </tr>
+                
+                    <tr>
+                        <td style="text-align: center;">Lv.2</td>
+                        <td style="text-align: center;">80.8%</td>
+                        <td style="text-align: center;">46.4%</td>
+                        <td rowspan="9" style="text-align: center;">12.0s</td>
+                        <td rowspan="9" style="text-align: center;">15.0s</td>
+                        <td rowspan="9" style="text-align: center;">60</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.3</td>
+                        <td style="text-align: center;">86.5%</td>
+                        <td style="text-align: center;">49.6%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.4</td>
+                        <td style="text-align: center;">94.0%</td>
+                        <td style="text-align: center;">53.9%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.5</td>
+                        <td style="text-align: center;">99.6%</td>
+                        <td style="text-align: center;">57.2%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.6</td>
+                        <td style="text-align: center;">105.3%</td>
+                        <td style="text-align: center;">60.4%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.7</td>
+                        <td style="text-align: center;">112.8%</td>
+                        <td style="text-align: center;">64.7%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.8</td>
+                        <td style="text-align: center;">120.3%</td>
+                        <td style="text-align: center;">69.0%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.9</td>
+                        <td style="text-align: center;">127.8%</td>
+                        <td style="text-align: center;">73.4%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.10</td>
+                        <td style="text-align: center;">135.4%</td>
+                        <td style="text-align: center;">77.7%</td>
+                        </tr>
+                        
+                        </table><br><br><br>
+                
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E6%9C%AA%E7%9F%A5%E3%81%AE%E6%B5%81%E9%80%9A%E3%83%AB%E3%83%BC%E3%83%88.webp?rev=159724bd7761850d91766940486b4958&t=20231220225137" width="75px" height="75px"><p class="hutaogift">&nbsp;未知の流通ルート</p></th>
+        <td colspan="16"><br><br><b>&nbsp;未知の流通ルート</b><br>&nbsp;&nbsp;
+          元素スキルを発動した後の4秒間、ナヴィアの通常攻撃、重撃、落下攻撃ダメージは、<br>
+          元素付与によって他の元素に変化しない岩元素ダメージへと変わる。この時、ナヴィアの通常攻撃、重撃、落下攻撃ダメージ+40%。<br><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E7%9B%B8%E4%BA%92%E9%80%A3%E6%90%BA%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF.webp?rev=3d93aaf4db9e603fafeb365e69e9a372&t=20231220225151" width="75px" height="75px"><p class="hutaogift">&nbsp;相互連携ネットワーク</p></th>
+        <td colspan="16"><br><br><b>&nbsp;相互連携ネットワーク</b><br>&nbsp;&nbsp;
+          最大ダメージアップ効果のある浪追いを発動した後の10秒間、下記の効果が発動される。<br>
+          ・通常攻撃と重撃の攻撃速度+15%、攻撃ダメージ+15%。<br>
+          ・重撃に必要な時間が大幅に減少する。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E3%81%8D%E3%82%81%E7%B4%B0%E3%82%84%E3%81%8B%E3%81%AA%E3%83%93%E3%82%B8%E3%83%8D%E3%82%B9.webp?rev=93453b22af5f38972bdc2ce24f8e4724&t=20231220225207" width="75px" height="75px"><p class="hutaogift">&nbsp;きめ細やかなビジネス</p></th>
+        <td colspan="16"><br><br><b>&nbsp;きめ細やかなビジネス</b><br>&nbsp;&nbsp;
+            フォンテーヌで20時間かかる探索任務を完了した時、獲得する報酬＋25％<br>
+         <br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E6%B7%91%E5%A5%B3%E3%81%AE%E8%B7%9D%E9%9B%A2%E6%84%9F.webp?rev=41dda7542643e898f147836f2c349c09&t=20231220225222" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;淑女の距離感</b><br>&nbsp;&nbsp;
+              セレモニアル・クリスタルショット発動時、「裂晶の欠片」を1個消費するごとに、<br>
+              ナヴィアは元素エネルギーを3ポイント回復し、晴天を衝く霰弾のサルートのクールタイム-1秒。<br>
+              この方法による元素エネルギー回復は最大9ポイント、短縮できるクールタイムは最大3秒まで。<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E5%8F%B8%E4%BB%A4%E5%A1%94%E3%81%AE%E8%BF%BD%E6%92%83.webp?rev=c46d021fc8ca361b702f607f1125619e&t=20231220225241" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;司令塔の追撃</b><br>&nbsp;&nbsp;
+              元素スキル発動時、「裂晶の欠片」を1個消費するごとに、<br>
+              今回の元素スキルの会心率+12%。この方法でアップできる会心率は最大36%まで。<br>
+              また、元素スキルが敵に命中した時、命中した敵の付近に元素爆発の「火力支援」を1回行う。<br>
+              元素スキル1回につき、発動する「火力支援」は1回まで。この方法によって発動した「火力支援」のダメージは元素爆発ダメージと見なされる。<br><br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E5%AE%9F%E6%A5%AD%E5%AE%B6%E3%81%AE%E5%A4%A7%E5%B1%80%E8%A6%B3.webp?rev=64a656c88e9182cf2d0c1d22a2f5bf3d&t=20231220225255" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;実業家の大局観</b><br>&nbsp;&nbsp;元素スキルの天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E8%AA%93%E7%B4%84%E8%80%85%E3%81%AE%E9%9D%9E%E5%A6%A5%E5%8D%94.webp?rev=308bac66c6871d6b6c33af9d01451db9&t=20231220225307" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;誓約者の非妥協</b><br>&nbsp;&nbsp;
+              元素爆発が敵に命中した時、その敵の岩元素耐性-20%、継続時間8秒。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E4%BA%A4%E6%B8%89%E4%BA%BA%E3%81%AE%E6%AF%85%E7%84%B6%E3%81%9F%E3%82%8B%E5%8D%94%E8%AD%B0.webp?rev=6899802a02d23eee29d1c788bafe9a52&t=20231220225323" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;交渉人の毅然たる協議</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E6%A3%98%E8%96%94%E8%96%87%E4%BC%9A%E9%95%B7%E3%81%AE%E5%8A%9F%E5%A6%99%E3%81%AA%E3%82%8B%E6%89%8B%E8%85%95.webp?rev=ada57f8f3d1efe48ddfc723475ebae25&t=20231220225337" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;棘薔薇会長の功妙なる手腕</b><br>&nbsp;&nbsp;
+              元素スキル発動時、消費した「裂晶の欠片」が3個を超えている場合、<br>
+              超えた分1個につき、今回の元素スキルの会心ダメージ+45%。さらに、超えた分の「裂晶の欠片」は発動後に返還される。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ナヴィアは"アタッカー"という立ち位置なので、メインステータスが攻撃力、会心率/ダメージを盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E8%A3%81%E6%96%AD.webp?rev=224146fd24ebbfee1e9fb137e20ca950&t=20231220212704">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E8%B5%A4%E8%A7%92%E7%9F%B3%E5%A1%B5%E6%BB%85%E7%A0%95.jpg?rev=5169a0c0dfa6405bb70e442e2151d6f8&t=20211214203816" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E7%84%A1%E5%B7%A5%E3%81%AE%E5%89%A3.png.webp?rev=02928859b2c0f3853837b95fdd6dbe4c&t=20210208031301" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E7%8B%BC%E3%81%AE%E6%9C%AB%E8%B7%AF.png.webp?rev=5a49995febdedcb5a6ec1b10d245b840&t=20201122011303" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E6%83%A1%E7%8E%8B%E4%B8%B8.png.webp?rev=1f7ab76c21de605f63f7567dc879a5ad&t=20240103220212" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E8%9E%AD%E9%BE%8D%E3%81%AE%E5%89%A3.png.webp?rev=cc81e293a9911f31b0e7c2011fe5e469&t=20210512075755" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+
+
+                <tr>
+                  <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E7%84%A1%E7%A7%81%E3%81%AE%E8%8A%B1%E9%A3%BE%E3%82%8A.png.webp?rev=3e971c5b810eba17b594f56740f506c8&t=20231224180505" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>残響の森で囁かれる夜話</b></p></td>
+                  <td style="width: 600px;"><b>セット効果</b><br>
+                      攻撃力+18%,
+                    <br>
+                    元素スキルを発動した後の10秒間、岩元素ダメージ+20%。結晶反応で生成されたシールド状態にある時、<br>
+                    上記強化効果の効果量+150%。追加された効果量は、結晶反応で生成されたシールド状態の効果が終了した1秒後にクリアされる<br>
+                  </td>
+                  <td style="width: 400px;">４セット効果を駆使して戦うので、<br>結晶を控えから生成できる岩元素キャラクターを一人パーティ編成に組みましょう。</td>
+                  <td style="display: flex;"><div width="50px" height="50px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2_s.webp?rev=1ff65dbf694ab2ebae19e0433d4d2de5&t=20231220212842">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B7%E9%9B%BB%E5%B0%86%E8%BB%8D_s.webp?rev=7c064efdd43177b4266dc3acd84356c0&t=20240313100241"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%AB_s.webp?rev=37b4558a7d7fa66327eacceeefc221aa&t=20240313100127">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%8D%83%E7%B9%94_s.webp?rev=85afa4c76f4aee5229d30cde14359128&t=20240314020837">
+                  </div></td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E6%82%A0%E4%B9%85%E3%81%AE%E7%9B%A4%E5%B2%A9_5.jpg?rev=443cdd129b53ef3258ffaaa6a7ff1633&t=20210212232535" width="100px" height="100px" style="margin: auto;">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%89%A3%E9%97%98%E5%A3%AB%E3%81%AE%E6%9C%AA%E7%B7%B4.png.webp?rev=aaea050c5b83c3ef7fbecf51a42a2f95&t=20210109182605" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>悠久の磐岩、剣闘士のフィナーレ</b></p></td>
+                <td style="width: 600px;"><b>セット効果</b><br>
+                  岩元素ダメージ+15%,
+                  <br>
+                  攻撃力+18%
+                </td>
+                <td style="width: 400px;">それぞれの２セット効果を駆使して、攻撃力も岩元素ダメージも上げるので自由なパーティを作ることができます。</td>
+                <td style="display: flex;"><div width="50px" height="50px">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2_s.webp?rev=1ff65dbf694ab2ebae19e0433d4d2de5&t=20231220212842">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926"><br>
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%8D%83%E7%B9%94_s.webp?rev=85afa4c76f4aee5229d30cde14359128&t=20240314020837">
+                </div></td>
+              </tr></table></div><br><br><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

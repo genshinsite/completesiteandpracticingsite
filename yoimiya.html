@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>宵宮</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">宵宮</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC9TUWZISFhLQi5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19" alt=""></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆5</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">弓</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">炎</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">琉金座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">稲妻</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">植田佳奈</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  <tr style="text-align: center;">
+    <th>基礎HP</th>
+    <td>2,053</td>
+    <td>2,731</td>
+    <td>4,086</td>
+    <td>4,568</td>
+    <td>5,256</td>
+    <td>5,899</td>
+    <td>6,593</td>
+    <td>7,076</td>
+    <td>7,777</td>
+    <td>8,259</td>
+    <td>8,968</td>
+    <td>9,450</td>
+    <td>10,164</td>
+  </tr>
+  <tr style="text-align: center;">
+    <th>基礎攻撃力</th>
+    <td>65</td>
+    <td>87</td>
+    <td>130</td>
+    <td>145</td>
+    <td>167</td>
+    <td>187</td>
+    <td>209</td>
+    <td>225</td>
+    <td>247</td>
+    <td>263</td>
+    <td>285</td>
+    <td>300</td>
+    <td>323</td>
+  </tr>
+  <tr style="text-align: center;">
+    <th>基礎防御力</th>
+    <td>124</td>
+    <td>165</td>
+    <td>247</td>
+    <td>276</td>
+    <td>318</td>
+    <td>357</td>
+    <td>399</td>
+    <td>428</td>
+    <td>470</td>
+    <td>500</td>
+    <td>542</td>
+    <td>572</td>
+    <td>615</td>
+  </tr>
+  <tr style="text-align: center;">
+    <th>会心率</th>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>4.8%</td>
+    <td>4.8%</td>
+    <td>9.6%</td>
+    <td>9.6%</td>
+    <td>9.6%</td>
+    <td>9.6%</td>
+    <td>14.4%</td>
+    <td>14.4%</td>
+    <td>19.2%</td>
+    <td>19.2%</td>
+  </tr></table></div><br><br><br>
+
+  <div class="gifttitle">
+    <h2 id="gift" style="text-align: left;">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+
+  <table border="1" style="margin: auto;" class="gifttable">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%AE%B5%E5%AE%AE/::ref/Talent_Firework_Flare-Up.png?rev=19343af63b6da51f4a41740b91623d61&t=20210803052414">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br><b>&nbsp;通常攻撃</b><br>&nbsp;&nbsp;最大5段の連続攻撃を行い、炎元素範囲ダメージを与える。<br><br>
+      <b>&nbsp;重撃</b><br>
+      &nbsp;&nbsp;ダメージがより高く、より精確な狙い撃ちを発動する。<br>
+      照準時、炎が矢先に集まり、攻撃と共に発射される。チャージの時間により、異なる効果を発動する。<br>
+      ・1段チャージ：烈火が集まった矢を放ち、炎元素ダメージを与える。<br>
+      ・2段チャージ：チャージの時間により最大3枚の焔硝の矢を生成し、発射とともに放たれる。<br>
+      焔硝の矢は近くの敵を追跡し、命中時に炎元素ダメージを与える。<br><br><br><b>&nbsp;落下攻撃</b><br>
+    &nbsp;&nbsp;空中から落下し地面に衝撃を与える(AOE)※経路上の敵を攻撃する<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 80px;">5段目</th>
+    <th style="width: 150px;">重撃ダメージ</th>
+    <th style="width: 150px;">２段重撃<br>ダメージ</th>
+    <th style="width: 150px;">焔硝の矢<br>ダメージ</th>
+    <th style="width: 150px;">落下期間<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下<br>攻撃ダメージ</th>
+  </tr>
+  <tr>
+    <th style="text-align: center;">Lv.2</th>
+    <td style="text-align: center;">38.1%×2</td>
+    <td style="text-align: center;">73.0%</td>
+    <td style="text-align: center;">94.9%</td>
+    <td style="text-align: center;">49.6%×2</td>
+    <td style="text-align: center;">113.1%</td>
+    <td style="text-align: center;">47.4%</td>
+    <td style="text-align: center;">133%</td>
+    <td style="text-align: right;">18%</td>
+    <td style="text-align: right;">61.5%</td>
+    <td style="text-align: right;">123%/153%</td>
+  </tr>
+  <tr>
+    <th style="text-align: center;">Lv.3</th>
+    <td style="text-align: center;">40.5%×2</td>
+    <td style="text-align: center;">77.7%</td>
+    <td style="text-align: center;">101.0%</td>
+    <td style="text-align: center;">52.8%×2</td>
+    <td style="text-align: center;">120.3%</td>
+    <td style="text-align: center;">51.0%</td>
+    <td style="text-align: center;">143%</td>
+    <td style="text-align: right;">19%</td>
+    <td style="text-align: right;">66.1%</td>
+    <td style="text-align: right;">132%/165%</td>
+  </tr>
+  <tr>
+    <th style="text-align: center;">Lv.4</th>
+    <td style="text-align: center;">43.7%×2</td>
+    <td style="text-align: center;">83.9%</td>
+    <td style="text-align: center;">109.1%</td>
+    <td style="text-align: center;">57.0%×2</td>
+    <td style="text-align: center;">129.9%</td>
+    <td style="text-align: center;">56.1%</td>
+    <td style="text-align: center;">155%</td>
+    <td style="text-align: right;">21%</td>
+    <td style="text-align: right;">72.7%</td>
+    <td style="text-align: right;">145%/182%</td>
+  </tr>
+  <tr>
+    <th style="text-align: center;">Lv.5</th>
+    <td style="text-align: center;">46.2%×2</td>
+    <td style="text-align: center;">88.6%</td>
+    <td style="text-align: center;">115.2%</td>
+    <td style="text-align: center;">60.1%×2</td>
+    <td style="text-align: center;">137.1%</td>
+    <td style="text-align: center;">59.7%</td>
+    <td style="text-align: center;">164%</td>
+    <td style="text-align: right;">22%</td>
+    <td style="text-align: right;">77.3%</td>
+    <td style="text-align: right;">155%/193%</td>
+  </tr>
+  
+  <tr>
+    <th style="text-align: center;">Lv.6</th>
+    <td style="text-align: center;">49.0%×2</td>
+    <td style="text-align: center;">94.0%</td>
+    <td style="text-align: center;">122.2%</td>
+    <td style="text-align: center;">63.8%×2</td>
+    <td style="text-align: center;">145.6%</td>
+    <td style="text-align: center;">63.8%</td>
+    <td style="text-align: center;">174%</td>
+    <td style="text-align: right;">23%</td>
+    <td style="text-align: right;">82.6%</td>
+    <td style="text-align: right;">165%/206%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.7</th>
+    <td style="text-align: center;">52.7%×2</td>
+    <td style="text-align: center;">101.0%</td>
+    <td style="text-align: center;">131.3%</td>
+    <td style="text-align: center;">68.6%×2</td>
+    <td style="text-align: center;">156.4%</td>
+    <td style="text-align: center;">69.4%</td>
+    <td style="text-align: center;">186%</td>
+    <td style="text-align: right;">25%</td>
+    <td style="text-align: right;">89.9%</td>
+    <td style="text-align: right;">180%/224%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.8</th>
+    <td style="text-align: center;">56.3%×2</td>
+    <td style="text-align: center;">108.0%</td>
+    <td style="text-align: center;">140.4%</td>
+    <td style="text-align: center;">73.3%×2</td>
+    <td style="text-align: center;">167.2%</td>
+    <td style="text-align: center;">75.0%</td>
+    <td style="text-align: center;">198%</td>
+    <td style="text-align: right;">26%</td>
+    <td style="text-align: right;">97.1%</td>
+    <td style="text-align: right;">194%/243%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.9</th>
+    <td style="text-align: center;">59.9%×2</td>
+    <td style="text-align: center;">115.0%</td>
+    <td style="text-align: center;">149.5%</td>
+    <td style="text-align: center;">78.1%×2</td>
+    <td style="text-align: center;">178.0%</td>
+    <td style="text-align: center;">80.6%</td>
+    <td style="text-align: center;">211%</td>
+    <td style="text-align: right;">28%</td>
+    <td style="text-align: right;">104.4%</td>
+    <td style="text-align: right;">209%/281%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.10</th>
+    <td style="text-align: center;">63.6%×2</td>
+    <td style="text-align: center;">122.0%</td>
+    <td style="text-align: center;">158.6%</td>
+    <td style="text-align: center;">82.8%×2</td>
+    <td style="text-align: center;">188.9%</td>
+    <td style="text-align: center;">86.7%</td>
+    <td style="text-align: center;">223%</td>
+    <td style="text-align: right;">30%</td>
+    <td style="text-align: right;">112.3%</td>
+    <td style="text-align: right;">225%/281%</td>
+  </tr></table><br><br><br>
+
+  <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%AE%B5%E5%AE%AE/::ref/Talent_Niwabi_Fire-Dance.png?rev=70931194e6d10df2260716f3f91874dd&t=20210803052427"><p class="skill">&nbsp;元素スキル</p></th>
+    <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;<b>庭火の焔硝</b>
+        継続時間内、宵宮の通常攻撃で発射した矢は熾焔の矢となる。<br>
+        炎元素ダメージに変化し、通常攻撃のダメージがアップする。<br>
+        継続時間中、「通常攻撃・打ち上げ花火」の2段チャージで焔硝の矢を生成できなくなる。<br>
+        
+        この効果は宵宮が退場する時に解除される。<br><br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 150px;">熾焔の矢ダメージ</th>
+    <th style="width: 100px;">継続時間</th>
+    <th style="width: 150px;">クールタイム(CT)</th>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.2</th>
+    <td style="text-align: center;">140.2%通常攻撃ダメージ</td>
+    <td rowspan="10" style="text-align: center;">10.0s</td>
+    <td rowspan="10" style="text-align: center;">18.0s</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.3</th>
+    <td style="text-align: center;">142.4%通常攻撃ダメージ</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.4</th>
+    <td style="text-align: center;">145.4%通常攻撃ダメージ</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.5</th>
+    <td style="text-align: center;">147.7%通常攻撃ダメージ</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.6</th>
+    <td style="text-align: center;">149.9%通常攻撃ダメージ</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.7</th>
+    <td style="text-align: center;">152.9%通常攻撃ダメージ</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.8</th>
+    <td style="text-align: center;">155.8%通常攻撃ダメージ</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.9</th>
+    <td style="text-align: center;">158.8%通常攻撃ダメージ</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.10</th>
+    <td style="text-align: center;">161.7%通常攻撃ダメージ</td>
+  </tr></table><br><br><br>
+
+  <table border="1" style="margin: auto;">
+    <tr>
+      <th>&nbsp;</th>
+      <th colspan="16" style="text-align: center;">天賦詳細</th>
+    </tr>
+    <tr>
+      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%AE%B5%E5%AE%AE/::ref/Talent_Ryuukin_Saxifrage.png?rev=aa7731388de04191d43bfbf13583c7d9&t=20210803052440"><p class="altimate">&nbsp;元素爆発</p></th>
+      <td colspan="16"><br><br><b>&nbsp;元素爆発</b><br>&nbsp;&nbsp;
+        前方に驚きに満ちた火の矢を発射する。<br>
+        炎元素範囲ダメージを与え、命中した敵の中の1体に「琉金の炎」を付着する。<br><br>
+        
+        琉金の炎<br>
+        チーム全員（宵宮自身を除く）の通常攻撃、重撃、落下攻撃、元素スキル、元素爆発が<br>
+        琉金の炎状態の敵に命中すると、爆発が起き炎元素範囲ダメージを与える。<br><br>
+        
+        琉金の炎状態の敵が継続時間中に倒れると、琉金の炎は近くの敵1体に移り、継続時間も継承される。<br>
+        琉金の炎による爆発は2秒毎に1回のみ発生可能。<br>
+        宵宮が戦闘不能になると、自身が発動した琉金の炎の効果はクリアされる。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br>
+      </td>
+    </tr>
+
+    <tr>
+      <th style="width: 200px;">ステータス詳細</th>
+      <th style="width: 150px;">スキルダメージ</th>
+      <th style="width: 200px;">琉金の炎爆発ダメージ</th>
+      <th style="width: 150px;">継続時間</th>
+      <th style="width: 150px;">クールタイム(CT)</th>
+      <th style="width: 150px;">元素エネルギー</th>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.2</th>
+      <td style="text-align: center;">127%</td>
+      <td style="text-align: center;">122%</td>
+      <td rowspan="10" style="text-align: center;">10.0s</td>
+      <td rowspan="10" style="text-align: center;">15.0s</td>
+      <td rowspan="10" style="text-align: center;">60</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.3</th>
+      <td style="text-align: center;">137%</td>
+      <td style="text-align: center;">131%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.4</th>
+      <td style="text-align: center;">146%</td>
+      <td style="text-align: center;">140%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.5</th>
+      <td style="text-align: center;">169%</td>
+      <td style="text-align: center;">162%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.6</th>
+      <td style="text-align: center;">178%</td>
+      <td style="text-align: center;">171%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.7</th>
+      <td style="text-align: center;">191%</td>
+      <td style="text-align: center;">183%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.8</th>
+      <td style="text-align: center;">204%</td>
+      <td style="text-align: center;">195%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.9</th>
+      <td style="text-align: center;">216%</td>
+      <td style="text-align: center;">207%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.10</th>
+      <td style="text-align: center;">229%</td>
+      <td style="text-align: center;">220%</td>
+    </tr></table><br><br><br>
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%AE%B5%E5%AE%AE/::ref/Talent_Tricks_of_the_Trouble-Maker.png?rev=717f88057707952d846a15cb9d7c43e8&t=20210803052454"><p class="yoimiyagift">&nbsp;袖火百景図</p></th>
+        <td colspan="16"><br><br><b>&nbsp;袖火百景図</b><br>&nbsp;&nbsp;焔硝の庭火舞いの効果継続時間中、宵宮の通常攻撃が命中すると、<br>炎元素ダメージ+2%、継続時間3秒、最大10重まで。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%AE%B5%E5%AE%AE/::ref/Talent_Summer_Night%2527s_Dawn.png?rev=8e32fca14bcf7b70765309ed4f22728c&t=20210803052506"><p class="yoimiyagift">&nbsp;炎昼の風物詩</p></th>
+        <td colspan="16"><br><br><b>&nbsp;炎昼の風物詩</b><br>&nbsp;&nbsp;琉金の雲間草を発動した後の15秒内、周囲のチーム全員（宵宮自身を除く）の攻撃力+10%。<br>
+            また、宵宮が琉金の雲間草を発動時に固有天賦「袖火百景図」の重ねた数をもとに、<br>1重ごとにさらに攻撃力を1%アップする。<br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%AE%B5%E5%AE%AE/::ref/Talent_Blazing_Match_0.png?rev=e1689b5a76911111d1f13ff015dd0149&t=20210803052519"><p class="yoimiyagift">&nbsp;炎色の配合法</p></th>
+        <td colspan="16"><br><br><b>&nbsp;炎色の配合法</b><br>&nbsp;&nbsp;建材、置物、景観などの調度品を製作する時、100%の確率で一部の材料が返還される。<br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%AE%B5%E5%AE%AE/::ref/Constellation_Agate_Ryuukin.png?rev=85c41e9074289971e81672f7360852a0&t=20210803052825" width="100px" height="100px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;紅玉の琉金</b><br>&nbsp;&nbsp;琉金の雲間草の琉金の炎の継続時間+4秒。<br>
+                また、宵宮自身が発動した琉金の炎の影響を受けた敵が継続時間内に倒されると、宵宮の攻撃力+20%、継続時間20秒。<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%AE%B5%E5%AE%AE/::ref/Constellation_A_Procession_of_Bonfires.png?rev=0a2862bc8da25af2d0187ac1762670ff&t=20210803052837" width="100px" height="100px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;万燈の火</b><br>&nbsp;&nbsp;宵宮の炎元素ダメージで会心が発生した後の6秒間、宵宮の炎元素ダメージ+25%。<br>
+                宵宮が待機している場合にも効果を発動できる。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;1.5秒に一回のみ発動可能<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%AE%B5%E5%AE%AE/::ref/Constellation_Trickster%2527s_Flare.png?rev=138765a43811b0557021e8f4e0bb53cf&t=20210803052848" width="100px" height="100px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;鼠花火の手品</b><br>&nbsp;&nbsp;元素スキルのLv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%AE%B5%E5%AE%AE/::ref/Constellation_Pyrotechnic_Professional.png?rev=d1abac48a794ce54f53166f37ad533ed&t=20210803052904" width="100px" height="100px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;花火職人の心得</b><br>&nbsp;&nbsp;宵宮自身が発動した琉金の炎が爆発を起こすと、焔硝の庭火舞いのクールタイム-1.2秒。。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%AE%B5%E5%AE%AE/::ref/Constellation_A_Summer_Festival%2527s_Eve.png?rev=0ad8f407a16e8e67162981f3333416d0&t=20210803052915" width="100px" height="100px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;真夏の宵祭り錦絵</b><br>&nbsp;&nbsp;元素爆発のLv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%AE%B5%E5%AE%AE/::ref/Constellation_Naganohara_Meteor_Swarm.png?rev=428ef48e30e05dfd909d871358409978&t=20210803052926" width="100px" height="100px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;長野原龍勢流星群</b><br>&nbsp;&nbsp;焔硝の庭火舞いの継続時間中、宵宮自身の通常攻撃は50%の確率で熾焔の矢を1本追加で発射し、<br>本来の60%分のダメージを与える。<br>
+                このダメージは通常攻撃とみなされる。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              宵宮は"アタッカー"という立ち位置なので、メインステータスが攻撃力、会心率/ダメージを盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、アタッカーの中でも"通常攻撃アタッカー"なので攻撃力と元素ダメージを多く盛りましょう<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E9%A3%9B%E9%9B%B7%E3%81%AE%E9%B3%B4%E5%BC%A6.png.webp?rev=30a9ffd6f05f7b8ea8d72df6c806dd55&t=20210811010931">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/screenshot.1605901433.jpg?rev=7dd8dea7d5d2892c3139228c9a25f71a&t=20201121044802" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E5%86%AC%E6%A5%B5%E3%81%AE%E7%99%BD%E6%98%9F.png.webp?rev=bf1acb4cf133170f7d903bcf765d5d65&t=20211013211107" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E8%8B%A5%E6%B0%B4.png.webp?rev=efe5be854633e9a96a6cf9729b6f449d&t=20220531135245" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E5%BC%93%E8%94%B5.png.webp?rev=5cc2ca750788c17d10eabf5a0fa7d452&t=20231201183500">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E7%A0%B4%E9%AD%94%E3%81%AE%E5%BC%93.jpg?rev=58b921e5b6b2156e203984f7a385bbd3&t=20210730100846" >
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E7%8B%A9%E4%BA%BA%E3%81%AE%E9%81%93.JPG?rev=14bb2d704e333327057642f79d3ebbfa&t=20220826205139" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E7%A5%AD%E7%A4%BC%E3%81%AE%E5%BC%93.png.webp?rev=5bead5dd99f4d2462d6cc173a3afef37&t=20231201183519" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E8%90%BD%E9%9C%9E.png.webp?rev=98074f90e2c75d31f6d5862136f6f851&t=20220601003122" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/screenshot.1605901596.jpg?rev=75f46a564009490740f75cba97cdd7d9&t=20201121044821" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>A</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E6%BE%B9%E6%9C%88%E3%83%BB%E8%A9%A6%E4%BD%9C.png.webp?rev=7d770406200e928d712ec2e4622d2bed&t=20210806184255" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E7%8E%8B%E3%81%AE%E8%BF%91%E4%BE%8D.png.webp?rev=138aa0971efcacc10cce393cfebd64b4&t=20220830221942" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/screenshot.1605900711.jpg?rev=8bd95db7f41f43c2a46df299ce77f3f9&t=20201121043504" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/screenshot.1605900705.jpg?rev=b1abd71824633a4a69ab3e75be845348&t=20201121043534" alt="">
+              </div></th>
+            </tr>
+            <th>AA</th>
+            <th><div class="image-container">
+              <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/wikiamos.png.webp?rev=a82b00b8e51053e209f0e0561c657667&t=20210113042739" alt="">
+              <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/IMG_20230821_104502.png.webp?rev=e57db4d3df0ceb68ec81ad3299c03c19&t=20230821104625" alt="">
+            </div></th>
+          </tr></table><br><br><br>
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%AD%94%E5%A5%B3%E3%81%AE%E7%82%8E%E3%81%AE%E8%8A%B1_5.png.webp?rev=5cce7c8f5ff07e9d1d890a4799d8f7b3&t=20210119123131https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%AD%94%E5%A5%B3%E3%81%AE%E7%82%8E%E3%81%AE%E8%8A%B1_5.png.webp?rev=5cce7c8f5ff07e9d1d890a4799d8f7b3&t=20210119123131" width="100px" height="100px"><p class="diluc-relic" style="text-align: center;"><b>炎の魔女</b></p></td>
+                  <td style="width: 600px;"><b>セット効果</b><br>
+                    炎元素ダメージ+15%,<br>
+                    過負荷、燃焼、烈開花反応によるダメージ+40%、蒸発、溶解反応による加算効果+15%、元素スキルを発動した10秒間、2セット効果+50%、最大3重まで
+                  </td>
+                  <td style="width: 400px;">４セット効果を駆使して戦うので元素反応を活かせるパーティ編成を作りましょう。</td>
+                  <td style="display: flex;"><div width="50px" height="50px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%AE%B5%E5%AE%AE_s.webp?rev=533c401be07b6a6ccdf59284deffe733&t=20240313094100">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A_s.webp?rev=61ba9a628f26920cdb5f0e822b23af9d&t=20240313095131">
+                  </div></td>
+                </tr>
+
+                <tr>
+                  <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%AD%82%E9%A6%99%E3%81%AE%E8%8A%B1_5.png.webp?rev=12b93e485e516a1f9269340a85f557fe&t=20220330144919" width="100px" height="100px" style="margin: auto;"><p class="klee-relic"><b>来歆の余響</b></p></td>
+                  <td style="width: 600px;"><b>セット効果</b><br>
+                    攻撃力+18%,
+                    <br>
+                    通常攻撃が敵に命中すると、36%の確率で「幽谷祭祀」が発動する。「幽谷祭祀」：通常攻撃ダメージが攻撃力70%分アップする。この効果は通常攻撃でダメージを与えた0.05秒後にクリアされる。通常攻撃後に「幽谷祭祀」が発動しなかった場合、次回の発動確率+20%。発動判定は0.2秒毎に1回のみ行われる。
+                  </td>
+                  <td style="width: 400px;">４セット効果を駆使して戦うので通常攻撃を強化しつつ、キャラクター切替をしなくても宵宮を守れる<br>パーティ編成を組みましょう<br></td>
+                  <td style="display: flex;"><div width="50px" height="50px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%AE%B5%E5%AE%AE_s.webp?rev=533c401be07b6a6ccdf59284deffe733&t=20240313094100">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B2%E8%8F%AB_s.webp?rev=a7666b3075b8d4ed94b458ac9b608f6d&t=20240313101403"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B8%E3%83%B3_s.webp?rev=463f219382bcc5f49497e2a6c0b9f4f5&t=20240313100829">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%8D%BE%E9%9B%A2_s.webp?rev=ab44a61a332174925072c553966eb001&t=20240313101433">
+                  </div></td>
+                </tr>
+
+                <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E8%A6%87%E7%B5%86%E3%81%AE%E8%8A%B1_5.png.webp?rev=98590d1100d744eb1ecd5f5179069b5a&t=20210723131444" width="100px" height="100px" style="margin: auto;"><p class="klee-relic"><b>追憶のしめ縄</b></p></td>
+                <td style="width: 600px;"><b>セット効果</b><br>
+                  攻撃力+18%,
+                  <br>
+                  元素スキルを発動した時、キャラクターの元素エネルギーが15以上の場合、 元素エネルギーを15消費し、次の10秒間通常攻撃、重撃、落下攻撃ダメージ+50%。 継続時間中この効果は再発動できない。
+                </td>
+                <td style="width: 400px;">４セット効果を駆使して戦いますが元素爆発エネルギーを消費するので通常攻撃を主体としたパーティ編成、<br>または追加ダメージを与えるキャラ入れてを総合ダメージを伸ばせるパーティ編成を行いましょう。<br></td>
+                <td style="display: flex;"><div width="50px" height="50px">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%AE%B5%E5%AE%AE_s.webp?rev=533c401be07b6a6ccdf59284deffe733&t=20240313094100">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633"><br>
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%B6%BA%E8%89%AF%E3%80%85_s.webp?rev=c6a550b496638a162f574465c9856241&t=20230526210202">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%AB_s.webp?rev=37b4558a7d7fa66327eacceeefc221aa&t=20240313100127">
+                </div></td>
+              </tr>
+
+                <td style="text-align: center;">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%AD%94%E5%A5%B3%E3%81%AE%E7%82%8E%E3%81%AE%E8%8A%B1_5.png.webp?rev=5cce7c8f5ff07e9d1d890a4799d8f7b3&t=20210119123131https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%AD%94%E5%A5%B3%E3%81%AE%E7%82%8E%E3%81%AE%E8%8A%B1_5.png.webp?rev=5cce7c8f5ff07e9d1d890a4799d8f7b3&t=20210119123131" width="100px" height="100px" style="margin: auto;">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%89%A3%E9%97%98%E5%A3%AB%E3%81%AE%E6%9C%AA%E7%B7%B4.png.webp?rev=aaea050c5b83c3ef7fbecf51a42a2f95&t=20210109182605" width="100px" height="100px" style="margin: auto;"><p class="klee-relic"><b>炎の魔女、剣闘士のフィナーレ</b></p></td>
+                <td style="width: 600px;"><b>セット効果</b><br>
+                  炎元素ダメージ+15%,
+                  <br>
+                  攻撃力+18%
+                </td>
+                <td style="width: 400px;">それぞれの２セット効果を駆使して、攻撃力も炎元素ダメージも上げるので自由なパーティを作ることができます。</td>
+                <td style="display: flex;"><div width="50px" height="50px">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%AE%B5%E5%AE%AE_s.webp?rev=533c401be07b6a6ccdf59284deffe733&t=20240313094100">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E4%B8%87%E8%91%89_s.webp?rev=7c5488d515d48d9a661f5af5d9a18a33&t=20240313100904"><br>
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%A1%8C%E7%A7%8B_s.webp?rev=99947695ce24868c42f736b737db5020&t=20240313094600">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926">
+                </div></td>
+              </tr></table><br><br><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

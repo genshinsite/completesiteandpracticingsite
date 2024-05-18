@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>召使</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    <a href="#combo">・コンボ</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">召使</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC81c2tQbkF5aC5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19"></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆5</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">槍</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">炎</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">浄煉の炎座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">スネージナヤ</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">森なな子</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  
+    
+    <tr>
+        <th style="text-align: center;">基礎HP</th>
+        <td style="text-align: center;">2646</td>
+        <td style="text-align: center;">3521</td>
+        <td style="text-align: center;">5268</td>
+        <td style="text-align: center;">5889</td>
+        <td style="text-align: center;">6776</td>
+        <td style="text-align: center;">7604</td>
+        <td style="text-align: center;">8500</td>
+        <td style="text-align: center;">9121</td>
+        <td style="text-align: center;">10025</td>
+        <td style="text-align: center;">10647</td>
+        <td style="text-align: center;">11561</td>
+        <td style="text-align: center;">12182</td>
+        <td style="text-align: center;">13103</td>
+        </tr>
+        
+        <tr>
+        <th style="text-align: center;">基礎攻撃力</th>
+        <td style="text-align: center;">69</td>
+        <td style="text-align: center;">92</td>
+        <td style="text-align: center;">137</td>
+        <td style="text-align: center;">153</td>
+        <td style="text-align: center;">176</td>
+        <td style="text-align: center;">198</td>
+        <td style="text-align: center;">221</td>
+        <td style="text-align: center;">238</td>
+        <td style="text-align: center;">261</td>
+        <td style="text-align: center;">278</td>
+        <td style="text-align: center;">302</td>
+        <td style="text-align: center;">318</td>
+        <td style="text-align: center;">342</td>
+        </tr>
+        
+        <tr>
+        <th style="text-align: center;">基礎防御力</th>
+        <td style="text-align: center;">154</td>
+        <td style="text-align: center;">205</td>
+        <td style="text-align: center;">307</td>
+        <td style="text-align: center;">344</td>
+        <td style="text-align: center;">395</td>
+        <td style="text-align: center;">444</td>
+        <td style="text-align: center;">496</td>
+        <td style="text-align: center;">532</td>
+        <td style="text-align: center;">585</td>
+        <td style="text-align: center;">621</td>
+        <td style="text-align: center;">675</td>
+        <td style="text-align: center;">711</td>
+        <td style="text-align: center;">765</td>
+        </tr>
+        
+        <tr>
+        <th style="text-align: center;">会心ダメージ</th>
+        <td style="text-align: center;">—</td>
+        <td style="text-align: center;">—</td>
+        <td style="text-align: center;">—</td>
+        <td style="text-align: center;">9.6%</td>
+        <td style="text-align: center;">9.6%</td>
+        <td style="text-align: center;">19.2%</td>
+        <td style="text-align: center;">19.2%</td>
+        <td style="text-align: center;">19.2%</td>
+        <td style="text-align: center;">19.2%</td>
+        <td style="text-align: center;">28.8%</td>
+        <td style="text-align: center;">28.8%</td>
+        <td style="text-align: center;">38.4%</td>
+        <td style="text-align: center;">38.4%</td>
+        </tr></table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E6%96%AC%E9%A6%96%E3%81%B8%E3%81%AE%E6%8B%9B%E5%BE%85%E7%8A%B6.webp?rev=5e33786bb1f9501ba96bfa0b0000c346&t=20240428222351" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+        通常攻撃<br>
+        最大6段の連続攻撃を行う。<br><br>
+        
+        重撃<br>
+        一定のスタミナを消費して近くの敵に突進し、斬撃を1回仕掛ける。<br>
+        長押しを続けると、アルレッキーノはスタミナを消費する代わりに、最大5秒間続く高速移動を行う。<br><br>
+        
+        落下攻撃<br>
+        空中から落下し地面に衝撃を与える。経路上に敵を攻撃し、落下時に範囲ダメージを与える。<br><br>
+        
+        赤死の宴<br>
+        アルレッキーノの「命の契約」がHP上限の30%以上の時、アルレッキーノは赤死の宴状態に入る。<br>
+        通常攻撃、重撃、落下攻撃ダメージは、元素付与によって他の元素に変化しない炎元素ダメージへと変わる。<br>
+        赤死の宴状態時、アルレッキーノの通常攻撃が敵に命中すると、その攻撃によるダメージはアルレッキーノの攻撃力×その時の「命の契約」パーセンテージ×一定の割合をもとにアップする。<br>
+        同時に、その時点における「命の契約」を7.5%消費する。これによって「命の契約」を消費するのは0.03秒に1回のみ。<br>
+        この方法で「命の契約」を消費するとき、元素スキル「万象、灰に帰す」のクールタイム-0.8秒。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">赤死の宴<br>ダメージアップ率</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 80px;">5段目</th>
+    <th style="width: 80px;">6段目</th>
+    <th style="width: 80px;">重撃<br>ダメージ</th>
+    <th style="width: 150px;">重撃スタミナ消費</th>
+    <th style="width: 150px;">高速スタミナ消費</th>
+    <th style="width: 150px;">落下期間<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+    
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2%</td>
+    <td style="text-align: center;">130.20%</td>
+    <td style="text-align: center;">51.4%</td>
+    <td style="text-align: center;">56.3%</td>
+    <td style="text-align: center;">70.7%</td>
+    <td style="text-align: center;">40.2%+40.2%</td>
+    <td style="text-align: center;">75.7%</td>
+    <td style="text-align: center;">92.3%</td>
+    <td style="text-align: center;">98.2%</td>
+    <td rowspan="9" style="text-align: center;">25.0</td>
+    <td rowspan="9" style="text-align: center;">40.0/s</td>
+    <td style="text-align: center;">69.1%</td>
+    <td style="text-align: center;">138.2%/172.7%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">140.00%</td>
+    <td style="text-align: center;">55.2%</td>
+    <td style="text-align: center;">60.6%</td>
+    <td style="text-align: center;">76.0%</td>
+    <td style="text-align: center;">43.2%+43.2%</td>
+    <td style="text-align: center;">81.4%</td>
+    <td style="text-align: center;">99.3%</td>
+    <td style="text-align: center;">105.6%</td>
+    <td style="text-align: center;">74.3%</td>
+    <td style="text-align: center;">148.6%/185.7%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">154.00%</td>
+    <td style="text-align: center;">60.8%</td>
+    <td style="text-align: center;">66.6%</td>
+    <td style="text-align: center;">83.6%</td>
+    <td style="text-align: center;">47.5%+47.5%</td>
+    <td style="text-align: center;">89.5%</td>
+    <td style="text-align: center;">109.2%</td>
+    <td style="text-align: center;">116.2%</td>
+    <td style="text-align: center;">81.8%</td>
+    <td style="text-align: center;">163.5%/204.2%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">163.80%</td>
+    <td style="text-align: center;">64.6%</td>
+    <td style="text-align: center;">70.9%</td>
+    <td style="text-align: center;">89.0%</td>
+    <td style="text-align: center;">50.5%+50.5%</td>
+    <td style="text-align: center;">95.2%</td>
+    <td style="text-align: center;">116.2%</td>
+    <td style="text-align: center;">123.6%</td>
+    <td style="text-align: center;">87.0%</td>
+    <td style="text-align: center;">173.9%/217.2%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">175.00%</td>
+    <td style="text-align: center;">69.0%</td>
+    <td style="text-align: center;">75.7%</td>
+    <td style="text-align: center;">95.0%</td>
+    <td style="text-align: center;">54.0%+54.0%</td>
+    <td style="text-align: center;">101.7%</td>
+    <td style="text-align: center;">124.1%</td>
+    <td style="text-align: center;">132.0%</td>
+    <td style="text-align: center;">92.9%</td>
+    <td style="text-align: center;">185.8%/232.1%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">190.40%</td>
+    <td style="text-align: center;">75.1%</td>
+    <td style="text-align: center;">82.4%</td>
+    <td style="text-align: center;">103.4%</td>
+    <td style="text-align: center;">58.7%+58.7%</td>
+    <td style="text-align: center;">110.7%</td>
+    <td style="text-align: center;">135.0%</td>
+    <td style="text-align: center;">143.6%</td>
+    <td style="text-align: center;">101.1%</td>
+    <td style="text-align: center;">202.2%/252.5%></td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">205.80%</td>
+    <td style="text-align: center;">81.2%</td>
+    <td style="text-align: center;">89.1%</td>
+    <td style="text-align: center;">111.8%</td>
+    <td style="text-align: center;">63.5%+63.5%</td>
+    <td style="text-align: center;">119.6%</td>
+    <td style="text-align: center;">145.9%</td>
+    <td style="text-align: center;">155.2%</td>
+    <td style="text-align: center;">109.3%</td>
+    <td style="text-align: center;">218.5%/272.9%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">221.20%</td>
+    <td style="text-align: center;">87.3%</td>
+    <td style="text-align: center;">95.7%</td>
+    <td style="text-align: center;">120.1%</td>
+    <td style="text-align: center;">68.2%+68.2%</td>
+    <td style="text-align: center;">128.6%</td>
+    <td style="text-align: center;">156.9%</td>
+    <td style="text-align: center;">166.8%</td>
+    <td style="text-align: center;">117.5%</td>
+    <td style="text-align: center;">234.9%/293.4%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">238.00%</td>
+    <td style="text-align: center;">100.5%</td>
+    <td style="text-align: center;">110.3%</td>
+    <td style="text-align: center;">138.4%</td>
+    <td style="text-align: center;">78.6%+78.6%</td>
+    <td style="text-align: center;">148.1%</td>
+    <td style="text-align: center;">180.7%</td>
+    <td style="text-align: center;">192.2%</td>
+    <td style="text-align: center;">126.4%</td>
+    <td style="text-align: center;">252.7%/315.6%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="1000px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E4%B8%87%E8%B1%A1%E3%80%81%E7%81%B0%E3%81%AB%E5%B8%B0%E3%81%99.webp?rev=f30b80004c862cfbda339704298e5f7a&t=20240428222407" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+        近くの複数の敵に炎元素ダメージを与え、そのうち1名の敵には猛進の斬撃を繰り出し、炎元素範囲ダメージを与える。<br>
+        この攻撃が命中した敵には血償の勅令が付与される。<br><br>
+        
+        血償の勅令<br>
+        ・血償の勅令は30秒間持続し、5秒毎に敵に炎元素ダメージを1回与える（最大2回まで）。これによるダメージは元素スキルダメージと見なされる。<br>
+        ・アルレッキーノが重撃、または元素爆発「昇りゆく凶月」を行う時、周囲の血償の勅令は回収され、1つ回収するたびにアルレッキーノにHP上限65%の「命の契約」を付与する。<br>
+        ・元素スキルを発動した後の35秒間、血償の勅令でアルレッキーノに付与できる「命の契約」はHP上限の145%まで。<br>
+         継続期間中に再び元素スキルを発動すると、継続時間と、血償の勅令で付与可能な「命の契約」の上限が再計算される。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 160px;">棘ダメージ</th>
+                <th style="width: 160px;">突進斬撃<br>ダメージ</th>
+                <th style="width: 160px;">血償の勅令<br>ダメージ</th>
+                <th style="width: 100px;">クールタイム(CT)</th>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Lv.2</td>
+                <td style="text-align: center;">16.0%</td>
+                <td style="text-align: center;">143.6%</td>
+                <td style="text-align: center;">34.2%</td>
+                <td rowspan="9" style="text-align: center;">30.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.3</td>
+                <td style="text-align: center;">17.1%</td>
+                <td style="text-align: center;">153.6%</td>
+                <td style="text-align: center;">36.6%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.4</td>
+                <td style="text-align: center;">18.6%</td>
+                <td style="text-align: center;">167.0%</td>
+                <td style="text-align: center;">39.8%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.5</td>
+                <td style="text-align: center;">19.7%</td>
+                <td style="text-align: center;">177.0%</td>
+                <td style="text-align: center;">42.1%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.6</td>
+                <td style="text-align: center;">20.8%</td>
+                <td style="text-align: center;">187.0%</td>
+                <td style="text-align: center;">44.5%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.7</td>
+                <td style="text-align: center;">22.3%</td>
+                <td style="text-align: center;">200.3%</td>
+                <td style="text-align: center;">47.7%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.8</td>
+                <td style="text-align: center;">23.7%</td>
+                <td style="text-align: center;">213.7%</td>
+                <td style="text-align: center;">50.9%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.9</td>
+                <td style="text-align: center;">25.2%</td>
+                <td style="text-align: center;">227.1%</td>
+                <td style="text-align: center;">54.1%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.10</td>
+                <td style="text-align: center;">26.7%</td>
+                <td style="text-align: center;">240.4%</td>
+                <td style="text-align: center;">57.2%</td>
+                </tr></table><br><br><br>
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E6%98%87%E3%82%8A%E3%82%86%E3%81%8F%E5%87%B6%E6%9C%88.webp?rev=5669f2fceb19b0dc464be73a0faa80d2&t=20240428222439" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+                      <td colspan="16"><br><br>
+                        血償の勅令を回収して炎元素範囲ダメージを与える。<br>
+                        その後、元素スキル「万象、灰に帰す」のクールタイムをリセットし、アルレッキーノ自身の「命の契約」の数値と攻撃力を基に、自身のHPを回復する。<br><br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                      </td>
+                    </tr>
+                
+                    <tr>
+                      <th rowspan="2" style="width: 150px;">ステータス詳細</th>
+                      <th rowspan="2" style="width: 160px;">スキルダメージ</th>
+                      <th colspan="2" style="width: 160px;">回復量</th>
+                      <th rowspan="2" style="width: 150px;">クールタイム(CT)</th>
+                      <th rowspan="2" style="width: 120px;">元素エネルギー</th>
+                    </tr>
+                    <tr>
+                        <th style="text-align: center; width: 100px;">命の契約</th>
+                        <th style="text-align: center; width: 100px;">攻撃力</th>
+                    </tr>
+                
+                    <tr>
+                        <td style="text-align: center;">Lv.2</td>
+                        <td style="text-align: center;">398.2%</td>
+                        <td rowspan="9" style="text-align: center;">150.0%</td>
+                        <td rowspan="9" style="text-align: center;">150.0%</td>
+                        <td rowspan="9" style="text-align: center;">15.0s</td>
+                        <td rowspan="9" style="text-align: center;">60</td>
+                        </tr>
+                        <tr>
+                        <td style="text-align: center;">Lv.3</td>
+                        <td style="text-align: center;">426.0%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.4</td>
+                        <td style="text-align: center;">463.0%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.5</td>
+                        <td style="text-align: center;">490.8%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.6</td>
+                        <td style="text-align: center;">518.6%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.7</td>
+                        <td style="text-align: center;">555.6%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.8</td>
+                        <td style="text-align: center;">592.6%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.9</td>
+                        <td style="text-align: center;">629.7%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.10</td>
+                        <td style="text-align: center;">666.7%</td>
+                        </tr>
+                        
+                        </table><br><br><br>
+                
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E5%84%9F%E3%81%88%E3%82%8B%E3%82%82%E3%81%AE%E3%81%AF%E8%8B%A6%E7%97%9B%E3%81%AE%E3%81%BF.webp?rev=463399210711e1a9ca15cad51e8f75c8&t=20240428222537" width="75px" height="75px"><p class="hutaogift">&nbsp;大洞弥羅尊法</p></th>
+        <td colspan="16"><br><br><b>&nbsp;償えるものは苦痛のみ</b><br>&nbsp;&nbsp;
+          血償の勅令は以下の特性を持つ。<br>
+          ・アルレッキーノ自身が付与した血償の勅令を持つ敵が倒された時、アルレッキーノにHP上限の130%分の「命の契約」を付与する。<br>
+          ・付与から5秒後、血償の勅令・結に強化され、回収時、アルレッキーノに130%分の「命の契約」を付与する。<br>
+          この方法で「命の契約」を付与する時も、付与された「命の契約」の数値の上限が万象、灰に帰すの本来の制限を超えることはない。<br><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E8%AD%B7%E3%82%8C%E3%82%8B%E3%82%82%E3%81%AE%E3%81%AF%E5%8A%9B%E3%81%AE%E3%81%BF.webp?rev=c758fa6eb73cf5c644dfabb94eabff19&t=20240428222552" width="75px" height="75px"><p class="hutaogift">&nbsp;縛霊通真法印</p></th>
+        <td colspan="16"><br><br><b>&nbsp;護れるものは力のみ</b><br>&nbsp;&nbsp;
+          アルレッキーノの攻撃力が1000を超えている時、1000を超えた分の数値100についき、アルレッキーノの全元素耐性と物理耐性が+1%。<br>
+          この方法でアップできるアルレッキーノの全元素耐性と物理耐性は最大20%まで。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E6%82%9F%E3%82%8C%E3%82%8B%E3%82%82%E3%81%AE%E3%81%AF%E5%87%B6%E6%9C%88%E3%81%AE%E3%81%BF.webp?rev=06c91a3d8fe6ce3354772c0a24ad1de8&t=20240428222604" width="75px" height="75px"><p class="hutaogift">&nbsp;悟れるものは凶月のみ</p></th>
+        <td colspan="16"><br><br><b>&nbsp;悟れるものは凶月のみ</b><br>&nbsp;&nbsp;
+          戦闘状態にある時、アルレッキーノの炎元素ダメージ+40%。また、昇りゆく凶月による治療しか受けられない。<br>
+         <br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E3%80%8C%E3%81%82%E3%82%89%E3%82%86%E3%82%8B%E6%80%A8%E3%81%BF%E3%81%A8%E5%80%9F%E3%82%8A%E3%81%AF%20%E7%A7%81%E3%81%8C%E6%B8%85%E7%AE%97%E3%81%97%E3%82%88%E3%81%86%E2%80%A6%E3%80%8D.webp?rev=9093a03594ad2c72be1d506bda2f01b2&t=20240428222617" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;「あらゆる怨みと借りは 私が清算しよう…」</b><br>&nbsp;&nbsp;
+              赤死の宴ダメージアップ率の効果量+100%。また、赤死の宴状態で通常攻撃または重撃を行う時、アルレッキーノの中断耐性がアップする。<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E3%80%8C%E3%81%82%E3%82%89%E3%82%86%E3%82%8B%E8%A4%92%E8%B3%9E%E3%81%A8%E7%BD%B0%E3%81%AF%20%E3%81%93%E3%81%AE%E6%89%8B%E3%81%AB%E3%82%88%E3%82%8B%E3%82%82%E3%81%AE%E2%80%A6%E3%80%8D.webp?rev=bcc1bbc15c4a02892eddb85c37ff3136&t=20240428222626" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;「あらゆる褒賞と罰は この手によるもの…」</b><br>&nbsp;&nbsp;
+              血償の勅令を付与する時、代わりに血償の勅令・結を付与するようになる。
+              アルレッキーノが血償の勅令・結を回収する時、前方に凶月血炎を召喚し、アルレッキーノの攻撃力900%分の炎元素範囲ダメージを与える。また、アルレッキーノの全元素耐性および物理耐性+20%、継続時間15秒。この効果は10秒毎に1回のみ発動可能。
+              固有天賦「償えるものは苦痛のみ」を解放する必要がある。<br><br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E3%80%8C%E5%90%9B%E3%81%AF%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%AE%20%E6%96%B0%E3%81%97%E3%81%84%E5%AE%B6%E6%97%8F%E3%81%AB%E3%81%AA%E3%82%8B%E3%82%93%E3%81%A0%E2%80%A6%E3%80%8D.webp?rev=8ba4b3c7318146985e045177a8305814&t=20240428222635" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;「君は私たちの 新しい家族になるんだ…」</b><br>&nbsp;&nbsp;通常攻撃の天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E3%80%8C%E3%81%93%E3%82%8C%E3%81%8B%E3%82%89%E3%81%AF%E4%BA%92%E3%81%84%E3%82%92%E6%85%88%E3%81%97%E3%81%BF%20%E6%89%8B%E3%82%92%E5%8F%96%E3%82%8A%E5%90%88%E3%81%86%E3%81%A8%E3%81%97%E3%82%88%E3%81%86%E2%80%A6%E3%80%8D.webp?rev=8fa149012709d10bd5c709b360439800&t=20240428222643" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;「これからは互いを慈しみ 手を取り合うとしよう…」</b><br>&nbsp;&nbsp;
+              アルレッキーノが血償の勅令の回収に成功した時、元素爆発のクールタイムが2秒減少し、自身の元素エネルギーを15ポイント回復する、この効果は10秒毎に1回のみ発動可能。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E3%80%8C%E7%A7%81%E3%81%9F%E3%81%A1%E3%81%AF%E3%81%BF%E3%81%AA%E7%8B%AC%E6%B3%95%E5%B8%AB%E3%81%A0%20%E6%88%91%E3%82%89%E3%81%8C%E8%BA%AB%E3%81%AF%E5%B1%8D%E3%82%82%E5%90%8C%E7%84%B6%E2%80%A6%E3%80%8D.webp?rev=10bfe2d8bb0f433a2f2cd96f56ea0c44&t=20240428222652" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;「私たちはみな独法師だ 我らが身は屍も同然…」</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E3%80%8C%E3%81%93%E3%81%AE%E5%85%88%E3%80%81%E6%88%91%E3%80%85%E3%81%AF%20%E2%80%94%E2%80%94%E6%96%B0%E3%81%97%E3%81%8D%E7%94%9F%E3%81%AB%E8%88%88%E3%81%98%E3%82%8B%E3%80%8D.webp?rev=67091feca7b055cf1d1373f675c4ee18&t=20240428222702" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;「この先、我々は ――新しき生に興じる」</b><br>&nbsp;&nbsp;
+              元素爆発のダメージがアップする。アップ量は、アルレッキーノの攻撃力×その時点における「命の契約」パーセンテージ×700%。
+              元素スキルを発動した後の20秒間、アルレッキーノの通常攻撃と元素爆発の会心率+10%、会心ダメージ+70%。この効果は15秒毎に1回のみ発動可能。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              召使は"アタッカー"という立ち位置なので、メインステータスが攻撃力、会心率/ダメージを盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、アタッカーの中でも"通常攻撃アタッカー"という、命の契約回収後、通常攻撃を多く行うアタッカーなので、通常攻撃により効果が発揮される武器を選びましょう。<br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E9%95%B7%E6%9F%84%E6%AD%A6%E5%99%A8/::ref/%E8%B5%A4%E6%9C%88%E3%81%AE%E3%82%B7%E3%83%AB%E3%82%A8%E3%83%83%E3%83%88.png.webp?rev=d0155115a475b9b16ab995c2745218f9&t=20240425183623">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E9%95%B7%E6%9F%84%E6%AD%A6%E5%99%A8/::ref/%E5%92%8C%E7%92%9E%E9%B3%B6.jpg?rev=0595811ca6e15418de65d766853cba20&t=20201129214914" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E9%95%B7%E6%9F%84%E6%AD%A6%E5%99%A8/::ref/%E8%AD%B7%E6%91%A9%E3%81%AE%E6%9D%96.png.webp?rev=b12c49bd913130c93c68a2ca98722370&t=20210224180220" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E9%95%B7%E6%9F%84%E6%AD%A6%E5%99%A8/::ref/%E7%99%BD%E7%BA%93%E6%A7%8D.png.webp?rev=7aad526364efe36de5e3d0e46770e732&t=20231202173839" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+
+
+                <tr>
+                    <td style="text-align: center;">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%9F%BF%E3%81%8D%E5%90%88%E3%81%86%E8%AB%A7%E5%BE%8B%E3%81%AE%E5%89%8D%E5%A5%8F.png.webp?rev=8f0bd4a0b353c2adee603af999b5f9af&t=20240429204349" width="100px" height="100px" style="margin: auto;"><p class="rine-relic"><b>諧律奇想の断章</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                      攻撃力+18%,
+                      <br>
+                      命の契約の数値が増減する時、キャラクターの与えるダメージ+18%、継続時間6秒、最大3層まで重ね掛け可能。
+                    </td>
+                    <td style="width: 400px;">４セットを使って戦うので、元素スキルの命の契約回収を多くしましょう。<br>パーティ編成は自由に炎元素関連反応ができるように組みましょう。<br></td>
+                    <td style="display: flex; text-align: center;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E_s.webp?rev=12ea83d7f779abb1ba99b0dbfe276703&t=20240426205626" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E4%B8%87%E8%91%89_s.webp?rev=7c5488d515d48d9a661f5af5d9a18a33&t=20240313100904" width="100px" height="100px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B8%E3%83%B3_s.webp?rev=463f219382bcc5f49497e2a6c0b9f4f5&t=20240313100829" width="100px" height="100px">
+                  　</td>
+                   </tr>
+
+                   <tr>
+                    <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%89%A3%E9%97%98%E5%A3%AB%E3%81%AE%E6%9C%AA%E7%B7%B4.png.webp?rev=aaea050c5b83c3ef7fbecf51a42a2f95&t=20210109182605" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>剣闘士のフィナーレ</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                      攻撃力+18%,
+                      <br>
+                      該当聖遺物セットを装備したキャラが片手剣、両手剣、長柄武器キャラの場合、通常攻撃ダメージ+35%
+                    </td>
+                    <td style="width: 400px;">４セット効果を駆使して戦いますが無条件発動なので比較的どんなパーティでも扱いやすいです。<br>通常攻撃バフなのでいっぱい通常攻撃を行いましょう</td>
+                    <td style="display: flex;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E_s.webp?rev=12ea83d7f779abb1ba99b0dbfe276703&t=20240426205626">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%A1%8C%E7%A7%8B_s.webp?rev=99947695ce24868c42f736b737db5020&t=20240313094600"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%8D%BE%E9%9B%A2_s.webp?rev=ab44a61a332174925072c553966eb001&t=20240313101433">
+                    </div></td>
+                  </tr></table></div><br><br><br><br>
+
+                  <h2 id="combo" style="text-align: left;">&nbsp;&nbsp;&nbsp;コンボ</h2>
+                </div><br><br>
+    
+                  <div class="combo-text">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3>&nbsp;&nbsp;&nbsp;MAXダメージコンボ</h3>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    ・召使は元素スキルと重撃がつながるのと元素爆発発動によって元素スキルのCTがリセットされるので<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;重撃から元素スキル発動後元素爆発を発動し、再度元素スキルを発動し重撃で命の契約を回収しましょう。<br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E6%96%AC%E9%A6%96%E3%81%B8%E3%81%AE%E6%8B%9B%E5%BE%85%E7%8A%B6.webp?rev=5e33786bb1f9501ba96bfa0b0000c346&t=20240428222351" alt="" width="100px" height="100px">
+                    <b>重撃</b>
+                    <b>&rightarrow;</b>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E4%B8%87%E8%B1%A1%E3%80%81%E7%81%B0%E3%81%AB%E5%B8%B0%E3%81%99.webp?rev=f30b80004c862cfbda339704298e5f7a&t=20240428222407" alt="" width="100px" height="100px">
+                    <b>&rightarrow;</b>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E6%98%87%E3%82%8A%E3%82%86%E3%81%8F%E5%87%B6%E6%9C%88.webp?rev=5669f2fceb19b0dc464be73a0faa80d2&t=20240428222439" alt="" width="100px" height="100px">
+                    <b>&rightarrow;</b>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E4%B8%87%E8%B1%A1%E3%80%81%E7%81%B0%E3%81%AB%E5%B8%B0%E3%81%99.webp?rev=f30b80004c862cfbda339704298e5f7a&t=20240428222407" alt="" width="100px" height="100px">
+                    <b>&rightarrow;</b>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E6%96%AC%E9%A6%96%E3%81%B8%E3%81%AE%E6%8B%9B%E5%BE%85%E7%8A%B6.webp?rev=5e33786bb1f9501ba96bfa0b0000c346&t=20240428222351" alt="" width="100px" height="100px">
+                    <b>重撃</b>
+                    <br><br>
+
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3>&nbsp;&nbsp;&nbsp;重撃ダメージコンボ</h3>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    ・召使は通常攻撃６段目のモーションを重撃モーションに変えるとスムーズに攻撃することができます。<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;またこのコンボはMAXダメージコンボにもつながります<br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E6%96%AC%E9%A6%96%E3%81%B8%E3%81%AE%E6%8B%9B%E5%BE%85%E7%8A%B6.webp?rev=5e33786bb1f9501ba96bfa0b0000c346&t=20240428222351" alt="" width="100px" height="100px">
+                    <b>×5</b>
+                    <b>&rightarrow;</b>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E6%96%AC%E9%A6%96%E3%81%B8%E3%81%AE%E6%8B%9B%E5%BE%85%E7%8A%B6.webp?rev=5e33786bb1f9501ba96bfa0b0000c346&t=20240428222351" alt="" width="100px" height="100px">
+                    <b>重撃</b>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E6%96%AC%E9%A6%96%E3%81%B8%E3%81%AE%E6%8B%9B%E5%BE%85%E7%8A%B6.webp?rev=5e33786bb1f9501ba96bfa0b0000c346&t=20240428222351" alt="" width="100px" height="100px">
+                    <b>×5</b>
+                    <b>&rightarrow;</b>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E6%96%AC%E9%A6%96%E3%81%B8%E3%81%AE%E6%8B%9B%E5%BE%85%E7%8A%B6.webp?rev=5e33786bb1f9501ba96bfa0b0000c346&t=20240428222351" alt="" width="100px" height="100px">
+                    <b>重撃</b>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E6%96%AC%E9%A6%96%E3%81%B8%E3%81%AE%E6%8B%9B%E5%BE%85%E7%8A%B6.webp?rev=5e33786bb1f9501ba96bfa0b0000c346&t=20240428222351" alt="" width="100px" height="100px">
+                    <b>×5</b>
+                    <b>&rightarrow;</b>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E/::ref/%E6%96%AC%E9%A6%96%E3%81%B8%E3%81%AE%E6%8B%9B%E5%BE%85%E7%8A%B6.webp?rev=5e33786bb1f9501ba96bfa0b0000c346&t=20240428222351" alt="" width="100px" height="100px">
+                    <b>重撃</b>
+
+                    <br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

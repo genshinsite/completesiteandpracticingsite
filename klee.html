@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>クレー</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">クレー</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC9xM0toMmtmNy5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19" alt=""></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆5</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">法器</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">炎</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">四つ葉座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">モンド</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">久野美咲</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  <tr style="text-align: center;">
+    <th>基礎HP</th>
+    <td>2,077</td>
+    <td>2,764</td>
+    <td>4,136</td>
+    <td>4,623</td>
+    <td>5,319</td>
+    <td>5,970</td>
+    <td>6,673</td>
+    <td>7,161</td>
+    <td>7,870</td>
+    <td>8,358</td>
+    <td>9,076</td>
+    <td>9,563</td>
+    <td>10,287</td>
+  </tr>
+  <tr style="text-align: center;">
+    <th>基礎攻撃力</th>
+    <td>63</td>
+    <td>84</td>
+    <td>125</td>
+    <td>140</td>
+    <td>161</td>
+    <td>180</td>
+    <td>202</td>
+    <td>216</td>
+    <td>238</td>
+    <td>253</td>
+    <td>274</td>
+    <td>289</td>
+    <td>311</td>
+  </tr>
+  <tr style="text-align: center;">
+    <th>基礎防御力</th>
+    <td>124</td>
+    <td>165</td>
+    <td>247</td>
+    <td>276</td>
+    <td>318</td>
+    <td>357</td>
+    <td>399</td>
+    <td>428</td>
+    <td>470</td>
+    <td>500</td>
+    <td>542</td>
+    <td>572</td>
+    <td>615</td>
+  </tr>
+  <tr style="text-align: center;">
+    <th>炎元素ダメージ</th>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>7.2%</td>
+    <td>7.2%</td>
+    <td>14.4%</td>
+    <td>14.4%</td>
+    <td>14.4%</td>
+    <td>14.4%</td>
+    <td>21.6%</td>
+    <td>21.6%</td>
+    <td>28.8%</td>
+    <td>28.8%</td>
+  </tr></table></div><br><br><br>
+
+  <div class="gifttitle">
+    <h2 id="gift" style="text-align: left;">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+
+  <table border="1" style="margin: auto;" class="gifttable">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%AF%E3%83%AC%E3%83%BC/::ref/Talent_Kaboom%2521.png?rev=369876bd26a6e7f649d2a748b8c07318&t=20210206193327">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br><b>&nbsp;通常攻撃</b><br>&nbsp;&nbsp;最大3段の連続攻撃を行い、炎元素範囲ダメージを与える。<br><br>
+      <b>&nbsp;重撃</b><br>
+      &nbsp;&nbsp;短い詠唱の後、一定のスタミナを消費し、敵に炎元素範囲ダメージを与える。(キャンセル可能)<br><br><br><b>&nbsp;落下攻撃</b><br>
+    &nbsp;&nbsp;空中から落下し地面に衝撃を与える(AOE)※経路上の敵を攻撃する<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 150px;">重撃ダメージ</th>
+    <th style="width: 150px;">重撃消費スタミナ</th>
+    <th style="width: 150px;">落下期間ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃ダメージ</th>
+  </tr>
+  <tr>
+    <th style="text-align: center;">Lv.2</th>
+    <td style="text-align: center;">77.6%</td>
+    <td style="text-align: center;">67.1%</td>
+    <td style="text-align: center;">96.7%</td>
+    <td style="text-align: center;">169%</td>
+    <td rowspan="10" style="text-align: center;">50</td>
+    <td style="text-align: right;">61.5%</td>
+    <td style="text-align: right;">123%/153%</td>
+  </tr>
+  <tr>
+    <th style="text-align: center;">Lv.3</th>
+    <td style="text-align: center;">83%</td>
+    <td style="text-align: center;">71.8%</td>
+    <td style="text-align: center;">103%</td>
+    <td style="text-align: center;">181%</td>
+    <td style="text-align: right;">66.1%</td>
+    <td style="text-align: right;">132%/165%</td>
+  </tr>
+  <tr>
+    <th style="text-align: center;">Lv.4</th>
+    <td style="text-align: center;">90.2%</td>
+    <td style="text-align: center;">78.0%</td>
+    <td style="text-align: center;">112%</td>
+    <td style="text-align: center;">197%</td>
+    <td style="text-align: right;">72.7%</td>
+    <td style="text-align: right;">145%/182%</td>
+  </tr>
+  <tr>
+    <th style="text-align: center;">Lv.5</th>
+    <td style="text-align: center;">95.6%</td>
+    <td style="text-align: center;">72.7%</td>
+    <td style="text-align: center;">119%</td>
+    <td style="text-align: center;">209%</td>
+    <td style="text-align: right;">77.3%</td>
+    <td style="text-align: right;">155%/193%</td>
+  </tr>
+  
+  <tr>
+    <th style="text-align: center;">Lv.6</th>
+    <td style="text-align: center;">101%</td>
+    <td style="text-align: center;">87.4%</td>
+    <td style="text-align: center;">126%</td>
+    <td style="text-align: center;">220%</td>
+    <td style="text-align: right;">82.6%</td>
+    <td style="text-align: right;">165%/206%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.7</th>
+    <td style="text-align: center;">108%</td>
+    <td style="text-align: center;">93.6%</td>
+    <td style="text-align: center;">135%</td>
+    <td style="text-align: center;">236%</td>
+    <td style="text-align: right;">89.9%</td>
+    <td style="text-align: right;">180%/224%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.8</th>
+    <td style="text-align: center;">115%</td>
+    <td style="text-align: center;">100%</td>
+    <td style="text-align: center;">144%</td>
+    <td style="text-align: center;">252%</td>
+    <td style="text-align: right;">97.1%</td>
+    <td style="text-align: right;">194%/243%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.9</th>
+    <td style="text-align: center;">123%</td>
+    <td style="text-align: center;">106%</td>
+    <td style="text-align: center;">153%</td>
+    <td style="text-align: center;">268%</td>
+    <td style="text-align: right;">104%</td>
+    <td style="text-align: right;">209%/261%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.10</th>
+    <td style="text-align: center;">130%</td>
+    <td style="text-align: center;">112%</td>
+    <td style="text-align: center;">162%</td>
+    <td style="text-align: center;">283%</td>
+    <td style="text-align: right;">112%</td>
+    <td style="text-align: right;">225%/281%</td>
+  </tr></table><br><br><br>
+
+  <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%AF%E3%83%AC%E3%83%BC/::ref/Talent_Jumpy_Dumpty.png?rev=c7deff9c96c32886ab9ffbc3cc89b154&t=20210206193340"><p class="skill">&nbsp;元素スキル</p></th>
+    <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;巨大な威力を持つボンボン爆弾を投げ出す！<br>
+        ボンボン爆弾は連続で3回跳ね、1回毎に爆発を1回起こし、炎元素範囲ダメージを与える。<br><br>
+        
+        3回跳ねた後、爆弾は複数のブービートラップに分裂する。<br>
+        ブービートラップは敵に触れる、または一定時間後に爆発し、炎元素範囲ダメージを与える。<br>※初期使用回数2回<br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 150px;">ボンボン爆弾ダメージ</th>
+    <th style="width: 150px;">ブービートラップ<br>ダメージ</th>
+    <th style="width: 100px;">ブービートラップ継続時間</th>
+    <th style="width: 150px;">クールタイム(CT)</th>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.2</th>
+    <td style="text-align: center;">102%</td>
+    <td style="text-align: center;">35.3%</td>
+    <td rowspan="10" style="text-align: center;">15.0s</td>
+    <td rowspan="10" style="text-align: center;">20.0s</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.3</th>
+    <td style="text-align: center;">109%</td>
+    <td style="text-align: center;">37.7%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.4</th>
+    <td style="text-align: center;">119%</td>
+    <td style="text-align: center;">41.0%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.5</th>
+    <td style="text-align: center;">126%</td>
+    <td style="text-align: center;">43.5%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.6</th>
+    <td style="text-align: center;">133%</td>
+    <td style="text-align: center;">45.9%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.7</th>
+    <td style="text-align: center;">143%</td>
+    <td style="text-align: center;">49.2%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.8</th>
+    <td style="text-align: center;">152%</td>
+    <td style="text-align: center;">52.5%</td>
+  </tr>\
+
+  <tr>
+    <th style="text-align: center;">Lv.9</th>
+    <td style="text-align: center;">162%</td>
+    <td style="text-align: center;">55.8%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.10</th>
+    <td style="text-align: center;">171%</td>
+    <td style="text-align: center;">62.3%</td>
+  </tr></table><br><br><br>
+
+  <table border="1" style="margin: auto;">
+    <tr>
+      <th>&nbsp;</th>
+      <th colspan="16" style="text-align: center;">天賦詳細</th>
+    </tr>
+    <tr>
+      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%AF%E3%83%AC%E3%83%BC/::ref/Talent_Sparks_%2527n%2527_Splash.png?rev=b64a0ff6063fedf23321c3fe6bea6a19&t=20210206193351"><p class="altimate">&nbsp;元素爆発</p></th>
+      <td colspan="16"><br><br><b>&nbsp;元素爆発</b><br>&nbsp;&nbsp;クレー火力全開！スキル継続中、ドッカン花火を立て続けに召喚して周囲の敵に攻撃し、<br>炎元素範囲ダメージを与える。&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br>
+      </td>
+    </tr>
+
+    <tr>
+      <th style="width: 200px;">ステータス詳細</th>
+      <th style="width: 80px;">ドッカン花火<br>ダメージ</th>
+      <th style="width: 150px;">継続時間</th>
+      <th style="width: 150px;">クールタイム(CT)</th>
+      <th style="width: 150px;">元素エネルギー</th>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.2</th>
+      <td style="text-align: center;">45.8%</td>
+      <td rowspan="10" style="text-align: center;">10.0s</td>
+      <td rowspan="10" style="text-align: center;">15.0s</td>
+      <td rowspan="10" style="text-align: center;">60</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.3</th>
+      <td style="text-align: center;">49.0%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.4</th>
+      <td style="text-align: center;">53.3%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.5</th>
+      <td style="text-align: center;">56.5%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.6</th>
+      <td style="text-align: center;">59.7%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.7</th>
+      <td style="text-align: center;">64.0%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.8</th>
+      <td style="text-align: center;">68.2%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.9</th>
+      <td style="text-align: center;">72.5%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.10</th>
+      <td style="text-align: center;">76.8%</td>
+    </tr></table><br><br><br>
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%AF%E3%83%AC%E3%83%BC/::ref/Talent_Pounding_Surprise.png?rev=bec00df3019900afdd6aa09f6f55a1ec&t=20210206193403"><p class="kleegift">&nbsp;こんこんプレゼント</p></th>
+        <td colspan="16"><br><br><b>&nbsp;こんこんプレゼント</b><br>&nbsp;&nbsp;ボンボン爆弾と通常攻撃が敵にダメージを与える時、50%の確率でクレーが爆裂花火を獲得する。<br>
+            重撃を発動する時、スタミナの代わりに爆裂花火を優先的に消費し、与えるダメージ+50%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%AF%E3%83%AC%E3%83%BC/::ref/Talent_Sparkling_Burst.png?rev=f8be3fc145b98c3d3366f336d91c2728&t=20210206193414"><p class="kleegift">&nbsp;無限花火</p></th>
+        <td colspan="16"><br><br><b>&nbsp;無限花火</b><br>&nbsp;&nbsp;クレーの重撃が会心発生すると、チーム全員の元素エネルギーが2回復する<br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%AF%E3%83%AC%E3%83%BC/::ref/Talent_All_Of_My_Treasures%2521.png?rev=e66b122fa413d3af136fa54a8c7a13cb&t=20210206193427"><p class="kleegift">&nbsp;宝物揃い</p></th>
+        <td colspan="16"><br><br><b>&nbsp;宝物揃い</b><br>&nbsp;&nbsp;ミニマップで周囲のモンド地域の特産の位置を表示する。<br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%AF%E3%83%AC%E3%83%BC/::ref/Constellation_Chained_Reactions.png?rev=ac66d0442bfea24e6f5000a63d5790ab&t=20210206193624" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;ゴロゴロコンボ</b><br>&nbsp;&nbsp;攻撃やスキル発動時、一定の確率で花火を召喚して敵を攻撃し、ドッカン花火の攻撃力の120%のダメージを与える。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%AF%E3%83%AC%E3%83%BC/::ref/Constellation_Explosive_Frags.png?rev=2d4a2acce77235ebe450c968d28b6282&t=20210206193638" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;弾丸の破片</b><br>&nbsp;&nbsp;ボンボン爆弾のブービートラップのダメージを受けた敵の防御力-23%、継続時間10秒。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;1.5秒に一回のみ発動可能<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%AF%E3%83%AC%E3%83%BC/::ref/Constellation_Exquisite_Compound.png?rev=5719153d6613fa63fada6d8604b22213&t=20210206193648" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;クレー特製</b><br>&nbsp;&nbsp;元素スキルの天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%AF%E3%83%AC%E3%83%BC/::ref/Constellation_Sparkly_Explosion.png?rev=033e049b2d3dfd3bb8f1b2c8e843c3f3&t=20210206193659" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;一触即発</b><br>&nbsp;&nbsp;ドッカン花火継続中にキャラを切り替えると、爆発が発生し、攻撃力555%分の炎元素範囲ダメージを与える。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%AF%E3%83%AC%E3%83%BC/::ref/Constellation_Nova_Burst.png?rev=6df8b0b8ce44b1754309342960f6b506&t=20210206193710" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;轟撃の星</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%AF%E3%83%AC%E3%83%BC/::ref/Constellation_Blazing_Delight.png?rev=01d07c88ddc36bdf75b4e350e7eba276&t=20210206193721" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;火力全開</b><br>&nbsp;&nbsp;ドッカン花火状態中、クレーは3秒毎にチーム全員（クレーを除く）の元素エネルギーを3回復する。ドッカン花火発動後25秒間、チーム全員の炎元素ダメージ+10%。
+              <br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              クレーは"アタッカー"という立ち位置なので、メインステータスが攻撃力、会心率/ダメージを盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、アタッカーの中でも"重撃アタッカー"なので攻撃力と元素ダメージを多く盛りましょう<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E5%A4%A9%E7%A9%BA%E3%81%AE%E5%B7%BB.png.webp?rev=cb6102676b50daaf7d2d470d9732c36b&t=20201023180110">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E5%9B%9B%E9%A2%A8%E5%8E%9F%E5%85%B8.jpg?rev=a87e011438d53723391de6cec17d5535&t=20201129215636" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E6%B5%81%E6%B5%AA%E6%A5%BD%E7%AB%A0.png.webp?rev=7a6c80be40a0c7a19c52049baae34d47&t=20231220010450" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E3%83%89%E3%83%89%E3%82%B3%E3%81%AE%E7%89%A9%E8%AA%9E.jpg.webp?rev=10212d6c8886c0470d636832e9ff115e&t=20210617061221" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E5%8C%A3%E4%B8%AD%E6%97%A5%E6%9C%88.png.webp?rev=ebd53db11b0c52fd5f94cae51b466864&t=20201029175301">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E7%A5%AD%E7%A4%BC%E3%81%AE%E6%96%AD%E7%89%87.png.webp?rev=98a338538bb29d6626f7745e2d9b49a1&t=20201122010958" >
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E8%A5%BF%E9%A2%A8%E7%A7%98%E5%85%B8.png.webp?rev=048f64319abea38a0196b29cd439e2dc&t=20201122010948" >
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E4%B8%87%E5%9B%BD%E8%AB%B8%E6%B5%B7%E3%81%AE%E5%9B%B3%E8%AD%9C.png.webp?rev=d52c7f08e7890c550989dc4c751cc1b8&t=20231220010530" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E7%A5%9E%E6%A5%BD%E3%81%AE%E7%9C%9F%E6%84%8F.png.webp?rev=1f7a730164dd3e870a6b41272243b358&t=20220216140630" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E5%8D%83%E5%A4%9C%E3%81%AB%E6%B5%AE%E3%81%8B%E3%81%B6%E5%A4%A2.png.webp?rev=e1de2ec6648a395a1c9d776d271ad7dc&t=20221102170924" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E6%98%AD%E5%BF%83.png.webp?rev=8f478f9b008f282890f0ba708cc50133&t=20231202155700" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>A</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E4%B9%85%E9%81%A0%E6%B5%81%E8%BB%A2%E3%81%AE%E5%A4%A7%E5%85%B8.png.webp?rev=063bd5abdbe943ff6799ea8023fd4df5&t=20230929072825" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E3%83%88%E3%82%A5%E3%83%A9%E3%82%A4%E3%83%88%E3%82%A5%E3%83%BC%E3%83%A9%E3%81%AE%E8%A8%98%E6%86%B6.png?rev=92cdf16e69528202ee8f8c38dbf6648c&t=20221210220831" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E6%BA%80%E6%82%A6%E3%81%AE%E5%AE%9F.jpg?rev=3d84e2a341ba85fa4802958f1a2e328e&t=20220918121153" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%AD%94%E5%A5%B3%E3%81%AE%E7%82%8E%E3%81%AE%E8%8A%B1_5.png.webp?rev=5cce7c8f5ff07e9d1d890a4799d8f7b3&t=20210119123131https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%AD%94%E5%A5%B3%E3%81%AE%E7%82%8E%E3%81%AE%E8%8A%B1_5.png.webp?rev=5cce7c8f5ff07e9d1d890a4799d8f7b3&t=20210119123131" width="100px" height="100px"><p class="diluc-relic" style="text-align: center;"><b>炎の魔女</b></p></td>
+                  <td style="width: 600px;"><b>セット効果</b><br>
+                    炎元素ダメージ+15%,<br>
+                    過負荷、燃焼、烈開花反応によるダメージ+40%、蒸発、溶解反応による加算効果+15%、元素スキルを発動した10秒間、2セット効果+50%、最大3重まで
+                  </td>
+                  <td style="width: 400px;">４セット効果を駆使して戦うので元素反応を活かせるパーティ編成を作りましょう。</td>
+                  <td style="display: flex;"><div width="50px" height="50px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%AF%E3%83%AC%E3%83%BC_s.webp?rev=72d3b426a8b818acd4d61428b4596ab1&t=20240313093847">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%AC%E3%82%A4%E3%82%A2_s.webp?rev=c3ed54305cbe18d6623f48afd15391de&t=20240313095117"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A_s.webp?rev=61ba9a628f26920cdb5f0e822b23af9d&t=20240313095131">
+                  </div></td>
+                </tr>
+
+                <tr>
+                  <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E6%A5%BD%E5%9B%A3%E3%81%AE%E6%9C%9D%E3%81%AE%E5%85%89.png.webp?rev=d1362b985a1a0b5fc83d177ab4abf0e3&t=20210109182322" width="100px" height="100px" style="margin: auto;"><p class="klee-relic"><b>大地を流浪する楽団</b></p></td>
+                  <td style="width: 600px;"><b>セット効果</b><br>
+                    元素熟知+80,
+                    <br>
+                    該当聖遺物セットを装備したキャラが法器、弓キャラの場合、キャラの重撃のダメージ＋35％
+                  </td>
+                  <td style="width: 400px;">４セット効果を駆使して戦いますが無条件発動なので比較的どんなパーティでも扱いやすいです。<br></td>
+                  <td style="display: flex;"><div width="50px" height="50px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%AF%E3%83%AC%E3%83%BC_s.webp?rev=72d3b426a8b818acd4d61428b4596ab1&t=20240313093847">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9_s.webp?rev=d6b16d45a11d6c4ebbd2829d5250c1f0&t=20240313100837"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%A6%99%E8%8F%B1_s.webp?rev=c09118e85ef5cd4a2f732748a76b631a&t=20240313093952">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%AC%E3%82%A4%E3%83%A9_s.webp?rev=8dce48b40d298df98847f58dafd728c5&t=20221118202455">
+                  </div></td>
+                </tr>
+
+                <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E8%A6%87%E7%B5%86%E3%81%AE%E8%8A%B1_5.png.webp?rev=98590d1100d744eb1ecd5f5179069b5a&t=20210723131444" width="100px" height="100px" style="margin: auto;"><p class="klee-relic"><b>追憶のしめ縄</b></p></td>
+                <td style="width: 600px;"><b>セット効果</b><br>
+                  攻撃力+18%,
+                  <br>
+                  元素スキルを発動した時、キャラクターの元素エネルギーが15以上の場合、 元素エネルギーを15消費し、次の10秒間通常攻撃、重撃、落下攻撃ダメージ+50%。 継続時間中この効果は再発動できない。
+                </td>
+                <td style="width: 400px;">４セット効果を駆使して戦いますが元素爆発エネルギーを消費するので重撃を主体としたパーティ編成、<br>または追加ダメージを与えるキャラ入れてを総合ダメージを伸ばせるパーティ編成を行いましょう。<br></td>
+                <td style="display: flex;"><div width="50px" height="50px">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%AF%E3%83%AC%E3%83%BC_s.webp?rev=72d3b426a8b818acd4d61428b4596ab1&t=20240313093847">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%A1%8C%E7%A7%8B_s.webp?rev=99947695ce24868c42f736b737db5020&t=20240313094600"><br>
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%A6%99%E8%8F%B1_s.webp?rev=c09118e85ef5cd4a2f732748a76b631a&t=20240313093952">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%AB_s.webp?rev=37b4558a7d7fa66327eacceeefc221aa&t=20240313100127">
+                </div></td>
+              </tr>
+
+              <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E8%A1%80%E6%9F%93%E3%82%81%E3%81%AE%E9%89%84%E3%81%AE%E5%BF%83_%E6%98%9F5.png.webp?rev=add52a813451acb1175984480158cdc4&t=20210119113806" width="100px" height="100px" style="margin: auto;"><p class="klee-relic"><b>血染めの騎士道 </b></p></td>
+              <td style="width: 600px;"><b>セット効果</b><br>
+                物理ダメージ+25%,
+                <br>
+                敵を倒した後の10秒間、重撃の際にスタミナを消費しない。また、重撃のダメージ+50%
+              </td>
+              <td style="width: 400px;">２セット効果はなくなりますが４セット効果が重撃キャラクターと相性がとてもいいので、重撃を強化するようなパーティ編成を作りましょう<br>または追加ダメージを与えるキャラ入れてを総合ダメージを伸ばせるパーティ編成を行いましょう。</td>
+              <td style="display: flex;"><div width="50px" height="50px">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%AF%E3%83%AC%E3%83%BC_s.webp?rev=72d3b426a8b818acd4d61428b4596ab1&t=20240313093847">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E4%B8%87%E8%91%89_s.webp?rev=7c5488d515d48d9a661f5af5d9a18a33&t=20240313100904"><br>
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%8D%BE%E9%9B%A2_s.webp?rev=ab44a61a332174925072c553966eb001&t=20240313101433">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%A2%E3%83%8A_s.webp?rev=fb73e6c173b2016c8d40e014ccb1d9de&t=20240313094549">
+              </div></td>
+            </tr>
+
+
+                <td style="text-align: center;">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%AD%94%E5%A5%B3%E3%81%AE%E7%82%8E%E3%81%AE%E8%8A%B1_5.png.webp?rev=5cce7c8f5ff07e9d1d890a4799d8f7b3&t=20210119123131https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%AD%94%E5%A5%B3%E3%81%AE%E7%82%8E%E3%81%AE%E8%8A%B1_5.png.webp?rev=5cce7c8f5ff07e9d1d890a4799d8f7b3&t=20210119123131" width="100px" height="100px" style="margin: auto;">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%89%A3%E9%97%98%E5%A3%AB%E3%81%AE%E6%9C%AA%E7%B7%B4.png.webp?rev=aaea050c5b83c3ef7fbecf51a42a2f95&t=20210109182605" width="100px" height="100px" style="margin: auto;"><p class="klee-relic"><b>炎の魔女、剣闘士のフィナーレ</b></p></td>
+                <td style="width: 600px;"><b>セット効果</b><br>
+                  炎元素ダメージ+15%,
+                  <br>
+                  攻撃力+18%
+                </td>
+                <td style="width: 400px;">それぞれの２セット効果を駆使して、攻撃力も炎元素ダメージも上げるので自由なパーティを作ることができます。</td>
+                <td style="display: flex;"><div width="50px" height="50px">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%AF%E3%83%AC%E3%83%BC_s.webp?rev=72d3b426a8b818acd4d61428b4596ab1&t=20240313093847">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%8D%BE%E9%9B%A2_s.webp?rev=ab44a61a332174925072c553966eb001&t=20240313101433"><br>
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%AD%E3%82%B5%E3%83%AA%E3%82%A2_s.webp?rev=63f7fc3c5d7edfa9d404a89c03c4d3cd&t=20240313095140">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B2%E8%8F%AB_s.webp?rev=a7666b3075b8d4ed94b458ac9b608f6d&t=20240313101403">
+                </div></td>
+              </tr></table><br><br><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

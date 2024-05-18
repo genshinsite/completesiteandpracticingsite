@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ニィロウ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">ニィロウ</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC96V09zTWI4Sy5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19"></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆5</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">片手剣</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">水</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">睡蓮座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">スメール</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">金元寿子</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  
+    
+  <tr>
+    <th style="text-align: center;">基礎HP</th>
+    <td style="text-align: center;">3066</td>
+    <td style="text-align: center;">4080</td>
+    <td style="text-align: center;">6105</td>
+    <td style="text-align: center;">6825</td>
+    <td style="text-align: center;">7852</td>
+    <td style="text-align: center;">8813</td>
+    <td style="text-align: center;">9850</td>
+    <td style="text-align: center;">10571</td>
+    <td style="text-align: center;">11618</td>
+    <td style="text-align: center;">12338</td>
+    <td style="text-align: center;">13397</td>
+    <td style="text-align: center;">14117</td>
+    <td style="text-align: center;">15185</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎攻撃力</th>
+    <td style="text-align: center;">46</td>
+    <td style="text-align: center;">61</td>
+    <td style="text-align: center;">92</td>
+    <td style="text-align: center;">103</td>
+    <td style="text-align: center;">118</td>
+    <td style="text-align: center;">133</td>
+    <td style="text-align: center;">149</td>
+    <td style="text-align: center;">160</td>
+    <td style="text-align: center;">175</td>
+    <td style="text-align: center;">186</td>
+    <td style="text-align: center;">202</td>
+    <td style="text-align: center;">213</td>
+    <td style="text-align: center;">229</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎防御力</th>
+    <td style="text-align: center;">147</td>
+    <td style="text-align: center;">196</td>
+    <td style="text-align: center;">293</td>
+    <td style="text-align: center;">327</td>
+    <td style="text-align: center;">377</td>
+    <td style="text-align: center;">423</td>
+    <td style="text-align: center;">473</td>
+    <td style="text-align: center;">507</td>
+    <td style="text-align: center;">557</td>
+    <td style="text-align: center;">592</td>
+    <td style="text-align: center;">643</td>
+    <td style="text-align: center;">677</td>
+    <td style="text-align: center;">729</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">HP%</th>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">7.2%</td>
+    <td style="text-align: center;">7.2%</td>
+    <td style="text-align: center;">14.4%</td>
+    <td style="text-align: center;">14.4%</td>
+    <td style="text-align: center;">14.4%</td>
+    <td style="text-align: center;">14.4%</td>
+    <td style="text-align: center;">21.6%</td>
+    <td style="text-align: center;">21.6%</td>
+    <td style="text-align: center;">28.8%</td>
+    <td style="text-align: center;">28.8%</td>
+    </tr></table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6/::ref/%E5%BC%A6%E6%9C%88%E3%81%AE%E3%83%80%E3%83%B3%E3%82%B9.png?rev=53b33ca461e551d9ac1ed616372ae602&t=20221014230155" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+        通常攻撃<br>
+        最大3段の連続攻撃を行う。<br><br>
+        
+        重撃<br>
+        一定のスタミナを消費し、回転切りを1回発動する。<br><br>
+        
+        落下攻撃<br>
+        空中から落下し地面に衝撃を与える。経路上の敵を攻撃し、落下時に範囲ダメージを与える。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">重撃<br>ダメージ</th>
+    <th style="width: 150px;">重撃スタミナ消費</th>
+    <th style="width: 150px;">落下期間<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+    
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2%</td>
+    <td style="text-align: center;">54.4%</td>
+    <td style="text-align: center;">49.1%</td>
+    <td style="text-align: center;">76.1%</td>
+    <td style="text-align: center;">54.3%+58.9%</td>
+    <td rowspan="9" style="text-align: center;">20</td>
+    <td style="text-align: center;">69.1%</td>
+    <td style="text-align: center;">138%/173%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">58.5%</td>
+    <td style="text-align: center;">52.8%</td>
+    <td style="text-align: center;">81.8%</td>
+    <td style="text-align: center;">58.4%+63.3%</td>
+    <td style="text-align: center;">74.3%</td>
+    <td style="text-align: center;">149%/186%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">64.3%</td>
+    <td style="text-align: center;">58.1</td>
+    <td style="text-align: center;">90.0%</td>
+    <td style="text-align: center;">64.2%+69.6%</td>
+    <td style="text-align: center;">81.8%</td>
+    <td style="text-align: center;">164%/204%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">68.4%</td>
+    <td style="text-align: center;">61.8%</td>
+    <td style="text-align: center;">95.7%</td>
+    <td style="text-align: center;">68.3%+74.0%</td>
+    <td style="text-align: center;">86.9%</td>
+    <td style="text-align: center;">173%/217%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">73.1%</td>
+    <td style="text-align: center;">66.0%</td>
+    <td style="text-align: center;">102.2%</td>
+    <td style="text-align: center;">73.0% +79.1%</td>
+    <td style="text-align: center;">92.9%</td>
+    <td style="text-align: center;">185%/232%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">79.5%</td>
+    <td style="text-align: center;">71.8%</td>
+    <td style="text-align: center;">111.2%</td>
+    <td style="text-align: center;">79.4%+86.0</td>
+    <td style="text-align: center;">101.1%</td>
+    <td style="text-align: center;">202%/252%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">86.0%</td>
+    <td style="text-align: center;">77.6%</td>
+    <td style="text-align: center;">120.3%</td>
+    <td style="text-align: center;">85.8%+93.1</td>
+    <td style="text-align: center;">109.3%</td>
+    <td style="text-align: center;">219%/273%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">92.4%</td>
+    <td style="text-align: center;">83.4%</td>
+    <td style="text-align: center;">129.2%</td>
+    <td style="text-align: center;">92.2%+100.0</td>
+    <td style="text-align: center;">117.4%</td>
+    <td style="text-align: center;">234%/293%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">99.4%</td>
+    <td style="text-align: center;">89.8%</td>
+    <td style="text-align: center;">139.0%</td>
+    <td style="text-align: center;">99.2%+107.6%</td>
+    <td style="text-align: center;">126.3%</td>
+    <td style="text-align: center;">252%/315%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="1000px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6/::ref/%E4%B8%83%E5%9F%9F%E3%81%AE%E3%83%80%E3%83%B3%E3%82%B9.png?rev=ac948e7030a6189e5ca3fc80bbde9b0e&t=20221014230145" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+        ピルエット」状態に入り、ニィロウのHP上限を基準に周囲の敵へ水元素ダメージを与える<br>
+        ピルエット状態において、ニィロウの通常攻撃と元素スキルは、<br>
+        それぞれ「剣舞のステップ」と「旋舞のステップ」へと変わり、<br>
+        与えるダメージが元素付与によって他の元素に変化しない水元素ダメージへと変わる、<br>
+        このダメージは元素スキルダメージと見なされる。<br><br>
+        
+        この状態の時、ニィロウの3段目のステップでピルエット状態を解除し、<br>
+        3段目のステップのタイプに応じて、それぞれ下記効果を発動する。<br>
+        ・剣舞のステップの場合:水月を一つ発動し、命中した敵に水元素ダメージを与え、ニィロウに祈月状態を付与する。<br>
+        この状態において、ニィロウの通常攻撃は剣舞のステップへと変わり、最後の一撃で水月を発動する。<br>
+        ・旋舞のステップの場合: 空を洗う水輪を一つ発動し、 水元素範囲ダメージを与える。<br>
+        また、フィールド上の自身のキャラクターと共に移動する天を滌う水環を生成し、中にいる敵に継続的に湿潤状態を付与する。<br><br>
+        
+        ピルエット、または祈月状態の時、<br>
+        ニィロウは重撃を行うことができない。上記の状態はニィロウが退場する時に解除される。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 160px;">スキル<br>ダメージ</th>
+                <th style="width: 130px;">剣舞/旋舞<br>ステップ1段<br>ダメージ</th>
+                <th style="width: 130px;">剣舞/旋舞<br>ステップ2段<br>ダメージ</th>
+                <th style="width: 130px;">水月/水輪<br>ダメージ</th>
+                <th style="width: 130px;">ピルエット<br>継続時間</th>
+                <th style="width: 130px;">折月<br>継続時間</th>
+                <th style="width: 130px;">天を滌う<br>水環<br>継続時間</th>
+                <th style="width: 130px;">クールタイム(CT)</th>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Lv.2</td>
+                <td style="text-align: center;">HP上限3.59%</td>
+                <td style="text-align: center;">HP上限4.89%/3.51%</td>
+                <td style="text-align: center;">HP上限5.53%/4.26%</td>
+                <td style="text-align: center;">HP上限7.71%/5.44%</td>
+                <td rowspan="9" style="text-align: center;">10.0s</td>
+                <td rowspan="9" style="text-align: center;">8.0s</td>
+                <td rowspan="9" style="text-align: center;">12.0s</td>
+                <td rowspan="9" style="text-align: center;">18.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.3</td>
+                <td style="text-align: center;">HP上限3.84%</td>
+                <td style="text-align: center;">HP上限5.24%/3.75%</td>
+                <td style="text-align: center;">HP上限5.92%4.55%</td>
+                <td style="text-align: center;">HP上限8.24%/5.82%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.4</td>
+                <td style="text-align: center;">HP上限4.17%</td>
+                <td style="text-align: center;">HP上限5.69%/4.08%</td>
+                <td style="text-align: center;">HP上限6.43%/4.95%</td>
+                <td style="text-align: center;">HP上限8.96%/6.33%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.5</td>
+                <td style="text-align: center;">HP上限4.42%</td>
+                <td style="text-align: center;">HP上限6.03%/4.32%</td>
+                <td style="text-align: center;">HP上限6.82%/5.25%</td>
+                <td style="text-align: center;">HP上限9.50%/6.71%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.6</td>
+                <td style="text-align: center;">HP上限4.67%</td>
+                <td style="text-align: center;">HP上限6.37%/4.57%</td>
+                <td style="text-align: center;">HP上限7.20%/5.54</td>
+                <td style="text-align: center;">HP上限10.04%/7.09%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.7</td>
+                <td style="text-align: center;">HP上限5.01%</td>
+                <td style="text-align: center;">HP上限6.83%/4.89%</td>
+                <td style="text-align: center;">HP上限7.72%/5.94%</td>
+                <td style="text-align: center;">HP上限10.75%/7.59%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.8</td>
+                <td style="text-align: center;">HP上限5.34%</td>
+                <td style="text-align: center;">HP上限7.28%/5.22%</td>
+                <td style="text-align: center;">HP上限8.23%/6.34%</td>
+                <td style="text-align: center;">HP上限11.47%/8.10%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.9</td>
+                <td style="text-align: center;">HP上限5.68%</td>
+                <td style="text-align: center;">HP上限7.74%/5.55%</td>
+                <td style="text-align: center;">HP上限8.75%/6.73%</td>
+                <td style="text-align: center;">HP上限12.19%/8.60%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.10</td>
+                <td style="text-align: center;">HP上限6.01%</td>
+                <td style="text-align: center;">HP上限8.19%/5.87%</td>
+                <td style="text-align: center;">HP上限9.26%/7.13%</td>
+                <td style="text-align: center;">HP上限12.90%/9.11%</td>
+                </tr></table><br><br><br>
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6/::ref/%E6%B5%AE%E8%93%AE%E3%81%AE%E3%83%80%E3%83%B3%E3%82%B9%E3%83%BB%E9%81%A0%E5%A4%A2%E8%81%86%E6%B3%89.png?rev=0f1f6627100e1f8622003cf7fd14bed7&t=20221014230134" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+                      <td colspan="16"><br><br>
+                        ニィロウのHP上限を基準に水元素範囲ダメージを与える。
+                        また、命中した敵に「久遠の惑溺」状態を付与する。
+                        短時間後、久遠の惑溺状態の敵は水元素ダメージを受ける<br><br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                      </td>
+                    </tr>
+                
+                    <tr>
+                      <th style="width: 150px;">ステータス詳細</th>
+                      <th style="width: 160px;">スキルダメージ</th>
+                      <th style="width: 160px;">瀑のダメージ</th>
+                      <th style="width: 150px;">クールタイム(CT)</th>
+                      <th style="width: 120px;">元素エネルギー</th>
+                    </tr>
+                
+                    <tr>
+                        <td style="text-align: center;">Lv.2</td>
+                        <td style="text-align: center;"> HP上限19.8%</td>
+                        <td style="text-align: center;"> HP上限24.2%</td>
+                        <td rowspan="9" style="text-align: center;">18.0s</td>
+                        <td rowspan="9" style="text-align: center;">70</td>
+                        </tr>
+                        <tr>
+                        <td style="text-align: center;">Lv.3</td>
+                        <td style="text-align: center;"> HP上限21.2%</td>
+                        <td style="text-align: center;"> HP上限25.9%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.4</td>
+                        <td style="text-align: center;"> HP上限23.0%</td>
+                        <td style="text-align: center;"> HP上限28.2%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.5</td>
+                        <td style="text-align: center;"> HP上限24.4%</td>
+                        <td style="text-align: center;"> HP上限29.8%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.6</td>
+                        <td style="text-align: center;"> HP上限25.8%</td>
+                        <td style="text-align: center;"> HP上限31.5%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.7</td>
+                        <td style="text-align: center;"> HP上限27.6%</td>
+                        <td style="text-align: center;"> HP上限33.8%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.8</td>
+                        <td style="text-align: center;"> HP上限29.5%</td>
+                        <td style="text-align: center;"> HP上限36.0%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.9</td>
+                        <td style="text-align: center;"> HP上限31.3%</td>
+                        <td style="text-align: center;"> HP上限38.3%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.10</td>
+                        <td style="text-align: center;"> HP上限33.2%</td>
+                        <td style="text-align: center;"> HP上限40.6%</td>
+                        </tr>
+                        
+                        </table><br><br><br>
+                
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6/::ref/%E8%90%BD%E8%8A%B1%E5%BB%BB%E6%97%8B%E3%81%AE%E5%BA%AD.png?rev=ddc26b1257b50d9a6be2cbc7a8b01232&t=20221014230121" width="75px" height="75px"><p class="hutaogift">&nbsp;落花廻旋の庭</p></th>
+        <td colspan="16"><br><br><b>&nbsp;落花廻旋の庭</b><br>&nbsp;&nbsp;
+            チーム全員の元素タイプが草元素と水元素であり、かつ草元素と水元素のキャラクターが少なくとも一人ずついる時、
+            ニィロウの七域のダンスの3段目のステップが完了すると、周囲チーム全員に「金盃の豊穣」状態を付与する、継続時間30秒。
+            金盃の豊穣状態のキャラクターが草元素の攻撃を受けた後、周囲のチーム全員の元素熟知+100、継続時間10秒。
+            また、開花反応を起こした時、草原核の代わりに「豊穣の核」が生成される。
+            草原核に比べ、豊穣の核は生成された直後に迸り、より大きな影響範囲を持つ。
+            豊穣の核は超開花反応と烈開花反応を起こすことができず、草原核と上限数を共有する。豊穣の核の攻撃は、開花反応による草原核の攻撃と見なされる。
+            チーム内キャラクターの元素タイプが固有天賦の条件を満たさない場合、既存の金盃の豊穣効果はクリアされる。<br><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6/::ref/%E8%BB%BD%E3%82%84%E3%81%8B%E3%81%AB%E8%88%9E%E3%81%86%E6%B0%B8%E4%B8%96%E3%81%AE%E5%A4%A2.png?rev=d80f5ce3e5a630f5667922ac5bf59e13&t=20221014230105" width="75px" height="75px"><p class="hutaogift">&nbsp;軽やかに舞う永世の夢</p></th>
+        <td colspan="16"><br><br><b>&nbsp;軽やかに舞う永世の夢</b><br>&nbsp;&nbsp;
+            ニィロウのHP上限が30000を超えているとき、その上限が1000超えるごとに<br>
+            「金盃の豊穣」状態のキャラクターが起こした豊穣の核によるダメージ+9%。<br>
+            この方法でアップできる豊穣の核のダメージは最大400%までとなる。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6/::ref/%E7%99%BD%E3%81%8D%E7%8E%89%E8%93%AE%E3%81%AE%E7%9B%83.png?rev=0ec4285b1547b74cb28e0cf33cd46895&t=20221014230053" width="75px" height="75px"><p class="hutaogift">&nbsp;白き玉蓮の盃</p></th>
+        <td colspan="16"><br><br><b>&nbsp;白き玉蓮の盃</b><br>&nbsp;&nbsp;
+            冒険系料理を完璧調理した時、12%の確率で料理を2倍獲得する。<br>
+         <br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6/::ref/%E5%8D%B4%E6%9C%88%E3%81%AE%E8%88%9E%E8%B8%8A.png?rev=e80ad7866d28820e4fac9cc1e4912e4d&t=20221014230040" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;却月の舞踊</b><br>&nbsp;&nbsp;
+                七域のダンスは、以下の強化効果を獲得する。<br>
+                ・水月によるダメージ+65%。<br>
+                ・天を滌う水環の継続時間+6秒。<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6/::ref/%E6%98%9F%E5%A4%A9%E3%81%AE%E8%8A%B1%E9%9B%A8.png?rev=64bf25871c6d4245ed1d75bae5ad0267&t=20221014230029" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;星天の花雨</b><br>&nbsp;&nbsp;
+                「金盃の豊穣」状態のキャラクターが敵に水元素ダメージを与えた後<br>
+                、その敵の水元素耐性-35%、継続時間10秒。<br>
+                開花反応を起こして敵にダメージを与えた後、<br>
+                その敵の草元素耐性-35%、継続時間10秒。<br><br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6/::ref/%E6%9C%9D%E5%BD%B1%E3%81%AE%E8%93%AE%E6%AD%A9.png?rev=cc61755fb13ac66e55ace79b1eeb14bc&t=20221014230020" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;朝影の蓮歩</b><br>&nbsp;&nbsp;元素スキルの天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6/::ref/%E6%B8%85%E6%BC%A3%E3%81%AE%E9%9F%B3%E7%AF%80.png?rev=2e03544d5c235375198b23807f2fa0b0&t=20221014230008" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;清漣の音節</b><br>&nbsp;&nbsp;
+                七域のダンスのピルエット状態の3段目のステップが敵に命中すると、<br>
+                ニィロウの元素エネルギーが15回復する。<br>
+                同時に浮蓮のダンス・遠夢聆泉によるダメージ+50%、継続時間8秒。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6/::ref/%E6%97%8B%E8%88%9E%E3%81%AE%E6%B5%81%E5%85%89.png?rev=18bd2c604815b2ba47c2478a98bd908c&t=20221014225958" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;旋舞の流光</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6/::ref/%E9%9C%9C%E7%B5%B6%E3%81%AE%E5%BC%A6%E6%AD%8C.png?rev=810a5eaaf3f5ce2a9a9d6d407c3e572f&t=20221014225946" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;霜絶の弦歌</b><br>&nbsp;&nbsp;
+                HP上限1000ごとにニィロウの会心率+0.6%、会心ダメージ+1.2%。<br>
+                この方式でアップできる会心率は最大30%、会心ダメージは最大60%となる。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ニィロウは"HP%依存サブアタッカー"という立ち位置なので、メインステータスがHP%、会心率/ダメージを盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、アタッカーの中でも"開花反応アタッカー"という、草元素と水元素の元素反応により戦う特殊キャラなので元素反応によって効果を得られる武器を選びましょう。<br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E7%A3%90%E5%B2%A9%E7%B5%90%E7%B7%91.png.webp?rev=9d92f1c97c11cfdc391832058a84f438&t=20210217011531">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E8%81%96%E9%A1%95%E3%81%AE%E9%8D%B5.png.webp?rev=9cb39676e09a9dd525a6addef7858703&t=20221014190534">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E9%9C%A7%E5%88%87%E3%81%AE%E5%BB%BB%E5%85%89.png.webp?rev=5cc0d4c3ff977816c5d3d62935be6bff&t=20210722011014" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%BC%E3%83%B3%E3%82%B7%E3%83%A7%E3%83%83%E3%83%88%202023-01-20%20203842.jpg?rev=60025e0872042613db80aae9e0762580&t=20230120203856" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E8%88%B9%E6%B8%A0%E5%89%A3.jpeg?rev=a86cd091520889a1a8cd3a65cb7c5037&t=20230928210213" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E9%BB%92%E5%89%A3.png.webp?rev=f40c67923e7e087924e4e354266bcbc2&t=20240102011138" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E6%B3%A2%E4%B9%B1%E6%9C%88%E7%99%BD%E7%B5%8C%E6%B4%A5.png.webp?rev=dd9729072c91ab418064b39f90c3f6fe&t=20220330145039" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E6%9C%89%E6%A5%BD%E5%BE%A1%E7%B0%BE%E5%88%87.png.webp?rev=8dcb3e6d48c394c9907c39792382f096&t=20240313210413" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E6%9C%88%E5%A8%98%E3%81%AE%E8%8F%AF%E5%BD%A9.jpg.webp?rev=7b71c1895eadbe981db946f39b1d1eab&t=20221229184529" width="100px" height="100px" style="margin: auto;"><p class="rine-relic"><b>楽園の絶花</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        元素熟知+80,
+                      <br>
+                      開花、超開花、烈開花反応によるダメージ+40％。また、装備者自身が開花、超開花、烈開花を起こした後、<br>
+                      上記強化効果の効果量+25％、継続時間10秒、最大4層まで重ねられ、1秒毎に最大1回のみ発動可能。装備したキャラクターが待機している場合にも効果を発揮できる。<br>
+                    </td>
+                    <td style="width: 400px;">４セット効果を駆使して戦うので、<br>水元素２、草元素２のパーティ編成を組みましょう。<br></td>
+                    <td style="display: flex; text-align: center;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%AB%E3%83%BC%E3%83%B4%E3%82%A7_s.webp?rev=17106967eb95fe9d66a943a0da854b5d&t=20230526210116" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6_s.webp?rev=9697109ce9c476aac96e3b0bb000c3fc&t=20240313094448" width="100px" height="100px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7_s.webp?rev=3aca58306ed023b42cdc0da8e0abb6c5&t=20240313094612" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%A8%E3%82%A9%E3%83%BC%E3%83%A8_s.webp?rev=d127e0f14d5939292be568c557247af9&t=20230118200205" width="100px" height="100px">
+                  　</td>
+                   </tr>
+                   <tr>
+                    <td style="text-align: center;">
+                        <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%81%89%E5%8B%B2%E3%81%AE%E8%8A%B1_5.png.webp?rev=f0fd9db451db37a9cce686f2979ee6ea&t=20210502014102" width="100px" height="100px" style="margin: auto;"><br>
+                        <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%A4%A2%E5%A2%83%E3%81%AE%E9%89%84%E8%8A%B1_5.png.webp?rev=212ae3cc99c1621153d01ce0a11d831f&t=20220826154359" width="100px" height="100px" style="margin: auto;"><p class="rine-relic"><b>千岩牢固、<br>金メッキの夢</br></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        HP+20%,
+                      <br>
+                      元素熟知+80。<br>
+                    </td>
+                    <td style="width: 400px;">２セット効果を２つ駆使して戦うので、元素反応を主軸としたパーティ編成を組みましょう<br><br></td>
+                    <td style="display: flex; text-align: center;"><div width="50px" height="50px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%83%A1%E6%A1%83_s.webp?rev=54adea76042ec54e902879a162ad1398&t=20240313094046" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6_s.webp?rev=9697109ce9c476aac96e3b0bb000c3fc&t=20240313094448" width="100px" height="100px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%A1%8C%E7%A7%8B_s.webp?rev=99947695ce24868c42f736b737db5020&t=20240313094600" width="100px" height="100px">
+                  　</td>
+                   </tr></table></div><br><br><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

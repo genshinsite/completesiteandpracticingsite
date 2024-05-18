@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>リオセスリ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    <a href="#combo">・コンボ</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">リオセスリ</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC9xbjZTelNMRy5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19"></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆5</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">法器</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">氷</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">獄守犬座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">フォンテーヌ</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">小野大輔</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  
+    
+    <tr>
+        <th style="text-align: center;">基礎HP</th>
+        <td style="text-align: center;">2745</td>
+        <td style="text-align: center;">3652</td>
+        <td style="text-align: center;">5465</td>
+        <td style="text-align: center;">6110</td>
+        <td style="text-align: center;">7029</td>
+        <td style="text-align: center;">7889</td>
+        <td style="text-align: center;">8818</td>
+        <td style="text-align: center;">9462</td>
+        <td style="text-align: center;">10400</td>
+        <td style="text-align: center;">11045</td>
+        <td style="text-align: center;">11993</td>
+        <td style="text-align: center;">12637</td>
+        <td style="text-align: center;">13593</td>
+        </tr>
+        
+        <tr>
+        <th style="text-align: center;">基礎攻撃力</th>
+        <td style="text-align: center;">62</td>
+        <td style="text-align: center;">83</td>
+        <td style="text-align: center;">125</td>
+        <td style="text-align: center;">139</td>
+        <td style="text-align: center;">160</td>
+        <td style="text-align: center;">180</td>
+        <td style="text-align: center;">201</td>
+        <td style="text-align: center;">216</td>
+        <td style="text-align: center;">238</td>
+        <td style="text-align: center;">252</td>
+        <td style="text-align: center;">274</td>
+        <td style="text-align: center;">289</td>
+        <td style="text-align: center;">311</td>
+        </tr>
+        
+        <tr>
+        <th style="text-align: center;">基礎防御力</th>
+        <td style="text-align: center;">154</td>
+        <td style="text-align: center;">205</td>
+        <td style="text-align: center;">307</td>
+        <td style="text-align: center;">343</td>
+        <td style="text-align: center;">395</td>
+        <td style="text-align: center;">443</td>
+        <td style="text-align: center;">495</td>
+        <td style="text-align: center;">531</td>
+        <td style="text-align: center;">584</td>
+        <td style="text-align: center;">620</td>
+        <td style="text-align: center;">673</td>
+        <td style="text-align: center;">710</td>
+        <td style="text-align: center;">763</td>
+        </tr>
+        
+        <tr>
+        <th style="text-align: center;">会心ダメージ</th>
+        <td style="text-align: center;">—</td>
+        <td style="text-align: center;">—</td>
+        <td style="text-align: center;">—</td>
+        <td style="text-align: center;">9.6%</td>
+        <td style="text-align: center;">9.6%</td>
+        <td style="text-align: center;">19.2%</td>
+        <td style="text-align: center;">19.2%</td>
+        <td style="text-align: center;">19.2%</td>
+        <td style="text-align: center;">19.2%</td>
+        <td style="text-align: center;">28.8%</td>
+        <td style="text-align: center;">28.8%</td>
+        <td style="text-align: center;">38.4%</td>
+        <td style="text-align: center;">38.4%</td>
+        </tr></table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E3%83%95%E3%83%AD%E3%82%B9%E3%83%88%E3%82%B3%E3%83%B3%E3%83%93%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.webp?rev=831c8514b828573b68996cc3dc77b6c4&t=20231019121508" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+        最大5段の連続攻撃を行い、氷元素ダメージを与える。<br>
+        元素スキル「アイスファング・ラッシュ」を発動、またはダッシュした後の一定時間、通常攻撃の連撃段数がリセットされない。<br><br>
+        
+        重撃<br>
+        一定のスタミナを消費し、氷元素範囲ダメージを与える。<br><br>
+        
+        落下攻撃<br>
+        空中から落下時に氷元素範囲ダメージを与える。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 80px;">5段目</th>
+    <th style="width: 80px;">重撃<br>ダメージ</th>
+    <th style="width: 150px;">重撃スタミナ消費</th>
+    <th style="width: 150px;">落下期間<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+    
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2%</td>
+    <td style="text-align: center;">57.7%</td>
+    <td style="text-align: center;">56.0%</td>
+    <td style="text-align: center;">72.7%</td>
+    <td style="text-align: center;">41.0%+41.0%</td>
+    <td style="text-align: center;">98.1%</td>
+    <td style="text-align: center;">164.4%</td>
+    <td rowspan="9" style="text-align: center;">50.0</td>
+    <td style="text-align: center;">61.5%</td>
+    <td style="text-align: center;">123%/153%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">62.0%</td>
+    <td style="text-align: center;">60.2%</td>
+    <td style="text-align: center;">78.2%</td>
+    <td style="text-align: center;">44.1%+44.1%</td>
+    <td style="text-align: center;">105.5%</td>
+    <td style="text-align: center;">175.9%</td>
+    <td style="text-align: center;">66.1%</td>
+    <td style="text-align: center;">132%/165%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">68.3%</td>
+    <td style="text-align: center;">66.3%</td>
+    <td style="text-align: center;">86.0%</td>
+    <td style="text-align: center;">48.5%+48.5%</td>
+    <td style="text-align: center;">116.1%</td>
+    <td style="text-align: center;">191.2%</td>
+    <td style="text-align: center;">72.7%</td>
+    <td style="text-align: center;">145%/182%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">72.6%</td>
+    <td style="text-align: center;">70.5%</td>
+    <td style="text-align: center;">91.5%</td>
+    <td style="text-align: center;">51.6%+51.6%</td>
+    <td style="text-align: center;">123.5%</td>
+    <td style="text-align: center;">202.7%</td>
+    <td style="text-align: center;">77.3%</td>
+    <td style="text-align: center;">155%/193%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">77.6%</td>
+    <td style="text-align: center;">75.3%</td>
+    <td style="text-align: center;">97.7%</td>
+    <td style="text-align: center;">55.1%+55.1%</td>
+    <td style="text-align: center;">131.9%</td>
+    <td style="text-align: center;">214.1%</td>
+    <td style="text-align: center;">82.6%</td>
+    <td style="text-align: center;">165%/206%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">84.4%</td>
+    <td style="text-align: center;">81.9%</td>
+    <td style="text-align: center;">106.3%</td>
+    <td style="text-align: center;">59.9%+59.9%</td>
+    <td style="text-align: center;">143.5%</td>
+    <td style="text-align: center;">229.4%</td>
+    <td style="text-align: center;">89.9%</td>
+    <td style="text-align: center;">180%/224%></td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">91.2%</td>
+    <td style="text-align: center;">88.5%</td>
+    <td style="text-align: center;">114.9%</td>
+    <td style="text-align: center;">64.8%+64.8%</td>
+    <td style="text-align: center;">155.1%</td>
+    <td style="text-align: center;">244.7%</td>
+    <td style="text-align: center;">97.1%</td>
+    <td style="text-align: center;">194%/243%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">98.0%</td>
+    <td style="text-align: center;">95.2%</td>
+    <td style="text-align: center;">123.5%</td>
+    <td style="text-align: center;">69.6%+69.6%</td>
+    <td style="text-align: center;">166.7%</td>
+    <td style="text-align: center;">260.0%</td>
+    <td style="text-align: center;">104.4%</td>
+    <td style="text-align: center;">209%/261%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">105.5%</td>
+    <td style="text-align: center;">102.4%</td>
+    <td style="text-align: center;">132.9%</td>
+    <td style="text-align: center;">74.9%+74.9%</td>
+    <td style="text-align: center;">179.4%</td>
+    <td style="text-align: center;">275.3%</td>
+    <td style="text-align: center;">112.3%</td>
+    <td style="text-align: center;">225%/281%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="1000px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E3%82%A2%E3%82%A4%E3%82%B9%E3%83%95%E3%82%A1%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5.webp?rev=a8234e5b6d4888dd5923d93e3dbd32c2&t=20231022170556" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+      烈霜の懲戒状態に入る。<br><br>
+
+      烈霜の懲戒<br>
+      ・リオセスリの中断耐性をアップする。<br>
+      ・HPが50％を超えている場合、「通常攻撃・フロストコンビネーション」のリペルブローが強化され、与えるダメージがアップする。<br>
+      リペルブローは命中すると、リオセスリは一定のHPを消費する。この効果は0.1秒毎に最大1回のみ発動。<br>
+      この効果はリオセスリが退場する時に解除される。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 160px;">強化リベルブロー<br>ダメージ</th>
+                <th style="width: 100px;">HP消費</th>
+                <th style="width: 100px;">継続時間</th>
+                <th style="width: 100px;">クールタイム(CT)</th>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Lv.2</td>
+                <td style="text-align: center;">通常攻撃ダメージ145.8%</td>
+                <td rowspan="9" style="text-align: center;">HP上限4.5%</td>
+                <td rowspan="9" style="text-align: center;">10.0s</td>
+                <td rowspan="9" style="text-align: center;">16.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.3</td>
+                <td style="text-align: center;">通常攻撃ダメージ148.3%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.4</td>
+                <td style="text-align: center;">通常攻撃ダメージ151.7%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.5</td>
+                <td style="text-align: center;">通常攻撃ダメージ154.3%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.6</td>
+                <td style="text-align: center;">通常攻撃ダメージ156.9%</td>
+                
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.7</td>
+                <td style="text-align: center;">通常攻撃ダメージ160.2%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.8</td>
+                <td style="text-align: center;">通常攻撃ダメージ163.6%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.9</td>
+                <td style="text-align: center;">通常攻撃ダメージ167.0%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.10</td>
+                <td style="text-align: center;">通常攻撃ダメージ170.3%</td>
+                </tr></table><br><br><br>
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E3%82%AC%E3%83%B3%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%BB%E3%82%A6%E3%83%AB%E3%83%95%E3%83%90%E3%82%A4%E3%83%88.webp?rev=83c374245230767b21a8ba7f9634628e&t=20231019121534" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+                      <td colspan="16"><br><br>
+                        氷柱で前方の敵に攻撃を与え続け、複数回の氷元素範囲ダメージを与える。<br><br>
+
+                        アルケー:ウーシア<br>
+                        氷柱による攻撃が終了した後、敵の位置に迸発の刃を召喚し、ウーシアを帯びた氷元素ダメージを与える。<br><br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                      </td>
+                    </tr>
+                
+                    <tr>
+                      <th style="width: 150px;">ステータス詳細</th>
+                      <th style="width: 160px;">スキルダメージ</th>
+                      <th style="width: 160px;">迸発の刃の<br>ダメージ</th>
+                      <th style="width: 150px;">クールタイム(CT)</th>
+                      <th style="width: 150px;">迸発の刃の<br>クールタイム</th>
+                      <th style="width: 120px;">元素エネルギー</th>
+                    </tr>
+                
+                    <tr>
+                        <td style="text-align: center;">Lv.2</td>
+                        <td style="text-align: center;">136.74%×5</td>
+                        <td style="text-align: center;">45.58%</td>
+                        <td rowspan="9" style="text-align: center;">15.0s</td>
+                        <td rowspan="9" style="text-align: center;">10.0s</td>
+                        <td rowspan="9" style="text-align: center;">60</td>
+                        </tr>
+                        <tr>
+                        <td style="text-align: center;">Lv.3</td>
+                        <td style="text-align: center;">146.28%×5</td>
+                        <td style="text-align: center;">159.00%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.4</td>
+                        <td style="text-align: center;">168.54%×5</td>
+                        <td style="text-align: center;">56.18%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.5</td>
+                        <td style="text-align: center;">178.08%×5</td>
+                        <td style="text-align: center;">59.36%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.6</td>
+                        <td style="text-align: center;">190.80%×5</td>
+                        <td style="text-align: center;">63.60%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.7</td>
+                        <td style="text-align: center;">203.52%×5</td>
+                        <td style="text-align: center;">67.84%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.8</td>
+                        <td style="text-align: center;">216.24%×5</td>
+                        <td style="text-align: center;">72.08%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.9</td>
+                        <td style="text-align: center;">228.96%×5</td>
+                        <td style="text-align: center;">76.32%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.10</td>
+                        <td style="text-align: center;">241.68%×5</td>
+                        <td style="text-align: center;">80.56%</td>
+                        </tr>
+                        
+                        </table><br><br><br>
+                
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E3%82%84%E3%81%8C%E3%81%A6%E5%85%AC%E7%BE%A9%E3%81%AF%E5%BC%81%E3%81%9C%E3%82%89%E3%82%8B.webp?rev=afd730f00b468e3e75ec836bbf5cd9da&t=20231019121455" width="75px" height="75px"><p class="hutaogift">&nbsp;やがて公義は弁ぜらる</p></th>
+        <td colspan="16"><br><br><b>&nbsp;やがて公義は弁ぜらる</b><br>&nbsp;&nbsp;
+          リオセスリのHPが60%未満の場合、「恩典の戒め」を獲得し、<br>
+          次の通常攻撃・フロストコンビネーションの重撃が誅罰・ヴォールティングアッパーに強化される。<br>
+          誅罰・ヴォールティングアッパー: スタミナを消費せず、与えるダメージ+50%。<br>
+          また、命中後にリオセスリのHPをHP上限の30%分回復する。<br>
+          この方法で獲得できる「恩典の戒め」は、5秒毎に1回のみ。<br><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E3%81%84%E3%81%9A%E3%82%8C%E7%BD%AA%E6%A5%AD%E3%81%AF%E8%B4%96%E3%82%8F%E3%82%8B.webp?rev=67c9ed2f26b3f8d9079f1cfb689e46fe&t=20231019121442" width="75px" height="75px"><p class="hutaogift">&nbsp;いずれ罪業は贖わる</p></th>
+        <td colspan="16"><br><br><b>&nbsp;いずれ罪業は贖わる</b><br>&nbsp;&nbsp;
+          リオセスリの現在のHPが増える、または減る時、<br>
+          リオセスリがアイスファング：ラッシュによる烈霜の懲戒状態にある場合、<br>
+          「抵罪の赦免」効果を1層獲得する。<br>
+          この効果は最大5層まで重ね掛けでき、1層につきリオセスリの攻撃力+6%。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E5%85%AC%E7%88%B5%E3%81%AE%E6%81%A9%E8%B5%A6.webp?rev=e2e6755b9452550933d4d41d98c7f326&t=20231019121427" width="75px" height="75px"><p class="hutaogift">&nbsp;公爵の恩赦</p></th>
+        <td colspan="16"><br><br><b>&nbsp;公爵の恩赦</b><br>&nbsp;&nbsp;
+          武器突破素材を合成する時、10%の確率でアイテムを2倍獲得する。<br>
+         <br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E6%82%AA%E3%82%92%E7%82%BA%E3%81%99%E8%80%85%E3%81%AB%E6%81%90%E3%82%8C%E3%82%92.webp?rev=0e58f28754efd0e007fa91d117a6974f&t=20231019121259" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;悪を為す者に恐れを</b><br>&nbsp;&nbsp;
+              固有天賦「やがて公義は弁ぜられる」の「恩典の戒め」が以下のように変化する。<br>
+              リオセスリのHPが60%未満、またはアイスファング：ラッシュによる<br>
+              烈霜の懲戒状態を継続中に、リペルブローの5段目が命中すると、「恩典の戒め」を獲得する。<br>
+              「恩典の戒め」は2.5秒毎に1回のみ獲得可能。<br>
+              また、誅罰・ヴォールティングアッパーは以下のように強化される。<br>
+              ・ダメージアップ効果が200%になる。<br>
+              ・命中した時に烈霜の懲戒状態だった場合、烈霜の懲戒状態が4秒延長される。<br>
+              烈霜の懲戒状態中、この方法による継続時間の延長は1回のみ。<br>
+              固有天賦「やがて公義は弁ぜられる」を解放する必要がある。<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E5%8A%9B%E3%81%AB%E9%A9%95%E3%82%8B%E8%80%85%E3%81%AB%E9%8E%96%E3%82%92.webp?rev=03a81eaf386178baecc293e45f4eb73b&t=20231019121313" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;力に驕る者に鎖を</b><br>&nbsp;&nbsp;
+              ガンメタル・ウルフバイトの発動時、<br>
+              固有天賦「いずれ罪業は贖わる」による「抵罪の赦免」1層につき、与えるダメージ+40%。<br>
+              固有天賦「いずれ罪業は贖わる」を解放する必要がある。<br><br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E9%A8%99%E3%81%97%E7%9B%97%E3%82%8B%E8%80%85%E3%81%AB%E7%BD%B0%E3%82%92.webp?rev=b1d9d2cb72ff83fa4b124ccdbfd565bb&t=20231019121328" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;騙し盗る者に罰を</b><br>&nbsp;&nbsp;通常攻撃の天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E8%8B%A6%E3%81%AB%E5%96%98%E3%81%90%E8%80%85%E3%81%AB%E6%95%91%E3%81%84%E3%82%92.webp?rev=b49b0020b7a2e727c339e1eb5571be74&t=20231019121342" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;苦に喘ぐ者に救いを</b><br>&nbsp;&nbsp;
+              誅罰・ヴォールティングアッパーの回復量が、リオセスリのHP上限の50%までアップする。<br>
+              固有天賦「やがて公義は弁ぜられる」を解放する必要がある。<br>
+              さらに、リオセスリが治療効果を受けた時、それがHP上限を超える回復だった場合、<br>
+              リオセスリがフィールド上にいるかによって異なる効果を発動する。<br>
+              リオセスリがフィールド上にいる場合、リオセスリの攻撃速度+20%。継続時間4秒。<br>
+              待機中の場合、チーム内の自身キャラクター全員の攻撃速度+10%、継続時間6秒。<br>
+              この2種類の攻撃速度アップ効果は重ね掛けできない。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E5%86%A4%E3%82%92%E8%92%99%E3%82%8B%E8%80%85%E3%81%AB%E8%B5%A6%E3%81%97%E3%82%92.webp?rev=1d39a7fbb51daaf039ea48146c72ad45&t=20231019121357" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;冤を蒙る者に赦しを</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E7%BD%AA%E3%81%AE%E7%84%A1%E3%81%84%E8%80%85%E3%81%AB%E6%85%B0%E3%82%81%E3%82%92.webp?rev=c94530945cd515151f0fb30a345b9cfb&t=20231019121411" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;罪の無い者に慰めを</b><br>&nbsp;&nbsp;
+              誅罰・ヴォールティングアッパーの会心率+10%、会心ダメージ+80%。<br>
+              また、発動時に氷柱を生成し、誅罰・ヴォールティングアッパー100%分の氷元素ダメージを与える。<br>
+              このダメージは重撃ダメージと見なされる。<br>
+              固有天賦「やがて公義は弁ぜられる」を解放する必要がある。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              リオセスリは"アタッカー"という立ち位置なので、メインステータスが攻撃力、会心率/ダメージを盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、アタッカーの中でも"通常攻撃アタッカー"という、より通常攻撃を多く行うアタッカーなので、通常攻撃により効果が発揮される武器を選びましょう。<br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E5%87%9B%E6%B5%81%E3%81%AE%E7%9B%A3%E8%A6%96%E8%80%85.png.webp?rev=8c36c063e2273aacc84eb18251e30769&t=20231021152802">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E3%83%88%E3%82%A5%E3%83%A9%E3%82%A4%E3%83%88%E3%82%A5%E3%83%BC%E3%83%A9%E3%81%AE%E8%A8%98%E6%86%B6.png?rev=92cdf16e69528202ee8f8c38dbf6648c&t=20221210220831">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E6%B5%81%E6%B5%AA%E6%A5%BD%E7%AB%A0.png.webp?rev=7a6c80be40a0c7a19c52049baae34d47&t=20231220010450" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E5%8C%A3%E4%B8%AD%E6%97%A5%E6%9C%88.png.webp?rev=ebd53db11b0c52fd5f94cae51b466864&t=20201029175301" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E5%A4%A9%E7%A9%BA%E3%81%AE%E5%B7%BB.png.webp?rev=cb6102676b50daaf7d2d470d9732c36b&t=20201023180110" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E5%9B%9B%E9%A2%A8%E5%8E%9F%E5%85%B8.jpg?rev=a87e011438d53723391de6cec17d5535&t=20201129215636" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E6%98%AD%E5%BF%83.png.webp?rev=8f478f9b008f282890f0ba708cc50133&t=20231202155700" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>A</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/screenshot.1605901420.jpg?rev=e31fd81a205c3753643fa1a6dbc419b5&t=20201121044915" alt="">
+            </tr></table><br><br><br>
+
+
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+
+                   <tr>
+                    <td style="text-align: center;">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E7%8B%A9%E4%BA%BA%E3%81%AE%E8%83%B8%E8%8A%B1.png.webp?rev=77b1baa4b6722aab9e3ae6f7b09e33f0&t=20230820021725" width="100px" height="100px" style="margin: auto;"><p class="rine-relic"><b>ファントムハンター</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        通常攻撃と重撃ダメージ+15%,
+                      <br>
+                      現在のHPが増える、または減る時、会心率+12%、継続時間5秒、最大3層まで重ね掛け可能。<br>
+                    </td>
+                    <td style="width: 400px;">４セット効果を駆使して戦うので、<br>会心ダメージを多く盛り、ダメージをだしましょう。<br>また通常攻撃の際に追加ダメージを与えたり、<br>バフをかけるキャラクターを入れた<br>パーティ編成を組みましょう。<br></td>
+                    <td style="display: flex; text-align: center;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA_s.webp.webp?rev=e23e379f0967e954b889b0e7dc2abad6&t=20231021115204" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%94%B3%E9%B6%B4_s.webp?rev=ecfb0358726729d65dcf0dde48734356&t=20240313095217" width="100px" height="100px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%8D%BE%E9%9B%A2_s.webp?rev=ab44a61a332174925072c553966eb001&t=20240313101433" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926" width="100px" height="100px">
+                  　</td>
+                   </tr></table></div><br><br><br><br>
+
+                   <h2 id="combo" style="text-align: left;">&nbsp;&nbsp;&nbsp;コンボ</h2>
+                  </div><br><br>
+      
+                    <div class="combo-text">
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3>&nbsp;&nbsp;&nbsp;重撃ダメージコンボ</h3>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                      ・リオセスリは元素スキル発動後HPが一定値減少すると重撃が強化されるので元素スキル発動から通常攻撃４段から重撃を放つコンボがあります。<br>
+                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;２回目の重撃後に元素爆発を入れたらMAXダメージとなります<br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E3%82%A2%E3%82%A4%E3%82%B9%E3%83%95%E3%82%A1%E3%83%B3%E3%82%B0%E3%83%BB%E3%83%A9%E3%83%83%E3%82%B7%E3%83%A5.webp?rev=a8234e5b6d4888dd5923d93e3dbd32c2&t=20231022170556" alt="" width="100px" height="100px">
+                      <b>&rightarrow;</b>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E3%83%95%E3%83%AD%E3%82%B9%E3%83%88%E3%82%B3%E3%83%B3%E3%83%93%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.webp?rev=831c8514b828573b68996cc3dc77b6c4&t=20231019121508" alt="" width="100px" height="100px">
+                      <b style="font-size: 30px;">×4</b>
+                      <b>&rightarrow;</b>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E3%83%95%E3%83%AD%E3%82%B9%E3%83%88%E3%82%B3%E3%83%B3%E3%83%93%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.webp?rev=831c8514b828573b68996cc3dc77b6c4&t=20231019121508" alt="" width="100px" height="100px">
+                      <b>重撃</b>
+                      <b>&rightarrow;</b>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E3%83%95%E3%83%AD%E3%82%B9%E3%83%88%E3%82%B3%E3%83%B3%E3%83%93%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.webp?rev=831c8514b828573b68996cc3dc77b6c4&t=20231019121508" alt="" width="100px" height="100px">
+                      <b style="font-size: 30px;">×4</b>
+                      <b>&rightarrow;</b>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E3%83%95%E3%83%AD%E3%82%B9%E3%83%88%E3%82%B3%E3%83%B3%E3%83%93%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.webp?rev=831c8514b828573b68996cc3dc77b6c4&t=20231019121508" alt="" width="100px" height="100px">
+                      <b>重撃</b>
+                      <b>&rightarrow;</b>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E3%83%95%E3%83%AD%E3%82%B9%E3%83%88%E3%82%B3%E3%83%B3%E3%83%93%E3%83%8D%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3.webp?rev=831c8514b828573b68996cc3dc77b6c4&t=20231019121508" alt="" width="100px" height="100px">
+                      <b style="font-size: 30px;">×4</b>
+                      <b>&rightarrow;</b>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA/::ref/%E3%82%AC%E3%83%B3%E3%83%A1%E3%82%BF%E3%83%AB%E3%83%BB%E3%82%A6%E3%83%AB%E3%83%95%E3%83%90%E3%82%A4%E3%83%88.webp?rev=83c374245230767b21a8ba7f9634628e&t=20231019121534" alt="" width="100px" height="100px">
+                      <br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

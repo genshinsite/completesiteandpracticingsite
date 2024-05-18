@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>モナ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">モナ</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC93M2syMVhaUS5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19" alt=""></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆5</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">法器</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">水</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">映天座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">モンド</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">小原好美</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  <tr>
+    <th style="text-align: center;">基礎HP</th>
+    <td style="text-align: center;">2102</td>
+    <td style="text-align: center;">2797</td>
+    <td style="text-align: center;">4185</td>
+    <td style="text-align: center;">4678</td>
+    <td style="text-align: center;">5383</td>
+    <td style="text-align: center;">6041</td>
+    <td style="text-align: center;">6752</td>
+    <td style="text-align: center;">7246</td>
+    <td style="text-align: center;">7964</td>
+    <td style="text-align: center;">8458</td>
+    <td style="text-align: center;">9184</td>
+    <td style="text-align: center;">9677</td>
+    <td style="text-align: center;">10409</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎攻撃力</th>
+    <td style="text-align: center;">58</td>
+    <td style="text-align: center;">77</td>
+    <td style="text-align: center;">115</td>
+    <td style="text-align: center;">129</td>
+    <td style="text-align: center;">148</td>
+    <td style="text-align: center;">166</td>
+    <td style="text-align: center;">186</td>
+    <td style="text-align: center;">199</td>
+    <td style="text-align: center;">219</td>
+    <td style="text-align: center;">233</td>
+    <td style="text-align: center;">253</td>
+    <td style="text-align: center;">267</td>
+    <td style="text-align: center;">287</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎防御力</th>
+    <td style="text-align: center;">132</td>
+    <td style="text-align: center;">176</td>
+    <td style="text-align: center;">263</td>
+    <td style="text-align: center;">294</td>
+    <td style="text-align: center;">338</td>
+    <td style="text-align: center;">379</td>
+    <td style="text-align: center;">424</td>
+    <td style="text-align: center;">455</td>
+    <td style="text-align: center;">500</td>
+    <td style="text-align: center;">531</td>
+    <td style="text-align: center;">576</td>
+    <td style="text-align: center;">607</td>
+    <td style="text-align: center;">653</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">元素チャージ効率</th>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">8.0%</td>
+    <td style="text-align: center;">8.0%</td>
+    <td style="text-align: center;">16.0%</td>
+    <td style="text-align: center;">16.0%</td>
+    <td style="text-align: center;">16.0%</td>
+    <td style="text-align: center;">16.0%</td>
+    <td style="text-align: center;">24.0%</td>
+    <td style="text-align: center;">24.0%</td>
+    <td style="text-align: center;">32.0%</td>
+    <td style="text-align: center;">32.0%</td>
+    </tr></table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%A2%E3%83%8A/::ref/Talent_Ripple_of_Fate.png?rev=ef8c8691b3734164e6c4e0fef41c9644&t=20210206231617" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+      <b>通常攻撃</b><br>
+      剣による最大4段の水元素ダメージを与える。<br><br>
+      
+      <b>重撃</b><br>
+      一定のスタミナを消費し、短い詠唱をした後、敵に水元素範囲ダメージを与える。。<br><br>
+      
+      <b>落下攻撃</b><br>
+      空中から落下し地面に衝撃を与える。経路上の敵を攻撃し、落下時に範囲水元素ダメージを与える。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 80px;">重撃<br>ダメージ</th>
+    <th style="width: 150px;">重撃スタミナ消費</th>
+    <th style="width: 110px;">落下期間の<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2%</td>
+    <td style="text-align: center;">40.4%</td>
+    <td style="text-align: center;">38.7%</td>
+    <td style="text-align: center;">48.2%</td>
+    <td style="text-align: center;">60.4%</td>
+    <td style="text-align: center;">161%</td>
+    <td rowspan="9" style="text-align: center;">50.0</td>
+    <td style="text-align: center;">61.5%</td>
+    <td style="text-align: center;">123%/153%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">43.2%</td>
+    <td style="text-align: center;">41.4%</td>
+    <td style="text-align: center;">51.5%</td>
+    <td style="text-align: center;">64.6%</td>
+    <td style="text-align: center;">172%</td>
+    <td style="text-align: center;">66.1%</td>
+    <td style="text-align: center;">132%/165%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">47.0%</td>
+    <td style="text-align: center;">45.0%</td>
+    <td style="text-align: center;">56.0%</td>
+    <td style="text-align: center;">70.2%</td>
+    <td style="text-align: center;">187%</td>
+    <td style="text-align: center;">72.7%</td>
+    <td style="text-align: center;">145%/182%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">49.8%</td>
+    <td style="text-align: center;">47.7%</td>
+    <td style="text-align: center;">59.4%</td>
+    <td style="text-align: center;">74.4%</td>
+    <td style="text-align: center;">198%</td>
+    <td style="text-align: center;">77.3%</td>
+    <td style="text-align: center;">155%/193%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">52.6%</td>
+    <td style="text-align: center;">50.4%</td>
+    <td style="text-align: center;">62.7%</td>
+    <td style="text-align: center;">78.6%</td>
+    <td style="text-align: center;">210%</td>
+    <td style="text-align: center;">82.6%</td>
+    <td style="text-align: center;">165%/206%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">56.4%</td>
+    <td style="text-align: center;">54.0%</td>
+    <td style="text-align: center;">67.2%</td>
+    <td style="text-align: center;">84.2%</td>
+    <td style="text-align: center;">225%</td>
+    <td style="text-align: center;">89.9%</td>
+    <td style="text-align: center;">180%/224%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">60.2%</td>
+    <td style="text-align: center;">57.6%</td>
+    <td style="text-align: center;">71.7%</td>
+    <td style="text-align: center;">89.9%</td>
+    <td style="text-align: center;">240%</td>
+    <td style="text-align: center;">97.1%</td>
+    <td style="text-align: center;">194%/243%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">63.9%</td>
+    <td style="text-align: center;">61.2%</td>
+    <td style="text-align: center;">76.2%</td>
+    <td style="text-align: center;">95.5%</td>
+    <td style="text-align: center;">255%</td>
+    <td style="text-align: center;">104.4%</td>
+    <td style="text-align: center;">209%/261%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">67.7%</td>
+    <td style="text-align: center;">64.8%</td>
+    <td style="text-align: center;">80.6%</td>
+    <td style="text-align: center;">101%</td>
+    <td style="text-align: center;">269%</td>
+    <td style="text-align: center;">112%</td>
+    <td style="text-align: center;">225%/281%</td>
+    </tr></table><br><br><br>
+
+
+            <table border="1" style="margin: auto;">
+              <tr>
+                <th>&nbsp;</th>
+                <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+              </tr>
+              <tr>
+                <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%A2%E3%83%8A/::ref/Talent_Mirror_Reflection_of_Doom.png?rev=0e73426848cc831470dbf159bb613b46&t=20210206231629" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+                <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+                    虚影<br>
+                    虚影は以下の特性を持つ: <br>
+                    ・持続的に周囲の敵を挑発し、攻撃を引き付ける。<br>
+                    ・持続的に付近の敵に水元素範囲ダメージを与える。<br>
+                    ・継続時間終了時、虚影が破裂し、水元素範囲ダメージを与える。<br><br>
+                    
+                    長押し<br>
+                    水流の勢いを利用し、素早く後退する。<br><br>
+                    
+                    水中幻願によって作られた虚影は、同時に最大1つまで存在可能。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 80px;">一回押し<br>ダメージ</th>
+                <th style="width: 80px;">一段<br>ダメージ</th>
+                <th style="width: 80px;">二段<br>ダメージ</th>
+                <th style="width: 150px;">爆発<br>ダメージ</th>
+                <th style="width: 150px;">クールタイム(CT)</th>
+              </tr>
+          
+              <tr>
+                <th style="text-align: center;">Lv.2</th>
+                <td style="text-align: center;">148%</td>
+                <td style="text-align: center;">90.3%+98.9%</td>
+                <td style="text-align: center;">94.6%+103%</td>
+                <td style="text-align: center;">142%</td>
+                <td rowspan="9" style="text-align: center;">5.0/7.5/10.0s</td>
+                </tr>
+                <tr>
+                <th style="text-align: center;">Lv.3</th>
+                <td style="text-align: center;">158%</td>
+                <td style="text-align: center;">96.6%+106%</td>
+                <td style="text-align: center;">101%+110%</td>
+                <td style="text-align: center;">152%</td>
+                </tr>
+                <tr>
+                <th style="text-align: center;">Lv.4</th>
+                <td style="text-align: center;">172%</td>
+                <td style="text-align: center;">105%+115%</td>
+                <td style="text-align: center;">110%+120%</td>
+                <td style="text-align: center;">165%</td>
+                </tr>
+                <tr>
+                <th style="text-align: center;">Lv.5</th>
+                <td style="text-align: center;">182%</td>
+                <td style="text-align: center;">111%+122%</td>
+                <td style="text-align: center;">117%+127%</td>
+                <td style="text-align: center;">175%</td>
+                </tr>
+                <tr>
+                <th style="text-align: center;">Lv.6</th>
+                <td style="text-align: center;">193%</td>
+                <td style="text-align: center;">118%+129%</td>
+                <td style="text-align: center;">123%+134%%</td>
+                <td style="text-align: center;">185%</td>
+                </tr>
+                <tr>
+                <th style="text-align: center;">Lv.7</th>
+                <td style="text-align: center;">206%</td>
+                <td style="text-align: center;">126%+138%</td>
+                <td style="text-align: center;">132%+144%</td>
+                <td style="text-align: center;">198%</td>
+                </tr>
+                <tr>
+                <th style="text-align: center;">Lv.8</th>
+                <td style="text-align: center;">220%</td>
+                <td style="text-align: center;">134%+147%</td>
+                <td style="text-align: center;">141%+154%</td>
+                <td style="text-align: center;">211%</td>
+                </tr>
+                <tr>
+                <th style="text-align: center;">Lv.9</th>
+                <td style="text-align: center;">234%</td>
+                <td style="text-align: center;">143%+156%</td>
+                <td style="text-align: center;">150%+163%</td>
+                <td style="text-align: center;">224%</td>
+                </tr>
+                <tr>
+                <th style="text-align: center;">Lv.10</th>
+                <td style="text-align: center;">248%</td>
+                <td style="text-align: center;">151%+166%</td>
+                <td style="text-align: center;">158%+173%</td>
+                <td style="text-align: center;">238%</td>
+                </tr></table><br><br><br>
+
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%A2%E3%83%8A/::ref/Talent_Mirror_Reflection_of_Doom.png?rev=0e73426848cc831470dbf159bb613b46&t=20210206231629" width="80px" height="80px"><p class="skill">&nbsp;特殊スキル</p></th>
+                      <td colspan="16"><br><br><b>&nbsp;特殊スキル</b><br>&nbsp;&nbsp;
+                        ダッシュの代わりに発動する<br>
+                        水流に隠れて激流となり、スタミナを消費して素早く移動する。<br><br>
+                        
+                        虚実流動状態のモナは水面上を高速移動できる。<br>
+                        虚実流動状態が終了し、姿を現した時に、周囲の敵に湿潤状態を与える。<br><br>
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th style="width: 200px;">ステータス詳細</th>
+                      <th style="width: 80px;">発動スタミナ消費</th>
+                      <th style="width: 80px;">継続スタミナ消費</th>
+                    </tr>
+
+                    <tr>
+                        <td style="text-align: center; width: 200px;">Lv.1</td>
+                        <td style="text-align: center; width: 80px;">10.00</td>
+                        <td style="text-align: center; width: 80px;">毎秒15.00</td>
+                      </tr></table><br><br><br>
+
+
+  <table border="1" style="margin: auto;">
+    <tr>
+      <th>&nbsp;</th>
+      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+    </tr>
+    <tr>
+      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%A2%E3%83%8A/::ref/Talent_Stellaris_Phantasm.png?rev=c3d039c14ffc92e65d00f22e24fd3876&t=20210206231713" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+      <td colspan="16"><br><br>元素スキル<br><br>
+        泡影<br>
+        星の泡で敵を拘束し、湿潤状態を付与する。比較的に弱い敵は泡影に拘束され、行動不能になる。<br>
+        泡影状態の敵がダメージを受けると、以下の効果を受ける。<br>
+        ・星異状態を与えられ、次に受けるダメージが上昇する。<br>
+        ・泡影の効果が解除する。解除時、水元素ダメージを受ける。<br><br>
+        
+        星異
+        星異状態継続中、受けるダメージがアップする。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br>
+      </td>
+    </tr>
+
+    <tr>
+      <th style="width: 150px;">ステータス詳細</th>
+      <th style="width: 80px;">泡影の<br>継続時間</th>
+      <th style="width: 80px;">泡影<br>破裂ダメージ</th>
+      <th style="width: 100px;">ダメージ上昇率</th>
+      <th style="width: 80px;">星異<br>継続時間</th>
+      <th style="width: 150px;">クールタイム(CT)</th>
+      <th style="width: 120px;">元素エネルギー</th>
+    </tr>
+
+    <tr>
+        <td style="text-align: center;">Lv.2</td>
+        <td rowspan="9" style="text-align: center;">8.0s</td>
+        <td style="text-align: center;">476%</td>
+        <td style="text-align: center;">44%</td>
+        <td rowspan="2" style="text-align: center;">4.0s</td>
+        <td rowspan="9" style="text-align: center;">15.0s</td>
+        <td rowspan="9" style="text-align: center;">60</td>
+        </tr>
+        
+        <tr>
+        <td style="text-align: center;">Lv.3</td>
+        <td style="text-align: center;">509%</td>
+        <td style="text-align: center;">46%</td>
+        </tr>
+        
+        <tr>
+        <td style="text-align: center;">Lv.4</td>
+        <td style="text-align: center;">553%</td>
+        <td style="text-align: center;">48%</td>
+        <td rowspan="3" style="text-align: center;">4.5s</td>
+        </tr>
+        
+        <tr>
+        <td style="text-align: center;">Lv.5</td>
+        <td style="text-align: center;">586%</td>
+        <td style="text-align: center;">50%</td>
+        </tr>
+        
+        <tr>
+        <td style="text-align: center;">Lv.6</td>
+        <td style="text-align: center;">619%</td>
+        <td style="text-align: center;">52%</td>
+        </tr>
+        
+        <tr>
+        <td style="text-align: center;">Lv.7</td>
+        <td style="text-align: center;">664%</td>
+        <td style="text-align: center;">54%</td>
+        <td rowspa="4" style="text-align: center;">4.0s</td>
+        </tr>
+        
+        <tr>
+        <td style="text-align: center;">Lv.8</td>
+        <td style="text-align: center;">708%</td>
+        <td style="text-align: center;">56%</td>
+        </tr>
+        
+        <tr>
+        <td style="text-align: center;">Lv.9</td>
+        <td style="text-align: center;">752%</td>
+        <td style="text-align: center;">58%</td>
+        </tr>
+        
+        <tr>
+        <td style="text-align: center;">Lv.10</td>
+        <td style="text-align: center;">796%</td>
+        <td style="text-align: center;">60%</td>
+        </tr></table><br><br><br>
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%A2%E3%83%8A/::ref/Talent_Come_%2527n%2527_Get_Me%252C_Hag%2521.png?rev=f36b0986f5588cd05be2d4cabb6988c7&t=20210206231726" width="75px" height="75px"><p class="benettegift">&nbsp;情熱復活</p></th>
+        <td colspan="16"><br><br><b>&nbsp;「おばば、私を捕まえられますか～」</b><br>&nbsp;&nbsp;
+            虚実流動状態に入った2秒後、周囲に敵がいる場合、自動的に虚影を1つ生成する。<br>
+            虚影は2秒間存在した後に破裂する。破裂ダメージは水中幻願のダメージの50%に相当する。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%A2%E3%83%8A/::ref/Talent_Waterborne_Destiny.png?rev=0ea10f2f27c425e76dbb50cb2da3c3d6&t=20210206231737" width="75px" height="75px"><p class="benettegift">&nbsp;恐れなき熱血</p></th>
+        <td colspan="16"><br><br><b>&nbsp;「運命の流れに任せましょう！」</b><br>&nbsp;&nbsp;
+            モナの与える水元素ダメージが増加する。増加量はモナの元素チャージ効率の20%に相当する。<br>
+                             <br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%A2%E3%83%8A/::ref/Talent_Principium_of_Astrology.png?rev=7f2388a53f5d73210b06f9bd01653ffb&t=20210206231751" width="75px" height="75px"><p class="benettegift">&nbsp;運行原理</p></th>
+        <td colspan="16"><br><br><b>&nbsp;運行原理</b><br>&nbsp;&nbsp;武器突破素材を合成する時、25%の確率で一部の材料が返還される。<br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%A2%E3%83%8A/::ref/Constellation_Prophecy_of_Submersion.png?rev=c87ea2f58f11ee86e9b2e1beaef84719&t=20210206231928" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;沈没の預言</b><br>&nbsp;&nbsp;
+                チーム内の自身のキャラクターの攻撃が星異状態の敵に命中した8秒間、水元素の関連反応の効果が強化される。<br>
+                ・感電反応ダメージ+15%、蒸発反応ダメージ+15%。水元素の拡散反応によるダメージ+15%。<br>
+                ・凍結反応の継続時間+15%。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%A2%E3%83%8A/::ref/Constellation_Lunar_Chain.png?rev=d96b8be34387d1c0c193bca0fdf2c353&t=20210206231944" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;星月の連珠</b><br>&nbsp;&nbsp;通常攻撃が命中した時、20%の確率で自動的に重撃を発動する<br>
+                5秒毎に1回のみ発動可能。
+                <br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%A2%E3%83%8A/::ref/Constellation_Restless_Revolution.png?rev=ca86b0192473665a4122af2b770e0142&t=20210206232003" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;果てしない天象</b><br>&nbsp;&nbsp;元素スキルの天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%A2%E3%83%8A/::ref/Constellation_Prophecy_of_Oblivion.png?rev=4e4b690f69f44ba0b77c4dc2e84600d1&t=20210206232014" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;絶滅の預言</b><br>&nbsp;&nbsp;チーム内の自身のキャラクターが星異状態の敵を攻撃する時、会心率+15%。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%A2%E3%83%8A/::ref/Constellation_Mockery_of_Fortuna.png?rev=74eece61f7881c8bf30feed6576c862b&t=20210206232026" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;運命の愚弄</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%A2%E3%83%8A/::ref/Constellation_Rhetorics_of_Calamitas.png?rev=4ac9dc9a32ac385d8e0fda9620759237&t=20210206232037" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;災厄の修辞</b><br>&nbsp;&nbsp;
+                モナが虚実流動状態に入った後、1秒移動する毎に、次の重撃ダメージ+60%。<br>
+                最大180%まで、継続時間8秒。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              モナは"バッファー"という立ち位置なので、メインステータスが元素チャージ効率を盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E7%A5%AD%E7%A4%BC%E3%81%AE%E6%96%AD%E7%89%87.png.webp?rev=98a338538bb29d6626f7745e2d9b49a1&t=20201122010958">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E9%BE%8D%E6%AE%BA%E3%81%97%E3%81%AE%E8%8B%B1%E5%82%91%E8%AD%9A.png.webp?rev=6138e6f71f30ad3832e2866227c91649&t=20240314023305" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E8%A5%BF%E9%A2%A8%E7%A7%98%E5%85%B8.png.webp?rev=048f64319abea38a0196b29cd439e2dc&t=20201122010948" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E9%87%91%E7%8F%80%E3%83%BB%E8%A9%A6%E4%BD%9C.png.webp?rev=842027713720679a5077abfd578cecda&t=20231220010522" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E8%AA%93%E3%81%84%E3%81%AE%E6%98%8E%E7%9E%B3.png.webp?rev=c15f6b74a82060d5af5a9929add4f0f6&t=20220217113034">
+              </div></th>
+            </tr></table><br><br><br>
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+
+                <tr>
+                  <td style="text-align: center;">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E6%97%A7%E8%B2%B4%E6%97%8F%E3%81%AE%E8%8A%B1.png.webp?rev=141efd01e5b7dd443a26177851d7edc6&t=20210109182341" width="100px" height="100px" style="margin: auto;"><p class="rine-relic"><b>旧貴族のしつけ</b></p></td>
+                  <td style="width: 600px;"><b>セット効果</b><br>
+                    元素爆発のダメージ+20%,
+                    <br>
+                    元素爆発を発動すると、チーム全員の攻撃力+20%、継続時間12秒、重ね掛け不可
+                  </td>
+                  <td style="width: 400px;">４セットを使ってアタッカーを<br>最大限サポートできますが、<br>聖遺物セット効果では元素チャージ効率がないので、メインステに元素チャージ効率があるものを<br>選んだり、編成にもう一人炎元素を追加して、<br>元素粒子の獲得を多くしましょう。<br></td>
+                  <td style="display: flex; text-align: center;"><div width="50px" height="50px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B7%E9%9B%BB%E5%B0%86%E8%BB%8D_s.webp?rev=7c064efdd43177b4266dc3acd84356c0&t=20240313100241" width="100px" height="100px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%A1%8C%E7%A7%8B_s.webp?rev=99947695ce24868c42f736b737db5020&t=20240313094600" width="100px" height="100px"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%A2%E3%83%8A_s.webp?rev=fb73e6c173b2016c8d40e014ccb1d9de&t=20240313094549" width="100px" height="100px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926" width="100px" height="100px">
+                　</td>
+                 </tr>
+
+                 <tr>
+                    <td style="text-align: center;">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E6%97%A7%E8%B2%B4%E6%97%8F%E3%81%AE%E8%8A%B1.png.webp?rev=141efd01e5b7dd443a26177851d7edc6&t=20210109182341" width="100px" height="100px" style="margin: auto;"><p class="rine-relic"><b>絶縁の旗印</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        元素チャージ効率+20%,
+                      <br>
+                      元素チャージ効率の25%を基準に、元素爆発のダメージがアップする。この方式でアップできるダメージは最大75%まで。
+                    </td>
+                    <td style="width: 400px;">４セットを使って戦うので蒸発反応を起こせるパーティ編成を組みましょう。<br></td>
+                    <td style="display: flex; text-align: center;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%A2%E3%83%8A_s.webp?rev=fb73e6c173b2016c8d40e014ccb1d9de&t=20240313094549" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9_s.webp?rev=d6b16d45a11d6c4ebbd2829d5250c1f0&t=20240313100837" width="100px" height="100px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E4%B8%87%E8%91%89_s.webp?rev=7c5488d515d48d9a661f5af5d9a18a33&t=20240313100904" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926" width="100px" height="100px">
+                  　</td>
+                   </tr>
+                
+                <tr style="text-align: center;">
+                <td style="text-align: center;">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%A8%81%E5%8E%B3%E3%81%AE%E9%B0%90_5.png.webp?rev=9b0be23111df21b6a33a19ad7fce945d&t=20210723131453" width="100px" height="100px" style="margin: auto;">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E4%BA%A1%E5%91%BD%E8%80%85%E3%81%AE%E8%8A%B1.png.webp?rev=eb4afc34923c53534791fb1b94284060&t=20210109182820" width="100px" height="100px" style="margin: auto;"><p class="rine-relic"><b>絶縁の旗印、亡命者</b></p></td>
+                <td style="width: 600px; text-align: left;"><b>セット効果</b><br>
+                  元素チャージ効率+20%。,
+                  <br>
+                  元素チャージ効率+20%。
+                </td>
+                <td style="width: 400px; text-align: center;">元素チャージ効率を盛るので、いっぱい元素爆発を回して味方をサポートしましょう。</td>
+                <td style="display: flex;"><div width="50px" height="50px">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%BF%E3%83%AB%E3%82%BF%E3%83%AA%E3%83%A4_s.webp?rev=db1270f556621b4f740828fe0c159572&t=20240313094437"width="100px" height="100px">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A6%E3%82%A7%E3%83%B3%E3%83%86%E3%82%A3_s.webp?rev=d03ba4b351bbabc78e48036945f26699&t=20240313100813"width="100px" height="100px"><br>
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926"width="100px" height="100px">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%A2%E3%83%8A_s.webp?rev=fb73e6c173b2016c8d40e014ccb1d9de&t=20240313094549"width="100px" height="100px">
+              　</td>
+               </tr></table></div><br><br><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

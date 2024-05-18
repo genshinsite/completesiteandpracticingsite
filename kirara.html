@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>綺良々</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">綺良々</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC93Nk1tTERZUS5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19"></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆4</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">片手剣</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">草</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">箱筥座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">稲妻</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">鈴代紗弓</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  
+    
+  <tr>
+    <th style="text-align: center;">基礎HP</th>
+    <td style="text-align: center;">2623</td>
+    <td style="text-align: center;">3386</td>
+    <td style="text-align: center;">5072</td>
+    <td style="text-align: center;">5614</td>
+    <td style="text-align: center;">6458</td>
+    <td style="text-align: center;">7181</td>
+    <td style="text-align: center;">8024</td>
+    <td style="text-align: center;">8566</td>
+    <td style="text-align: center;">9409</td>
+    <td style="text-align: center;">9951</td>
+    <td style="text-align: center;">10794</td>
+    <td style="text-align: center;">11336</td>
+    <td style="text-align: center;">12180</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎攻撃力</th>
+    <td style="text-align: center;">48</td>
+    <td style="text-align: center;">62</td>
+    <td style="text-align: center;">93</td>
+    <td style="text-align: center;">103</td>
+    <td style="text-align: center;">118</td>
+    <td style="text-align: center;">132</td>
+    <td style="text-align: center;">147</td>
+    <td style="text-align: center;">157</td>
+    <td style="text-align: center;">173</td>
+    <td style="text-align: center;">182</td>
+    <td style="text-align: center;">197</td>
+    <td style="text-align: center;">208</td>
+    <td style="text-align: center;">223</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎防御力</th>
+    <td style="text-align: center;">118</td>
+    <td style="text-align: center;">152</td>
+    <td style="text-align: center;">227</td>
+    <td style="text-align: center;">252</td>
+    <td style="text-align: center;">290</td>
+    <td style="text-align: center;">322</td>
+    <td style="text-align: center;">360</td>
+    <td style="text-align: center;">384</td>
+    <td style="text-align: center;">422</td>
+    <td style="text-align: center;">446</td>
+    <td style="text-align: center;">484</td>
+    <td style="text-align: center;">508</td>
+    <td style="text-align: center;">546</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">HP</th>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">6.0%</td>
+    <td style="text-align: center;">6.0%</td>
+    <td style="text-align: center;">12.0%</td>
+    <td style="text-align: center;">12.0%</td>
+    <td style="text-align: center;">12.0%</td>
+    <td style="text-align: center;">12.0%</td>
+    <td style="text-align: center;">18.0%</td>
+    <td style="text-align: center;">18.0%</td>
+    <td style="text-align: center;">24.0%</td>
+    <td style="text-align: center;">24.0%</td>
+    </tr>
+    </table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%8F%E3%82%A4%E3%82%BC%E3%83%B3/::ref/Sword_Dendro_0.webp?rev=f147811a7c973e272ed313c34d411fbe&t=20230126183658" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+        通常攻撃<br>
+        最大5段の連続攻撃を行う。<br><br>
+        
+        重撃<br>
+        一定のスタミナを消費して前方に斬撃を放つ<br><br>
+        
+        落下攻撃<br>
+        空中から落下し、路上の敵を攻撃し、落下時に範囲ダメージを与える。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 80px;">重撃<br>ダメージ</th>
+    <th style="width: 150px;">重撃スタミナ消費</th>
+    <th style="width: 150px;">落下期間<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+    
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2%</td>
+    <td style="text-align: center;">51.8%</td>
+    <td style="text-align: center;">50.1%</td>
+    <td style="text-align: center;">27.5%+41.2%</td>
+    <td style="text-align: center;">79.2%</td>
+    <td style="text-align: center;">24.2%+48.4%+48.4%</td>
+    <td rowspan="9" style="text-align: center;">20.0</td>
+    <td style="text-align: center;">69.1%</td>
+    <td style="text-align: center;">138%/173%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">55.7%</td>
+    <td style="text-align: center;">53.9%</td>
+    <td style="text-align: center;">29.6%+44.3%</td>
+    <td style="text-align: center;">85.2%</td>
+    <td style="text-align: center;">26.0%+52.0%+52.0%</td>
+    <td style="text-align: center;">74.3%</td>
+    <td style="text-align: center;">149%/186%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">61.3%</td>
+    <td style="text-align: center;">59.3%</td>
+    <td style="text-align: center;">32.5%+48.4%</td>
+    <td style="text-align: center;">93.7%</td>
+    <td style="text-align: center;">28.6%+57.2%+57.2%</td>
+    <td style="text-align: center;">81.8%</td>
+    <td style="text-align: center;">164%/204%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">65.2%</td>
+    <td style="text-align: center;">63.1%</td>
+    <td style="text-align: center;">34.6%+51.9%</td>
+    <td style="text-align: center;">99.7%</td>
+    <td style="text-align: center;">30.4%+60.9%+60.9%</td>
+    <td style="text-align: center;">87.0%</td>
+    <td style="text-align: center;">174%/217%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">69.6%</td>
+    <td style="text-align: center;">67.4%</td>
+    <td style="text-align: center;">37.0%+55.4%</td>
+    <td style="text-align: center;">106.5%</td>
+    <td style="text-align: center;">32.5%+65.1%+65.1%</td>
+    <td style="text-align: center;">92.9%</td>
+    <td style="text-align: center;">186%/232%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">75.8%</td>
+    <td style="text-align: center;">73.3%</td>
+    <td style="text-align: center;">40.2%+60.3%</td>
+    <td style="text-align: center;">115.9%</td>
+    <td style="text-align: center;">35.4%+70.8%+70.8%</td>
+    <td style="text-align: center;">101.1%</td>
+    <td style="text-align: center;">202%/253%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">81.9%</td>
+    <td style="text-align: center;">79.2%</td>
+    <td style="text-align: center;">43.5%+65.2%</td>
+    <td style="text-align: center;">125.2%</td>
+    <td style="text-align: center;">38.2%+76.5%+76.5%</td>
+    <td style="text-align: center;">109.3%</td>
+    <td style="text-align: center;">219%/273%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">88.0%</td>
+    <td style="text-align: center;">85.2%</td>
+    <td style="text-align: center;">46.7%+70.1%</td>
+    <td style="text-align: center;">134.6%</td>
+    <td style="text-align: center;">41.1%+82.2%+82.2%</td>
+    <td style="text-align: center;">117.5%</td>
+    <td style="text-align: center;">235%/293%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">94.7%</td>
+    <td style="text-align: center;">91.6%</td>
+    <td style="text-align: center;">50.3%+75.4%</td>
+    <td style="text-align: center;">144.8%</td>
+    <td style="text-align: center;">44.2%+88.5%+88.5%</td>
+    <td style="text-align: center;">126.4%</td>
+    <td style="text-align: center;">253%/316%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="1600px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%B6%BA%E8%89%AF%E3%80%85/::ref/%E3%81%AB%E3%82%83%E3%82%93%E3%81%AB%E3%82%83%E3%82%93%E7%94%BA%E9%A3%9B%E8%84%9A.webp?rev=bcd98a4d3eeb1755ac8b13f9597517d6&t=20230524222317" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+        一回押し<br>
+        猫又返しを繰り出し、草元素範囲ダメージを与える。<br>
+        また、安全運送シールドを張って、綺良々に短時間の草元素付着を与える。<br>
+        安全運送シールドは草元素ダメージに対して250%の吸収効果がある。<br>
+        シールドのダメージ吸収量は綺良々のHP上限によって決まり、そのHP上限の一定割合を超えることはできない。<br>
+        ダメージ吸収量が残っているときに新しく「安全運送シールド」を獲得すると、吸収量は加算され、継続時間も更新される。<br><br>
+        
+        長押し<br>
+        一回押しと同様の安全運送シールドを張る。またネコ箱急便状態となって素早く移動しながら戦う。<br><br>
+        
+        ネコ箱急便状態<br>
+        ・衝突した敵に草元素ダメージを与える。この効果は敵1体につき、0.5秒毎に最大1回のみ発動可能。<br>
+        ・該当状態にある綺良々の移動速度、登る速度、ジャンプ力がアップし、登る時のスタミナ消費が増える。<br>
+        ・継続時間終了時、または再びスキルを発動した時、一回押しより強力なくるりん爪撃を繰り出し、草元素範囲ダメージを与える。<br>
+        ・ネコ箱急便状態は最大10秒間継続可能。スキル終了時にクールタイムに入る。ネコ箱急便状態の継続時間が長いほど、クールタイムは長くなる。<br>
+        ・効果時間継続中、ダッシュしたり登り状態を解除したりすると、ネコ箱急便状態を早期に終了させることができる。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 160px;">猫又返し<br>ダメージ<br></th>
+                <th style="width: 160px;">シールド吸収量</th>
+                <th style="width: 130px;">シールド吸収量上限</th>
+                <th style="width: 110px;">ネコ箱急便<br>突進ダメージ</th>
+                <th style="width: 130px;">くるりん爪撃<br>ダメージ</th>
+                <th style="width: 160px;">シールド継続時間</th>
+                <th style="width: 130px;">ネコ箱急便状態<br>最大継続時間</th>
+                <th style="width: 100px;">クールタイム(CT)</th>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Lv.2</td>
+                <td style="text-align: center;">111.8%</td>
+                <td style="text-align: center;">HP上限10.8%+1058</td>
+                <td style="text-align: center;">HP上限17.2%+1695</td>
+                <td style="text-align: center;">36.1%</td>
+                <td style="text-align: center;">154.8%</td>
+                <td rowspan="9" style="text-align: center;">12.0s</td>
+                <td rowspan="9" style="text-align: center;">10.0s</td>
+                <td rowspan="9" style="text-align: center;">8.0~12.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.3</td>
+                <td style="text-align: center;">119.6%</td>
+                <td style="text-align: center;">HP上限11.5%+1163</td>
+                <td style="text-align: center;">HP上限18.4%+1862</td>
+                <td style="text-align: center;">38.6%</td>
+                <td style="text-align: center;">165.6%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.4</td>
+                <td style="text-align: center;">130.0%</td>
+                <td style="text-align: center;">HP上限12.5%+1275</td>
+                <td style="text-align: center;">HP上限20.0%+2042</td>
+                <td style="text-align: center;">42.0%</td>
+                <td style="text-align: center;">180.0%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.5</td>
+                <td style="text-align: center;">137.8%</td>
+                <td style="text-align: center;">HP上限13.3%+1395</td>
+                <td style="text-align: center;">HP上限21.2%+2235</td>
+                <td style="text-align: center;">44.5%</td>
+                <td style="text-align: center;">190.8%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.6</td>
+                <td style="text-align: center;">145.6%</td>
+                <td style="text-align: center;">HP上限14.0%+1524</td>
+                <td style="text-align: center;">HP上限22.4%+2440</td>
+                <td style="text-align: center;">47.0%</td>
+                <td style="text-align: center;">201.6%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.7</td>
+                <td style="text-align: center;">156.0%</td>
+                <td style="text-align: center;">HP上限15.0%+1660</td>
+                <td style="text-align: center;">HP上限24.0%+2659</td>
+                <td style="text-align: center;">50.4%</td>
+                <td style="text-align: center;">216.0%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.8</td>
+                <td style="text-align: center;">166.4%</td>
+                <td style="text-align: center;">HP上限16.0%+1804</td>
+                <td style="text-align: center;">HP上限25.6%+2890</td>
+                <td style="text-align: center;">53.8%</td>
+                <td style="text-align: center;">230.4%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.9</td>
+                <td style="text-align: center;">176.8%</td>
+                <td style="text-align: center;">HP上限17.0%+1957</td>
+                <td style="text-align: center;">HP上限27.2%+3134</td>
+                <td style="text-align: center;">57.1%</td>
+                <td style="text-align: center;">244.8%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.10</td>
+                <td style="text-align: center;">187.2%</td>
+                <td style="text-align: center;">HP上限18.0%+2117</td>
+                <td style="text-align: center;">HP上限28.8%+3391</td>
+                <td style="text-align: center;">60.5%</td>
+                <td style="text-align: center;">259.2%</td>
+                </tr></table><br><br><br>
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="1000px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%B6%BA%E8%89%AF%E3%80%85/::ref/%E7%A7%98%E6%8A%80%E3%83%BB%E3%82%B5%E3%83%97%E3%83%A9%E3%82%A4%E3%82%BA%E7%89%B9%E5%88%A5%E9%85%8D%E9%80%81.webp?rev=d2a0be23b2dd8157724739bafe4c9ce5&t=20230524222306" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+                      <td colspan="16"><br><br>
+                        草元素範囲ダメージを与える。
+                        特注配送箱が爆発すると、複数のニャルダモンをばら撒く。
+                        ニャルダモンは敵に触れたとき、または一定時間後に爆発し、草元素範囲ダメージを与える。<br><br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                      </td>
+                    </tr>
+                
+                    <tr>
+                      <th style="width: 150px;">ステータス詳細</th>
+                      <th style="width: 100px;">スキルダメージ</th>
+                      <th style="width: 150px;">ニャルダモン<br>爆発ダメージ</th>
+                      <th style="width: 180px;">ニャルダモン存在時間</th>
+                      <th style="width: 150px;">クールタイム(CT)</th>
+                      <th style="width: 150px;"><small>元素エネルギー</small></th>
+                    </tr>
+                
+                    <tr>
+                        <td style="text-align: center;">Lv.2</td>
+                        <td style="text-align: center;">613.0%</td>
+                        <td style="text-align: center;">38.3%</td>
+                        <td rowspan="9" style="text-align: center;">12.0s</td>
+                        <td rowspan="9" style="text-align: center;">15.0s</td>
+                        <td rowspan="9" style="text-align: center;">60</td>
+                        </tr>
+        
+                        <tr>
+                        <td style="text-align: center;">Lv.3</td>
+                        <td style="text-align: center;">655.8%</td>
+                        <td style="text-align: center;">41.0%</td>
+                        </tr>
+        
+                        <tr>
+                        <td style="text-align: center;">Lv.4</td>
+                        <td style="text-align: center;">712.8%</td>
+                        <td style="text-align: center;">44.6%</td>
+                        </tr>
+        
+                        <tr>
+                        <td style="text-align: center;">Lv.5</td>
+                        <td style="text-align: center;">755.6%</td>
+                        <td style="text-align: center;">47.2%</td>
+                        </tr>
+                        <tr>
+                        <td style="text-align: center;">Lv.6</td>
+                        <td style="text-align: center;">798.3%</td>
+                        <td style="text-align: center;">49.9%</td>
+                        </tr>
+        
+                        <tr>
+                          <td style="text-align: center;">Lv.7</td>
+                          <td style="text-align: center;">855.4%</td>
+                          <td style="text-align: center;">53.5%</td>
+                        </tr>
+        
+                        <tr>
+                        <td style="text-align: center;">Lv.8</td>
+                        <td style="text-align: center;">912.4%</td>
+                        <td style="text-align: center;">57.0%</td>
+                        </tr>
+        
+                        <tr>
+                        <td style="text-align: center;">Lv.9</td>
+                        <td style="text-align: center;">969.4%</td>
+                        <td style="text-align: center;">60.6%</td>
+                        </tr>
+        
+                        <tr>
+                        <td style="text-align: center;">Lv.10</td>
+                        <td style="text-align: center;">1026.4%</td>
+                        <td style="text-align: center;">64.2%</td>
+                        </tr></table><br><br><br>
+                
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%B6%BA%E8%89%AF%E3%80%85/::ref/%E5%A6%96%E8%AA%AC%E5%B2%90%E5%B0%BE%E3%81%AE%E5%A4%89.webp?rev=28600cec6a71e0a95ba316df8d9f2b16&t=20230524222232" width="75px" height="75px"><p class="hutaogift">&nbsp;妖説岐尾の変</p></th>
+        <td colspan="16"><br><br><b>&nbsp;妖説岐尾の変</b><br>&nbsp;&nbsp;
+            ネコ箱急便状態にある綺良々は、敵に衝突するたびにがっちり梱包を1層獲得する、最大3層まで。
+            この効果は敵1体につき、0.5秒毎に最大1回のみ発動可能。ネコ箱急便の終了時、がっちり梱包1層につき、綺良々は安全運送シールドを1つ獲得する。
+            このシールドのダメージ吸収量は元素スキルで生成できる安全運送シールドの20%に相当する。
+            綺良々がすでに元素スキルで安全運送シールドを獲得しているとき、ダメージ吸収量は加算され、継続時間も更新される。<br><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%B6%BA%E8%89%AF%E3%80%85/::ref/%E3%83%8D%E3%82%B3%E3%81%AE%E3%81%90%E3%82%8B%E3%81%90%E3%82%8B%E7%9B%AE%E6%99%82%E8%A8%88.webp?rev=c146d0916a119c41ecd9eaae88992024&t=20230524222219" width="75px" height="75px"><p class="hutaogift">&nbsp;ネコのぐるぐる目時計</p></th>
+        <td colspan="16"><br><br><b>&nbsp;ネコのぐるぐる目時計</b><br>&nbsp;&nbsp;
+            綺良々のHP上限を基準に、HP上限1000毎に元素スキルの与えるダメージ+0.4%、秘法・サプライズ特別配送の与えるダメージ+0.3%。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%B6%BA%E8%89%AF%E3%80%85/::ref/%E6%8A%9C%E3%81%8D%E8%B6%B3%E3%80%81%E5%B7%AE%E3%81%97%E8%B6%B3%E3%80%81%E5%BF%8D%E3%81%B3%E7%8C%AB.webp?rev=933f5d7bff52a70d9a5d5c6dcf13839c&t=20230524222208" width="75px" height="75px"><p class="hutaogift">&nbsp;抜き足、差し足、忍び猫</p></th>
+        <td colspan="16"><br><br><b>&nbsp;抜き足、差し足、忍び猫</b><br>&nbsp;&nbsp;
+            綺良々がチーム内にいる時、チーム内の自身のキャラクターが鳥肉、獣肉、冷製鮮肉をドロップする動物に近づいても気付かれにくくなる。<br>
+         <br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%B6%BA%E8%89%AF%E3%80%85/::ref/%E5%99%A8%E7%89%A9%E6%B5%81%E8%BB%A2.webp?rev=1ab3bb1b15f007cd4cca1bd3dc0450f8&t=20230524222151" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;器物流転</b><br>&nbsp;&nbsp;
+                元素爆発を発動した時、綺良々のHP上限8000毎にニャルダモンを追加で1個生成する。この方法で生成されるニャルダモンは最大4個まで。<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%B6%BA%E8%89%AF%E3%80%85/::ref/%E5%85%AB%E9%9A%85%E3%83%BB%E5%AE%8C%E7%92%A7%E6%A2%B1%E5%8C%85%E8%A1%93.webp?rev=fd32fce203027dbc687a5d9dda3c107f&t=20230524222129" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;八隅・完璧梱包術</b><br>&nbsp;&nbsp;
+                元素スキルのネコ箱急便状態にある綺良々は、接触したチーム内他のキャラクターに安全運送シールド・重要貨物状態を与える。
+                安全運送シールド・重要貨物のダメージ吸収量は元素スキルの安全運送シールド吸収量上限の40%に相当し、草元素ダメージに対して250%の吸収効果がある。
+                安全運送シールド・重要貨物状態は12秒継続し、キャラクター1体につき、10秒毎に最大1回発動可能。<br><br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%B6%BA%E8%89%AF%E3%80%85/::ref/%E4%B8%87%E6%88%B8%E9%96%80%E6%9C%AD%E3%81%AB%E9%80%9A%E3%81%9A.webp?rev=e6d2e57ad34d058277b933f63de56422&t=20230524222106" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;万戸門札に通ず</b><br>&nbsp;&nbsp;元素スキルの天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%B6%BA%E8%89%AF%E3%80%85/::ref/%E9%9F%8B%E9%A7%84%E5%A4%A9%E9%A7%BF%E8%B6%B3.webp?rev=9d9e97d9ac10c01afa387db392cc2690&t=20230524222053" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;韋駄天駿足</b><br>&nbsp;&nbsp;
+                安全運送シールド、または安全運送シールド・重要貨物状態のフィールド上キャラクターの通常攻撃、重撃、または落下攻撃が敵に命中した後、
+                綺良々はニャルダモン・ミニを使って連携攻撃を行い、綺良々の攻撃力200%の草元素ダメージを与える。
+                このダメージは元素爆発ダメージと見なされる。この効果は3.8秒毎に最大1回のみ発動可能で、チーム全員がクールタイムを共有する。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%B6%BA%E8%89%AF%E3%80%85/::ref/%E4%B8%80%E6%97%A5%E5%8D%83%E9%87%8C.webp?rev=c19813782d634c98f0b3f87967e7362d&t=20230524222026" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;一日千里</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%B6%BA%E8%89%AF%E3%80%85/::ref/%E9%81%93%E4%B8%AD%E7%99%BE%E6%99%AF%E5%BF%83%E5%BE%97%E3%81%9F%E3%82%8A.webp?rev=7be23593201817f6d3cdc7269db74b04&t=20230524222012" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;道中百景心得たり</b><br>&nbsp;&nbsp;
+                綺良々が元素スキルまたは元素爆発を発動した後15秒間、周囲のチーム全員の全元素ダメージ+12%。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                綺良々は"HP依存シールドサポーター"という立ち位置なので、メインステータスがHPを盛ることができる武器を選びましょう。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                また綺良々は元素スキルでシールドを生成委するので上記のメインステータス武器がない場合は祭礼シリーズ(元素チャージ効率)の武器も視野に入れましょう<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E8%81%96%E9%A1%95%E3%81%AE%E9%8D%B5.png.webp?rev=9cb39676e09a9dd525a6addef7858703&t=20221014190534">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E7%A5%AD%E7%A4%BC%E3%81%AE%E5%89%A3.png.webp?rev=50373b911a28edaedd95707358388411&t=20201122005125" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E8%A5%BF%E9%A2%A8%E5%89%A3.png.webp?rev=52a80a66e361da23aaed13f7a4690e41&t=20201122005110" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+
+
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+
+
+
+                <tr>
+                    <td style="text-align: center;">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%81%89%E5%8B%B2%E3%81%AE%E8%8A%B1_5.png.webp?rev=f0fd9db451db37a9cce686f2979ee6ea&t=20210502014102" width="100px" height="100px" style="margin: auto;"><p class="rine-relic"><b>千岩牢固</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        HP+20%,
+                      <br>
+                      元素スキルが敵に命中すると、周囲のチーム全員の攻撃力+20%、シールド強化+30%、持続時間3秒。<br>
+                      この効果は0.5秒ごとに一回のみ発動可能。この聖遺物セットを装備したキャラクターが待機してる場合にも効果を発動できる
+                    </td>
+                    <td style="width: 400px;">4セット効果を駆使して戦うので<br>敵の近くで元素スキルを発動しましょう。<br>またパーティ編成は自由に組むことができます。<br></td>
+                    <td style="display: flex; text-align: center;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A2%E3%83%AB%E3%83%8F%E3%82%A4%E3%82%BC%E3%83%B3_s.webp?rev=bc08d236644ba069a9537ed7525462ed&t=20230118200145" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633" width="100px" height="100px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B7%E9%9B%BB%E5%B0%86%E8%BB%8D_s.webp?rev=7c064efdd43177b4266dc3acd84356c0&t=20240313100241" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%B6%BA%E8%89%AF%E3%80%85_s.webp?rev=c6a550b496638a162f574465c9856241&t=20230526210202" width="100px" height="100px">
+                  　</td>
+                   </tr></table></div><br><br><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

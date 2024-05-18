@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ノエル</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    <a href="#combo">・コンボ</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">ノエル</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC9ZSlFvamNEZS5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19"></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆4</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">両手剣</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">岩</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">心護座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">モンド</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">高尾奏音</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  
+    
+  <tr>
+    <th style="text-align: center;">基礎HP</th>
+    <td style="text-align: center;">2600</td>
+    <td style="text-align: center;">3356</td>
+    <td style="text-align: center;">5027</td>
+    <td style="text-align: center;">5564</td>
+    <td style="text-align: center;">6400</td>
+    <td style="text-align: center;">7117</td>
+    <td style="text-align: center;">7953</td>
+    <td style="text-align: center;">8490</td>
+    <td style="text-align: center;">9325</td>
+    <td style="text-align: center;">9862</td>
+    <td style="text-align: center;">10698</td>
+    <td style="text-align: center;">11235</td>
+    <td style="text-align: center;">12071</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎攻撃力</th>
+    <td style="text-align: center;">41</td>
+    <td style="text-align: center;">53</td>
+    <td style="text-align: center;">80</td>
+    <td style="text-align: center;">88</td>
+    <td style="text-align: center;">101</td>
+    <td style="text-align: center;">113</td>
+    <td style="text-align: center;">126</td>
+    <td style="text-align: center;">134</td>
+    <td style="text-align: center;">148</td>
+    <td style="text-align: center;">156</td>
+    <td style="text-align: center;">169</td>
+    <td style="text-align: center;">178</td>
+    <td style="text-align: center;">191</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎防御力</th>
+    <td style="text-align: center;">172</td>
+    <td style="text-align: center;">222</td>
+    <td style="text-align: center;">333</td>
+    <td style="text-align: center;">368</td>
+    <td style="text-align: center;">423</td>
+    <td style="text-align: center;">471</td>
+    <td style="text-align: center;">526</td>
+    <td style="text-align: center;">562</td>
+    <td style="text-align: center;">617</td>
+    <td style="text-align: center;">652</td>
+    <td style="text-align: center;">708</td>
+    <td style="text-align: center;">743</td>
+    <td style="text-align: center;">799</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">防御力</th>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">7.5%</td>
+    <td style="text-align: center;">7.5%</td>
+    <td style="text-align: center;">15.0%</td>
+    <td style="text-align: center;">15.0%</td>
+    <td style="text-align: center;">15.0%</td>
+    <td style="text-align: center;">15.0%</td>
+    <td style="text-align: center;">22.5%</td>
+    <td style="text-align: center;">22.5%</td>
+    <td style="text-align: center;">30.0%</td>
+    <td style="text-align: center;">30.0%</td>
+    </tr></table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E3%81%94%E3%82%81%E3%82%93%E3%81%82%E3%81%9D%E3%81%B0%E3%81%9B.webp?rev=289d1f9f8fbebc1e14095b1916538e7b&t=20231220225036" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+        通常攻撃<br>
+        最大4段の連続攻撃を行う。<br><br>
+        
+        重撃<br>
+        持続的にスタミナを消費し、素早い連続攻撃を発動する。<br>
+        重撃の終了時、更に強力な攻撃を1回放つ。<br><br>
+        
+        落下攻撃<br>
+        空中から落下し、路上の敵を攻撃し、落下時に範囲ダメージを与える。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 80px;">重撃<br>ダメージ</th>
+    <th style="width: 80px;">重撃終了<br>ダメージ</th>
+    <th style="width: 150px;">重撃スタミナ消費</th>
+    <th style="width: 150px;">最大継続時間</th>
+    <th style="width: 150px;">落下期間<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+    
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2</td>
+    <td style="text-align: center;">85.6%</td>
+    <td style="text-align: center;">79.3%</td>
+    <td style="text-align: center;">93.3%</td>
+    <td style="text-align: center;">123%</td>
+    <td style="text-align: center;">54.9%</td>
+    <td style="text-align: center;">97.8%</td>
+    <td rowspan="9" style="text-align: center;">毎秒40.0</td>
+    <td rowspan="9" style="text-align: center;">5.0s</td>
+    <td style="text-align: center;">80.7%</td>
+    <td style="text-align: center;">161%/201%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">92.0%</td>
+    <td style="text-align: center;">85.3%</td>
+    <td style="text-align: center;">100%</td>
+    <td style="text-align: center;">132%</td>
+    <td style="text-align: center;">59.0%</td>
+    <td style="text-align: center;">105%</td>
+    <td style="text-align: center;">86.7%</td>
+    <td style="text-align: center;">173%/217%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">101%</td>
+    <td style="text-align: center;">93.8%</td>
+    <td style="text-align: center;">110%</td>
+    <td style="text-align: center;">145%</td>
+    <td style="text-align: center;">64.9%</td>
+    <td style="text-align: center;">116%</td>
+    <td style="text-align: center;">95.4%</td>
+    <td style="text-align: center;">191%/238%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">108%</td>
+    <td style="text-align: center;">99.8%</td>
+    <td style="text-align: center;">117%</td>
+    <td style="text-align: center;">154%</td>
+    <td style="text-align: center;">69.0%</td>
+    <td style="text-align: center;">123%</td>
+    <td style="text-align: center;">101.5%</td>
+    <td style="text-align: center;">203%/253%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">115%</td>
+    <td style="text-align: center;">107%</td>
+    <td style="text-align: center;">125%</td>
+    <td style="text-align: center;">165%</td>
+    <td style="text-align: center;">73.8%</td>
+    <td style="text-align: center;">132%</td>
+    <td style="text-align: center;">108.4%</td>
+    <td style="text-align: center;">216%/270%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">125%</td>
+    <td style="text-align: center;">116%</td>
+    <td style="text-align: center;">136%</td>
+    <td style="text-align: center;">179%</td>
+    <td style="text-align: center;">80.2%</td>
+    <td style="text-align: center;">143%</td>
+    <td style="text-align: center;">118.0%</td>
+    <td style="text-align: center;">235%/294%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">135%</td>
+    <td style="text-align: center;">125%</td>
+    <td style="text-align: center;">147%</td>
+    <td style="text-align: center;">194%</td>
+    <td style="text-align: center;">86.7%</td>
+    <td style="text-align: center;">155%</td>
+    <td style="text-align: center;">127.5%</td>
+    <td style="text-align: center;">255%/318%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">145%</td>
+    <td style="text-align: center;">135%</td>
+    <td style="text-align: center;">158%</td>
+    <td style="text-align: center;">208%</td>
+    <td style="text-align: center;">93.2%</td>
+    <td style="text-align: center;">166%</td>
+    <td style="text-align: center;">137.0%</td>
+    <td style="text-align: center;">274%/342%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">156%</td>
+    <td style="text-align: center;">145%</td>
+    <td style="text-align: center;">171%</td>
+    <td style="text-align: center;">224%</td>
+    <td style="text-align: center;">100%</td>
+    <td style="text-align: center;">179%</td>
+    <td style="text-align: center;">147.4%</td>
+    <td style="text-align: center;">294%/368%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="1000px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8E%E3%82%A8%E3%83%AB/::ref/Talent_Breastplate.png?rev=be451ece5d07fc23110aea47214afd06&t=20210204225022" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+        周囲の敵に岩元素ダメージを与え、シールドを生成する、ダメージ吸収量はノエルの防御力によって決まる。<br>
+        シールドは下記の効果が発動する。<br>
+        ・ノエルの通常攻撃または重撃が命中したとき、一定の確率でチーム全員のHPを回復する。<br>
+        ・全元素ダメージと物理ダメージに150%の吸収効果がある。<br><br>
+        
+        回復効果の回復量はノエルの防御力によって決まる。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 200px;">スキルダメージ</th>
+                <th style="width: 200px;">吸収量</th>
+                <th style="width: 200px;">回復量</th>
+                <th style="width: 200px;">回復発動率</th>
+                <th style="width: 100px;">継続時間</th>
+                <th style="width: 100px;">クールタイム</th>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Lv.2</td>
+                <td style="text-align: center;">防御力129%</td>
+                <td style="text-align: center;">防御力172%+847</td>
+                <td style="text-align: center;">防御力22.9%+113</td>
+                <td rowspan="9" style="text-align: center;">12.0s</td>
+                <td rowspan="9" style="text-align: center;">24.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.3</td>
+                <td style="text-align: center;">防御力138%</td>
+                <td style="text-align: center;">防御力184%+930</td>
+                <td style="text-align: center;">防御力24.5%+124</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.4</td>
+                <td style="text-align: center;">防御力150%</td>
+                <td style="text-align: center;">防御力200%+1020</td>
+                <td style="text-align: center;">防御力26.6%+136</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.5</td>
+                <td style="text-align: center;">防御力159%</td>
+                <td style="text-align: center;">防御力212%+1116</td>
+                <td style="text-align: center;">防御力28.2%+149</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.6</td>
+                <td style="text-align: center;">防御力168%</td>
+                <td style="text-align: center;">防御力224%</td>
+                <td style="text-align: center;">防御力1219%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.7</td>
+                <td style="text-align: center;">防御力180%</td>
+                <td style="text-align: center;">防御力240%+1328</td>
+                <td style="text-align: center;">防御力31.9%+177</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.8</td>
+                <td style="text-align: center;">防御力631.7%</td>
+                <td style="text-align: center;">防御力57.6%</td>
+                <td style="text-align: center;">防御力38.7%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.9</td>
+                <td style="text-align: center;">防御力204%</td>
+                <td style="text-align: center;">防御力272%+1565</td>
+                <td style="text-align: center;">防御力36.2%+209</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.10</td>
+                <td style="text-align: center;">防御力216%</td>
+                <td style="text-align: center;">防御力288%+1694</td>
+                <td style="text-align: center;">防御力38.3%+226</td>
+                </tr></table><br><br><br>
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8E%E3%82%A8%E3%83%AB/::ref/Talent_Sweeping_Time.png?rev=e94a6b264f49b88e7717609097359341&t=20210204225035" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+                      <td colspan="16"><br><br>
+                        周囲の敵に衝撃を与えて広範囲攻撃を1回行い、岩元素ダメージを与える。<br>
+                        その後、下記の効果が発動される。<br>
+                        ・ノエルの攻撃範囲が大幅にアップする。<br>
+                        ・攻撃ダメージは岩元素ダメージとなり、元素付与によって他の元素に変化することはない。<br>
+                        ・ノエルの防御力を基準に攻撃力がアップする。
+                        <br><br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                      </td>
+                    </tr>
+                
+                    <tr>
+                      <th style="width: 150px;">ステータス詳細</th>
+                      <th style="width: 160px;">爆発ダメージ</th>
+                      <th style="width: 150px;">スキルダメージ</th>
+                      <th style="width: 150px;">攻撃力上昇</th>
+                      <th style="width: 150px;">継続時間</th>
+                      <th style="width: 150px;">クールタイム(CT)</th>
+                      <th style="width: 120px;">元素エネルギー</th>
+                    </tr>
+                
+                    <tr>
+                        <td style="text-align: center;">Lv.2</td>
+                        <td style="text-align: center;">72.2%</td>
+                        <td style="text-align: center;">99.8%</td>
+                        <td style="text-align: center;">防御力43%</td>
+                        <td rowspan="9" style="text-align: center;">15.0s</td>
+                        <td rowspan="9" style="text-align: center;">15.0s</td>
+                        <td rowspan="9" style="text-align: center;">60</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.3</td>
+                        <td style="text-align: center;">77.3%</td>
+                        <td style="text-align: center;">107%</td>
+                        <td style="text-align: center;">防御力46%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.4</td>
+                        <td style="text-align: center;">84.0%</td>
+                        <td style="text-align: center;">116%</td>
+                        <td style="text-align: center;">防御力50%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.5</td>
+                        <td style="text-align: center;">89.0%</td>
+                        <td style="text-align: center;">123%</td>
+                        <td style="text-align: center;">防御力53%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.6</td>
+                        <td style="text-align: center;">94.1%</td>
+                        <td style="text-align: center;">130%</td>
+                        <td style="text-align: center;">防御力56%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.7</td>
+                        <td style="text-align: center;">101%</td>
+                        <td style="text-align: center;">139%</td>
+                        <td style="text-align: center;">防御力60%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.8</td>
+                        <td style="text-align: center;">108%</td>
+                        <td style="text-align: center;">148%</td>
+                        <td style="text-align: center;">防御力64%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.9</td>
+                        <td style="text-align: center;">114%</td>
+                        <td style="text-align: center;">158%</td>
+                        <td style="text-align: center;">防御力68%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.10</td>
+                        <td style="text-align: center;">121%</td>
+                        <td style="text-align: center;">167%</td>
+                        <td style="text-align: center;">防御力72%</td>
+                        </tr>
+                        
+                        </table><br><br><br>
+                
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8E%E3%82%A8%E3%83%AB/::ref/Talent_Devotion.png?rev=918278701e131f42e6060c98b46ec763&t=20210204225047" width="75px" height="75px"><p class="hutaogift">&nbsp;誠心誠意</p></th>
+        <td colspan="16"><br><br><b>&nbsp;誠心誠意</b><br>&nbsp;&nbsp;
+            ノエルが待機時、出場中のキャラクターのHPが30%以下になると自動発動される。<br>
+            出場している自身のキャラクターにノエルの防御力400%相当のダメージを吸収シールドを付与する、継続時間20秒。<br>
+            ・全ての元素ダメージと物理ダメ一ジに対して150%の吸収効果がある。<br>
+            60秒毎に1回のみ発動可能。<br><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8E%E3%82%A8%E3%83%AB/::ref/Talent_Nice_and_Clean.png?rev=6b903bf8eb34202b390052a1bc062b7c&t=20210204225101" width="75px" height="75px"><p class="hutaogift">&nbsp;きれいさっぱり</p></th>
+        <td colspan="16"><br><br><b>&nbsp;きれいさっぱり</b><br>&nbsp;&nbsp;
+            ノエルの通常攻撃または重撃が敵に累計4回命中すると、護心鎧のクールタイム-1秒。<br>
+            0.1秒毎に1回のみカウント可能。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8E%E3%82%A8%E3%83%AB/::ref/Talent_Maid%2527s_Knighthood.png?rev=ffdb47357a8f94ed7da9cd1b74a408d0&t=20210204225113" width="75px" height="75px"><p class="hutaogift">&nbsp;メイドの仕草</p></th>
+        <td colspan="16"><br><br><b>&nbsp;メイドの仕草</b><br>&nbsp;&nbsp;
+            防御系料理を完璧調理したとき、12%の確率で料理を2倍獲得する。<br>
+         <br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8E%E3%82%A8%E3%83%AB/::ref/Constellation_I_Got_Your_Back.png?rev=b3385c5292dbae7c7890633676909fa9&t=20210204225230" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;支援はお任せください</b><br>&nbsp;&nbsp;
+                同時に元素爆発と元素スキルが場に居るとき、元素スキルのHP回復効果の発動率が100％になる。<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8E%E3%82%A8%E3%83%AB/::ref/Constellation_Combat_Maid.png?rev=2a3e07c29df34f03a661f9c969f5fd1b&t=20210204225241" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;旋風のメイド</b><br>&nbsp;&nbsp;
+                ノエルの重撃スタミナ消費-20%、与えるダメージ+15%。<br><br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8E%E3%82%A8%E3%83%AB/::ref/Constellation_Invulnerable_Maid.png?rev=889980dc450ab7f64c813801fb09a2a9&t=20210204225251" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;怪我はしません</b><br>&nbsp;&nbsp;元素スキルの天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8E%E3%82%A8%E3%83%AB/::ref/Constellation_To_Be_Cleaned.png?rev=429d4b38eb69cff051d7413b17ee8b51&t=20210204225302" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;綺麗にしますから</b><br>&nbsp;&nbsp;
+                元素スキル効果終了時、またはダメージによって破壊された時、周囲の敵に攻撃力400%分の岩元素ダメージを与える。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8E%E3%82%A8%E3%83%AB/::ref/Constellation_Favonius_Sweeper_Master.png?rev=f988071546e5f74e68dfff21dcf44a87&t=20210204225313" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;騎士団の掃除達人</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8E%E3%82%A8%E3%83%AB/::ref/Constellation_Must_Be_Spotless.png?rev=8f2a7b2b1b58345b9d10a7929f5349b5&t=20210204225323" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;埃は許しません</b><br>&nbsp;&nbsp;
+                元素爆発発動で、ノエルの防御力50%相当の攻撃力を追加でアップする。
+                スキル継続中、敵1体倒す度に継続時間+1秒、最大10秒まで。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ノエルは"アタッカー"という立ち位置なので、メインステータスが攻撃力、会心率/ダメージを盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E7%8B%BC%E3%81%AE%E6%9C%AB%E8%B7%AF.png.webp?rev=5a49995febdedcb5a6ec1b10d245b840&t=20201122011303">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E7%84%A1%E5%B7%A5%E3%81%AE%E5%89%A3.png.webp?rev=02928859b2c0f3853837b95fdd6dbe4c&t=20210208031301">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E8%B5%A4%E8%A7%92%E7%9F%B3%E5%A1%B5%E6%BB%85%E7%A0%95.jpg?rev=5169a0c0dfa6405bb70e442e2151d6f8&t=20211214203816" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E9%BB%92%E5%B2%A9%E3%81%AE%E6%96%AC%E5%88%80.png.webp?rev=db1989e232257dbb57d050963e4d618f&t=20240103220128" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E8%9E%AD%E9%BE%8D%E3%81%AE%E5%89%A3.png.webp?rev=cc81e293a9911f31b0e7c2011fe5e469&t=20210512075755" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+
+                
+                <tr>
+                <td style="text-align: center;">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E7%8B%A9%E4%BA%BA%E3%81%AE%E8%83%B8%E8%8A%B1.png.webp?rev=77b1baa4b6722aab9e3ae6f7b09e33f0&t=20230820021725" width="100px" height="100px" style="margin: auto;">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E6%A0%84%E8%8A%B1%E3%81%AE%E6%9C%9F_5.png.webp?rev=bc9973f105234c5b0f828005c9160061&t=20211124231224" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>ファントムハンター、華館夢醒形骸記</b></p></td>
+                <td style="width: 600px;"><b>セット効果</b><br>
+                  通常攻撃と重撃ダメージ+15%,
+                  <br>
+                  防御力+30%
+                </td>
+                <td style="width: 400px;">それぞれの２セット効果を駆使して、防御力も通常攻撃ダメージも上げるので
+                    <br>元素爆発発動時一緒にダメージを与えることができるパーティ編成を組みましょう。</td>
+                <td style="display: flex;"><div width="50px" height="50px">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8E%E3%82%A8%E3%83%AB_s.webp?rev=14ad249b51f890c5c882cb5589a8540a&t=20240313101352">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B7%E9%9B%BB%E5%B0%86%E8%BB%8D_s.webp?rev=7c064efdd43177b4266dc3acd84356c0&t=20240313100241"><br>
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633">
+                  <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80_s.webp.webp?rev=ca50d1c01181d34502b4301b329847fd&t=20221102192029">
+                </div></td>
+              </tr></table></div><br><br><br><br>
+
+              <h2 id="combo" style="text-align: left;">&nbsp;&nbsp;&nbsp;コンボ</h2>
+            </div><br><br>
+              <div class="combo-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3>&nbsp;&nbsp;&nbsp;元素爆発発動後ダメージコンボ</h3>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                ・ノエルは元素爆発発動後、通常攻撃３段から元素スキルで通常攻撃キャンセルして再度通常攻撃を行うコンボです。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;元素スキルがCT中はダッシュなどで代用しましょう。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8E%E3%82%A8%E3%83%AB/::ref/Talent_Sweeping_Time.png?rev=e94a6b264f49b88e7717609097359341&t=20210204225035" alt="" width="100px" height="100px">
+                <b>&rightarrow;</b>
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E3%81%94%E3%82%81%E3%82%93%E3%81%82%E3%81%9D%E3%81%B0%E3%81%9B.webp?rev=289d1f9f8fbebc1e14095b1916538e7b&t=20231220225036" alt=""  width="100px" height="100px">
+                <b style="font-size: 30px;">×3</b>
+                <b>&rightarrow;</b>
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8E%E3%82%A8%E3%83%AB/::ref/Talent_Breastplate.png?rev=be451ece5d07fc23110aea47214afd06&t=20210204225022" width="100px" height="100px">
+                <b>&rightarrow;</b>
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2/::ref/%E3%81%94%E3%82%81%E3%82%93%E3%81%82%E3%81%9D%E3%81%B0%E3%81%9B.webp?rev=289d1f9f8fbebc1e14095b1916538e7b&t=20231220225036" alt=""  width="100px" height="100px">
+                <b style="font-size: 30px;">×3</b><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  
