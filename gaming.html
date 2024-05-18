@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>嘉明</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">嘉明</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC83cXdCcklsTi5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19" alt=""></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆4</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">両手剣</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">炎</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">醒獅座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">璃月</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">小松昌平</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  <tr>
+    <th style="text-align: center;">基礎HP</th>
+    <td style="text-align: center;">2,460</td>
+    <td style="text-align: center;">3,175</td>
+    <td style="text-align: center;">4,755</td>
+    <td style="text-align: center;">5,264</td>
+    <td style="text-align: center;">6,054</td>
+    <td style="text-align: center;">6,732</td>
+    <td style="text-align: center;">7,523</td>
+    <td style="text-align: center;">8,031</td>
+    <td style="text-align: center;">8,821</td>
+    <td style="text-align: center;">9,329</td>
+    <td style="text-align: center;">10,120</td>
+    <td style="text-align: center;">10,628</td>
+    <td style="text-align: center;">11,419</td>
+    </tr>
+    <tr>
+    <th style="text-align: center;">基礎攻撃力</th>
+    <td style="text-align: center;">65</td>
+    <td style="text-align: center;">84</td>
+    <td style="text-align: center;">126</td>
+    <td style="text-align: center;">139</td>
+    <td style="text-align: center;">160</td>
+    <td style="text-align: center;">178</td>
+    <td style="text-align: center;">198</td>
+    <td style="text-align: center;">212</td>
+    <td style="text-align: center;">233</td>
+    <td style="text-align: center;">246</td>
+    <td style="text-align: center;">267</td>
+    <td style="text-align: center;">280</td>
+    <td style="text-align: center;">302</td>
+    </tr>
+    <tr>
+    <th style="text-align: center;">基礎防御力</th>
+    <td style="text-align: center;">151</td>
+    <td style="text-align: center;">195</td>
+    <td style="text-align: center;">293</td>
+    <td style="text-align: center;">324</td>
+    <td style="text-align: center;">373</td>
+    <td style="text-align: center;">414</td>
+    <td style="text-align: center;">463</td>
+    <td style="text-align: center;">494</td>
+    <td style="text-align: center;">543</td>
+    <td style="text-align: center;">574</td>
+    <td style="text-align: center;">623</td>
+    <td style="text-align: center;">654</td>
+    <td style="text-align: center;">703</td>
+    </tr>
+    <tr>
+        <th style="text-align: center;">攻撃力%</th>
+        <td style="text-align: center;">-</td>
+        <td style="text-align: center;">-</td>
+        <td style="text-align: center;">-</td>
+        <td style="text-align: center;">6.0%</td>
+        <td style="text-align: center;">6.0%</td>
+        <td style="text-align: center;">12.0%</td>
+        <td style="text-align: center;">12.0%</td>
+        <td style="text-align: center;">12.0%</td>
+        <td style="text-align: center;">12.0%</td>
+        <td style="text-align: center;">18.0%</td>
+        <td style="text-align: center;">18.0%</td>
+        <td style="text-align: center;">24.0%</td>
+        <td style="text-align: center;">24.0%</td>
+        </tr></table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%98%89%E6%98%8E/::ref/%E6%87%B8%E6%98%9F%E3%81%AE%E7%88%AA%E5%88%83.webp?rev=9679fa98bc204e140b475e37083c9e80&t=20240201171458" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+        通常攻撃<br>
+        最大4段の連続攻撃を行う。<br><br>
+        
+        重撃<br>
+        持続的にスタミナを消費し、大剣を振り回して周囲の敵を攻撃する。重撃終了後、より強力な一撃を放つ。<br><br>
+        
+        落下攻撃<br>
+        空中から落下し地面に衝撃を与える。経路上の敵を攻撃し、落下時に範囲ダメージを与える。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 80px;">連続重撃ダメージ</th>
+    <th style="width: 80px;">重撃終了ダメージ</th>
+    <th style="width: 150px;">重撃スタミナ消費</th>
+    <th style="width: 80px;">最大継続時間</th>
+    <th style="width: 110px;">落下期間の<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+  </tr>
+  <tr>
+    <th style="text-align: center;">Lv.2</th>
+    <td style="text-align: center;">90.7%</td>
+    <td style="text-align: center;">85.5%</td>
+    <td style="text-align: center;">115.3%</td>
+    <td style="text-align: center;">138.4%</td>
+    <td style="text-align: center;">67.6%</td>
+    <td style="text-align: center;">122%</td>
+    <td rowspan="9" style="text-align: center;">毎秒40.0</td>
+    <td rowspan="9" style="text-align: center;">5.0s</td>
+    <td style="text-align: center;">69.4%</td>
+    <td style="text-align: center;">139%/173%</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">Lv.3</th>
+    <td style="text-align: center;">97.5%</td>
+    <td style="text-align: center;">91.9%</td>
+    <td style="text-align: center;">124.0%</td>
+    <td style="text-align: center;">148.8%</td>
+    <td style="text-align: center;">72.7%</td>
+    <td style="text-align: center;">132%</td>
+    <td style="text-align: center;">74.6%</td>
+    <td style="text-align: center;">149%/186%</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">Lv.4</th>
+    <td style="text-align: center;">107.3%</td>
+    <td style="text-align: center;">101.1%</td>
+    <td style="text-align: center;">136.4%</td>
+    <td style="text-align: center;">163.7%</td>
+    <td style="text-align: center;">80.0%</td>
+    <td style="text-align: center;">145%</td>
+    <td style="text-align: center;">82.0%</td>
+    <td style="text-align: center;">164%/205%</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">Lv.5</th>
+    <td style="text-align: center;">114.1%</td>
+    <td style="text-align: center;">107.5%</td>
+    <td style="text-align: center;">145.1%</td>
+    <td style="text-align: center;">174.1%</td>
+    <td style="text-align: center;">85.1%</td>
+    <td style="text-align: center;">154%</td>
+    <td style="text-align: center;">87.3%</td>
+    <td style="text-align: center;">174%/218%</td>
+    </tr>
+    <tr>
+    <th style="text-align: center;">Lv.6</th>
+    <td style="text-align: center;">121.9%</td>
+    <td style="text-align: center;">114.9%</td>
+    <td style="text-align: center;">155.0%</td>
+    <td style="text-align: center;">186.0%</td>
+    <td style="text-align: center;">90.9%</td>
+    <td style="text-align: center;">164%</td>
+    <td style="text-align: center;">93.2%</td>
+    <td style="text-align: center;">186%/233%</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">Lv.7</th>
+    <td style="text-align: center;">90.7%</td>
+    <td style="text-align: center;">85.5%</td>
+    <td style="text-align: center;">115.3%</td>
+    <td style="text-align: center;">138.4%</td>
+    <td style="text-align: center;">67.6%</td>
+    <td style="text-align: center;">122%</td>
+    <td style="text-align: center;">101.4%</td>
+    <td style="text-align: center;">203%/253%</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">Lv.8</th>
+    <td style="text-align: center;">143.3%</td>
+    <td style="text-align: center;">135.1%</td>
+    <td style="text-align: center;">182.3%</td>
+    <td style="text-align: center;">218.7%</td>
+    <td style="text-align: center;">106.9%</td>
+    <td style="text-align: center;">193%</td>
+    <td style="text-align: center;">109.6%</td>
+    <td style="text-align: center;">219%/274%</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">Lv.9</th>
+    <td style="text-align: center;">154.1%</td>
+    <td style="text-align: center;">145.2%</td>
+    <td style="text-align: center;">195.9%</td>
+    <td style="text-align: center;">235.1%</td>
+    <td style="text-align: center;">114.9%</td>
+    <td style="text-align: center;">208%</td>
+    <td style="text-align: center;">117.8%</td>
+    <td style="text-align: center;">236%/294%</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">Lv.10</th>
+    <td style="text-align: center;">165.8%</td>
+    <td style="text-align: center;">156.3%</td>
+    <td style="text-align: center;">210.8%</td>
+    <td style="text-align: center;">252.9%</td>
+    <td style="text-align: center;">123.6%</td>
+    <td style="text-align: center;">224%</td>
+    <td style="text-align: center;">126.8%</td>
+    <td style="text-align: center;">254%/317%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%98%89%E6%98%8E/::ref/%E7%91%9E%E7%8D%A3%E7%99%BB%E6%A5%BC.webp?rev=62d1c3a107329be74c420e4c57b85cae&t=20240201171514" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+        落下攻撃・踏雲献瑞<br>
+        元素スキル・瑞獣登楼後の落下攻撃のダメージは元素付与によって他の元素に変化しない炎元素ダメージへと変わり、<br>
+        着地時に嘉明は一定のHPを消費する。このHP消費によって、嘉明の残りHPが10%を下回ることはない。<br>
+        踏雲献瑞によるダメージは落下攻撃ダメージとみなされる。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 160px;">落下・踏雲献瑞<br>ダメージ</th>
+                <th style="width: 100px;">HP消費</th>
+                <th style="width: 100px;">クールタイム(CT)</th>
+              </tr>
+              <tr>
+                <th style="text-align: center;">Lv.2</th>
+                <td style="text-align: center;">247.7%</td>
+                <td rowspan="9" style="text-align: center;">HP上限15.0%</td>
+                <td rowspan="9" style="text-align: center;">6.0s</td>
+                </tr>
+                
+                <tr>
+                <th style="text-align: center;">Lv.3</th>
+                <td style="text-align: center;">265.0%</td>
+                </tr>
+                
+                <tr>
+                <th style="text-align: center;">Lv.4</th>
+                <td style="text-align: center;">288.0%</td>
+                </tr>
+                
+                <tr>
+                <th style="text-align: center;">Lv.5</th>
+                <td style="text-align: center;">305.3%</td>
+                </tr>
+                
+                <tr>
+                <th style="text-align: center;">Lv.6</th>
+                <td style="text-align: center;">322.6%</td>
+                </tr>
+                
+                <tr>
+                <th style="text-align: center;">Lv.7</th>
+                <td style="text-align: center;">345.6%</td>
+                </tr>
+                
+                <tr>
+                <th style="text-align: center;">Lv.8</th>
+                <td style="text-align: center;">368.6%</td>
+                </tr>
+                
+                <tr>
+                <th style="text-align: center;">Lv.9</th>
+                <td style="text-align: center;">391.7%</td>
+                </tr>
+                
+                <tr>
+                <th style="text-align: center;">Lv.10</th>
+                <td style="text-align: center;"> 414.7%</td>
+                </tr></table><br><br><br>
+
+
+  <table border="1" style="margin: auto;">
+    <tr>
+      <th>&nbsp;</th>
+      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+    </tr>
+    <tr>
+      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%98%89%E6%98%8E/::ref/%E7%87%A6%E7%82%8E%E9%87%91%E7%8C%8A%E3%81%AE%E8%88%9E.webp?rev=a7c5b42752cea805259f6ecb6cd6b219&t=20240201171528" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+      <td colspan="16"><br><br>嘉明は獣舞の態勢に入り、短時間炎元素付着状態となる。この時、一定のHPを回復すると共に、頼れる仲間の猊獣・ウェンツァイを召喚して目標に投げつけ、炎元素範囲ダメージを与える。<br>
+        猊獣・ウェンツァイは目標に当たった後、付近に転がり、その後嘉明の位置に戻ってくる。嘉明と合流すると猊獣・ウェンツァイは退場し、嘉明の元素スキル「瑞獣登楼」の<br>クールタイムをリセットする。<br>
+        獣舞態勢の継続期間中、嘉明の中断耐性がアップし、落下攻撃・踏雲献瑞が着地したとき、または瑞獣登楼の前方跳躍を行ったとき、嘉明のHPが50%を超えていた場合、猊獣・ウェンツァイが<br>再び召喚される。<br><br>
+        
+        フィールド上に嘉明自身が召喚した猊獣・ウェンツァイは同時に最大1体まで存在可能。
+        効果は嘉明退場時に解除される。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br>
+      </td>
+    </tr>
+
+    <tr>
+      <th style="width: 150px;">ステータス詳細</th>
+      <th style="width: 160px;">猊獣・ウェンツァイ<br>投げつけダメージ</th>
+      <th style="width: 150px;">スキルによる<br>回復量</th>
+      <th style="width: 100px;">獣舞態勢<br>継続時間</th>
+      <th style="width: 150px;">クールタイム(CT)</th>
+      <th style="width: 120px;">元素エネルギー</th>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.2</th>
+      <td style="text-align: center;">398.2%</td>
+      <td rowspan="10" style="text-align: center;">HP上限30%</td>
+      <td rowspan="10" style="text-align: center;">12.0s</td>
+      <td rowspan="10" style="text-align: center;">15.0s</td>
+      <td rowspan="10" style="text-align: center;">60</td>
+      </tr>
+    <tr>
+       <th style="text-align: center;">Lv.3</th>
+       <td style="text-align: center;">426.0%</td>
+     </tr>
+     </tr>
+    <tr>
+       <th style="text-align: center;">Lv.4</th>
+       <td style="text-align: center;">463.0%</td>
+    </tr>
+        </tr>
+        <tr>
+          <th style="text-align: center;">Lv.5</th>
+          <td style="text-align: center;">490.8%</td>
+        </tr>
+    <tr>
+      <th style="text-align: center;">Lv.6</th>
+      <td style="text-align: center;">518.6%</td>
+    </tr>
+    
+    </tr>
+    <tr>
+      <th style="text-align: center;">Lv.7</th>
+      <td style="text-align: center;">555.6%</td>
+    </tr>
+    
+    </tr>
+    <tr>
+      <th style="text-align: center;">Lv.8</th>
+      <td style="text-align: center;">592.6%</td>
+    </tr>
+    
+    </tr>
+    <tr>
+      <th style="text-align: center;">Lv.9</th>
+      <td style="text-align: center;">629.7%</td>
+    </tr>
+    
+    </tr>
+    <tr>
+      <th style="text-align: center;">Lv.10</th>
+      <td style="text-align: center;">666.7%</td>
+    </tr>
+    
+    </tr></table><br><br><br>
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%98%89%E6%98%8E/::ref/%E6%B3%B0%E5%B9%B3%E3%81%AE%E8%88%9E.webp?rev=d7495c0d2eb5b9189f51e1189dc56128&t=20240201171542" width="75px" height="75px"><p class="hutaogift">&nbsp;泰平の舞</p></th>
+        <td colspan="16"><br><br><b>&nbsp;泰平の舞</b><br>&nbsp;&nbsp;瑞獣登楼の落下攻撃・踏雲献瑞が敵に命中した後、嘉明は0.2秒毎に1回HPを回復する。<br>
+            回復量は嘉明のHP上限の1.5%に相当する。継続時間0.8秒。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%98%89%E6%98%8E/::ref/%E7%A5%A5%E7%85%99%E3%81%AE%E7%91%9E%E6%B0%97.webp?rev=7f103e9dc58459f4545a6c5fe4967437&t=20240201171601" width="75px" height="75px"><p class="hutaogift">&nbsp;祥煙の瑞気</p></th>
+        <td colspan="16"><br><br><b>&nbsp;祥煙の瑞気</b><br>&nbsp;&nbsp;嘉明のHPが50%未満の時、受ける治療効果+20%。<br>嘉明のHPが50%以上の時、落下攻撃・踏雲献瑞の与えるダメージ+20%。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%98%89%E6%98%8E/::ref/%E7%8C%9B%E3%82%8B%E7%8D%A3%E3%81%AE%E5%81%A5%E8%84%9A.webp?rev=89e288d16174c51c4ace854471398a09&t=20240201171613" width="75px" height="75px"><p class="hutaogift">&nbsp;猛る獣の健脚</p></th>
+        <td colspan="16"><br><br><b>&nbsp;猛る獣の健脚</b><br>&nbsp;&nbsp;日中（6時から18時まで）になると、チーム内にいる自身のキャラクター全員が疾走効果を獲得し、移動速度+10%。<br>
+            この効果は秘境、征討領域、深境螺旋では発動されない。また、疾走効果は重ね掛け不可。<br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%98%89%E6%98%8E/::ref/%E7%91%9E%E7%8D%A3%E5%BA%87%E8%AD%B7.webp?rev=854738e10f2149569181821dfb508854&t=20240201171627" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;瑞獣庇護</b><br>&nbsp;&nbsp;燦炎金猊の舞の猊獣・ウェンツァイが嘉明と合流した時、嘉明のHPを15%回復する。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%98%89%E6%98%8E/::ref/%E6%A2%85%E8%8A%B1%E8%B8%8F%E6%AD%A9.webp?rev=23a86e0bf2daa6d38b591ba86f9f6661&t=20240201171645" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;梅花踏歩</b><br>&nbsp;&nbsp;嘉明が治療効果を受けた時、それがHP上限を超える回復だった場合、嘉明の攻撃力+20%、継続時間5秒。<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%98%89%E6%98%8E/::ref/%E9%86%92%E9%9C%8A%E5%8F%A9%E9%9C%87.webp?rev=2af719bde7b7ceed0d9459b839095822&t=20240201171701" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;醒霊叩震</b><br>&nbsp;&nbsp;元素スキルの天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%98%89%E6%98%8E/::ref/%E9%9B%B2%E4%B8%AD%E8%B6%8A%E5%B1%B1.webp?rev=83e1be5df6ed29998217adef4492ebad&t=20240201171714" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;雲中越山</b><br>&nbsp;&nbsp;瑞獣登楼の落下攻撃・踏雲献瑞が敵に命中した時、嘉明の元素エネルギーを2ポイント回復する。<br>この効果は0.2秒毎に1回のみ発動可能。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%98%89%E6%98%8E/::ref/%E9%80%80%E9%AD%94%E5%92%86%E5%93%AE.webp?rev=4f3848d1b53a6cf9469fa8b6e4cd85e9&t=20240201171727" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;退魔咆哮</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%98%89%E6%98%8E/::ref/%E7%99%BE%E7%8D%A3%E6%94%AF%E9%85%8D.webp?rev=158c44119068230e71a2a5a2d2918289&t=20240201171743" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;百獣支配</b><br>&nbsp;&nbsp;瑞獣登楼の落下攻撃・踏雲献瑞の会心率+20%、会心ダメージ+40%、攻撃範囲がアップする。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              嘉明は"アタッカー"という立ち位置なので、メインステータスが攻撃力、会心率/ダメージを盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、アタッカーの中でも"落下攻撃アタッカー"という落下攻撃を多く行えるアタッカーです。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E7%8B%BC%E3%81%AE%E6%9C%AB%E8%B7%AF.png.webp?rev=5a49995febdedcb5a6ec1b10d245b840&t=20201122011303">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E7%84%A1%E5%B7%A5%E3%81%AE%E5%89%A3.png.webp?rev=02928859b2c0f3853837b95fdd6dbe4c&t=20210208031301" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E8%B5%A4%E8%A7%92%E7%9F%B3%E5%A1%B5%E6%BB%85%E7%A0%95.jpg?rev=5169a0c0dfa6405bb70e442e2151d6f8&t=20211214203816" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E9%BB%92%E5%B2%A9%E3%81%AE%E6%96%AC%E5%88%80.png.webp?rev=db1989e232257dbb57d050963e4d618f&t=20240103220128">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E8%9E%AD%E9%BE%8D%E3%81%AE%E5%89%A3.png.webp?rev=cc81e293a9911f31b0e7c2011fe5e469&t=20210512075755" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E9%8A%9C%E7%8E%89%E3%81%AE%E6%B5%B7%E7%9A%87.png.webp?rev=2a5c05d5e31d1f3fe2657805d4ac788f&t=20210927225158" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>A</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E5%8F%A4%E8%8F%AF%E3%83%BB%E8%A9%A6%E4%BD%9C.png.webp?rev=fd3faf181047f138fee54a04c73500c9&t=20201122010501" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E6%97%A7%E8%B2%B4%E6%97%8F%E3%81%AE%E8%8A%B1.png.webp?rev=141efd01e5b7dd443a26177851d7edc6&t=20210109182341" width="100px" height="100px" style="margin: auto;"><p class="rine-relic"><b>ファントムハンター</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                      通常攻撃、重撃ダメージ+15%,
+                      <br>
+                      現在のHPが増える、または減る時、会心率+12%、継続時間5秒、<br>最大3層まで重ね掛け可能。
+                    </td>
+                    <td style="width: 400px;">嘉明自体がHPを増減させて戦うのでヒーラーを入れたパーティ編成を組みましょう。<br>また落下攻撃を強化するサポーターがいると尚良いです。<br></td>
+                    <td style="display: flex; text-align: center;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%98%89%E6%98%8E_s.webp?rev=53cfe38061e61f107d7db8112500d7cc&t=20240202002820" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%8D%BE%E9%9B%A2_s.webp?rev=ab44a61a332174925072c553966eb001&t=20240313101433" width="100px" height="100px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%96%91%E9%9B%B2_s.webp?rev=f4adef3c02ca9dd1a267d0e0e5f5d0ba&t=20240202002805" width="100px" height="100px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926" width="100px" height="100px">
+                  　</td>
+                   </tr>
+                <tr style="text-align: center;">
+                  <td style="text-align: center;">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%AD%94%E5%A5%B3%E3%81%AE%E7%82%8E%E3%81%AE%E8%8A%B1_5.png.webp?rev=5cce7c8f5ff07e9d1d890a4799d8f7b3&t=20210119123131https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%AD%94%E5%A5%B3%E3%81%AE%E7%82%8E%E3%81%AE%E8%8A%B1_5.png.webp?rev=5cce7c8f5ff07e9d1d890a4799d8f7b3&t=20210119123131" width="100px" height="100px" style="margin: auto;">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%89%A3%E9%97%98%E5%A3%AB%E3%81%AE%E6%9C%AA%E7%B7%B4.png.webp?rev=aaea050c5b83c3ef7fbecf51a42a2f95&t=20210109182605" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>炎の魔女、剣闘士のフィナーレ</b></p></td>
+                  <td style="width: 600px;"><b>セット効果</b><br>
+                    炎元素ダメージ+15%,
+                    <br>
+                    攻撃力+18%
+                  </td>
+                  <td style="width: 400px;">それぞれの２セット効果を駆使して、攻撃力も炎元素ダメージも上げるので自由なパーティを作ることができます。</td>
+                  <td style="display: flex;"><div width="50px" height="50px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%98%89%E6%98%8E_s.webp?rev=53cfe38061e61f107d7db8112500d7cc&t=20240202002820" width="100px" height="100px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%8D%BE%E9%9B%A2_s.webp?rev=ab44a61a332174925072c553966eb001&t=20240313101433" width="100px" height="100px"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%83%AA%E3%83%BC%E3%83%8A_s.webp?rev=79020e2b8491927fd44b8841ae8a1674&t=20231109210243"　width="100px" height="100px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B8%E3%83%B3_s.webp?rev=463f219382bcc5f49497e2a6c0b9f4f5&t=20240313100829" width="100px" height="100px">
+                  </div></td>
+                </tr></table></div><br><br><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

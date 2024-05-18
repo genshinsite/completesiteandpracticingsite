@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ディシア</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">ディシア</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC9FcGZjeVBHcy5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19" alt=""></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆5</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">両手剣</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">炎</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">マンティコア座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">スメール</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">福原綾香</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  <tr style="text-align: center;">
+    <th>基礎HP</th>
+    <td>3,165</td>
+    <td>4,212</td>
+    <td>6,302</td>
+    <td>7,045</td>
+    <td>8,106</td>
+    <td>9,097</td>
+    <td>10,168</td>
+    <td>10,912</td>
+    <td>11,993</td>
+    <td>12,736</td>
+    <td>13,829</td>
+    <td>14,573</td>
+    <td>15,675</td>
+  </tr>
+  <tr style="text-align: center;">
+    <th>基礎攻撃力</th>
+    <td>53</td>
+    <td>71</td>
+    <td>106</td>
+    <td>119</td>
+    <td>138</td>
+    <td>154</td>
+    <td>172</td>
+    <td>184</td>
+    <td>203</td>
+    <td>215</td>
+    <td>234</td>
+    <td>247</td>
+    <td>266</td>
+  </tr>
+  <tr style="text-align: center;">
+    <th>基礎防御力</th>
+    <td>127</td>
+    <td>169</td>
+    <td>252</td>
+    <td>282</td>
+    <td>325</td>
+    <td>364</td>
+    <td>407</td>
+    <td>437</td>
+    <td>480</td>
+    <td>510</td>
+    <td>554</td>
+    <td>584</td>
+    <td>628</td>
+  </tr>
+  <tr style="text-align: center;">
+    <th>HP%</th>
+    <td>-</td>
+    <td>-</td>
+    <td>-</td>
+    <td>7.2%</td>
+    <td>7.2%</td>
+    <td>14.4%</td>
+    <td>14.4%</td>
+    <td>14.4%</td>
+    <td>14.4%</td>
+    <td>21.6%</td>
+    <td>21.6%</td>
+    <td>28.8%</td>
+    <td>28.8%</td>
+  </tr></table></div><br><br><br>
+
+  <div class="gifttitle">
+    <h2 id="gift" style="text-align: left;">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+
+  <table border="1" style="margin: auto;" class="gifttable">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2/::ref/%E6%88%A6%E9%97%98%E5%A4%A9%E8%B3%A6_%E9%80%9A%E5%B8%B8%E6%94%BB%E6%92%83%E3%83%BB%E5%89%A3%E9%97%98%E8%A1%93%E3%83%BB%E9%87%91%E7%A0%82%E5%A1%B5.webp?rev=bbff75fcc85524f6440241403e6bdb95&t=20230319014401" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br><b>&nbsp;通常攻撃</b><br>&nbsp;&nbsp;最大4段の連続攻撃を行う<br><br>
+      <b>&nbsp;重撃</b><br>
+      &nbsp;&nbsp;継続的にスタミナを消費し、素早い連続攻撃を行う<br>
+    重撃が終了した際にさらに強力な一撃を行う<br><br><b>&nbsp;落下攻撃</b><br>
+    &nbsp;&nbsp;空中から落下し地面に衝撃を与える(AOE)※経路上の敵を攻撃する<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 150px;">連続重撃ダメージ</th>
+    <th style="width: 150px;">重撃終了ダメージ</th>
+    <th style="width: 150px;">重撃消費スタミナ</th>
+    <th style="width: 150px;">継続時間</th>
+    <th style="width: 150px;">落下期間ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃ダメージ</th>
+  </tr>
+  <tr>
+    <th style="text-align: center;">Lv.2</th>
+    <td style="text-align: center;">67.2%</td>
+    <td style="text-align: center;">66.7%</td>
+    <td style="text-align: center;">82.9%</td>
+    <td style="text-align: center;">103.0%</td>
+    <td style="text-align: right;">60.9%</td>
+    <td style="text-align: right;">110%</td>
+    <td rowspan="10" style="text-align: center;">40s</td>
+    <td rowspan="10" style="text-align: center;">5.0s</td>
+    <td style="text-align: right;">80.7%</td>
+    <td style="text-align: right;">161%/201%</td>
+  </tr>
+  <tr>
+    <th style="text-align: center;">Lv.3</th>
+    <td style="text-align: center;">72.2%</td>
+    <td style="text-align: center;">71.8%</td>
+    <td style="text-align: center;">89.1%</td>
+    <td style="text-align: center;">110.8%</td>
+    <td style="text-align: right;">65.5%</td>
+    <td style="text-align: right;">118%</td>
+    <td style="text-align: right;">86.7%</td>
+    <td style="text-align: right;">173%/217%</td>
+  </tr>
+  <tr>
+    <th style="text-align: center;">Lv.4</th>
+    <td style="text-align: center;">79.5%</td>
+    <td style="text-align: center;">78.9%</td>
+    <td style="text-align: center;">98.0%</td>
+    <td style="text-align: center;">121.9%</td>
+    <td style="text-align: right;">72.1%</td>
+    <td style="text-align: right;">130%</td>
+    <td style="text-align: right;">95.4%</td>
+    <td style="text-align: right;">191%/238%</td>
+  </tr>
+  <tr>
+    <th style="text-align: center;">Lv.5</th>
+    <td style="text-align: center;">84.5%</td>
+    <td style="text-align: center;">84.0%</td>
+    <td style="text-align: center;">104.3%</td>
+    <td style="text-align: center;">129.6%</td>
+    <td style="text-align: right;">76.6%</td>
+    <td style="text-align: right;">139%</td>
+    <td style="text-align: right;">101.5%</td>
+    <td style="text-align: right;">203%/235%</td>
+  </tr>
+  
+  <tr>
+    <th style="text-align: center;">Lv.6</th>
+    <td style="text-align: center;">90.3%</td>
+    <td style="text-align: center;">89.7%</td>
+    <td style="text-align: center;">111.4%</td>
+    <td style="text-align: center;">138.5%</td>
+    <td style="text-align: right;">81.9%</td>
+    <td style="text-align: right;">148%</td>
+    <td style="text-align: right;">108.4%</td>
+    <td style="text-align: right;">217%/271%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.7</th>
+    <td style="text-align: center;">98.2%</td>
+    <td style="text-align: center;">97.6%</td>
+    <td style="text-align: center;">121.2%</td>
+    <td style="text-align: center;">150.7%</td>
+    <td style="text-align: right;">89.1%</td>
+    <td style="text-align: right;">161%</td>
+    <td style="text-align: right;">118.0%</td>
+    <td style="text-align: right;">236%/295%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.8</th>
+    <td style="text-align: center;">106.2%</td>
+    <td style="text-align: center;">105.5%</td>
+    <td style="text-align: center;">131.0%</td>
+    <td style="text-align: center;">162.9%</td>
+    <td style="text-align: right;">96.3%</td>
+    <td style="text-align: right;">174%</td>
+    <td style="text-align: right;">127.5%</td>
+    <td style="text-align: right;">255%/318%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.9</th>
+    <td style="text-align: center;">114.1%</td>
+    <td style="text-align: center;">113.4%</td>
+    <td style="text-align: center;">140.8%</td>
+    <td style="text-align: center;">175.1%</td>
+    <td style="text-align: right;">103.5%</td>
+    <td style="text-align: right;">187%</td>
+    <td style="text-align: right;">137.0</td>
+    <td style="text-align: right;">274%/342%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.10</th>
+    <td style="text-align: center;">122.8%</td>
+    <td style="text-align: center;">122.0%</td>
+    <td style="text-align: center;">151.5%</td>
+    <td style="text-align: center;">188.4%</td>
+    <td style="text-align: right;">111.4%</td>
+    <td style="text-align: right;">201%</td>
+    <td style="text-align: right;">147.4%</td>
+    <td style="text-align: right;">295%/368%</td>
+  </tr></table><br><br><br>
+
+  <table border="1" style="margin: auto;" width="1300px">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16"style="text-align: center;" >天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2/::ref/%E6%88%A6%E9%97%98%E5%A4%A9%E8%B3%A6_%E5%85%83%E7%B4%A0%E3%82%B9%E3%82%AD%E3%83%AB_%E6%BA%B6%E9%89%84%E6%B5%81%E7%8D%84.webp?rev=9e5370c342ed86162b5b465e538463ee&t=20230319015241" width="100px" height="100px"><p class="skill">&nbsp;元素スキル</p></th>
+    <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;<b>浄焔怒涛</b><br>フィールド上にディシア自身の「浄焔剣獄」が存在しない時に繰り出される。
+        炎元素範囲ダメージを与え、「浄焔剣獄」領域を生成する。<br>&nbsp;<b>剣域熾焔</b><br>フィールド上にディシア自身の「浄焔剣獄」が存在する時に繰り出される。
+        跳躍攻撃を行い、炎元素範囲ダメージを与え、新たな位置に「浄焔剣獄」領域を再生成する。
+        この方法で再生成された「浄焔剣獄」領域は元の領域の継続時間を引き継ぐ。
+        <br>
+        1回の「浄焔剣獄」継続時間中に剣域熾焔は1回のみ発動可能。<br><br>
+    </td>
+  </tr>
+
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">浄焔怒涛のダメージ</th>
+    <th style="width: 80px;">剣域熾焔のダメージ</th>
+    <th style="width: 100px;">領域のダメージ<br><small>(攻撃力/HP上限)</small></th>
+    <th style="width: 100px;">ダメージカット</th>
+    <th style="width: 150px;">赤鬣の血の上限</th>
+    <th style="width: 150px;">領域の継続時間</th>
+    <th style="width: 150px;">クールタイム(CT)</th>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.2</th>
+    <td style="text-align: center;">121.3%</td>
+    <td style="text-align: center;">142.8%</td>
+    <td style="text-align: center;">64.7%+1.11%</td>
+    <td style="text-align: center;">34%</td>
+    <td rowspan="10" style="text-align: center;">200%HP上限</td>
+    <td rowspan="10" style="text-align: center;">12.0s</td>
+    <td rowspan="10" style="text-align: center;">20.0s</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.3</th>
+    <td style="text-align: center;">129.8%</td>
+    <td style="text-align: center;">152.7%</td>
+    <td style="text-align: center;">69.2%+1.19%</td>
+    <td style="text-align: center;">36%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.4</th>
+    <td style="text-align: center;">141.1%</td>
+    <td style="text-align: center;">166.0%</td>
+    <td style="text-align: center;">75.3%+1.29%</td>
+    <td style="text-align: center;">38%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.5</th>
+    <td style="text-align: center;">149.6%</td>
+    <td style="text-align: center;">176.0%</td>
+    <td style="text-align: center;">79.8%+1.37%</td>
+    <td style="text-align: center;">40</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.6</th>
+    <td style="text-align: center;">158.0%</td>
+    <td style="text-align: center;">185.9%</td>
+    <td style="text-align: center;">84.3%+1.44%</td>
+    <td style="text-align: center;">42%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.7</th>
+    <td style="text-align: center;">169.3%</td>
+    <td style="text-align: center;">199.2%</td>
+    <td style="text-align: center;">90.3%+1.55%</td>
+    <td style="text-align: center;">44%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.8</th>
+    <td style="text-align: center;">180.6%</td>
+    <td style="text-align: center;">212.5%</td>
+    <td style="text-align: center;">96.3%+1.65%</td>
+    <td style="text-align: center;">46%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.9</th>
+    <td style="text-align: center;">191.9%</td>
+    <td style="text-align: center;">225.8%</td>
+    <td style="text-align: center;">102.3%+1.75%</td>
+    <td style="text-align: center;">48%</td>
+  </tr>
+
+  <tr>
+    <th style="text-align: center;">Lv.10</th>
+    <td style="text-align: center;">203.2%</td>
+    <td style="text-align: center;">239.0%</td>
+    <td style="text-align: center;">108.4%+1.86%</td>
+    <td style="text-align: center;">50%</td>
+  </tr></table><br><br><br>
+
+  <table border="1" style="margin: auto;">
+    <tr>
+      <th>&nbsp;</th>
+      <th colspan="16" style="text-align: center;">天賦詳細</th>
+    </tr>
+    <tr>
+      <th style="padding: 30px;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2/::ref/%E6%88%A6%E9%97%98%E5%A4%A9%E8%B3%A6_%E5%85%83%E7%B4%A0%E7%88%86%E7%99%BA_%E7%82%8E%E5%93%AE%E7%8D%85%E5%AD%90%E5%92%AC.webp?rev=8b80b84d5fc9f6a78531d418c445f82a&t=20230319015307" width="100px" height="100px"><p class="altimate">&nbsp;元素爆発</p></th>
+      <td colspan="16"><br><br><b>&nbsp;元素爆発</b><br>灼熱の怒りを解き放ち、身のこなしに制限を与える大剣を手放して「熾炎獅子」状態に入り、<br>中断耐性をアップする。<br>
+        この状態の時、ディシアは自動的に熾鬣拳を放ち続け、攻撃力とHP上限を基に炎元素ダメージを与える。
+        また、継続時間終了後に残火蹴を繰り出し、攻撃力とHP上限を基に炎元素範囲ダメージを与える。
+        <br>発動時、フィールド上にディシア自身の元素スキル「熔鉄流獄」による「浄焔剣獄」領域が存在する場合、
+        ディシアはそれを回収し、「熾炎獅子」状態の終了時に新たな位置に領域を再生する。
+        再生成された領域の継続時間は、領域が回収された時の継続時間を引き継ぐ。
+        この状態の時、ディシアは元素スキルを発動できず、通常攻撃、重撃、落下攻撃を行うことができない。
+        「通常攻撃・剣闘術・金砂塵」と元素スキル「熔鉄流獄」は「炎咆連打」に切り替わる。<br>
+        &nbsp;&nbsp;その後、烈焔を大剣に集め、前方に飛行する炎の鳥を出し、<br>経路上の敵に大量の炎元素ダメージを与える。<br>
+        &nbsp;&nbsp;<b>炎咆</b><br>
+        &nbsp;&nbsp;熾鬣拳を発動した後、0.4秒以内に炎咆連打を発動すると、次の熾鬣拳の発動速度が上昇する。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br>
+      </td>
+    </tr>
+
+    <tr>
+      <th style="width: 200px;">ステータス詳細</th>
+      <th style="width: 140px;">
+        熾鬣拳のダメージ<br><small>(攻撃力+HP上限)</small>
+        </th>
+      <th style="width: 140px;">
+        残火蹴のダメージ<br><small>(攻撃力+HP上限)</small>
+    </th>
+      <th style="width: 150px;">継続時間</th>
+      <th style="width: 150px;">クールタイム(CT)</th>
+      <th style="width: 150px;">元素エネルギー</th>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.2</th>
+      <td style="text-align: center;">106.1%+1.82%</td>
+      <td style="text-align: center;">149.7%+2.57%</td>
+      <td rowspan="10" style="text-align: center;">4.0s</td>
+      <td rowspan="10" style="text-align: center;">18.0s</td>
+      <td rowspan="10" style="text-align: center;">70</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.3</th>
+      <td style="text-align: center;">113.5%+1.95%</td>
+      <td style="text-align: center;">160.2%+2.75%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.4</th>
+      <td style="text-align: center;">123.4%+2.12%</td>
+      <td style="text-align: center;">174.1%+2.99%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.5</th>
+      <td style="text-align: center;">130.8%+2.24%</td>
+      <td style="text-align: center;">184.6%+3.16%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.6</th>
+      <td style="text-align: center;">138.2%+2.37%</td>
+      <td style="text-align: center;">195.0%+3.34%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.7</th>
+      <td style="text-align: center;">148.1%+2.54%</td>
+      <td style="text-align: center;">209.0%+3.58%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.8</th>
+      <td style="text-align: center;">157.9%+2.71%</td>
+      <td style="text-align: center;">222.9%+3.82%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.9</th>
+      <td style="text-align: center;">167.8%+2.88%</td>
+      <td style="text-align: center;">236.8%+4.06%</td>
+    </tr>
+
+    <tr>
+      <th style="text-align: center;">Lv.10</th>
+      <td style="text-align: center;">177.7%+3.05%	</td>
+      <td style="text-align: center;">250.7%+4.30%</td>
+    </tr></table><br><br><br>
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2/::ref/%E5%9B%BA%E6%9C%89%E5%A4%A9%E8%B3%A6_%E6%83%9C%E3%81%97%E3%81%BF%E3%81%AA%E3%81%8D%E6%89%B6%E7%BF%BC.webp?rev=19faffe195a0c1572d6fb6f0ccb5ee24&t=20230319015705" width="100px" height="100px"><p class="dehyagift">&nbsp;惜しみなき扶翼</p></th>
+        <td colspan="16"><br><br><b>&nbsp;惜しみなき扶翼</b><br>&nbsp;&nbsp;熔鉄流獄・剣域熾焔、または炎哮獅子咬を通して浄焔剣獄を回収してから6秒間、ディシアが赤鬣の血によるダメージを受ける際、そのダメージ-60%。<br>
+            この効果は2秒間に1回のみ発動可能。<br>
+            また、ディシアが熔鉄流獄・浄焔怒涛を発動してから9秒間、チーム全員に「熔金の躰」状態を付与する。<br>
+            熔金の躰状態にあるキャラクターが浄焔剣獄内にいる時、追加の中断耐性を獲得する。<br>
+            なお、熔金の躰状態の発生は18秒毎に1回のみ可能&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2/::ref/%E5%9B%BA%E6%9C%89%E5%A4%A9%E8%B3%A6_%E8%87%B3%E8%AA%A0%E3%81%AE%E5%B0%8A%E5%B4%87.webp?rev=d576f5e5a24c07b98b046b91c10c7856&t=20230319015658" width="100px" height="100px"><p class="dehyagift">&nbsp;至誠の尊崇</p></th>
+        <td colspan="16"><br><br><b>&nbsp;至誠の尊崇</b><br>&nbsp;&nbsp;HPが40%未満の時、ディシアはHP上限の20%を基にHPを回復する。さらにそれから10秒間、HP上限の6%を基に2秒ごとにディシアのHPを回復する。<br>
+            この効果は20秒毎に1回のみ発動可能。<br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2/::ref/%E5%9B%BA%E6%9C%89%E5%A4%A9%E8%B3%A6_%E9%99%BD%E3%81%AE%E5%B0%84%E3%81%99%E6%AD%A3%E9%81%93.webp?rev=e8fa4ee4af78c671645adf988d41410f&t=20230319015717" width="100px" height="100px"><p class="dehyagift">&nbsp;陽の射す正道</p></th>
+        <td colspan="16"><br><br><b>&nbsp;陽の射す正道</b><br>&nbsp;&nbsp;日中（6時から18時まで）になると、チーム内にいる自身のキャラクター全員が疾走効果を獲得し、移動速度+10%。<br>
+            この効果は秘境、征討領域、深境螺旋では発動されない。また、疾走効果は重ね掛け不可。<br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2/::ref/%E5%91%BD%E3%83%8E%E6%98%9F%E5%BA%A7_%E7%AC%AC1%E9%87%8D_%E7%85%8C%E3%82%81%E3%81%8F%E7%9A%8E%E6%BD%94%E3%81%AE%E7%82%8E.webp?rev=3da972132107e2f4232b6c68d210e2a4&t=20230319020005" width="100px" height="100px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;煌めく皎潔の炎</b><br>&nbsp;&nbsp;ディシアのHP上限+20%。またHP上限を基準に、ディシアの下記攻撃のダメージが増加する。<br>
+                ・熔鉄流獄のダメージ増加量: HP上限の3.6%。<br>
+                ・炎哮獅子咬のダメージ増加量: HP上限の6%。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2/::ref/%E5%91%BD%E3%83%8E%E6%98%9F%E5%BA%A7_%E7%AC%AC2%E9%87%8D_%E7%87%BF%E3%81%8F%E6%B8%85%E7%A0%82%E3%81%AE%E5%88%A9%E5%88%83.webp?rev=2e35bdd95afeae8d056298220c470215&t=20240407213656" width="100px" height="100px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;燿く清砂の利刃</b><br>&nbsp;&nbsp;熔鉄流獄・剣域熾焔発動時、再生成された「浄焔剣獄」領域の継続時間+6秒。<br>
+                また、フィールド上に「浄焔剣獄」領域が存在する場合、領域内フィールド上キャラクターが攻撃を受けると、「浄焔剣獄」による次の連携攻撃のダメージ+50%。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;1.5秒に一回のみ発動可能<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2/::ref/%E5%91%BD%E3%83%8E%E6%98%9F%E5%BA%A7_%E7%AC%AC3%E9%87%8D_%E6%8E%A0%E3%82%81%E3%82%8B%E7%86%BE%E7%82%8E%E3%81%AE%E6%80%92%E3%82%8A.webp?rev=cd9e14c7f78f7dcc1c1e02ea236418f1&t=20230319020048" width="100px" height="100px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;掠める熾炎の怒り</b><br>&nbsp;&nbsp;元素スキルのLv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2/::ref/%E5%91%BD%E3%83%8E%E6%98%9F%E5%BA%A7_%E7%AC%AC4%E9%87%8D_%E8%AA%93%E3%81%84%E3%81%97%E6%B0%B8%E9%81%A0%E3%81%AE%E9%8A%98%E5%BF%83.webp?rev=9fbb29c7a313f580a7f1cd3d650b55e4&t=20230319020102" width="100px" height="100px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;誓いし永遠の銘心</b><br>&nbsp;&nbsp;炎哮獅子咬の熾鬣拳、または残火蹴が敵に命中した時、ディシアの元素エネルギーを1.5回復し、またHP上限の2.5%を基にディシアのHPを回復する。<br>
+                この効果は0.2秒毎に1回のみ発動可能。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2/::ref/%E5%91%BD%E3%83%8E%E6%98%9F%E5%BA%A7_%E7%AC%AC5%E9%87%8D_%E4%B8%8D%E7%B8%9B%E3%81%AA%E3%82%8B%E8%87%B3%E9%AB%98%E3%81%AE%E7%8D%85%E5%AD%90.webp?rev=af3d24eedd866a3b67a503c92e469a14&t=20230319020119" width="100px" height="100px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;朝を告げる炎の鳥</b><br>&nbsp;&nbsp;元素爆発のLv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2/::ref/%E5%91%BD%E3%83%8E%E6%98%9F%E5%BA%A7_%E7%AC%AC6%E9%87%8D_%E9%BB%84%E9%87%91%E3%82%92%E8%A3%82%E3%81%8F%E7%84%94%E7%88%AA.webp?rev=a448903dd1fe04436d1746bc93c6f325&t=20230319020128" width="100px" height="100px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;闇を清算する炎の剣</b><br>&nbsp;&nbsp;炎哮獅子咬の会心率+10%。<br>
+                また、1回の熾炎獅子の継続時間中、熾鬣拳が敵に命中し会心を起こすと、継続時間内の炎哮獅子咬の会心ダメージ+15%、熾炎獅子の継続時間+0.5秒。<br>
+                この効果は0.2秒毎に1回のみ発動可能。この方法で延長できる継続時間は2秒まで、アップできる会心ダメージは60%までとなる。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ディシアは"タンクサブアタッカー"という立ち位置なので、役割によって変えるところはありますが、HP、会心率、会心ダメージ、攻撃力を盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E8%91%A6%E6%B5%B7%E3%81%AE%E6%A8%99.png.webp?rev=21548060152293b916b17d487bb3fff1&t=20230302021327">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E7%84%A1%E5%B7%A5%E3%81%AE%E5%89%A3.png.webp?rev=02928859b2c0f3853837b95fdd6dbe4c&t=20210208031301">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E8%B5%A4%E8%A7%92%E7%9F%B3%E5%A1%B5%E6%BB%85%E7%A0%95.jpg?rev=5169a0c0dfa6405bb70e442e2151d6f8&t=20211214203816" >
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E7%8B%BC%E3%81%AE%E6%9C%AB%E8%B7%AF.png.webp?rev=5a49995febdedcb5a6ec1b10d245b840&t=20201122011303" >
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E5%A4%A9%E7%A9%BA%E3%81%AE%E5%82%B2.png.webp?rev=26c62385a4869d4c76c26fc68ee30fb5&t=20201122011316">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E8%9E%AD%E9%BE%8D%E3%81%AE%E5%89%A3.png.webp?rev=cc81e293a9911f31b0e7c2011fe5e469&t=20210512075755" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E9%BB%92%E5%B2%A9%E3%81%AE%E6%96%AC%E5%88%80.png.webp?rev=db1989e232257dbb57d050963e4d618f&t=20240103220128" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E6%83%A1%E7%8E%8B%E4%B8%B8.png.webp?rev=1f7ab76c21de605f63f7567dc879a5ad&t=20240103220212" >
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E8%A9%B1%E6%AD%BB%E5%90%88%E3%81%84%E6%A3%92.png.webp?rev=e4cc452c8025142d3431c7b122867fda&t=20230828134526" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E6%90%BA%E5%B8%AF%E5%9E%8B%E3%83%81%E3%82%A7%E3%83%BC%E3%83%B3%E3%82%BD%E3%83%BC.jpeg?rev=1494594867879b21eb7d5ceb3bb4f78e&t=20231002150237" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>A</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E8%A5%BF%E9%A2%A8%E5%A4%A7%E5%89%A3.png.webp?rev=e837a03ebf8613adec17ee1537522a38&t=20201122010318" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E6%A1%82%E6%9C%A8%E6%96%AC%E9%95%B7%E6%AD%A3.png.webp?rev=e61b22fab5fa8df6d00a1c7bc0495828&t=20240103220201" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>AA</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E5%8F%A4%E8%8F%AF%E3%83%BB%E8%A9%A6%E4%BD%9C.png.webp?rev=fd3faf181047f138fee54a04c73500c9&t=20201122010501" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E9%90%98%E3%81%AE%E5%89%A3.png.webp?rev=fdb5919e956548d0d14a83f9dac23c59&t=20201122010351" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+                <tr>
+                  <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%AD%94%E5%A5%B3%E3%81%AE%E7%82%8E%E3%81%AE%E8%8A%B1_5.png.webp?rev=5cce7c8f5ff07e9d1d890a4799d8f7b3&t=20210119123131https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%AD%94%E5%A5%B3%E3%81%AE%E7%82%8E%E3%81%AE%E8%8A%B1_5.png.webp?rev=5cce7c8f5ff07e9d1d890a4799d8f7b3&t=20210119123131" width="100px" height="100px"><p class="diluc-relic" style="text-align: center;"><b>炎の魔女</b></p></td>
+                  <td style="width: 600px;"><b>セット効果</b><br>
+                    炎元素ダメージ+15%,<br>
+                    過負荷、燃焼、烈開花反応によるダメージ+40%、蒸発、溶解反応による加算効果+15%、元素スキルを発動した10秒間、2セット効果+50%、最大3重まで
+                  </td>
+                  <td style="width: 400px;">４セット効果を駆使して戦うので元素反応を活かせるパーティ編成を作りましょう。</td>
+                  <td style="display: flex;"><div width="50px" height="50px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2_s.webp?rev=222b990d3de8aac563d38b933f70d510&t=20230301132950">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9_s.webp?rev=d6b16d45a11d6c4ebbd2829d5250c1f0&t=20240313100837"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%A1%8C%E7%A7%8B_s.webp?rev=99947695ce24868c42f736b737db5020&t=20240313094600">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%A8%E3%82%A9%E3%83%BC%E3%83%A8_s.webp?rev=d127e0f14d5939292be568c557247af9&t=20230118200205">
+                  </div></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%A8%81%E5%8E%B3%E3%81%AE%E9%B0%90_5.png.webp?rev=9b0be23111df21b6a33a19ad7fce945d&t=20210723131453" width="100px" height="100px"><p class="dehya-relic" style="text-align: center;"><b>絶縁の旗印</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        元素チャージ効率+20%,<br>
+                        元素チャージ効率の25%を基準に、元素爆発のダメージがアップする。この方式でアップできるダメージは最大75%まで。
+                    </td>
+                    <td style="width: 400px;">４セット効果を駆使して戦うので元素爆発を強くできる且つ元素爆発以外をカバーできるパーティ編成を作りましょう。</td>
+                    <td style="display: flex;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2_s.webp?rev=222b990d3de8aac563d38b933f70d510&t=20230301132950">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%A2%E3%83%8A_s.webp?rev=fb73e6c173b2016c8d40e014ccb1d9de&t=20240313094549">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%8D%BE%E9%9B%A2_s.webp?rev=ab44a61a332174925072c553966eb001&t=20240313101433">
+                    </div></td>
+                  </tr>
+
+                <tr>
+                  <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%9C%8A%E5%85%89%E8%B5%B7%E6%BA%90%E3%81%AE%E8%95%8A.png.webp?rev=19bbd1e4b2122fcb5bce342a70a93515&t=20230510174844" width="100px" height="100px" style="margin: auto;"><p class="dehya-relic"><b>熔鉄の孤砦</b></p></td>
+                  <td style="width: 600px;"><b>セット効果</b><br>
+                    HP+20%。
+                    <br>
+                    元素スキルと元素爆発のダメージ+10%。装備者がダメージを受けた後の5秒間、上記強化効果の効果量+80%、最大5層まで重ねがけ可能。継続時間は層ごとに独立してカウントされる。装備したキャラクターが待機している場合にも効果を発動できる。
+                  </td>
+                  <td style="width: 400px;">４セット効果を駆使して戦いますが条件が"ダメージ"なので回復が多くできる且つ回復をバフ、ダメージに変えることのできるパーティ編成を作りましょう<br></td>
+                  <td style="display: flex;"><div width="50px" height="50px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2_s.webp?rev=222b990d3de8aac563d38b933f70d510&t=20230301132950">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7_s.webp?rev=3aca58306ed023b42cdc0da8e0abb6c5&t=20240313094612"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%96%91%E9%9B%B2_s.webp?rev=f4adef3c02ca9dd1a267d0e0e5f5d0ba&t=20240202002805">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926">
+                  </div></td>
+                </tr>
+
+                <tr>
+                    <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%BB%84%E9%87%91%E3%81%AE%E6%97%8B%E5%BE%8B%E3%81%AE%E5%A4%89%E5%A5%8F.png.webp?rev=47fefd090194213a484e98c2d3cd75f3&t=20230820021709" width="100px" height="100px" style="margin: auto;"><p class="dehya-relic"><b>罪禍の終末</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        元素スキルのダメージ+20%。
+                      <br>
+                      元素スキルのダメージ+25%。また、装備者が待機中の時、元素スキルのダメージがさらに+25%。この効果は装備キャラクターが登場してから2秒後に解除される。
+                    </td>
+                    <td style="width: 400px;">４セット効果を駆使して戦いますが場に出さないことが多いので比較的どんなパーティでも扱いやすいです。<br>しかし場に出さないことが多いので元素スキルの効果時間を把握しておきましょう</td>
+                    <td style="display: flex;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2_s.webp?rev=222b990d3de8aac563d38b933f70d510&t=20230301132950">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%8D%83%E7%B9%94_s.webp?rev=85afa4c76f4aee5229d30cde14359128&t=20240314020837"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%A1%8C%E7%A7%8B_s.webp?rev=99947695ce24868c42f736b737db5020&t=20240313094600">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A_s.webp?rev=61ba9a628f26920cdb5f0e822b23af9d&t=20240313095131">
+                    </div></td>
+                  </tr></table><br><br><br>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ディオナ</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    <a href="#combo">・コンボ</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">ディオナ</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC9kNmNRbFZTcS5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19"></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆4</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">弓</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">氷</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">子猫座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">モンド</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">井澤詩織</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  
+    
+    <tr>
+        <th style="text-align: center;">基礎HP</th>
+        <td style="text-align: center;">2061</td>
+        <td style="text-align: center;">2661</td>
+        <td style="text-align: center;">3985</td>
+        <td style="text-align: center;">4411</td>
+        <td style="text-align: center;">5074</td>
+        <td style="text-align: center;">5642</td>
+        <td style="text-align: center;">6305</td>
+        <td style="text-align: center;">6731</td>
+        <td style="text-align: center;">7393</td>
+        <td style="text-align: center;">7818</td>
+        <td style="text-align: center;">8481</td>
+        <td style="text-align: center;">8907</td>
+        <td style="text-align: center;">9570</td>
+        </tr>
+        
+        <tr>
+        <th style="text-align: center;">基礎攻撃力</th>
+        <td style="text-align: center;">45</td>
+        <td style="text-align: center;">59</td>
+        <td style="text-align: center;">88</td>
+        <td style="text-align: center;">98</td>
+        <td style="text-align: center;">112</td>
+        <td style="text-align: center;">125</td>
+        <td style="text-align: center;">140</td>
+        <td style="text-align: center;">149</td>
+        <td style="text-align: center;">164</td>
+        <td style="text-align: center;">174</td>
+        <td style="text-align: center;">188</td>
+        <td style="text-align: center;">198</td>
+        <td style="text-align: center;">212</td>
+        </tr>
+        
+        <tr>
+        <th style="text-align: center;">基礎防御力</th>
+        <td style="text-align: center;">129</td>
+        <td style="text-align: center;">167</td>
+        <td style="text-align: center;">250</td>
+        <td style="text-align: center;">277</td>
+        <td style="text-align: center;">318</td>
+        <td style="text-align: center;">354</td>
+        <td style="text-align: center;">396</td>
+        <td style="text-align: center;">422</td>
+        <td style="text-align: center;">464</td>
+        <td style="text-align: center;">491</td>
+        <td style="text-align: center;">532</td>
+        <td style="text-align: center;">559</td>
+        <td style="text-align: center;">601</td>
+        </tr>
+        
+        <tr>
+        <th style="text-align: center;">氷元素ダメージ</th>
+        <td style="text-align: center;">—</td>
+        <td style="text-align: center;">—</td>
+        <td style="text-align: center;">—</td>
+        <td style="text-align: center;">6.0%</td>
+        <td style="text-align: center;">6.0%</td>
+        <td style="text-align: center;">12.0%</td>
+        <td style="text-align: center;">12.0%</td>
+        <td style="text-align: center;">12.0%</td>
+        <td style="text-align: center;">12.0%</td>
+        <td style="text-align: center;">18.0%</td>
+        <td style="text-align: center;">18.0%</td>
+        <td style="text-align: center;">24.0%</td>
+        <td style="text-align: center;">24.0%</td>
+        </tr></table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%98%E9%9B%A8/::ref/Talent_Liutian_Archery.png?rev=74723be448b14201b5beca0abea2bed9&t=20210206192137" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+      通常攻撃<br>
+      最大6段の連続射撃を行う。<br><br>
+      
+      重撃<br>
+      ダメージがより高く、精確な狙い撃ちを発動し、氷元素ダメージを与える。<br><br>
+      
+      落下攻撃<br>
+      空中から落下し地面に衝撃を与え、落下時に範囲ダメージを与える。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 80px;">5段目</th>
+    <th style="width: 80px;">狙い撃ち</th>
+    <th style="width: 120px;">フルチャージ<br>狙い撃ち</th>
+    <th style="width: 150px;">落下期間<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+    
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2%</td>
+    <td style="text-align: center;">39.1%</td>
+    <td style="text-align: center;">36.2%</td>
+    <td style="text-align: center;">49.3%</td>
+    <td style="text-align: center;">46.5%</td>
+    <td style="text-align: center;">58.1%</td>
+    <td style="text-align: center;">47.4%</td>
+    <td style="text-align: center;">133%</td>
+    <td style="text-align: center;">61.5%</td>
+    <td style="text-align: center;">123%/153%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">42.0%</td>
+    <td style="text-align: center;">39.%</td>
+    <td style="text-align: center;">53.0%</td>
+    <td style="text-align: center;">50.0%</td>
+    <td style="text-align: center;">62.5%</td>
+    <td style="text-align: center;">51.0%</td>
+    <td style="text-align: center;">143%</td>
+    <td style="text-align: center;">66.1%</td>
+    <td style="text-align: center;">132%/165%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">46.2%</td>
+    <td style="text-align: center;">42.9%</td>
+    <td style="text-align: center;">58.3%</td>
+    <td style="text-align: center;">55.0%</td>
+    <td style="text-align: center;">68.8%</td>
+    <td style="text-align: center;">56.1%</td>
+    <td style="text-align: center;">155%</td>
+    <td style="text-align: center;">72.7%</td>
+    <td style="text-align: center;">145%/182%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">49.1%</td>
+    <td style="text-align: center;">45.6%</td>
+    <td style="text-align: center;">62.0%</td>
+    <td style="text-align: center;">58.5%</td>
+    <td style="text-align: center;">73.1%</td>
+    <td style="text-align: center;">59.7%</td>
+    <td style="text-align: center;">164%</td>
+    <td style="text-align: center;">77.3%</td>
+    <td style="text-align: center;">155%/193%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">52.5%</td>
+    <td style="text-align: center;">48.8%</td>
+    <td style="text-align: center;">66.3%</td>
+    <td style="text-align: center;">62.5%</td>
+    <td style="text-align: center;">78.1%</td>
+    <td style="text-align: center;">63.8%</td>
+    <td style="text-align: center;">174%</td>
+    <td style="text-align: center;">82.6%</td>
+    <td style="text-align: center;">165%/206%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">57.1%</td>
+    <td style="text-align: center;">53.0%</td>
+    <td style="text-align: center;">72.1%</td>
+    <td style="text-align: center;">68.0%</td>
+    <td style="text-align: center;">85.0%</td>
+    <td style="text-align: center;">69.4%</td>
+    <td style="text-align: center;">186%</td>
+    <td style="text-align: center;">89.9%</td>
+    <td style="text-align: center;">180%/224%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">61.7%</td>
+    <td style="text-align: center;">57.3%</td>
+    <td style="text-align: center;">77.9%</td>
+    <td style="text-align: center;">73.5%</td>
+    <td style="text-align: center;">91.9%</td>
+    <td style="text-align: center;">75.0%</td>
+    <td style="text-align: center;">198%</td>
+    <td style="text-align: center;">97.1%</td>
+    <td style="text-align: center;">194%/243%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">66.4%</td>
+    <td style="text-align: center;">61.6%</td>
+    <td style="text-align: center;">83.7%</td>
+    <td style="text-align: center;">79.0%</td>
+    <td style="text-align: center;">98.8%</td>
+    <td style="text-align: center;">80.6%</td>
+    <td style="text-align: center;">211%</td>
+    <td style="text-align: center;">104.4%</td>
+    <td style="text-align: center;">209%/261%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">71.4%</td>
+    <td style="text-align: center;">66.3%</td>
+    <td style="text-align: center;">90.1%</td>
+    <td style="text-align: center;">85.0%</td>
+    <td style="text-align: center;">106.3%</td>
+    <td style="text-align: center;">86.7%</td>
+    <td style="text-align: center;">223%</td>
+    <td style="text-align: center;">112.3%</td>
+    <td style="text-align: center;">225%/281%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="1000px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Talent_Icy_Paws.png?rev=a2d37782d99460b7325b237643e4e9af&t=20210204223926" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+        敵に氷元素ダメージを与え、命中時にシールドを生成する。<br>
+        シールドのダメージ吸収量はディオナのHP上限によって決まり、継続時間は命中したフリーズキャッツクローの数によって決まる。<br><br>
+        
+        一回押し<br>
+        素早くフリーズキャッツクローを2枚発射する。<br><br>
+        
+        長押し<br>
+        素早く後退し、フリーズキャッツクローを5枚発射する。<br>
+        長押しで生成したシールドのダメージ吸収量+75％。<br><br>
+        
+        シールドは氷元素ダメージに対して、250％の吸収効果がある。また、シールド生成時、キャラクターに短時間の氷元素付着を与える。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 160px;">キャックロー<br>ダメージ</th>
+                <th style="width: 160px;">シールド基礎吸収量</th>
+                <th style="width: 150px;">継続時間</th>
+                <th style="width: 100px;">一回押し<br>クールタイム</th>
+                <th style="width: 100px;">長押し<br>クールタイム</th>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Lv.2</td>
+                <td style="text-align: center;">1つにつき45.1%</td>
+                <td style="text-align: center;">HP上限7.7%+762</td>
+                <td style="text-align: center;">キャッツクロー1につき1.9s</td>
+                <td rowspan="9" style="text-align: center;">6.0s</td>
+                <td rowspan="9" style="text-align: center;">15.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.3</td>
+                <td style="text-align: center;">1つにつき48.2%</td>
+                <td style="text-align: center;">HP上限8.3%+837</td>
+                <td style="text-align: center;">キャッツクロー1につき2.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.4</td>
+                <td style="text-align: center;">1つにつき52.4%</td>
+                <td style="text-align: center;">HP上限9.0%+918</td>
+                <td style="text-align: center;">キャッツクロー1につき2.1s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.5</td>
+                <td style="text-align: center;">1つにつき55.5%</td>
+                <td style="text-align: center;">HP上限9.5%+1005</td>
+                <td style="text-align: center;">キャッツクロー1につき2.2s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.6</td>
+                <td style="text-align: center;">1つにつき58.7%</td>
+                <td style="text-align: center;">HP上限10.1%+1097</td>
+                <td style="text-align: center;">キャッツクロー1につき2.3s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.7</td>
+                <td style="text-align: center;">1つにつき62.9%</td>
+                <td style="text-align: center;">HP上限10.8%+1195</td>
+                <td rowspan="4" style="text-align: center;">キャッツクロー1につき2.4s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.8</td>
+                <td style="text-align: center;">1つにつき67.1%</td>
+                <td style="text-align: center;">HP上限11.5%+299</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.9</td>
+                <td style="text-align: center;">1つにつき71.3%</td>
+                <td style="text-align: center;">HP上限12.2%+1409</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.10</td>
+                <td style="text-align: center;">1つにつき75.5%</td>
+                <td style="text-align: center;">HP上限13.0%+1524</td>
+                </tr></table><br><br><br>
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Talent_Signature_Mix.png?rev=7932dd6af7b890c513bde6ef8bded828&t=20210204223937" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+                      <td colspan="16"><br><br>
+                        氷元素範囲ダメージを与え、氷気の酒霧エリアを生成する。<br><br>
+
+                        氷気の酒霧エリア<br>
+                        ・エリアにいる敵に氷元素ダメージを持続的に与える。<br>
+                        ・エリアにいるキャラクターのHPを持続的に回復する。<br><br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                      </td>
+                    </tr>
+                
+                    <tr>
+                      <th style="width: 150px;">ステータス詳細</th>
+                      <th style="width: 160px;">スキルダメージ</th>
+                      <th style="width: 160px;">エリアの継続<br>ダメージ</th>
+                      <th style="width: 160px;">継続回復量</th>
+                      <th style="width: 160px;">継続時間</th>
+                      <th style="width: 150px;">クールタイム(CT)</th>
+                      <th style="width: 120px;">元素エネルギー</th>
+                    </tr>
+                
+                    <tr>
+                        <td style="text-align: center;">Lv.2</td>
+                        <td style="text-align: center;">86%</td>
+                        <td style="text-align: center;">56.6%</td>
+                        <td style="text-align: center;">HP上限5.74%+565</td>
+                        <td rowspan="9" style="text-align: center;">12.0s</td>
+                        <td rowspan="9" style="text-align: center;">20.0s</td>
+                        <td rowspan="9" style="text-align: center;">80</td>
+                        </tr>
+                        <tr>
+                        <td style="text-align: center;">Lv.3</td>
+                        <td style="text-align: center;">92%</td>
+                        <td style="text-align: center;">60.5%</td>
+                        <td style="text-align: center;">HP上限6.14%+620</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.4</td>
+                        <td style="text-align: center;">100%</td>
+                        <td style="text-align: center;">65.8%</td>
+                        <td style="text-align: center;">HP上限6.67%+680</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.5</td>
+                        <td style="text-align: center;">106%</td>
+                        <td style="text-align: center;">69.7%</td>
+                        <td style="text-align: center;">HP上限7.07%+744</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.6</td>
+                        <td style="text-align: center;">112%</td>
+                        <td style="text-align: center;">73.7%</td>
+                        <td style="text-align: center;">HP上限7.47%+813</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.7</td>
+                        <td style="text-align: center;">120%</td>
+                        <td style="text-align: center;">79.0%</td>
+                        <td style="text-align: center;">HP上限8.00%+885</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.8</td>
+                        <td style="text-align: center;">128%</td>
+                        <td style="text-align: center;">84.2%</td>
+                        <td style="text-align: center;">HP上限8.54%+962</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.9</td>
+                        <td style="text-align: center;">136%</td>
+                        <td style="text-align: center;">89.5%</td>
+                        <td style="text-align: center;">HP上限9.07%+1044</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.10</td>
+                        <td style="text-align: center;">144%</td>
+                        <td style="text-align: center;">94.8%</td>
+                        <td style="text-align: center;">HP上限9.60%+1129</td>
+                        </tr>
+                        
+                        </table><br><br><br>
+                
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Talent_Cat%2527s_Tail_Secret_Menu.png?rev=22b107bf8257ff3e852e27ad31b36c34&t=20210204223948" width="75px" height="75px"><p class="hutaogift">&nbsp;キャッツテールの裏メニュー</p></th>
+        <td colspan="16"><br><br><b>&nbsp;キャッツテールの裏メニュー</b><br>&nbsp;&nbsp;
+            元素スキルのシールドが存在する時、キャラクターの移動速度+10％、スタミナ消費-10％。<br><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Talent_Drunkards%2527_Farce.png?rev=0c0eaadc2fa93c4a022362a1db32c05d&t=20210204224001" width="75px" height="75px"><p class="hutaogift">&nbsp;滑稽な酔態</p></th>
+        <td colspan="16"><br><br><b>&nbsp;滑稽な酔態</b><br>&nbsp;&nbsp;
+            元素爆発のエリアに入った敵の攻撃力が15秒間-10％。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Talent_Complimentary_Bar_Food.png?rev=c9f3cbfb76939dc45defdd3cbbcef562&t=20210204224019" width="75px" height="75px"><p class="hutaogift">&nbsp;おまけのおつまみ</p></th>
+        <td colspan="16"><br><br><b>&nbsp;おまけのおつまみ</b><br>&nbsp;&nbsp;
+            回復系料理を完璧調理した時、12％の確率で料理を2倍獲得する。<br>
+         <br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Constellation_A_Lingering_Flavor.png?rev=9d6000ca9e9600e6650d29f753bfc5d4&t=20210204224142" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;特製の余韻</b><br>&nbsp;&nbsp;
+                元素爆発の効果終了時、ディオナの元素エネルギーを15回復する。<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Constellation_Shaken%252C_Not_Purred.png?rev=a6428227c7133144bbe66c8d52f7c63b&t=20210204224152" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;クールキャッツクロー</b><br>&nbsp;&nbsp;
+                フリーズキャッツクローによるダメージ+15%、シールドのダメージ吸収量+15%。<br>
+                命中時、近くに出場している他のキャラクターにフリーズキャッツクロー50％分のダメージを吸収するシールドを付与する、継続時間5秒<br><br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Constellation_A-Another_Round%253F.png?rev=bcf8ffd72fb79d21e494df38078ddb1c&t=20210204224201" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;お、おかわり？</b><br>&nbsp;&nbsp;元素スキルの天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Constellation_Wine_Industry_Slayer.png?rev=dd0d9ddf821aada4a26a12952ea2dbce&t=20210204224211" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;「酒造業キラー」</b><br>&nbsp;&nbsp;
+                元素爆発のエリアにいる時、ディオナの狙い撃ちのチャージ時間-60%。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Constellation_Double_Shot%252C_On_The_Rocks.png?rev=1b59717b1073bb35134b261897772159&t=20210204224221" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;エクストラアイス</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Constellation_Cat%2527s_Tail_Closing_Time.png?rev=6a72d59c4c5cf8b6a586554cd5beb05d&t=20210204224231" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;キャッツテールが閉店の時</b><br>&nbsp;&nbsp;
+                元素爆発のエリアにいるキャラクターは自身の現在HPによって下記の効果を獲得する。<br>
+                ・HPが50％以下の時、受ける治療効果+30％。<br>
+                ・HPが50％を超えている時、元素熟知+200。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              ディオナは"サポーター"という立ち位置なので、メインステータスが元素チャージ効率を盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、サポーターの中でも"ヒーラー兼シールダー"という、元素スキルでシールドを生成し、元素爆発でエリア回復を行うので両スキルを効率よく回せる武器を選びましょう。<br><br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E7%A5%AD%E7%A4%BC%E3%81%AE%E5%BC%93.png.webp?rev=5bead5dd99f4d2462d6cc173a3afef37&t=20231201183519">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/screenshot.1605900705.jpg?rev=b1abd71824633a4a69ab3e75be845348&t=20201121043534" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E7%B5%82%E7%84%89%E3%82%92%E5%98%86%E3%81%8F%E8%A9%A9.png.webp?rev=522a5725effa41d6ba12c414459ce743&t=20210319091919" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+
+
+                <tr>
+                    <td style="text-align: center;">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%A4%8F%E7%A5%AD%E3%82%8A%E3%81%AE%E8%8A%B1_5.jpg?rev=c57591bd5296328d2d8f05c855ff3958&t=20210212232645" width="100px" height="100px" style="margin: auto;">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%81%89%E5%8B%B2%E3%81%AE%E8%8A%B1_5.png.webp?rev=f0fd9db451db37a9cce686f2979ee6ea&t=20210502014102" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>逆飛びの流星、千岩牢固</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                      シールド強化+35%,
+                      <br>
+                      HP+20%
+                    </td>
+                    <td style="width: 400px;">それぞれの２セット効果を駆使して、HPを上げるので元素スキルから戦闘を開始しましょう。パーティは自由に編成しましょう。</td>
+                    <td style="display: flex;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA_s.webp.webp?rev=e23e379f0967e954b889b0e7dc2abad6&t=20231021115204">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%A6%99%E8%8F%B1_s.webp?rev=c09118e85ef5cd4a2f732748a76b631a&t=20240313093952">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A_s.webp?rev=61ba9a628f26920cdb5f0e822b23af9d&t=20240313095131">
+                    </div></td>
+                  </tr>
+              
+  
+                    
+                    <tr>
+                    <td style="text-align: center;">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%81%89%E5%8B%B2%E3%81%AE%E8%8A%B1_5.png.webp?rev=f0fd9db451db37a9cce686f2979ee6ea&t=20210502014102" width="100px" height="100px" style="margin: auto;">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E9%9C%8A%E5%85%89%E8%B5%B7%E6%BA%90%E3%81%AE%E8%95%8A.png.webp?rev=19bbd1e4b2122fcb5bce342a70a93515&t=20230510174844" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>千岩牢固、花海甘露の光</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                      HP+20%,
+                      <br>
+                      HP+20%
+                    </td>
+                    <td style="width: 400px;">それぞれの２セット効果を駆使して、HPを上げるので元素スキルから戦闘を開始しましょう。パーティは自由に編成しましょう。</td>
+                    <td style="display: flex;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%A5%9E%E9%87%8C%E7%B6%BE%E8%8F%AF_s.webp?rev=b2b63fe585d6f33ca3dfaa6d7971132b&t=20240313095226">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E4%B8%87%E8%91%89_s.webp?rev=7c5488d515d48d9a661f5af5d9a18a33&t=20240313100904"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A_s.webp?rev=61ba9a628f26920cdb5f0e822b23af9d&t=20240313095131">
+                    </div></td>
+                  </tr>
+                
+                  <tr>
+                    <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%BD%BC%E6%96%B9%E3%81%AB%E3%81%82%E3%82%8B%E5%B0%91%E5%A5%B3%E3%81%AE%E5%BF%83_5.png.webp?rev=2d54199d2b4e06ba5cba850e79ad5dff&t=20210502011250" width="100px" height="100px"><p class="diluc-relic" style="text-align: center;"><b>愛される少女</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        与える治癒効果+15%,<br>
+                        元素スキルまたは元素爆発を発動した後の10秒間、チーム全員のうける治癒効果+20%	<br>
+                    </td>
+                    <td style="width: 400px;">４セット効果を駆使して戦うので、元素スキルを置いてから戦闘を開始しましょう。<br>また回復が必要なキャラクターとパーティ編成を組みましょう。</td>
+                    <td style="display: flex;"><div width="50px" height="50px">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%83%A1%E6%A1%83_s.webp?rev=54adea76042ec54e902879a162ad1398&t=20240313094046">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%A1%8C%E7%A7%8B_s.webp?rev=99947695ce24868c42f736b737db5020&t=20240313094600"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E4%B8%87%E8%91%89_s.webp?rev=7c5488d515d48d9a661f5af5d9a18a33&t=20240313100904">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A_s.webp?rev=61ba9a628f26920cdb5f0e822b23af9d&t=20240313095131">
+                    </div></td>
+                  </tr>
+  
+                  <tr>
+                    <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E6%B5%B7%E6%9F%93%E3%81%AE%E8%8A%B1_5.png.webp?rev=2b784a4c8f1e35692d9bcd9c40551296&t=20211124231136" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>海染硨磲</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                        与える治療効果+15%,
+                      <br>
+                      この聖遺物セットを装備したキャラクターがチーム内のキャラクターに治療を行うと、<br>
+                      治療によるHP回復量(HP上限を超えた回復量も含む)を記録する海染の泡を生成する。 <br>
+                      海染の泡は3秒継続する。継続時間終了時、海染の泡は破裂し、周囲の敵に記録した回復量の90%分のダメージを与える<br>
+                      (このダメージは感電や超電導などの元素反応と同じように計算されるが、元素熟知、キャラクターLv、または元素反応のダメージアップ効果の影響は受けない)。<br>
+                       海染の泡は3.5秒毎に1回のみ生成可能。海染の泡が記録できる回復量は最大30000までとなり、HP上限超過分の回復量を含む。 <br>
+                      チーム内で、海染の泡は同時に最大1つまで存在できる。この聖遺物セットを装備したキャラクターは待機中でも、この効果を発動できる。<br>
+                    </td>
+                    <td style="width: 400px;">４セット効果を駆使して戦うので元素スキルを置いてから戦闘を開始したり、<br>
+                        元素爆発時、追加ダメージや元素反応を起こせるパーティ編成を組みましょう。</td>
+                    <td style="display: flex;"><div width="50px" height="50px"><br><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%83%AB%E3%83%83%E3%82%AF_s.webp?rev=dc48c0c0e71cdd1b668507ce743b21b1&t=20240313093901">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80_s.webp.webp?rev=ca50d1c01181d34502b4301b329847fd&t=20221102192029"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A_s.webp?rev=61ba9a628f26920cdb5f0e822b23af9d&t=20240313095131">
+                    </div></td>
+                  </tr>
+                  
+                  <tr>
+                    <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%9C%A8%E3%82%8A%E3%81%97%E6%97%A5%E3%81%AE%E9%81%BA%E5%A4%B1%E3%81%AE%E5%A5%91.png.webp?rev=9054d143cd402be9c41607c19bc25264&t=20231224180540" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>在りし日の歌</b></p></td>
+                    <td style="width: 600px;"><b>セット効果</b><br>
+                     与える治療効果+15%,
+                      <br>
+                      装備者がチームにいるキャラクターのHPを回復した時、継続時間6秒の「渇望」効果が発動し、HP回復量（HP上限を超えた回復量を含む）を記録する。<br>
+                      継続時間終了時、「渇望」効果は「かの時の潮」効果に変化する。「かの時の潮」効果発動中、フィールド上にいるチーム内の自身キャラクターの<br>
+                      通常攻撃、重撃、落下攻撃、元素スキル、元素爆発が敵に命中すると、「渇望」効果で記録した回復量の8%分を基に与えるダメージをアップする。<br>
+                      「かの時の潮」効果は、5回発動、または10秒後にクリアされる。1回の「渇望」効果が記録する回復量は最大15000ポイントまで。<br>
+                      なお、「渇望」は同時に最大1つまで存在でき、複数の装備者の与える回復量を記録可能。装備したキャラクターが待機している場合にも効果を発動できる。<br>
+                    </td>
+                    <td style="width: 400px;">４セット効果を駆使して味方の与ダメージを上昇させるので元素スキルを置いてから戦闘を開始しましょう。<br></td>
+                    <td style="display: flex;"><div width="50px" height="50px"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B7%E3%83%A7%E3%82%A6_s.webp?rev=9096515fcfbf33749e65d58723ca19c6&t=20240313100821">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%96%91%E9%9B%B2_s.webp?rev=f4adef3c02ca9dd1a267d0e0e5f5d0ba&t=20240202002805"><br>
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%82%A1%E3%83%AB%E3%82%B6%E3%83%B3_s.webp?rev=c5703a902230cbd1b69adfd0961a1247&t=20221207151743">
+                      <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A_s.webp?rev=61ba9a628f26920cdb5f0e822b23af9d&t=20240313095131">
+                    </div></td>
+                  </tr></table></div><br><br><br><br>
+
+
+                  <h2 id="combo" style="text-align: left;">&nbsp;&nbsp;&nbsp;コンボ</h2>
+                </div><br><br>
+    
+                  <div class="combo-text">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3>&nbsp;&nbsp;&nbsp;コンボ</h3>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    ・ディオナはシールドの継続時間が少なく、元素スキル単押しの場合はCTがすぐ上がるので<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;元素スキル単押しで元素粒子生成から元素爆発、元素スキル長押しのコンボをしてよりシールド継続時間を伸びましょう。<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Talent_Icy_Paws.png?rev=a2d37782d99460b7325b237643e4e9af&t=20210204223926" alt="" width="100px" height="100px">
+                    <b>単押し</b>
+                    <b>&rightarrow;</b>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Talent_Signature_Mix.png?rev=7932dd6af7b890c513bde6ef8bded828&t=20210204223937" alt="" width="100px" height="100px">
+                    <b>&rightarrow;</b>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A/::ref/Talent_Icy_Paws.png?rev=a2d37782d99460b7325b237643e4e9af&t=20210204223926" width="100px" height="100px">
+                    <b>長押し</b><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

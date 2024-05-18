@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>シャルロット</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">シャルロット</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://img.altema.jp/gensin/kakudai/charlotte.png" width="800px" height="800px"></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆4</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">法器</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">氷</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">真実明鏡座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">フォンテーヌ</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">和氣あず未</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  
+    
+    <tr>
+        <th style="text-align: center;">基礎HP</th>
+        <td style="text-align: center;">2319</td>
+        <td style="text-align: center;">2993</td>
+        <td style="text-align: center;">4484</td>
+        <td style="text-align: center;">4963</td>
+        <td style="text-align: center;">5708</td>
+        <td style="text-align: center;">6347</td>
+        <td style="text-align: center;">7093</td>
+        <td style="text-align: center;">7572</td>
+        <td style="text-align: center;">8317</td>
+        <td style="text-align: center;">8796</td>
+        <td style="text-align: center;">9541</td>
+        <td style="text-align: center;">10021</td>
+        <td style="text-align: center;">10766</td>
+        </tr>
+        
+        <tr>
+        <th style="text-align: center;">基礎攻撃力</th>
+        <td style="text-align: center;">37</td>
+        <td style="text-align: center;">48</td>
+        <td style="text-align: center;">72</td>
+        <td style="text-align: center;">80</td>
+        <td style="text-align: center;">92</td>
+        <td style="text-align: center;">102</td>
+        <td style="text-align: center;">114</td>
+        <td style="text-align: center;">121</td>
+        <td style="text-align: center;">133</td>
+        <td style="text-align: center;">141</td>
+        <td style="text-align: center;">153</td>
+        <td style="text-align: center;">161</td>
+        <td style="text-align: center;">173</td>
+        </tr>
+        
+        <tr>
+        <th style="text-align: center;">基礎防御力</th>
+        <td style="text-align: center;">118</td>
+        <td style="text-align: center;">152</td>
+        <td style="text-align: center;">227</td>
+        <td style="text-align: center;">252</td>
+        <td style="text-align: center;">290</td>
+        <td style="text-align: center;">322</td>
+        <td style="text-align: center;">360</td>
+        <td style="text-align: center;">384</td>
+        <td style="text-align: center;">422</td>
+        <td style="text-align: center;">446</td>
+        <td style="text-align: center;">484</td>
+        <td style="text-align: center;">508</td>
+        <td style="text-align: center;">546</td>
+        </tr>
+        
+        <tr>
+        <th style="text-align: center;">攻撃力</th>
+        <td style="text-align: center;">—</td>
+        <td style="text-align: center;">—</td>
+        <td style="text-align: center;">—</td>
+        <td style="text-align: center;">6.0%</td>
+        <td style="text-align: center;">6.0%</td>
+        <td style="text-align: center;">12.0%</td>
+        <td style="text-align: center;">12.0%</td>
+        <td style="text-align: center;">12.0%</td>
+        <td style="text-align: center;">12.0%</td>
+        <td style="text-align: center;">18.0%</td>
+        <td style="text-align: center;">18.0%</td>
+        <td style="text-align: center;">24.0%</td>
+        <td style="text-align: center;">24.0%</td>
+        </tr></table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88/::ref/%E5%AF%92%E8%89%B2%E6%92%AE%E5%BD%B1%E6%8A%80%E6%B3%95.webp?rev=831c8514b828573b68996cc3dc77b6c4&t=20231111153511" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+        通常攻撃
+        最大3段の攻撃を行い、氷元素ダメージを与える。
+        
+        重撃
+        一定のスタミナを消費し、氷元素範囲ダメージを与える。
+        
+        落下攻撃
+        空中から落下し、地面に衝撃を与える。経路上の敵を攻撃するとともに、落下時に氷元素範囲ダメージを与える。
+        
+        アルケー: プネウマ
+        シャルロットが重撃を発動するとプネウマを帯びた氷元素範囲ダメージを与える、一定間隔ごとに発動が可能。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">重撃<br>ダメージ</th>
+    <th style="width: 150px;">重撃スタミナ消費</th>
+    <th style="width: 150px;">落下期間<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+    <th style="width: 150px;">霊息の棘<br>ダメージ</th>
+    <th style="width: 150px;">霊息の棘<br>間隔</th>
+    
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2%</td>
+    <td style="text-align: center;">53.6%</td>
+    <td style="text-align: center;">46.6%</td>
+    <td style="text-align: center;">69.4%</td>
+    <td style="text-align: center;">108.1%</td>
+    <td rowspan="9" style="text-align: center;">50.0</td>
+    <td style="text-align: center;">61.5%</td>
+    <td style="text-align: center;">123%/153%</td>
+    <td style="text-align: center;">12.0%</td>
+    <td rowspan="9" style="text-align: center;">6.0s</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">57.3%</td>
+    <td style="text-align: center;">49.9%</td>
+    <td style="text-align: center;">74.3%</td>
+    <td style="text-align: center;">115.6%</td>
+    <td style="text-align: center;">66.1%</td>
+    <td style="text-align: center;">132%/165%</td>
+    <td style="text-align: center;">12.8%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">62.3%</td>
+    <td style="text-align: center;">54.2%</td>
+    <td style="text-align: center;">80.8%</td>
+    <td style="text-align: center;">125.6%</td>
+    <td style="text-align: center;">72.7%</td>
+    <td style="text-align: center;">145%/182%</td>
+    <td style="text-align: center;">14.0%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">66.0%</td>
+    <td style="text-align: center;">57.5%</td>
+    <td style="text-align: center;">85.6%</td>
+    <td style="text-align: center;">133.2%</td>
+    <td style="text-align: center;">77.3%</td>
+    <td style="text-align: center;">155%/193%</td>
+    <td style="text-align: center;">14.8%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">69.8%</td>
+    <td style="text-align: center;">60.7%</td>
+    <td style="text-align: center;">90.4%</td>
+    <td style="text-align: center;">140.7%</td>
+    <td style="text-align: center;">82.6%</td>
+    <td style="text-align: center;">165%/206%</td>
+    <td style="text-align: center;">15.6%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">74.8%</td>
+    <td style="text-align: center;">65.1%</td>
+    <td style="text-align: center;">96.9%</td>
+    <td style="text-align: center;">150.8%</td>
+    <td style="text-align: center;">89.9%</td>
+    <td style="text-align: center;">180%/224%></td>
+    <td style="text-align: center;">16.8%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">79.8%</td>
+    <td style="text-align: center;">69.4%</td>
+    <td style="text-align: center;">103.4%</td>
+    <td style="text-align: center;">160.8%</td>
+    <td style="text-align: center;">97.1%</td>
+    <td style="text-align: center;">194%/243%</td>
+    <td style="text-align: center;">17.9%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">84.7%</td>
+    <td style="text-align: center;">73.7%</td>
+    <td style="text-align: center;">109.8%</td>
+    <td style="text-align: center;">170.9%</td>
+    <td style="text-align: center;">104.4%</td>
+    <td style="text-align: center;">209%/261%</td>
+    <td style="text-align: center;">19.0%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">89.7%</td>
+    <td style="text-align: center;">78.1%</td>
+    <td style="text-align: center;">116.0%</td>
+    <td style="text-align: center;">180.9%</td>
+    <td style="text-align: center;">112.3%</td>
+    <td style="text-align: center;">225%/281%</td>
+    <td style="text-align: center;">20.1%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="1800px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88/::ref/%E3%83%95%E3%83%AC%E3%83%BC%E3%83%9F%E3%83%B3%E3%82%B0%E3%83%BB%E6%B0%B7%E7%82%B9%E6%B3%95.webp?rev=6816b999540c125428f64f0376062382&t=20231111153524" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+        一回押し<br>
+        「ヴェリテくん」による迅速なスナップショットを繰り出し、前方の敵に氷元素範囲ダメージを与え、<br>
+        命中した最大5体の敵に「スナップシルエット」を付与する。継続時間中、「スナップシルエット」は一定間隔で敵に氷元素ダメージを与える。<br><br>
+        
+        長押し「ヴェリテくん」のファインダーをのぞき、構図モードに入る。長押し中、ファインターは徐々に最大画角まで拡大していく。
+        この状態の時、シャルロットは移動と向きを調整できる。長押し終了時、「ヴェリテくん」はファインダーで捕捉した敵に氷元素ダメージを与え、<br>
+        一回押しの時と同じ「スナップシルエット」を付与する。ただし、ファインダーが最大画角に達した後に長押しを終了してスキルを発動した場合は、<br>
+        より長く持続し、より大きなダメージを与える「フォーカスインプレッション」を代わりに付与する。この時、スキルのクールタイムはより長くなる。<br>
+        構図モードは最大15秒持続し、最大5体の敵を捕捉可能。<br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th rowspan="2" style="width: 200px;">ステータス詳細</th>
+                <th rowspan="2" style="width: 120px;">一回押し<br>ダメージ</th>
+                <th rowspan="2" style="width: 120px;">長押し<br>ダメージ</th>
+                <th colspan="3" style="width: 40px;">「スナップシルエット」マーク</th>
+                <th colspan="3" style="width: 40px;">「フォーカスインプレッション」マーク</th>
+                <th rowspan="2" style="width: 170px;">クールタイム(CT)</th>
+                <th rowspan="2" style="width: 200px;">最大画角で発動時<br>クールタイム</th>
+              </tr>
+              <tr>
+                <th style="text-align: center;">ダメージ</th>
+                <th style="text-align: center;">発動間隔</th>
+                <th style="text-align: center;">継続時間</th>
+                <th style="text-align: center;">ダメージ</th>
+                <th style="text-align: center;">発動間隔</th>
+                <th style="text-align: center;">継続時間</th>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Lv.2</td>
+                <td style="text-align: center;">72.2%</td>
+                <td style="text-align: center;">149.6%</td>
+                <td style="text-align: center;">42.1%</td>
+                <td rowspan="9" style="text-align: center;">1.5s</td>
+                <td rowspan="9" style="text-align: center;">6.0s</td>
+                <td style="text-align: center;">43.6%</td>
+                <td rowspan="9" style="text-align: center;">1.5s</td>
+                <td rowspan="9" style="text-align: center;">12.0s</td>
+                <td rowspan="9" style="text-align: center;">12.0s</td>
+                <td rowspan="9" style="text-align: center;">18.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.3</td>
+                <td style="text-align: center;">77.3%</td>
+                <td style="text-align: center;">160.1%</td>
+                <td style="text-align: center;">45.1%</td>
+                <td style="text-align: center;">46.7%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.4</td>
+                <td style="text-align: center;">84.0%</td>
+                <td style="text-align: center;">174.0%</td>
+                <td style="text-align: center;">49.0%</td>
+                <td style="text-align: center;">50.8%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.5</td>
+                <td style="text-align: center;">89.0%</td>
+                <td style="text-align: center;">184.4%</td>
+                <td style="text-align: center;">51.9%</td>
+                <td style="text-align: center;">53.8%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.6</td>
+                <td style="text-align: center;">94.1%</td>
+                <td style="text-align: center;">194.9%</td>
+                <td style="text-align: center;">54.9%</td>
+                <td style="text-align: center;">56.8%</td>
+                
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.7</td>
+                <td style="text-align: center;">100.8%</td>
+                <td style="text-align: center;">208.8%</td>
+                <td style="text-align: center;">58.8%</td>
+                <td style="text-align: center;">60.9%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.8</td>
+                <td style="text-align: center;">107.5%</td>
+                <td style="text-align: center;">222.7%</td>
+                <td style="text-align: center;">62.7%</td>
+                <td style="text-align: center;">65.0%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.9</td>
+                <td style="text-align: center;">114.2%</td>
+                <td style="text-align: center;">236.6%</td>
+                <td style="text-align: center;">66.6%</td>
+                <td style="text-align: center;">69.0%</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.10</td>
+                <td style="text-align: center;">121.0%</td>
+                <td style="text-align: center;">250.6%</td>
+                <td style="text-align: center;">70.6%</td>
+                <td style="text-align: center;">73.1%</td>
+                </tr></table><br><br><br>
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88/::ref/%E3%82%B9%E3%83%81%E3%83%AB%E3%83%95%E3%82%A9%E3%83%88%E3%83%BB%E5%A4%9A%E8%A7%92%E7%9A%84%E7%AB%8B%E8%A8%BC.webp?rev=bbb1a81635cfc6b93812b6b16efe2ffd&t=20231111153534" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+                      <td colspan="16"><br><br>
+                        「スクープフィールド」を展開して氷元素範囲ダメージを与え、周囲のチーム全員のHPを回復する。回復量はシャルロットの攻撃力によって決まる。<br><br>
+
+                        スクープフィールド<br>
+                        ・継続期間中、「ヴェリテくん」は一定時間ごとに範囲内の敵を攻撃し、氷元素ダメージを与える。<br>
+                        ・範囲内にいるフィールド上のキャラクターのHPを持続的に回復する。回復量はシャルロットの攻撃力によって決まる。<br><br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                      </td>
+                    </tr>
+                
+                    <tr>
+                      <th style="width: 150px;">ステータス詳細</th>
+                      <th style="width: 160px;">発動後の回復量</th>
+                      <th style="width: 160px;">スキルダメージ</th>
+                      <th style="width: 160px;">写真機の<br>継続回復量</th>
+                      <th style="width: 160px;">写真機<br>ダメージ</th>
+                      <th style="width: 160px;">「スクープフィールド」<br>継続時間</th>
+                      <th style="width: 150px;">クールタイム(CT)</th>
+                      <th style="width: 120px;">元素エネルギー</th>
+                    </tr>
+                
+                    <tr>
+                        <td style="text-align: center;">Lv.2</td>
+                        <td style="text-align: center;"> 攻撃力275.8%+1769</td>
+                        <td style="text-align: center;"> 83.4%</td>
+                        <td style="text-align: center;"> 攻撃力9.9%+63</td>
+                        <td style="text-align: center;"> 7.0%</td>
+                        <td rowspan="9" style="text-align: center;">4.0s</td>
+                        <td rowspan="9" style="text-align: center;">20.0s</td>
+                        <td rowspan="9" style="text-align: center;">70</td>
+                        </tr>
+                        <tr>
+                        <td style="text-align: center;">Lv.3</td>
+                        <td style="text-align: center;"> 攻撃力295.1%+1944</td>
+                        <td style="text-align: center;"> 89.3%</td>
+                        <td style="text-align: center;"> 攻撃力10.6%+69</td>
+                        <td style="text-align: center;"> 7.4%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.4</td>
+                        <td style="text-align: center;"> 攻撃力320.7%+2131</td>
+                        <td style="text-align: center;"> 97.0%</td>
+                        <td style="text-align: center;"> 攻撃力11.5%+76</td>
+                        <td style="text-align: center;"> 8.1%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.5</td>
+                        <td style="text-align: center;"> 攻撃力340.0%+2332</td>
+                        <td style="text-align: center;"> 102.8%</td>
+                        <td style="text-align: center;"> 攻撃力12.2%+83</td>
+                        <td style="text-align: center;"> 8.6%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.6</td>
+                        <td style="text-align: center;"> 攻撃力359.2%+2547</td>
+                        <td style="text-align: center;"> 108.7%</td>
+                        <td style="text-align: center;"> 攻撃力12.9%+91</td>
+                        <td style="text-align: center;"> 9.1%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.7</td>
+                        <td style="text-align: center;"> 攻撃力384.9%+2775</td>
+                        <td style="text-align: center;"> 116.4%</td>
+                        <td style="text-align: center;"> 攻撃力13.8%+99</td>
+                        <td style="text-align: center;"> 9.7%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.8</td>
+                        <td style="text-align: center;"> 攻撃力410.5%+3016</td>
+                        <td style="text-align: center;"> 124.2%</td>
+                        <td style="text-align: center;"> 攻撃力14.7%+108</td>
+                        <td style="text-align: center;"> 10.3%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.9</td>
+                        <td style="text-align: center;"> 攻撃力436.2%+3271</td>
+                        <td style="text-align: center;"> 131.9%</td>
+                        <td style="text-align: center;"> 攻撃力15.7%+117</td>
+                        <td style="text-align: center;"> 11.0%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.10</td>
+                        <td style="text-align: center;"> 攻撃力461.8%+3539</td>
+                        <td style="text-align: center;"> 139.7%</td>
+                        <td style="text-align: center;"> 攻撃力16.6%+126</td>
+                        <td style="text-align: center;"> 11.6%</td>
+                        </tr>
+                        
+                        </table><br><br><br>
+                
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88/::ref/%E8%A1%9D%E6%92%83%E7%9A%84%E3%83%A2%E3%83%BC%E3%83%A1%E3%83%B3%E3%83%88.webp?rev=c0a15bd6affda8f89e0375edb2cca31c&t=20231111153544" width="75px" height="75px"><p class="hutaogift">&nbsp;衝撃的モーメント</p></th>
+        <td colspan="16"><br><br><b>&nbsp;衝撃的モーメント</b><br>&nbsp;&nbsp;
+            「フォーカスインプレッション」のマークが付いている敵が倒されたとき、フレーミング・氷点法のクールタイム-2秒。<br>
+            この方法での短縮は12秒毎に4回のみ発動可能。<br><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88/::ref/%E5%A4%9A%E6%A7%98%E6%80%A7%E3%83%AA%E3%82%B5%E3%83%BC%E3%83%81.webp?rev=0544a07725d938db6b5d9c750a0d9c86&t=20231111153557" width="75px" height="75px"><p class="hutaogift">&nbsp;多様性リサーチ</p></th>
+        <td colspan="16"><br><br><b>&nbsp;多様性リサーチ</b><br>&nbsp;&nbsp;
+            チームにシャルロット自身を除いたフォンテーヌ出身のキャラクターが1/2/3名いるとき、シャルロットの与える治療効果がそれぞれ+5%/10%/15%。<br>
+            チームにフォンテーヌ以外の出身のキャラクターが1/2/3名いるとき、シャルロットの氷元素ダメージがそれぞれ+5%/10%/15%。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88/::ref/%E4%B8%BB%E8%A6%B3%E3%82%B7%E3%83%A3%E3%83%83%E3%82%BF%E3%83%BC.webp?rev=e667c6d3cd7de4e53129bbd648c991c7&t=20231111153614" width="75px" height="75px"><p class="hutaogift">&nbsp;主観シャッター</p></th>
+        <td colspan="16"><br><br><b>&nbsp;主観シャッター</b><br>&nbsp;&nbsp;
+            シャルロットが「特殊分析ズームレンズ」を有効にした状態で、元素スキル「フレーミング・氷点法」を長押しすると、<br>
+            元の効果を発揮する代わりに、特殊な方法で写真を撮ることができるようになる…<br>
+         <br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88/::ref/%E6%A4%9C%E8%A8%BC%E3%82%92%E4%BB%A5%E3%81%A6%E5%88%B6%E7%B4%84%E3%81%A8%E7%82%BA%E3%81%99.webp?rev=07fe42843adbe5ed1b17fd0b0a84894c&t=20231111153626" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;検証を以て制約と為す</b><br>&nbsp;&nbsp;
+                スチルフォト・多角的立証がキャラクターに治療を行うと、キャラクターに「検証」マークを付与し、2秒毎にキャラクターのHPを回復する。
+                回復量はシャルロットの攻撃力の80%分に相当する。この効果の継続時間は6秒。<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88/::ref/%E6%B1%82%E7%9C%9F%E3%82%92%E4%BB%A5%E3%81%A6%E8%81%B7%E8%B2%AC%E3%81%A8%E7%82%BA%E3%81%99.webp?rev=4ef850ea76abe4ac4cf2250a7ff03bd0&t=20231111153635" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;求真を以て職責と為す</b><br>&nbsp;&nbsp;
+                フレーミング・氷点法発動時、「ヴェリテくん」の攻撃が1/2/3体、またはそれ以上の敵に命中すると、シャルロットの攻撃力はそれぞれ+10%/20%/30%となる。継続時間12秒。<br><br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88/::ref/%E7%8B%AC%E7%AB%8B%E3%82%92%E4%BB%A5%E3%81%A6%E5%89%8D%E6%8F%90%E3%81%A8%E7%82%BA%E3%81%99.webp?rev=857a0add408d0329dd926dcf142e3b14&t=20231111153749" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;独立を以て前提と為す</b><br>&nbsp;&nbsp;元素スキルの天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88/::ref/%E7%9D%A3%E4%BF%83%E3%82%92%E4%BB%A5%E3%81%A6%E7%BE%A9%E5%8B%99%E3%81%A8%E7%82%BA%E3%81%99.webp?rev=b4853050092ed6970333c521e5af48ac&t=20231111153759" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;督促を以て義務と為す</b><br>&nbsp;&nbsp;
+                スチルフォト・多角的立証が「スナップシルエット」、または「フォーカスインプレッション」マークが付いている敵に命中したとき、与えるダメージ+10%。
+                また、シャルロットが元素エネルギーを2ポイント回復する。この方法での元素エネルギー回復は20秒毎に5回のみ可能。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88/::ref/%E8%89%AF%E8%AD%98%E3%82%92%E4%BB%A5%E3%81%A6%E5%8E%9F%E5%89%87%E3%81%A8%E7%82%BA%E3%81%99.webp?rev=84473d04b7571796bb102317b489fcb2&t=20231111153810" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;良識を以て原則と為す</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88/::ref/%E5%A5%BD%E5%A5%87%E3%82%92%E4%BB%A5%E3%81%A6%E8%A6%81%E7%BE%A9%E3%81%A8%E7%82%BA%E3%81%99.webp?rev=686b372b054a817518afa15dfb05cd49&t=20231111153822" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;好奇を以て要義と為す</b><br>&nbsp;&nbsp;
+                フィールド上にいるキャラクターの通常攻撃と重撃がフレーミング・氷点法の<br>
+                「フォーカスインプレッション」マークを付与されている敵に命中すると、「ヴェリテくん」は連携攻撃を発動し、<br>
+                シャルロットの攻撃力180%分に相当する氷元素範囲ダメージを与え、<br>
+                同時に攻撃範囲内にいるフィールド上キャラクターのHPを回復する。回復量はシャルロットの攻撃力42%分に相当する。<br>
+                この効果は6秒毎に1回のみ発動可能。<br>
+                この方法によって与えたダメージと治療効果は、シャルロットの元素爆発によるものと見なされる。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              シャルロットは"攻撃力依存ヒーラー"という立ち位置なので、メインステータスが攻撃力を盛ることができる武器を選びましょう。<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              またシャルロットは元素爆発により回復を行うので元素チャージ効率も視野に入れましょう<br>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              また、見た目も非常に大切です。シャルロットの場合は通常攻撃、重撃モーションともにかわいいので非戦闘時はいっぱい眺めましょう。
+
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E6%98%AD%E5%BF%83.png.webp?rev=8f478f9b008f282890f0ba708cc50133&t=20231202155700">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E5%86%AC%E5%BF%8D%E3%81%B3%E3%81%AE%E5%AE%9F.jpg?rev=14e5343cdbb8644a7748dea1effe744c&t=20201228161722">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E3%83%89%E3%83%89%E3%82%B3%E3%81%AE%E7%89%A9%E8%AA%9E.jpg.webp?rev=10212d6c8886c0470d636832e9ff115e&t=20210617061221" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E8%AA%93%E3%81%84%E3%81%AE%E6%98%8E%E7%9E%B3.png.webp?rev=c15f6b74a82060d5af5a9929add4f0f6&t=20220217113034" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E5%A4%A9%E7%A9%BA%E3%81%AE%E5%B7%BB.png.webp?rev=cb6102676b50daaf7d2d470d9732c36b&t=20201023180110" alt="">
+              </div></th>
+            </tr>
+
+            <tr>
+              <th>A</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E8%A5%BF%E9%A2%A8%E7%A7%98%E5%85%B8.png.webp?rev=048f64319abea38a0196b29cd439e2dc&t=20201122010948" alt="">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E6%B3%95%E5%99%A8/::ref/%E9%87%91%E7%8F%80%E3%83%BB%E8%A9%A6%E4%BD%9C.png.webp?rev=842027713720679a5077abfd578cecda&t=20231220010522" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+                <tr>
+                  <td style="text-align: center;">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E6%97%A7%E8%B2%B4%E6%97%8F%E3%81%AE%E8%8A%B1.png.webp?rev=141efd01e5b7dd443a26177851d7edc6&t=20210109182341" width="100px" height="100px" style="margin: auto;"><p class="rine-relic"><b>旧貴族のしつけ</b></p></td>
+                  <td style="width: 600px;"><b>セット効果</b><br>
+                    元素爆発のダメージ+20%,
+                    <br>
+                    元素爆発を発動すると、チーム全員の攻撃力+20%、継続時間12秒、重ね掛け不可
+                  </td>
+                  <td style="width: 400px;">４セットを使ってアタッカーを<br>最大限サポートできますが、<br>聖遺物セット効果では元素チャージ効率がないので、メインステに元素チャージ効率があるものを<br>選んだり、編成にもう一人氷元素を追加して、<br>元素粒子の獲得を多くしましょう。<br></td>
+                  <td style="display: flex; text-align: center;"><div width="50px" height="50px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B7%E3%83%A7%E3%82%A6_s.webp?rev=9096515fcfbf33749e65d58723ca19c6&t=20240313100821" width="100px" height="100px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%96%91%E9%9B%B2_s.webp?rev=f4adef3c02ca9dd1a267d0e0e5f5d0ba&t=20240202002805" width="100px" height="100px"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%AD%E3%82%B5%E3%83%AA%E3%82%A2_s.webp?rev=63f7fc3c5d7edfa9d404a89c03c4d3cd&t=20240313095140" width="100px" height="100px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88_s.webp?rev=6c364a637d9a4c7fd8245e798f4fac33&t=20231109210256" width="100px" height="100px">
+                　</td>
+                 </tr>
+                
+                 <tr>
+                  <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E6%B5%B7%E6%9F%93%E3%81%AE%E8%8A%B1_5.png.webp?rev=2b784a4c8f1e35692d9bcd9c40551296&t=20211124231136" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>海染硨磲</b></p></td>
+                  <td style="width: 600px;"><b>セット効果</b><br>
+                      与える治療効果+15%,
+                    <br>
+                    この聖遺物セットを装備したキャラクターがチーム内のキャラクターに治療を行うと、<br>
+                    治療によるHP回復量(HP上限を超えた回復量も含む)を記録する海染の泡を生成する。 <br>
+                    海染の泡は3秒継続する。継続時間終了時、海染の泡は破裂し、周囲の敵に記録した回復量の90%分のダメージを与える<br>
+                    (このダメージは感電や超電導などの元素反応と同じように計算されるが、元素熟知、キャラクターLv、または元素反応のダメージアップ効果の影響は受けない)。<br>
+                     海染の泡は3.5秒毎に1回のみ生成可能。海染の泡が記録できる回復量は最大30000までとなり、HP上限超過分の回復量を含む。 <br>
+                    チーム内で、海染の泡は同時に最大1つまで存在できる。この聖遺物セットを装備したキャラクターは待機中でも、この効果を発動できる。<br>
+                  </td>
+                  <td style="width: 400px;">４セット効果を駆使して戦うので元素爆発から戦闘を開始したり、<br>
+                      元素爆発後、氷元素反応を起こせるパーティ編成を組みましょう。</td>
+                  <td style="text-align: center;"><div width="110px" height="110px"><br><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B7%E9%9B%BB%E5%B0%86%E8%BB%8D_s.webp?rev=7c064efdd43177b4266dc3acd84356c0&t=20240313100241" width="110px" height="110px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80_s.webp.webp?rev=ca50d1c01181d34502b4301b329847fd&t=20221102192029" width="110px" height="110px"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633" width="110px" height="110px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88_s.webp?rev=6c364a637d9a4c7fd8245e798f4fac33&t=20231109210256" width="110px" height="110px">
+                  </div></td>
+                </tr>
+              
+                <tr>
+                  <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E5%9C%A8%E3%82%8A%E3%81%97%E6%97%A5%E3%81%AE%E9%81%BA%E5%A4%B1%E3%81%AE%E5%A5%91.png.webp?rev=9054d143cd402be9c41607c19bc25264&t=20231224180540" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>在りし日の歌</b></p></td>
+                  <td style="width: 600px;"><b>セット効果</b><br>
+                   与える治療効果+15%,
+                    <br>
+                    装備者がチームにいるキャラクターのHPを回復した時、継続時間6秒の「渇望」効果が発動し、HP回復量（HP上限を超えた回復量を含む）を記録する。<br>
+                    継続時間終了時、「渇望」効果は「かの時の潮」効果に変化する。「かの時の潮」効果発動中、フィールド上にいるチーム内の自身キャラクターの<br>
+                    通常攻撃、重撃、落下攻撃、元素スキル、元素爆発が敵に命中すると、「渇望」効果で記録した回復量の8%分を基に与えるダメージをアップする。<br>
+                    「かの時の潮」効果は、5回発動、または10秒後にクリアされる。1回の「渇望」効果が記録する回復量は最大15000ポイントまで。<br>
+                    なお、「渇望」は同時に最大1つまで存在でき、複数の装備者の与える回復量を記録可能。装備したキャラクターが待機している場合にも効果を発動できる。<br>
+                  </td>
+                  <td style="width: 400px;">４セット効果を駆使して味方の与ダメージを上昇させるので元素爆発から戦闘を開始しましょう。<br></td>
+                  <td style="text-align: center;"><div width="50px" height="50px"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B7%E3%83%A7%E3%82%A6_s.webp?rev=9096515fcfbf33749e65d58723ca19c6&t=20240313100821" width="110px" height="110px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%96%91%E9%9B%B2_s.webp?rev=f4adef3c02ca9dd1a267d0e0e5f5d0ba&t=20240202002805" width="110px" height="110px"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%82%A1%E3%83%AB%E3%82%B6%E3%83%B3_s.webp?rev=c5703a902230cbd1b69adfd0961a1247&t=20221207151743" width="110px" height="110px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88_s.webp?rev=6c364a637d9a4c7fd8245e798f4fac33&t=20231109210256" width="110px" height="110px">
+                  </div></td>
+                </tr></table></div><br><br><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  

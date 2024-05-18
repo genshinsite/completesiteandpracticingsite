@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ゴロー</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="python"
+  </head>
+  <body>
+    <div class="wrapper">
+    </div>
+<div class="header">
+  <nav class="navbar">
+    <h2 class="logo">原神</h2>
+    <ul class="menu">
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/index.html">ホーム</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/character.html">キャラクター</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/wepon.html#title2">武器</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/materialbooks.html">天賦本</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/seiibutu.html">聖遺物</a></li>
+      <li><a href="file:///c%3A/Users/kkhtt/OneDrive/%E3%83%87%E3%82%B9%E3%82%AF%E3%83%88%E3%83%83%E3%83%97/project1/searchparty.html">パーティ編成</a></li>
+      <li><a href="">tier表</a></li>
+    </ul>
+  </nav>
+    </div><br><br><br><br><br><br>
+<style>
+    a {
+        color: rgb(114, 77, 32);
+    }
+
+.image-container {
+  text-align: left;
+}
+
+    .image-container img {
+      width: 100px; /* 画像の幅を固定 */
+      height: 100px; /* 画像の高さを固定 */
+    }
+
+    .long-box {
+        width: 300px; /* 枠の幅を指定 */
+        height: 230px; /* 枠の高さを指定 */
+        border: 2px solid black; /* 枠線のスタイルを指定 */
+        padding: 20px; /* 枠内の余白を指定 */
+        text-align: left;
+        margin: auto;
+        display: block;
+    }
+    .characterdetailtitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .statustitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .gifttitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .weapontitle {
+      width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .relictitle {
+        width: 900px; /* 枠の幅を指定 */
+        height: 40px; /* 枠の高さを指定 */
+        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
+        text-align: left;
+    }
+
+    .rarity {
+      width: 200px;
+      margin-top: -20px;
+    }
+    
+    .normalatk {
+      text-indent: 10%;
+    }
+    
+</style>
+</head>
+<body>
+    <div class="long-box">
+        <!-- 枠の中に表示する内容を記述 -->
+    目次<br>
+    <a href="#characterdetails">・キャラクター詳細</a><br>
+    <a href="#status">・Lvステータス</a><br>
+    <a href="#gift">・天賦</a><br>
+    <a href="#hearttstar">・命ノ星座</a><br>
+    <a href="#weapon">・武器</a><br>
+    <a href="#relic">・聖遺物</a><br>
+    </div><br><br><br><br><br>
+
+  <div class="characterdetailtitle">
+    <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
+</div><br><br><br><br>
+<div class="characterdetail">
+    <table border="1" style="margin:auto">
+        <tr>
+            <th colspan="13">ゴロー</th>
+        </tr>
+        <tr>
+            <td rowspan="1"><img src="https://cdn.gamerch.com/resize/eyJidWNrZXQiOiJnYW1lcmNoLWltZy1jb250ZW50cyIsImtleSI6Indpa2lcLzQyNjhcL2VudHJ5XC9QcEU1YWJoTi5wbmciLCJlZGl0cyI6eyJ3ZWJwIjp7InF1YWxpdHkiOjg1fSwidG9Gb3JtYXQiOiJ3ZWJwIn19"></td>
+        </tr>
+<tr>
+        <th class="rarity" style="text-align: center;">レアリティ</th>
+</tr>
+<tr>
+      <td colspan="6" style="text-align: center;">☆4</td>
+</tr>
+<tr>
+    <th>武器種類</th>
+</tr>
+<tr>
+  <td style="text-align: center;">弓</td>
+</tr>
+<tr>
+  <th>元素</th>
+</tr>
+<tr>
+  <td style="text-align: center;">岩</td>
+</tr>
+
+<tr>
+  <th>命ノ星座</th>
+</tr>
+<tr>
+  <td style="text-align: center;">柴犬座</td>
+</tr>
+
+<tr>
+  <th>出身</th>
+</tr>
+<tr>
+  <td style="text-align: center;">稲妻</td>
+</tr>
+<tr>
+  <th>声優</th>
+</tr>
+<tr>
+  <td style="text-align: center;">畠中祐</td>
+</tr>
+</table><br><br><br><br><br>
+</div>
+
+<div class="statustitle">
+  <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
+</div><br><br>
+<div class="status">
+<table border="1" style="margin: auto;">
+  <tr>
+    <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+    <th colspan="2">Lv.20</th>
+    <th colspan="2">Lv.40</th>
+    <th colspan="2">Lv.50</th>
+    <th colspan="2">Lv.60</th>
+    <th colspan="2">Lv.70</th>
+    <th colspan="2">Lv.80</th>
+    <th rowspan="2">lv.90</th>
+  </tr>
+  <tr>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+    <th>突破前</th>
+    <th>突破後</th>
+  </tr>
+  
+    
+  <tr>
+    <th style="text-align: center;">基礎HP</th>
+    <td style="text-align: center;">2061</td>
+    <td style="text-align: center;">2661</td>
+    <td style="text-align: center;">3985</td>
+    <td style="text-align: center;">4411</td>
+    <td style="text-align: center;">5074</td>
+    <td style="text-align: center;">5642</td>
+    <td style="text-align: center;">6305</td>
+    <td style="text-align: center;">6731</td>
+    <td style="text-align: center;">7393</td>
+    <td style="text-align: center;">7818</td>
+    <td style="text-align: center;">8481</td>
+    <td style="text-align: center;">8907</td>
+    <td style="text-align: center;">9570</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎攻撃力</th>
+    <td style="text-align: center;">39</td>
+    <td style="text-align: center;">51</td>
+    <td style="text-align: center;">76</td>
+    <td style="text-align: center;">84</td>
+    <td style="text-align: center;">97</td>
+    <td style="text-align: center;">108</td>
+    <td style="text-align: center;">120</td>
+    <td style="text-align: center;">129</td>
+    <td style="text-align: center;">141</td>
+    <td style="text-align: center;">149</td>
+    <td style="text-align: center;">162</td>
+    <td style="text-align: center;">170</td>
+    <td style="text-align: center;">183</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">基礎防御力</th>
+    <td style="text-align: center;">140</td>
+    <td style="text-align: center;">180</td>
+    <td style="text-align: center;">270</td>
+    <td style="text-align: center;">299</td>
+    <td style="text-align: center;">344</td>
+    <td style="text-align: center;">382</td>
+    <td style="text-align: center;">427</td>
+    <td style="text-align: center;">456</td>
+    <td style="text-align: center;">501</td>
+    <td style="text-align: center;">530</td>
+    <td style="text-align: center;">575</td>
+    <td style="text-align: center;">603</td>
+    <td style="text-align: center;">648</td>
+    </tr>
+    
+    <tr>
+    <th style="text-align: center;">岩元素ダメージ</th>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">6.0%</td>
+    <td style="text-align: center;">6.0%</td>
+    <td style="text-align: center;">12.0%</td>
+    <td style="text-align: center;">12.0%</td>
+    <td style="text-align: center;">12.0%</td>
+    <td style="text-align: center;">12.0%</td>
+    <td style="text-align: center;">18.0%</td>
+    <td style="text-align: center;">18.0%</td>
+    <td style="text-align: center;">24.0%</td>
+    <td style="text-align: center;">24.0%</td>
+    </tr></table><br><br><br>
+    
+    
+
+  <div class="gifttitle">
+    <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
+  </div><br><br>
+  <div class="gift">
+    <table border="1" style="margin: auto;">
+  <tr>
+    <th>&nbsp;</th>
+    <th colspan="16" style="text-align: center;">天賦詳細</th>
+  </tr>
+  <tr>
+    <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B4%E3%83%AD%E3%83%BC/::ref/Talent_Ripping_Fang_Fletching.png?rev=fda73933d2ca3e56ae422cdf16a7ec7e&t=20211211005901" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
+    <td colspan="16"><br><br><br>&nbsp;
+        通常攻撃<br>
+        最大4段の連続攻撃を行い、風元素ダメージを与える。<br><br>
+        
+        重撃<br>
+        精確な狙い撃ちを発動する。<br>
+        照準時、敵に風元素ダメージを与える。<br><br>
+        
+        落下攻撃<br>
+        空中から落下し、地面に衝撃を与える。経路上の敵を攻撃し、落下時に水元素範囲ダメージを与える。<br><br><br><br>
+    </td>
+  </tr>
+  <tr>
+    <th style="width: 200px;">ステータス詳細</th>
+    <th style="width: 80px;">1段目</th>
+    <th style="width: 80px;">2段目</th>
+    <th style="width: 80px;">3段目</th>
+    <th style="width: 80px;">4段目</th>
+    <th style="width: 150px;">狙い撃ち</th>
+    <th style="width: 150px;">フルチャージ<br>狙い撃ち</th>
+    <th style="width: 100px;">落下期間の<br>ダメージ</th>
+    <th style="width: 160px;">低空/高空落下攻撃<br>ダメージ</th>
+    
+  </tr>
+  <tr>
+    <td style="text-align: center;">Lv.2%</td>
+    <td style="text-align: center;">40.8%</td>
+    <td style="text-align: center;">40.2%</td>
+    <td style="text-align: center;">53.5%</td>
+    <td style="text-align: center;">63.8%</td>
+    <td style="text-align: center;">47.4%</td>
+    <td style="text-align: center;">133%</td>
+    <td style="text-align: center;">61.5%</td>
+    <td style="text-align: center;">123%/153%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.3</td>
+    <td style="text-align: center;">43.9%</td>
+    <td style="text-align: center;">43.2%</td>
+    <td style="text-align: center;">57.5%</td>
+    <td style="text-align: center;">68.6%</td>
+    <td style="text-align: center;">51.0%</td>
+    <td style="text-align: center;">143%</td>
+    <td style="text-align: center;">66.1%</td>
+    <td style="text-align: center;">132%/165%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.4</td>
+    <td style="text-align: center;">48.3%</td>
+    <td style="text-align: center;">47.5%</td>
+    <td style="text-align: center;">63.3%</td>
+    <td style="text-align: center;">75.5%</td>
+    <td style="text-align: center;">56.1%</td>
+    <td style="text-align: center;">155%</td>
+    <td style="text-align: center;">72.7%</td>
+    <td style="text-align: center;">145%/182%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.5</td>
+    <td style="text-align: center;">51.4%</td>
+    <td style="text-align: center;">50.5%</td>
+    <td style="text-align: center;">67.3%</td>
+    <td style="text-align: center;">80.3%</td>
+    <td style="text-align: center;">59.7%</td>
+    <td style="text-align: center;">164%</td>
+    <td style="text-align: center;">77.3%</td>
+    <td style="text-align: center;">155%/193%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.6</td>
+    <td style="text-align: center;">54.9%</td>
+    <td style="text-align: center;">54.0%</td>
+    <td style="text-align: center;">71.9%</td>
+    <td style="text-align: center;">85.8%</td>
+    <td style="text-align: center;">63.8%</td>
+    <td style="text-align: center;">174%</td>
+    <td style="text-align: center;">82.6%</td>
+    <td style="text-align: center;">165%/206%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.7</td>
+    <td style="text-align: center;">59.7%</td>
+    <td style="text-align: center;">58.8%</td>
+    <td style="text-align: center;">78.2%</td>
+    <td style="text-align: center;">93.3%</td>
+    <td style="text-align: center;">69.4%</td>
+    <td style="text-align: center;">186%</td>
+    <td style="text-align: center;">89.9%</td>
+    <td style="text-align: center;">180%/224%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.8</td>
+    <td style="text-align: center;">64.5%</td>
+    <td style="text-align: center;">63.5%</td>
+    <td style="text-align: center;">84.5%</td>
+    <td style="text-align: center;">100.8%</td>
+    <td style="text-align: center;">75.0%</td>
+    <td style="text-align: center;">198%</td>
+    <td style="text-align: center;">97.1%</td>
+    <td style="text-align: center;">194%/243%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.9</td>
+    <td style="text-align: center;">69.4%</td>
+    <td style="text-align: center;">68.3%</td>
+    <td style="text-align: center;">90.9%</td>
+    <td style="text-align: center;">108.4%</td>
+    <td style="text-align: center;">80.6%</td>
+    <td style="text-align: center;">211%</td>
+    <td style="text-align: center;">104.4%</td>
+    <td style="text-align: center;">209%/261%</td>
+    </tr>
+    
+    <tr>
+    <td style="text-align: center;">Lv.10</td>
+    <td style="text-align: center;">74.6%</td>
+    <td style="text-align: center;">73.4%</td>
+    <td style="text-align: center;">97.8%</td>
+    <td style="text-align: center;">116.6%</td>
+    <td style="text-align: center;">86.7%</td>
+    <td style="text-align: center;">223%</td>
+    <td style="text-align: center;">112.3%</td>
+    <td style="text-align: center;">225%/281%</td>
+    </tr></table><br><br><br>
+
+
+ <table border="1" style="margin: auto;">
+   <tr>
+     <th>&nbsp;</th>
+     <th colspan="16" style="text-align: center;", width="1000px">天賦詳細</th>
+   </tr>
+   <tr>
+     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B4%E3%83%AD%E3%83%BC/::ref/Talent_Inuzaka_All-Round_Defense.png?rev=63820c5c9e94002df391f28287174051&t=20211211005917" width="80px" height="80px"><p class="skill">&nbsp;元素スキル</p></th>
+     <td colspan="16"><br><br><b>&nbsp;元素スキル</b><br>&nbsp;&nbsp;
+        岩元素範囲ダメージを与え、大将の旗指物を掲げる。<br><br>
+
+        大将の旗指物<br>
+        発動時、チームにいる岩元素タイプキャラクターの人数に応じて、領域内のフィールド上キャラクターに下記効果を与える。<br>
+        ・1人の時・「堅牢」：防御力がアップ。<br>
+        ・2人の時・「破耐」：上記効果に加え、中断耐性がアップ。<br>
+        ・3人の時・「粉砕」：上記効果に加え、岩元素ダメージがアップ。<br><br>
+        
+        ゴロー自身が創造した大将の旗指物は、同時に最大1つまで存在可能。キャラクターが獲得できる大将の旗指物の効果は1種のみ。キャラクターが領域を出た後、領域による効果は2秒続く。<br><br>
+        
+        長押し<br>
+        スキルの発動位置を調整できる。 
+        <br><br>
+                </td>
+              </tr>
+            
+              <tr>
+                <th style="width: 200px;">ステータス詳細</th>
+                <th style="width: 130px;">スキルダメージ</th>
+                <th style="width: 130px;">防御力アップ</th>
+                <th style="width: 130px;">岩元素ダメージ<br>アップ</th>
+                <th style="width: 130px;">継続時間</th>
+                <th style="width: 130px;">クールタイム</th>
+              </tr>
+              <tr>
+                <td style="text-align: center;">Lv.2</td>
+                <td style="text-align: center;">115.2%</td>
+                <td style="text-align: center;">222</td>
+                <td rowspan="9" style="text-align: center;">15%</td>
+                <td rowspan="9" style="text-align: center;">10.0s</td>
+                <td rowspan="9" style="text-align: center;">10.0s</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.3</td>
+                <td style="text-align: center;">123.3%</td>
+                <td style="text-align: center;">237</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.4</td>
+                <td style="text-align: center;">134.0%</td>
+                <td style="text-align: center;">258</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.5</td>
+                <td style="text-align: center;">142.0%</td>
+                <td style="text-align: center;">273</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.6</td>
+                <td style="text-align: center;">150.1%</td>
+                <td style="text-align: center;">289</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.7</td>
+                <td style="text-align: center;">160.8%</td>
+                <td style="text-align: center;">309</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.8</td>
+                <td style="text-align: center;">171.5%</td>
+                <td style="text-align: center;">330</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.9</td>
+                <td style="text-align: center;">182.2%</td>
+                <td style="text-align: center;">350</td>
+                </tr>
+                
+                <tr>
+                <td style="text-align: center;">Lv.10</td>
+                <td style="text-align: center;">193.0%</td>
+                <td style="text-align: center;">371</td>
+                </tr></table><br><br><br>
+
+
+
+                <table border="1" style="margin: auto;">
+                    <tr>
+                      <th>&nbsp;</th>
+                      <th colspan="16" style="text-align: center;", width="600px">天賦詳細</th>
+                    </tr>
+                    <tr>
+                      <th style="padding: 30px;", width="200px"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B4%E3%83%AD%E3%83%BC/::ref/Talent_Juuga_Forward_Unto_Victory.png?rev=da019e3514e813961521ec817a75f2b5&t=20211211005930" width="80px" height="80px"><p class="altimate">&nbsp;元素爆発</p></th>
+                      <td colspan="16"><br><br>
+                        岩元素範囲ダメージを与え、大将威儀の領域を展開する。<br><br>
+
+                        大将威儀<br>
+                        大将威儀は以下の特性を持つ。<br>
+                        ・領域は元素スキル「犬坂の遠吠え方円陣」が創造した大将の旗指物と同じ効果を持つ。発動時、チームにいる岩元素タイプキャラクターの人数に応じて、領域内のフィールド上キャラクターに効果を与える。また、領域はフィールド上キャラクターと共に移動する。<br>
+                        ・1.5秒毎に岩晶崩滅を発動し、領域内の敵1体に岩元素範囲ダメージを与える。<br>
+                        ・1.5秒毎に領域内の結晶反応で生成した結晶の欠片を1つ、キャラクターの位置に引き寄せる。<br><br>
+                        
+                        発動時、ゴロー自身の大将の旗指物が存在する場合、それは破壊される。<br>
+                        また、大将威儀の継続時間内、ゴロー自身が元素スキル「犬坂の遠吠え方円陣」を発動しても、大将の旗指物は創造されない。<br>
+                        ゴローが戦闘不能になった時、ゴロー自身の大将威儀効果はクリアされる。
+                        <br>
+                        <br><br>
+                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br><br>
+                      </td>
+                    </tr>
+                
+                    <tr>
+                      <th style="width: 150px;">ステータス詳細</th>
+                      <th style="width: 160px;">スキルダメージ</th>
+                      <th style="width: 160px;">岩晶崩滅ダメージ</th>
+                      <th style="width: 160px;">継続時間</th>
+                      <th style="width: 150px;">クールタイム(CT)</th>
+                      <th style="width: 120px;">元素エネルギー</th>
+                    </tr>
+                
+                    <tr>
+                        <td style="text-align: center;">Lv.2</td>
+                        <td style="text-align: center;">防御力106%</td>
+                        <td style="text-align: center;">防御力66%</td>
+                        <td rowspan="9" style="text-align: center;">9.0s</td>
+                        <td rowspan="9" style="text-align: center;">20.0s</td>
+                        <td rowspan="9" style="text-align: center;">80</td>
+                        </tr>
+                        <tr>
+                        <td style="text-align: center;">Lv.3</td>
+                        <td style="text-align: center;">防御力113%</td>
+                        <td style="text-align: center;">防御力70%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.4</td>
+                        <td style="text-align: center;">防御力123%</td>
+                        <td style="text-align: center;">防御力77%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.5</td>
+                        <td style="text-align: center;">防御力130%</td>
+                        <td style="text-align: center;">防御力81%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.6</td>
+                        <td style="text-align: center;">防御力138%</td>
+                        <td style="text-align: center;">防御力86%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.7</td>
+                        <td style="text-align: center;">防御力147%</td>
+                        <td style="text-align: center;">防御力92%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.8</td>
+                        <td style="text-align: center;">防御力157%</td>
+                        <td style="text-align: center;">防御力98%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.9</td>
+                        <td style="text-align: center;">防御力167%</td>
+                        <td style="text-align: center;">防御力104%</td>
+                        </tr>
+                        
+                        <tr>
+                        <td style="text-align: center;">Lv.10</td>
+                        <td style="text-align: center;">防御力177%</td>
+                        <td style="text-align: center;">防御力110%</td>
+                        </tr></table><br><br><br>
+                
+
+    <table border="1" style="margin: auto;">
+      <tr>
+        <th colspan="16" style="text-align: center;">固有天賦</th>
+      </tr>
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B4%E3%83%AD%E3%83%BC/::ref/Talent_Heedless_of_the_Wind_and_Weather.png?rev=18d97daae3ee32b258db40469d7d547a&t=20211211005942" width="75px" height="75px"><p class="hutaogift">&nbsp;風雨を恐れず</p></th>
+        <td colspan="16"><br><br><b>&nbsp;風雨を恐れず</b><br>&nbsp;&nbsp;
+          元素爆発を発動した後の12秒間、周囲のチーム全員の防御力+25%<br><br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br>※突破１で解放<br><br>
+        </td>
+      </tr>
+
+      <tr>
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B4%E3%83%AD%E3%83%BC/::ref/Talent_A_Favor_Repaid.png?rev=c7300767fad016619066fe3750e098e4&t=20211211005953" width="75px" height="75px"><p class="hutaogift">&nbsp;報恩の守護</p></th>
+        <td colspan="16"><br><br><b>&nbsp;報恩の守護</b><br>&nbsp;&nbsp;
+          防御力を基にゴローの以下攻撃のダメージが増加する。<br>
+          ・元素スキルのスキルダメージが防御力156%分アップする。<br>
+          ・元素爆発のスキルダメージと岩晶崩滅のダメージが防御力15.6%分アップする。<br><br>※突破4で解放<br><br>
+        </td>
+      </tr>
+
+      <tr style="padding: 130px;">
+        <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B4%E3%83%AD%E3%83%BC/::ref/Talent_Seeker_of_Shinies.png?rev=49009198dbb6bf38e64bcaf754b61eb7&t=20211211010005" width="75px" height="75px"><p class="hutaogift">&nbsp;キラキラ発見術</p></th>
+        <td colspan="16"><br><br><b>&nbsp;キラキラ発見術</b><br>&nbsp;&nbsp;
+          ミニマップで周囲の稲妻地域の特産の位置を表示する。<br>
+         <br><br><br>
+        </td>
+      </tr></table><br><br><br>
+
+      <div class="heartstartitle">
+        <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
+      </div><br><br>
+      <div class="heartstar">
+        <table border="1" style="margin: auto;">
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B4%E3%83%AD%E3%83%BC/::ref/Constellation_Rushing_Hound_Swift_as_the_Wind.png?rev=d6f5f08d49e9408559c72cf3756b9748&t=20211211010137" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;破離求真</b><br>&nbsp;&nbsp;
+                1回の非想風天の「疾風示現」効果継続時間中、ファルザンはフルチャージ狙い撃ちで「風烈の矢」を最大2回まで放てる。<br>&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B4%E3%83%AD%E3%83%BC/::ref/Constellation_Sitting_Hound_Steady_as_a_Clock.png?rev=6ab3d02fb3deb5f3955181b643994ef0&t=20211211010148" width="50px" height="50px"><p class="heartstar">&nbsp;2凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;忘形煉智</b><br>&nbsp;&nbsp;
+                元素爆発の「赫耀多面体」の存在時間+6秒。<br><br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B4%E3%83%AD%E3%83%BC/::ref/Constellation_Mauling_Hound_Fierce_as_Fire.png?rev=45ea5c6115e7b275c4ba7e184806ce76&t=20211211010159" width="50px" height="50px"><p class="heartstar">&nbsp;3凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;霊囿漫遊</b><br>&nbsp;&nbsp; 元素スキルの天賦+Lv.3&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B4%E3%83%AD%E3%83%BC/::ref/Constellation_Lapping_Hound_Warm_as_Water.png?rev=8131b1616f69f2c127338c70baef91e8&t=20211211010210" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;4凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;神機明悟</b><br>&nbsp;&nbsp;
+                命中した敵の数に基づき、風圧崩潰のサイクロンはファルザンの元素エネルギーを回復する。1体の敵に命中した場合、ファルザンの元素エネルギーを2ポイント回復する。<br>
+                また、追加で1体の敵に命中するたびに、ファルザンの元素エネルギーが0.5ポイント回復する。この方法による1回のサイクロンで回復できる元素エネルギーは最大4ポイントまで。&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B4%E3%83%AD%E3%83%BC/::ref/Constellation_Striking_Hound_Thunderous_Force.png?rev=9d83021a9d3697322c3debac8187fe05&t=20211211010220" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;5凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;思慮奇境</b><br>&nbsp;&nbsp;元素爆発の天賦Lv.+3%&nbsp;&nbsp;&nbsp;<br>&nbsp;&nbsp;<br><br><br>
+            </td>
+          </tr>
+
+          <tr>
+            <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%B4%E3%83%AD%E3%83%BC/::ref/Constellation_Valiant_Hound_Mountainous_Fealty.png?rev=a022db22f70c7c2cfd60186a919429e0&t=20211211010230" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
+            <td colspan="16"><br><br><b>&nbsp;妙道合一</b><br>&nbsp;&nbsp;
+                元素爆発の「祈風の恵み」状態のキャラクターが風元素ダメージを与えるとき、会心ダメージ+40%。<br>
+                「祈風の恵み」状態のフィールド上のキャラクターがダメージを与えると、追加で敵に「風圧崩潰」効果を付与する。<br>
+                「風圧崩潰」効果の付与は3秒毎に1回のみ発動可能で、チーム全員がクールタイムを共有する。<br><br><br>
+            </td>
+          </tr></table><br><br><br></div>
+
+          <div class="weapontitle">
+            <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
+          </div><br><br>
+          <div class="weapon">
+            <div class="wepon-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                ゴローは"サポーター"という立ち位置なので、メインステータスが元素チャージ効率を盛ることができる武器を選びましょう。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+
+            </div><br>
+          <table border="1" style="margin: auto;">
+            <tr>
+              <th>&nbsp;&nbsp;&nbsp;</th>
+              <th>適性武器一覧</th>
+            </tr>
+            <tr>
+              <th>SSS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E7%B5%82%E7%84%89%E3%82%92%E5%98%86%E3%81%8F%E8%A9%A9.png.webp?rev=522a5725effa41d6ba12c414459ce743&t=20210319091919">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E7%A5%AD%E7%A4%BC%E3%81%AE%E5%BC%93.png.webp?rev=5bead5dd99f4d2462d6cc173a3afef37&t=20231201183519">
+              </div></th>
+            </tr>
+            <tr>
+              <th>SS</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/screenshot.1605900705.jpg?rev=b1abd71824633a4a69ab3e75be845348&t=20201121043534" alt="">
+              </div></th>
+            </tr>
+            <tr>
+              <th>S</th>
+              <th><div class="image-container">
+                <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E7%AB%AD%E6%B2%A2.png.webp?rev=c8a58d67370c27d4036e27848d95a001&t=20220830222118" alt="">
+              </div></th>
+            </tr></table><br><br><br>
+
+            <div class="relictitle">
+              <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
+            </div><br><br>
+            <div class="relic">
+              <h2 class="relic-text">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              </h2>
+              <table border="1" style="margin: auto;">
+
+                <tr>
+                  <th colspan="2">適性聖遺物</th>
+                  <th style="width: 200px;">詳細</th>
+                  <th>Ex.編成</th>
+                </tr>
+  
+                <tr>
+                  <td style="text-align: center;"><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%90%E3%83%83%E3%82%B0/%E8%81%96%E9%81%BA%E7%89%A9/::ref/%E6%A0%84%E8%8A%B1%E3%81%AE%E6%9C%9F_5.png.webp?rev=bc9973f105234c5b0f828005c9160061&t=20211124231224" width="100px" height="100px" style="margin: auto;"><p class="diluc-relic"><b>華館夢醒形骸記</b></p></td>
+                  <td style="width: 600px;"><b>セット効果</b><br>
+                      防御力+30%,
+                    <br>
+                    この聖遺物セットを装備したキャラクターは、以下の状況において「問答」効果を獲得する。 <br>
+                    「問答」効果:フィールド上で岩元素攻撃を敵に命中した後に1層獲得、0.3秒毎に1層のみ獲得できる。<br>
+                    待機中の場合は、3秒毎に自動で1層獲得する。重ね掛けできる「問答」は最大4層までとなり、<br>
+                    1層につき防御力+6%、岩元素ダメージ+6%。6秒毎に「問答」効果を獲得していない場合は、1層失う。
+                  </td>
+                  <td style="width: 400px;">４セット効果を駆使するので、元素爆発を発動したらゴローを控えてアタッカーと一緒にダメージを出せるパーティ編成を組みましょう。</td>
+                  <td style="display: flex;"><div width="50px" height="50px">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%8D%92%E7%80%A7%E4%B8%80%E6%96%97_s.webp?rev=422f082b7bc95de99a6b0ea7b4a343ba&t=20240313101425">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B4%E3%83%AD%E3%83%BC_s.webp?rev=d81ca53b6c302699a0059729c60bc497&t=20240313101338"><br>
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%8D%BE%E9%9B%A2_s.webp?rev=ab44a61a332174925072c553966eb001&t=20240313101433">
+                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B7%E9%9B%BB%E5%B0%86%E8%BB%8D_s.webp?rev=7c064efdd43177b4266dc3acd84356c0&t=20240313100241">
+                  </div></td>
+                </tr></table></div><br><br><br><br>
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
+
+<script>
+    const menu = document.querySelector(".menu");
+    const navbar = document.querySelector(".navbar");
+    window.addEventListener("scroll", () => {
+      if (window.pageYOffset >= menu.offsetTop) {
+        navbar.classList.add("sticky");
+      } else {
+        navbar.classList.remove("sticky");
+      }
+    });
+  </script>
+  　</body>
+  </html>  
