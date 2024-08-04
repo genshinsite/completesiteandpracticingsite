@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Character Selection</title>
+<link rel="stylesheet" href="style1.css" />
+</head>
+<body>
+    <div class="title"><span class="title1">create</span><span class="title2">party</span></div>
+<div class="header">
+<div class="header-content-title">概要</div>
+<div class="header-content-left">
+    操作方法について<br>
+    &nbsp;&nbsp;<span class="left-contents">4つの枠に各々の役割に該当するキャラクターを枠をタップすることで登場する<br>&nbsp;&nbsp;下部のバーから枠に入れることで枠の下の表にキャラクター詳細が表示されます。</span><br>
+    コンボ申請について<br>
+    &nbsp;&nbsp;<span class="left-contents">4名のキャラクター選択後枠の右上にあるコンボ申請をタップしてユーザー名を入力することで<br>&nbsp;&nbsp;その4名のキャラクターの適切なコンボが遅れて表示されます。
+    </span><br>
+</div>
+<div class="header-content-right">
+    パーティ編成について<br>
+    &nbsp;<span class="right-contents">
+        原神は7つの異なる元素を持つ様々なキャラクター、<br>
+        &nbsp;&nbsp;元素反応で戦ったり、1元素で戦ったり様々な戦い方が要求される中で<br>
+        &nbsp;&nbsp;「どんなパーティ編成を組めばいいかわからない」という方向けにこのcreatepartyを作りました。<br>
+        &nbsp;&nbsp;ぜひ螺旋、幻想シアターなど様々な用途でご活用ください。</span>
+</div>
+</div>
+<div class="role" id="attacker" onclick="selectRole('attacker')">Attacker</div>
+<div class="role" id="sub-attacker" onclick="selectRole('sub-attacker')">Sub Attacker</div>
+<div class="role" id="supporter" onclick="selectRole('supporter')">Supporter</div>
+<div class="role" id="buffer" onclick="selectRole('buffer')">Buffer</div>
+
+<div class="info-table">
+    <table>
+        <tr>
+            <th>名前</th>
+            <th>役割</th>
+            <th>武器</th>
+            <th>聖遺物</th>
+            <th>目標ステータス</th>
+        </tr>
+        <tr>
+            <td id="attacker-name"></td>
+            <td id="attacker-role">Attacker</td>
+            <td id="attacker-weapon"></td>
+            <td id="attacker-artifact"></td>
+            <td id="attacker-status" style="text-align: left;"></td>
+        </tr>
+        <tr>
+            <td id="sub-attacker-name"></td>
+            <td id="sub-attacker-role">Sub Attacker</td>
+            <td id="sub-attacker-weapon"></td>
+            <td id="sub-attacker-artifact"></td>
+            <td id="sub-attacker-status" style="text-align: left;"></td>
+        </tr>
+        <tr>
+            <td id="supporter-name"></td>
+            <td id="supporter-role">Supporter</td>
+            <td id="supporter-weapon"></td>
+            <td id="supporter-artifact"></td>
+            <td id="supporter-status" style="text-align: left;"></td>
+        </tr>
+        <tr>
+            <td id="buffer-name"></td>
+            <td id="buffer-role">Buffer</td>
+            <td id="buffer-weapon"></td>
+            <td id="buffer-artifact"></td>
+            <td id="buffer-status" style="text-align: left;"></td>
+        </tr>
+    </table><br>
+    <div class="table-under"><p>HP%(体力%),ATK%(攻撃力%),DEF%(防御力%),EM(元素熟知),EC(元素チャージ効率),Edmg(元素ダメージ),CRITrate/dmg%(会心率/ダメージ)</p></div>
+
+    <div class="accordion">
+        <button class="accordion-header">コンボ</button>
+        <div class="accordion-content">
+            <div id="combo-reply-container">
+                <p id="combo-reply"></p>
+            </div>
+        </div>
+
+        <button class="accordion-header">元素共鳴一覧</button>
+        <div class="accordion-content">
+            <p>元素共鳴とは</p>
+            <p>炎元素共鳴:氷元素付着の継続時間-40%,攻撃力+25%</p>
+            <p>水元素共鳴:炎元素付着の継続時間-40%, HP上限+25%</p>
+            <p>氷元素共鳴:雷元素付着の継続時間-40%, 氷元素付着または凍結状態の敵を攻撃する時、会心率+15%</p>
+            <p>雷元素共鳴:水元素付着の継続時間-40%,<br>
+                &nbsp;超電導、過負荷、感電、原激化、超激化または超開花反応を起こしたとき、100%の確率で雷元素粒子を生成する(クールタイム5秒)</p>
+            <p>風元素共鳴:スタミナ消費-15%,移動速度+10%,スキルのクールタイム-5%</p>
+            <p>岩元素共鳴:シールド強化+15%,<br>
+                &nbsp;キャラがシールド状態の時以下の効果,<br>
+                &nbsp;└与えるダメージ+15%,└敵にダメージを与えた時、敵の岩元素耐性-20%/継続時間15秒</p>
+            <p>草元素共鳴:元素熟知+50<br>
+                &nbsp;燃焼、原激化、開花反応を発動すると周囲のチーム全員の元素熟知+30、継続時間6秒<br>
+                &nbsp;超激化、草激化、超開花、烈開花反応を発動すると、周囲のチーム全員の元素熟知+20、継続時間6秒<br>
+                &nbsp;上記効果の継続時間は各効果毎に独立</p>
+        </div>
+
+        <button class="accordion-header">元素反応一覧</button>
+        <div class="accordion-content">
+        <p>        
+         <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%85%83%E7%B4%A0%E5%8F%8D%E5%BF%9C%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/::ref/%E5%85%83%E7%B4%A0%E5%8F%8D%E5%BF%9Cver3.jpg?rev=1c9a19441990770198785ef576b8a844&t=20221115132616" class="small-image">
+        </p>
+        </div>
+    </div>
+</div>
+
+
+<!-- コンボ申請ボタンを追加 -->
+<button id="combo-request-btn">コンボ申請</button>
+
+<button class="update-combo-btn" onclick="updateComboFromServer()">更新</button>
+
+
+<div id="bottom-bar">
+    <span id="prev-btn" onclick="prevCharacters()">←</span>
+    <div class="characters-container" style="display: flex; flex-grow: 1; justify-content: center; align-items: center;">
+        <!-- Character Images -->
+    </div>
+    <span id="next-btn" onclick="nextCharacters()">→</span>
+</div>
+
+<script>
+    let selectedRole = null;
+    let selectedRoleElement = null;
+    const charactersPerPage = 7;
+    let currentGroupIndex = 0;
+    let filteredCharacters = [];
+
+    const characters = [
+    { name: 'ディルック', role: 'attacker', weapon: '狼の末路', artifact: '燃え盛る炎の魔女/剣闘士のフィナーレ(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%83%AB%E3%83%83%E3%82%AF_s.webp?rev=dc48c0c0e71cdd1b668507ce743b21b1&t=20240313093901',
+    status: 'HP20000, ATK2000, CRIT rate/damage 70/230',},
+    { name: '胡桃', role: 'attacker', weapon: '護摩の杖', artifact: '炎の魔女(ATK/HP%,Edmg%,C rate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%83%A1%E6%A1%83_s.webp?rev=54adea76042ec54e902879a162ad1398&t=20240313094046',
+     status: 'HP30000, ATK2000, EM150, CRIT rate/damage 65/250'},
+    { name: '召使', role: 'attacker', weapon: '赤月のシルエット', artifact: '諧律奇想の断章/剣闘士のフィナーレ(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A2%E3%83%AB%E3%83%AC%E3%83%83%E3%82%AD%E3%83%BC%E3%83%8E_s.webp?rev=12ea83d7f779abb1ba99b0dbfe276703&t=20240426205626',
+    status: 'HP20000, ATK2500, CRIT rate/damage 70/280'},
+    { name: '宵宮', role: 'attacker', weapon: '飛雷の鳴弦', artifact: 'しめ縄/剣闘士のフィナーレ(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%AE%B5%E5%AE%AE_s.webp?rev=533c401be07b6a6ccdf59284deffe733&t=20240313094100',
+    status: 'HP15000, ATK2500, CRIT rate/damage 70/240'},
+    { name: 'リネ', role: 'attacker', weapon: '始まりの大魔術', artifact: 'ファントムハンター(ATK/HP%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%AA%E3%83%8D_s.webp?rev=91d3dbcdbfb063b47af3a31023bd97a2&t=20230818213017', 
+    status: 'HP30000, ATK2200, CRIT rate/damage 70/330'},
+    { name: 'クレー', role: 'attacker', weapon: '四風原典', artifact: '大地を流浪する楽団(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%AF%E3%83%AC%E3%83%BC_s.webp?rev=72d3b426a8b818acd4d61428b4596ab1&t=20240313093847',    
+    status: 'HP15000, ATK2000, EM220, CRIT rate/damage 70/200'},
+    { name: '嘉明', role: 'attacker', weapon: '赤角石塵滅砕', artifact: 'ファントムハンター/剣闘士のフィナーレ(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%98%89%E6%98%8E_s.webp?rev=53cfe38061e61f107d7db8112500d7cc&t=20240202002820',
+    status: 'HP25000, ATK2500, CRIT rate/damage 70/230'},
+    { name: '煙緋', role: 'attacker', weapon: '四風原典', artifact: '血染めの騎士道/大地を流浪する楽団(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%85%99%E7%B7%8B_s.webp?rev=0c06b763375e10a949c8f96029e0c916&t=20240313093939', 
+    status: 'HP15000, ATK2500, EM200, CRIT rate/damage 70/200'},
+    { name: 'ヌヴィレット', role: 'attacker', weapon: '久遠流転の大典', artifact: 'ファントムハンター(ATK/HP%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8C%E3%83%B4%E3%82%A3%E3%83%AC%E3%83%83%E3%83%88_s.webp?rev=9d192d6d060cb5a158f79f9463bfdf22&t=20231018215951',
+    status: 'HP35000, ATK2000, CRIT rate/damage 55/300',},
+    { name: 'タルタリヤ', role: 'attacker', weapon: '冬極の白星', artifact: '沈淪の心/剣闘士のフィナーレ(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%BF%E3%83%AB%E3%82%BF%E3%83%AA%E3%83%A4_s.webp?rev=db1270f556621b4f740828fe0c159572&t=20240313094437',
+    status: 'HP20000, ATK2000, CRIT rate/damage 70/230',},
+    { name: '神里綾人', role: 'attacker', weapon: '波乱月白経津', artifact: '来歆の余響/剣闘士のフィナーレ(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%A5%9E%E9%87%8C%E7%B6%BE%E4%BA%BA_s.webp?rev=6a5120e9484bc84b973e9bc1826730b1&t=20240313094622%22%22',
+    status: 'HP20000, ATK2000, CRIT rate/damage 70/230',},
+    { name: '神里綾華', role: 'attacker', weapon: '霧切の廻光', artifact: '氷風を彷徨う勇士/剣闘士のフィナーレ(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%A5%9E%E9%87%8C%E7%B6%BE%E8%8F%AF_s.webp?rev=b2b63fe585d6f33ca3dfaa6d7971132b&t=20240313095226',
+    status: 'HP20000, ATK2000, CRIT rate/damage 70/230',},
+    { name: 'エウルア', role: 'attacker', weapon: '松韻の響く頃', artifact: '蒼白の炎(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A8%E3%82%A6%E3%83%AB%E3%82%A2_s.webp?rev=013704c4d8a00406ce171395371ea420&t=20240313095108',
+    status: 'HP20000, ATK2200, CRIT rate/damage 75/300',},
+    { name: 'リオセスリ', role: 'attacker', weapon: '凛流の監視者', artifact: 'ファントムハンター(ATK/HP%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%AA%E3%82%AA%E3%82%BB%E3%82%B9%E3%83%AA_s.webp.webp?rev=e23e379f0967e954b889b0e7dc2abad6&t=20231021115204',
+    status: 'HP20000, ATK1800, CRIT rate/damage 70/280',},
+    { name: 'フレミネ', role: 'attacker', weapon: '狼の末路', artifact: '血染めの騎士道/剣闘士のフィナーレ(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%83%AC%E3%83%9F%E3%83%8D_s.webp.webp?rev=6bc5b57bf135c1b932e36a43e2827f18&t=20230906001206',
+    status: 'HP20000, ATK2000, CRIT rate/damage 70/230',},
+    { name: '刻晴', role: 'attacker', weapon: '霧切の廻光', artifact: '雷のような怒り/剣闘士のフィナーレ(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%88%BB%E6%99%B4_s.webp?rev=6301a57e7b4c6782945e165f8d34f282&t=20240313100211',
+    status: 'HP20000, ATK2000, EM200, CRIT rate/damage 70/250',},
+    { name: 'クロリンデ', role: 'attacker', weapon: '赦罪', artifact: '雷のような怒り/諧律奇想の断章(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%AF%E3%83%AD%E3%83%AA%E3%83%B3%E3%83%87_s.webp?rev=0c9be838aab16edb4dc00ec9ec5d8ebe&t=20240605172515',
+    status: 'HP20000, ATK2000, EM130, CRIT rate/damage 70/230',},
+    { name: 'セノ', role: 'attacker', weapon: '赤砂の杖', artifact: '金メッキの夢(ATK%/EM,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%BB%E3%83%8E_s.webp?rev=920a1b856b346cd0a5241b3ef630c083&t=20240313095535',
+    status: 'HP20000, ATK2000, EM150, CRIT rate/damage 70/230',},
+    { name: 'セトス', role: 'attacker', weapon: '若水', artifact: '金メッキの夢(ATK%EM,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%BB%E3%83%88%E3%82%B9_s.webp?rev=a171a51caaa77102ac0f23f11fde0cf6&t=20240605171736',
+    status: 'HP20000, ATK2000, CRIT rate/damage 70/230',},
+    { name: '魈', role: 'attacker', weapon: '和璞鳶', artifact: '辰砂往生録/翠緑の影(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B7%E3%83%A7%E3%82%A6_s.webp?rev=9096515fcfbf33749e65d58723ca19c6&t=20240313100821',
+    status: 'HP25000, ATK2000, CRIT rate/damage 70/3000',},
+    { name: '放浪者', role: 'attacker', weapon: 'トゥライトゥーラの記憶', artifact: '翠緑の影/剣闘士のフィナーレ(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E6%94%BE%E6%B5%AA%E8%80%85_s.webp?rev=89aa8adab02c75679baf087f75b6cd4d&t=20221207151715',
+    status: 'HP20000, ATK2000, CRIT rate/damage 70/230',},
+    { name: '鹿野院平蔵', role: 'attacker', weapon: '神楽の真意', artifact: '翠緑の影/剣闘士のフィナーレ(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%B9%BF%E9%87%8E%E9%99%A2%E5%B9%B3%E8%94%B5_s.webp?rev=6730864ae26dc357e9d7967221ac4030&t=20240313100845',
+    status: 'HP20000, ATK2000, CRIT rate/damage 70/230',},
+    { name: '荒瀧一斗', role: 'attacker', weapon: '赤角石塵滅砕', artifact: '華館(ATK/DEF%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%8D%92%E7%80%A7%E4%B8%80%E6%96%97_s.webp?rev=422f082b7bc95de99a6b0ea7b4a343ba&t=20240313101425',
+    status: 'HP20000, ATK2000, DEF1500, CRIT rate/damage 70/230',},
+    { name: 'ナヴィア', role: 'attacker', weapon: '	裁断', artifact: '残響の森で囁かれる夜話/黄金の劇団(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2_s.webp?rev=1ff65dbf694ab2ebae19e0433d4d2de5&t=20231220212842',
+    status: 'HP20000, ATK2000, CRIT rate/damage 80/270',},
+    { name: 'アルハイゼン', role: 'attacker', weapon: '萃光の裁葉', artifact: '金メッキの夢/剣闘士のフィナーレ(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A2%E3%83%AB%E3%83%8F%E3%82%A4%E3%82%BC%E3%83%B3_s.webp?rev=bc08d236644ba069a9537ed7525462ed&t=20230118200145',
+    status: 'HP20000, ATK2000, CRIT rate/damage 70/230',},
+    { name: 'ティナリ', role: 'attacker', weapon: '狩人の道', artifact: '金メッキの夢/剣闘士のフィナーレ(ATK%/EM,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%86%E3%82%A3%E3%83%8A%E3%83%AA_s.webp?rev=6d50ac6cb195f9e41ea3112ad2f5dc72&t=20240313101345',
+    status: 'HP20000, ATK2000, EM200, CRIT rate/damage 70/230',},
+    { name: 'アンバー', role: 'sub-attacker', weapon: '冬極の白星', artifact: '炎の魔女/絶縁(EC%,Edmg%,EM)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A2%E3%83%B3%E3%83%90%E3%83%BC_s.webp?rev=29274837d3c9328ecccb19c3d7e1cf70&t=20240313093833',
+    status: 'HP15000, ATK2000, EM300, CRIT rate/damage 50/150'},
+    { name: '香菱', role: 'sub-attacker', weapon: '四風長槍', artifact: '絶縁(EC%,ATK/Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%A6%99%E8%8F%B1_s.webp?rev=c09118e85ef5cd4a2f732748a76b631a&t=20240313093952',
+    status: 'HP20000, ATK2000, EM220, CRIT rate/damage 70/200'},
+    { name: 'ニィロウ', role: 'sub-attacker', weapon: '聖顕の鍵', artifact: '楽園の絶花(HP%,HP%,HP%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8B%E3%82%A3%E3%83%AD%E3%82%A6_s.webp?rev=9697109ce9c476aac96e3b0bb000c3fc&t=20240313094448',
+    status: 'HP50000, ATK1500, CRIT rate/damage 50/150'},
+    { name: '夜蘭', role: 'sub-attacker', weapon: '若水', artifact: '絶縁/旧貴族のしつけ(ATK/HP%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633',
+    status: 'HP30000, ATK2000, CRIT rate/damage 70/300'},
+    { name: '行秋', role: 'sub-attacker', weapon: '祭礼の剣', artifact: '絶縁(ATK/EC%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%A1%8C%E7%A7%8B_s.webp?rev=99947695ce24868c42f736b737db5020&t=20240313094600', 
+    status: 'HP20000, ATK2200, EC240%, CRIT rate/damage 70/140'},
+    { name: '甘雨', role: 'sub-attacker', weapon: 'アモスの弓', artifact: '氷風を彷徨う勇士(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%94%98%E9%9B%A8_s.webp?rev=66e18d552610b949dd8cbcce60db8295&t=20240313095153',
+    status: 'HP20000, ATK3000, CRIT rate/damage 70/240'},
+    { name: '重雲', role: 'sub-attacker', weapon: '狼の末路', artifact: '旧貴族のしつけ(ATK%/EM,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%87%8D%E9%9B%B2_s.webp?rev=c85447414af14a3eb1166a126e0dbaf2&t=20240313095210',
+    status: 'HP20000, ATK2500, CRIT rate/damage 70/180'},
+    { name: 'ガイア', role: 'sub-attacker', weapon: '天空の刃', artifact: '旧貴族のしつけ(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%AC%E3%82%A4%E3%82%A2_s.webp?rev=c3ed54305cbe18d6623f48afd15391de&t=20240313095117',
+    status: 'HP20000, ATK2000, CRIT rate/damage 70/180'},
+    { name: 'ロサリア', role: 'sub-attacker', weapon: '赤砂の杖', artifact: '旧貴族のしつけ(ATK%/EM,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%AD%E3%82%B5%E3%83%AA%E3%82%A2_s.webp?rev=63f7fc3c5d7edfa9d404a89c03c4d3cd&t=20240313095140',
+    status: 'HP20000, ATK1400, CRIT rate/damage 100↑/80'},
+    { name: '雷電', role: 'sub-attacker', weapon: '草薙の稲光', artifact: '絶縁(EC%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B7%E9%9B%BB%E5%B0%86%E8%BB%8D_s.webp?rev=7c064efdd43177b4266dc3acd84356c0&t=20240313100241',
+    status: 'HP20000, ATK2000, EC280% CRIT rate/damage 70/170'},
+    { name: '八重神子', role: 'sub-attacker', weapon: '神楽の真意', artifact: '金メッキの夢/大地を流浪する楽団(ATK%/EM,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%85%AB%E9%87%8D%E7%A5%9E%E5%AD%90_s.webp?rev=7a16b692dc9aaeffed49cfa64250be61&t=20240313100219',
+    status: 'HP20000, ATK2000,EM150 CRIT rate/damage 80/200'},
+    { name: 'リサ', role: 'sub-attacker', weapon: '天空の巻', artifact: '金メッキの夢/大地を流浪する楽団(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%AA%E3%82%B5_s.webp?rev=2ec74642aec9b4e47c059363dfc48d4d&t=20240313100134',
+    status: 'HP20000, ATK1500, EM200 CRIT rate/damage 70/150'},
+    { name: '北斗', role: 'sub-attacker', weapon: '赤角石塵滅砕', artifact: '剣闘士のフィナーレ(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%8C%97%E6%96%97_s.webp?rev=2509eec2400a60645c3a69050cd13767&t=20240313100233',
+    status: 'HP20000, ATK2500, CRIT rate/damage 70/240'},
+    { name: 'フィッシュル', role: 'sub-attacker', weapon: '終焉を嘆く詩', artifact: '金メッキの夢/教官(EM,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%82%A3%E3%83%83%E3%82%B7%E3%83%A5%E3%83%AB_s.webp?rev=37b4558a7d7fa66327eacceeefc221aa&t=20240313100127',
+    status: 'HP20000, ATK1800, EM200 CRIT rate/damage 70/140'},
+    { name: '久岐忍', role: 'sub-attacker', weapon: '聖顕の鍵', artifact: '雷のような怒り/花海甘露の光(EM,HP%,HP%/EM/EC%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E4%B9%85%E5%B2%90%E5%BF%8D_s.webp?rev=a4cd24eeb101975cdac32ce89fbbf9c7&t=20240313100155',
+    status: 'HP38000, ATK1600, CRIT rate/damage 50/150'},
+    { name: 'ウェンティ', role: 'sub-attacker', weapon: '終焉を嘆く詩', artifact: '翠緑の影(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A6%E3%82%A7%E3%83%B3%E3%83%86%E3%82%A3_s.webp?rev=d03ba4b351bbabc78e48036945f26699&t=20240313100813',
+    status: 'HP20000, ATK2000, CRIT rate/damage 70/200'},
+    { name: '楓原楓葉', role: 'sub-attacker', weapon: '蒼古なる自由への誓い', artifact: '翠緑の影(ATK%/EM,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E4%B8%87%E8%91%89_s.webp?rev=7c5488d515d48d9a661f5af5d9a18a33&t=20240313100904',
+    status: 'HP20000, ATK1500, EM300, CRIT rate/damage 70/140'},
+    { name: 'リネット', role: 'sub-attacker', weapon: '波乱月白経津', artifact: '翠緑の影(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%AA%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=c5410d46feb4b0e9ce773942650beb0a&t=20230817152912',
+    status: 'HP20000, ATK2500, CRIT rate/damage 70/180'},
+    { name: '千織', role: 'sub-attacker', weapon: '有楽御簾切', artifact: '剣闘士のフィナーレ/大地を流浪する楽団(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%8D%83%E7%B9%94_s.webp?rev=85afa4c76f4aee5229d30cde14359128&t=20240314020837',
+    status: 'HP20000, ATK2300, DEF2000 CRIT rate/damage 70/240'},
+    { name: '凝光', role: 'sub-attacker', weapon: '四風原典', artifact: '残響の森で囁かれる夜話/剣闘士のフィナーレ(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%87%9D%E5%85%89_s.webp?rev=cad06b570cf5a384b44b384cd16528e6&t=20240313101416',
+    status: 'HP20000, ATK2500, CRIT rate/damage 70/240'},
+    { name: 'コレイ', role: 'sub-attacker', weapon: '終焉を嘆く詩', artifact: '終焉を嘆く詩(ATK%/EM,ATK%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B3%E3%83%AC%E3%82%A4_s.webp?rev=6677acb672e4dfe657d4abfb7b0c0256&t=20240313101327',
+    status: 'HP20000, ATK1500, EM200 CRIT rate/damage 70/140'},
+    { name: 'カーヴェ', role: 'sub-attacker', weapon: '葦海の標', artifact: '楽園の絶花(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%AB%E3%83%BC%E3%83%B4%E3%82%A7_s.webp?rev=17106967eb95fe9d66a943a0da854b5d&t=20230526210116',
+    status: 'HP20000, ATK2000, EM230, CRIT rate/damage 70/140'},
+    { name: 'ベネット', role: 'buffer', weapon: '風鷹剣', artifact: '旧貴族のしつけ/絶縁(EC%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926', 
+    status: 'HP30000, ATK2000, EC180% CRIT rate/damage 0/0'},
+    { name: 'シュヴルーズ', role: 'buffer', weapon: '正義の報酬', artifact: '旧貴族のしつけ/絶縁(HP%,HP%,HP%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B7%E3%83%A5%E3%83%B4%E3%83%AB%E3%83%BC%E3%82%BA_s.webp?rev=8bfce2b3315a4bc3f45faf7d6884929c&t=20240109220418',
+    status: 'HP40000, ATK1400, CRIT rate/damage 50/140'},
+    { name: 'フリーナ', role: 'buffer', weapon: '静水流転の輝き', artifact: '黄金の劇団(HP%,HP%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%83%AA%E3%83%BC%E3%83%8A_s.webp?rev=79020e2b8491927fd44b8841ae8a1674&t=20231109210243',
+    status: 'HP50000, ATK2500, CRIT rate/damage 60/180'},
+    { name: 'モナ', role: 'buffer', weapon: '西風秘典', artifact: '絶縁(EC%,ATK%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%A2%E3%83%8A_s.webp?rev=fb73e6c173b2016c8d40e014ccb1d9de&t=20240313094549',
+    status: 'HP20000, ATK1200, EC200%, CRIT rate/damage 70/140'},
+    { name: 'キャンディス', role: 'buffer', weapon: '草薙の稲光', artifact: '絶縁/剣闘士のフィナーレ(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%87%E3%82%A3%E3%82%B9_s.webp?rev=3b9cd62844015e423c4066519c52553c&t=20240313094422',
+    status: 'HP20000, ATK2000, EC150%, CRIT rate/damage 70/180'},
+    { name: '申鶴', role: 'buffer', weapon: '息災', artifact: 'しめ縄,剣闘士のフィナーレ(ATK%,ATK%,ATK%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%94%B3%E9%B6%B4_s.webp?rev=ecfb0358726729d65dcf0dde48734356&t=20240313095217',
+    status: 'HP20000, ATK3500, CRIT rate/damage 50/50'},
+    { name: 'ミカ', role: 'buffer', weapon: '草薙の稲光', artifact: '旧貴族のしつけ(EC%,HP%,HP%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%9F%E3%82%AB_s.webp?rev=6bc1b975f17f95af023118a5891a35fd&t=20230321225531',
+    status: 'HP40000, ATK2000, EC170% CRIT rate/damage 0/0'},
+    { name: '九条沙羅', role: 'buffer', weapon: '祭礼の弓', artifact: '旧貴族のしつけ/絶縁(EC%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E4%B9%9D%E6%9D%A1%E8%A3%9F%E7%BE%85_s.webp?rev=45257cd192e75cd399a21e2d2c8feec5&t=20240313100203',
+    status: 'HP20000, ATK2500, CRIT rate/damage 70/140'},
+    { name: 'スクロース', role: 'buffer', weapon: '祭礼の断片', artifact: '翠緑の影(EM,Edmg%,EM)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B9%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9_s.webp?rev=d6b16d45a11d6c4ebbd2829d5250c1f0&t=20240313100837',
+    status: 'HP20000, ATK1200, EM300, EC150%, CRIT rate/damage 70/140'},
+    { name: 'ファルザン', role: 'buffer', weapon: '祭礼の弓', artifact: '翠緑の影(EC%,ATK%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%82%A1%E3%83%AB%E3%82%B6%E3%83%B3_s.webp?rev=c5703a902230cbd1b69adfd0961a1247&t=20221207151743',
+    status: 'HP20000, ATK1300, EC200%, CRIT rate/damage 70/100'},
+    { name: 'アルベド', role: 'buffer', weapon: '蒼古なる自由への誓い', artifact: '悠久の磐岩(DF%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89_s.webp?rev=364c50e7496f4819761de2f7556fa8f2&t=20240313101314',
+    status: 'HP20000, ATK2500,DEF CRIT rate/damage 70/200'},
+    { name: 'ゴロー', role: 'buffer', weapon: '祭礼の弓', artifact: '鹿館/絶縁(DF%,DF%,EC%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B4%E3%83%AD%E3%83%BC_s.webp?rev=d81ca53b6c302699a0059729c60bc497&t=20240313101338',
+    status: 'HP20000, ATK2000, EC150%, DEF20000, CRIT rate/damage 40/80'},
+    { name: '雲菫', role: 'buffer', weapon: '四風長槍', artifact: '旧貴族のしつけ/絶縁(EC%,DF%,DF%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%9B%B2%E8%8F%AB_s.webp?rev=a7666b3075b8d4ed94b458ac9b608f6d&t=20240313101403',
+    status: 'HP20000, ATK1700, EC200%↓, DEF1400, CRIT rate/damage 50/100'},
+    { name: 'ナヒーダ', role: 'buffer', weapon: '千夜に浮かぶ夢', artifact: '金メッキの夢(EM,ATK%,EM)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8A%E3%83%92%E3%83%BC%E3%83%80_s.webp.webp?rev=ca50d1c01181d34502b4301b329847fd&t=20221102192029',
+    status: 'HP20000, ATK2500, EM10000, CRIT rate/damage 50/100'},
+    { name: 'ディシア', role: 'supporter', weapon: '葦海の標', artifact: '花海甘露の光(HP%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%B7%E3%82%A2_s.webp?rev=222b990d3de8aac563d38b933f70d510&t=20230301132950',
+    status: 'HP28000, ATK2500, CRIT rate/damage 70/180'},
+    { name: '辛炎', role: 'supporter', weapon: '赤角石塵滅砕', artifact: '血染めの騎士道(ATK%,Edmg%,CRITdmg%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E8%BE%9B%E7%82%8E_s.webp?rev=b9487ae07708501f07bf056641eee2b3&t=20240313094111',
+    status: 'HP240000, ATK2000, CRIT rate/damage 50/3000'},
+    { name: 'トーマ', role: 'supporter', weapon: '正義の報酬', artifact: '千岩牢固(HP%,HP%,HP%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%88%E3%83%BC%E3%83%9E_s.webp?rev=759a717fb20cc440ba64885bf3552430&t=20240313093913',
+    status: 'HP30000, ATK2500, CRIT rate/damage 70/140'},
+    { name: '珊瑚宮心海', role: 'supporter', weapon: '不滅の月華', artifact: '海染硨磲(HP%,HP%,EC%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%8F%8A%E7%91%9A%E5%AE%AE%E5%BF%83%E6%B5%B7_s.webp?rev=3aca58306ed023b42cdc0da8e0abb6c5&t=20240313094612',
+    status: 'HP40000, ATK2300, CRIT rate/damage 70/140'},
+    { name: 'シグウィン', role: 'supporter', weapon: '白雨心弦', artifact: '在りし日の歌(HP%,Edmg%/EC%,HP%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B7%E3%82%B0%E3%82%A6%E3%82%A3%E3%83%B3_s.webp?rev=a45611d94e18e87c7424d687f8fb1c41&t=20240625212645',
+    status: 'HP50000, ATK2200, CRIT rate/damage 70/180'},   
+    { name: 'バーバラ', role: 'supporter', weapon: '西風秘典', artifact: '愛される少女/在りし日の歌(HP%,HP%,EC/HP%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%90%E3%83%BC%E3%83%90%E3%83%A9_s.webp?rev=759b26e93424045ee9baf151b6489b25&t=20240313094537',
+    status: 'HP40000, ATK1200, CRIT rate/damage 40/80'},
+    { name: '七七', role: 'supporter', weapon: '斬山の刃', artifact: 'しめ縄/剣闘士のフィナーレ(ATK%/EC,ATK%,ATK%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E4%B8%83%E4%B8%83_s.webp?rev=66978a07ea7443b726c8151398162153&t=20240313095200',
+    status: 'HP20000, ATK3300, CRIT rate/damage 50/100'},
+    { name: 'レイラ', role: 'supporter', weapon: '祭礼の剣', artifact: '旧貴族のしつけ/千岩牢固(ATK%,Edmg%,HP/ATK%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%AC%E3%82%A4%E3%83%A9_s.webp?rev=8dce48b40d298df98847f58dafd728c5&t=20221118202455',
+    status: 'HP25000, ATK2400, EC150%, CRIT rate/damage 50/100'},
+    { name: 'シャルロット', role: 'supporter', weapon: '不滅の月華', artifact: '在りし日の歌(HP%,HP%,HP%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B7%E3%83%A3%E3%83%AB%E3%83%AD%E3%83%83%E3%83%88_s.webp?rev=6c364a637d9a4c7fd8245e798f4fac33&t=20231109210256',
+    status: 'HP35000, ATK1500, EC200%, CRIT rate/damage 50/100'},
+    { name: 'ディオナ', role: 'supporter', weapon: '祭礼の弓', artifact: '愛される少女/絶縁(EC%,HP%,HP/EC%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A_s.webp?rev=61ba9a628f26920cdb5f0e822b23af9d&t=20240313095131',
+    status: 'HP30000, ATK1200, EM300, CRIT rate/damage 50/100'},
+    { name: 'ドリー', role: 'supporter', weapon: '鐘の剣', artifact: '金メッキの夢(HP%/EM,HP%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%89%E3%83%AA%E3%83%BC_s.webp?rev=524cf352f7dadfcd4ee8745327722b9a&t=20240313100108',
+    status: 'HP40000, ATK1400, EM300, CRIT rate/damage 40/80'},
+    { name: 'ジン', role: 'supporter', weapon: '風鷹剣', artifact: 'しめ縄/剣闘士のフィナーレ(ATK%,ATK%,ATK%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B8%E3%83%B3_s.webp?rev=463f219382bcc5f49497e2a6c0b9f4f5&t=20240313100829',
+    status: 'HP20000, ATK3300, EC150%, CRIT rate/damage 70/140'},
+    { name: '閑雲', role: 'supporter', weapon: '鶴鳴の余韻', artifact: '在りし日の歌(ATK%,ATK%,ATK%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%96%91%E9%9B%B2_s.webp?rev=f4adef3c02ca9dd1a267d0e0e5f5d0ba&t=20240202002805',
+    status: 'HP20000, ATK3300, CRIT rate/damage 70/160'},
+    { name: '早柚', role: 'supporter', weapon: '祭礼の剣', artifact: '愛される少女/翠緑の影(ATK/HP%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E6%97%A9%E6%9F%9A_s.webp?rev=9e42dbc6723eb61389388b2dfa314357&t=20240313100857',
+    status: 'HP20000, ATK2200, CRIT rate/damage 70/180'},
+    { name: '鍾離', role: 'supporter', weapon: '黒纓槍', artifact: '千岩牢固(HP%,HP%,HP%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%8D%BE%E9%9B%A2_s.webp?rev=ab44a61a332174925072c553966eb001&t=20240313101433',
+    status: 'HP50000, ATK1800, CRIT rate/damage 70/140'},
+    { name: 'ノエル', role: 'supporter', weapon: '赤角石塵滅砕', artifact: '鹿館(ATK/DF%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8E%E3%82%A8%E3%83%AB_s.webp?rev=14ad249b51f890c5c882cb5589a8540a&t=20240313101352',
+    status: 'HP20000, ATK2500,DEF800 CRIT rate/damage 70/200'},
+    { name: '白朮', role: 'supporter', weapon: '碧落の瓏', artifact: '在りし日の歌(ATK%,Edmg%,CRITrate%)', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%99%BD%E6%9C%AE_s.webp?rev=9c5af572b41668c752309bab527fcafa&t=20230526210151',
+    status: 'HP50000, ATK20000, CRIT rate/damage 50/100'},
+    { name: '綺良々', role: 'supporter', weapon: '聖顕の鍵', artifact: '千岩牢固', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E7%B6%BA%E8%89%AF%E3%80%85_s.webp?rev=c6a550b496638a162f574465c9856241&t=20230526210202',
+    status: 'HP40000, ATK1500, EM200, CRIT rate/damage 50/100'},
+    { name: 'ヨォーヨ', role: 'supporter', weapon: '黒纓槍', artifact: '愛される少女', imgUrl: 'https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%A8%E3%82%A9%E3%83%BC%E3%83%A8_s.webp?rev=d127e0f14d5939292be568c557247af9&t=20230118200205',
+    status: 'HP40000, ATK1300, CRIT rate/damage 70/140'},
+    ];
+
+    function selectRole(role) {
+        const roleElement = document.getElementById(role);
+        if (selectedRoleElement === roleElement) {
+            deselectRole();
+        } else {
+            selectedRole = role;
+            selectedRoleElement = roleElement;
+            resetRoles();
+            roleElement.classList.add('selected-role');
+            currentGroupIndex = 0;
+            filteredCharacters = characters.filter(character => character.role === role);
+            updateCharacterGroup();
+            showBottomBar();
+        }
+    }
+
+    function deselectRole() {
+        selectedRole = null;
+        selectedRoleElement = null;
+        document.getElementById('bottom-bar').classList.remove('show');
+        resetRoles();
+    }
+
+    function resetRoles() {
+        const roles = ["attacker", "sub-attacker", "supporter", "buffer"];
+        roles.forEach(role => {
+            const roleElement = document.getElementById(role);
+            roleElement.classList.remove('selected-role');
+        });
+    }
+
+    function showBottomBar() {
+        const bottomBar = document.getElementById('bottom-bar');
+        bottomBar.classList.add('show');
+        updateCharacterGroup();
+    }
+
+    function selectCharacter(name, role, weapon, artifact, imgUrl,status) {
+        if (selectedRoleElement) {
+            let selectedImage = selectedRoleElement.querySelector('img');
+            if (!selectedImage) {
+                selectedImage = document.createElement('img');
+                selectedRoleElement.appendChild(selectedImage);
+            }
+            selectedImage.src = imgUrl;
+            selectedImage.alt = name;
+
+            document.getElementById(`${role}-name`).innerText = name;
+            document.getElementById(`${role}-weapon`).innerText = weapon;
+            document.getElementById(`${role}-artifact`).innerText = artifact;
+            document.getElementById(`${role}-status`).innerText = status;
+        }
+    }
+
+    function prevCharacters() {
+        currentGroupIndex = Math.max(currentGroupIndex - 1, 0);
+        updateCharacterGroup();
+    }
+
+    function nextCharacters() {
+        const maxIndex = Math.floor(filteredCharacters.length / charactersPerPage);
+        currentGroupIndex = Math.min(currentGroupIndex + 1, maxIndex);
+        updateCharacterGroup();
+    }
+
+    function updateCharacterGroup() {
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        prevBtn.classList.toggle('disabled', currentGroupIndex === 0);
+        nextBtn.classList.toggle('disabled', currentGroupIndex === Math.floor(filteredCharacters.length / charactersPerPage));
+
+        const charactersContainer = document.querySelector('#bottom-bar .characters-container');
+        charactersContainer.innerHTML = '';
+
+        const start = currentGroupIndex * charactersPerPage;
+        const end = start + charactersPerPage;
+        const charactersToShow = filteredCharacters.slice(start, end);
+
+        charactersToShow.forEach(character => {
+            const img = document.createElement('img');
+            img.src = character.imgUrl;
+            img.alt = character.name;
+            img.className = 'bottom-bar-character';
+            img.onclick = function() {
+                selectCharacter(character.name, character.role, character.weapon, character.artifact, character.imgUrl, character.status,);
+            };
+            charactersContainer.appendChild(img);
+        });
+    }
+
+
+    document.addEventListener('DOMContentLoaded', () => {
+    const headers = document.querySelectorAll('.accordion-header');
+
+    headers.forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+            } else {
+                document.querySelectorAll('.accordion-content').forEach(el => el.style.maxHeight = null);
+                content.style.maxHeight = content.scrollHeight + 'px';
+            }
+        });
+    });
+});
+
+document.getElementById('combo-request-btn').addEventListener('click', () => {
+    const selectedCharacters = [];
+    const roles = ["attacker", "sub-attacker", "supporter", "buffer"];
+    
+    roles.forEach(role => {
+        const roleElement = document.getElementById(role);
+        const imgElement = roleElement.querySelector('img');
+        if (imgElement) {
+            selectedCharacters.push(imgElement.alt);
+        }
+    });
+
+    // ユーザーIDの入力を求める
+    const userID = prompt("ユーザーIDを入力してください:");
+    if (userID) {
+        // 入力があれば Discord 通知を送信する
+        sendDiscordNotification(selectedCharacters, userID);
+    } else {
+        // 入力がなければアラートを表示
+        alert("ユーザーIDが入力されていません");
+    }
+});
+
+function sendDiscordNotification(selectedCharacters, userID) {
+    const webhookURL = 'https://discord.com/api/webhooks/1248995573558804553/SkuHbyoabqZThnGtVXsvNSGBV9dbmGi-o_ARPyOuiaNx4WH2vu3xO3HBv3hT3Zodejyq';  // ここにWebhook URLを追加します
+
+    const data = {
+        content: `コンボ申請がされました: ${selectedCharacters.join(', ')}, ユーザーID: ${userID}`
+    };
+
+    fetch(webhookURL, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    }).then(response => {
+        if (response.ok) {
+            alert('コンボ申請が送信されました');
+        } else {
+            alert('コンボ申請の送信に失敗しました');
+        }
+    }).catch(error => {
+        console.error('Error:', error);
+        alert('コンボ申請の送信に失敗しました');
+    });
+}
+
+
+function displayComboReply(reply) {
+    const comboReplyContainer = document.getElementById('combo-reply-container');
+    const comboReplyElement = document.getElementById('combo-reply');
+    comboReplyElement.textContent = reply;
+    comboReplyContainer.style.display = 'block';
+}
+
+
+
+    // 初期化
+    updateCharacterGroup();
+
+     // 画像のクリックイベントを設定
+document.querySelectorAll('.small-image').forEach(image => {
+  image.addEventListener('click', function() {
+    const bigImageSrc = this.src.replace('small', 'large');
+    const bigImageAlt = this.alt;
+
+    const overlay = document.createElement('div');
+    overlay.classList.add('overlay');
+
+    const bigImage = document.createElement('img');
+    bigImage.src = bigImageSrc;
+    bigImage.alt = bigImageAlt;
+    bigImage.classList.add('big-image');
+
+    const closeButton = document.createElement('button');
+    closeButton.innerHTML = '&times;';
+    closeButton.classList.add('close-button');
+    closeButton.addEventListener('click', function() {
+      overlay.remove();
+    });
+
+    overlay.appendChild(bigImage);
+    overlay.appendChild(closeButton);
+    document.body.appendChild(overlay);
+  });
+});
+
+</script>
+
+</body>
+</html>
