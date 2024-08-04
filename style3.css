@@ -251,7 +251,7 @@ margin-top: 380px;
 }
 
 
-@media only screen and (max-width: 380px) {
+@media only screen and (max-width: 400px) {
     body {
         background-color: #ffeef1;
         padding: 60px;
@@ -283,7 +283,7 @@ margin-top: 380px;
     font-size: 40px;
     font-weight: bold;
     color: white;
-    margin: 10px 0;
+    margin: 5px 0;
     z-index: 1; /* 他の要素に隠れないようにするため */
     }
     
@@ -396,7 +396,7 @@ margin-top: 380px;
         position: fixed;
         bottom: -100px;
         left: 0;
-        width: 60%;
+        width: 100%;
         background-color: #ffeef1;
         border-top: 2px solid black;
         display: flex;
@@ -432,7 +432,7 @@ margin-top: 380px;
     }
     
     .accordion {
-    width: 600px;
+    width: 380px;
     text-align: left;
     }
     
