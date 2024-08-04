@@ -308,7 +308,7 @@ margin-top: 380px;
     
     .header-content-left, .header-content-right {
     float: left;
-    margin: 250px;  
+    margin: 300px;  
     }
     
     .header-content-right {
@@ -330,11 +330,11 @@ margin-top: 380px;
     }
     
     .left-contents {
-    font-size: 7px;
+    font-size: 5px;
     }
     
     .right-contents {
-    font-size: 7px;
+    font-size: 5px;
     }
     .role {
         width: 100px;
