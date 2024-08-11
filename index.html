@@ -5,29 +5,62 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>genshin complete site</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="python"
+    <link rel="stylesheet" href="style0.css" />
+    <link rel="stylesheet" href="python">
   </head>
   <body>
-    <div class="wrapper">
-        </div>
+    <div class="wrapper"></div>
 <div class="header">
   <nav class="navbar">
-    <h2 class="logo">原神</h2>
+    <h2 class="logo">Genshin</h2>
     <ul class="menu">
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="character.html">キャラクター</a></li>
-            <li><a href="wepon.html#title2">武器</a></li>
-            <li><a href="materialbooks.html">天賦本</a></li>
-            <li><a href="seiibutu.html">聖遺物</a></li>
-            <li><a href="inputparty.html">パーティ編成</a></li>
-            <li><a href="">tier表</a></li>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="characterlist.html">キャラクター</a></li>
+      <li><a href="weapon.html">武器</a></li>
+      <li><a href="materialbooks.html">天賦本</a></li>
+      <li><a href="seiibutu.html">聖遺物</a></li>
+      <li><a href="inputparty.html">パーティ編成</a></li>
+      <li><a href="tierlist.html">tier表</a></li>
     </ul>
   </nav>
-   
+</div>
+<h2 id="title1">原神とは</h2>
+<div class="title1-content">
+  『原神』は、miHoYoが開発したオープンワールド・アクションロールプレイングゲーム。<br>2020年にAndroid、iOS、Windows、PlayStation 4で、2021年にPlayStation 5でリリースされた。<br>テイワットと呼ばれる大陸を舞台に、プレイヤーは旅人となって双子の片割れを探す旅を行う。</div>
+<div class="gachatitle">
+  <h2 style="text-align: left;">&nbsp;&nbsp;&nbsp;現ver.ガチャ</h2>
+</div>
+<div class="gacha">
+  <img src="https://img.game8.jp/10149149/bdee96c3be7b0c8da3b8a850ccb938b7.jpeg/original">
+  <img src="https://img.game8.jp/10149148/d05c9a48534f3cc6f54e6a31fa438843.jpeg/original"><br>
+  <img src="https://img.game8.jp/10149147/13c974d4f04419453da701db4a70e535.jpeg/original">
+  <div id="countdown">countdown</div>
+</div>
+
+<div class="noweventtitle">
+  <h2 style="text-align: left;">&nbsp;&nbsp;&nbsp;開催中イベント</h2>
+</div>
+<div class="nowevent">
+  <img src="https://img.game8.jp/10067804/709cc6e211abcc95b21144bca46979b8.jpeg/original">
+</div>
+</div>
 
 
-        </div>
+
+
+
+
+
+
+</body>
+</html>
+
+</div>
+
+
+
+
+
 <script>
   const menu = document.querySelector(".menu");
   const navbar = document.querySelector(".navbar");
@@ -38,6 +71,36 @@
       navbar.classList.remove("sticky");
     }
   });
+
+  // カウントダウンの終了時間を設定
+let countdownDate = new Date("July 17, 2024 16:00:00").getTime();
+
+// 毎秒カウントダウンを更新
+let countdownFunction = setInterval(function() {
+
+    // 現在の時刻を取得
+    let now = new Date().getTime();
+    
+    // 終了時間と現在の時刻の差を計算
+    let distance = countdownDate - now;
+    
+    // 時間、分、秒を計算
+    let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    let seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+    // カウントダウンを表示
+    document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+    
+    // カウントダウンが終了した場合
+    if (distance < 0) {
+        clearInterval(countdownFunction);
+        document.getElementById("countdown").innerHTML = "EXPIRED";
+    }
+}, 1000);
+
 </script>
 　</body>
 </html>
