@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Noto Sans JP';
 }
 .header {
   width: 100;
@@ -134,7 +134,6 @@ nav.sticky .logo {
 
 .title1-content {
   text-align: center;
-  font-family: cursive;
   font-size: 17px;
 }
 
@@ -278,7 +277,6 @@ nav.sticky .logo {
   white-space: pre-wrap;
   width: 500px;
   margin-left: 150px;
-  font-family: cursive;
   font-size: 20px;
 }
 
