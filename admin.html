@@ -1,0 +1,48 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理者用ページ</title>
+</head>
+<body>
+    <h1>管理者返信フォーム</h1>
+    <form id="admin-reply-form">
+        <label for="userID">ユーザーID:</label>
+        <input type="text" id="userID" name="userID" required>
+
+        <label for="reply">返信:</label>
+        <textarea id="reply" name="reply" required></textarea>
+
+        <button type="submit">返信を送信</button>
+    </form>
+
+    <script>
+        document.getElementById('admin-reply-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const userID = document.getElementById('userID').value;
+    const reply = document.getElementById('reply').value;
+
+    fetch('/reply', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ userID, reply })
+    }).then(response => {
+        if (response.ok) {
+            alert('返信が送信されました');
+        } else {
+            alert('返信の送信に失敗しました');
+        }
+    }).catch(error => {
+        console.error('Error:', error);
+        alert('返信の送信に失敗しました');
+    });
+});
+
+    </script>
+</body>
+</html>

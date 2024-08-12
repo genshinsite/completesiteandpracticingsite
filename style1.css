@@ -1,332 +1,291 @@
-body {
-    background-color: #ffeef1;
-    padding: 60px;
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-    height: 100vh;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Coptic&display=swap');
+
+* {
     margin: 0;
-    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
 }
-
 .header {
-width: 100%;
-height: 400px; /* 余白の高さを設定 */
-background-color: #a5a5a5; /* 余白の背景色を設定 */
-position: absolute;
-top: 0;
-left: 0;
-z-index: 0; /* 他の要素の後ろに配置 */
+  width: 100;
+  height: 100vh;
+  background-image: url("https://asset.watch.impress.co.jp/img/gmw/docs/1440/838/5_l.jpg");
+  background-position: center;
+  background-size: cover;
 }
-
-.title {
-position: absolute;
-top: 0;
-left: 91%;
-transform: translateX(-50%);
-font-size: 50px;
-font-weight: bold;
-color: white;
-margin: 10px 0;
-z-index: 1; /* 他の要素に隠れないようにするため */
-}
-
-.title1 {
-border: 1px solid #a5a5a5; /* 四角の枠線の色と太さ */
-background-color: rgb(0, 36, 166); /* 背景色 */
-}
-
-.title2 {
-border: 1px solid #a5a5a5; /* 四角の枠線の色と太さ */
-background-color: rgb(71, 71, 71); /* 背景色 */
-}
-
-.header-content-title {
-position: absolute;
-color: white;
-font-size: 25px;
-font-weight: bold;
-margin-left: 20px; 
-margin-top: 10px;
-}
-
-.header-content-left, .header-content-right {
-float: left;
-margin: 700px;  
-}
-
-.header-content-right {
-position: absolute;
-color: white;
-font-size: 25px;
-font-weight: bold;
-margin-right: 20px; 
-margin-top: 130px;
-}
-
-.header-content-left {
-position: absolute;
-color: white;
-font-size: 25px;
-font-weight: bold;
-margin-left: 20px; 
-margin-top: 110px;
-}
-
-.left-contents {
-font-size: 15px;
-}
-
-.right-contents {
-font-size: 15px;
-}
-.role {
-    width: 180px;
-    height: 180px;
-    top: 400px;
-    margin: 15px;
-    border: 2px solid black;
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav {
     text-align: center;
-    position: relative;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-.selected-role {
-    background-color: lightgreen;
-}
-
-.role img {
-    width: 80%;
-    height: 80%;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.info-table {
-    width: 1200px;
-    padding: 100px;
-    position: absolute;
-    margin-left: 50px;
-    top: 580px;
-    text-align: center;
-}
-
-.info-table table {
-    width: 100%;
-    border-collapse: collapse;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
-}
-
-.info-table th, .info-table td {
-    border: 1px solid black;
-    padding: 5px;
-    text-align: center;
-}
-.table-under {
-    text-align: left;
-    margin-left: 3px;
-
-}
-
-#bottom-bar {
-    position: fixed;
-    bottom: -100px;
+    position: fixed; /* 固定位置 */
+    top: 0;
     left: 0;
     width: 100%;
-    background-color: #ffeef1;
-    border-top: 2px solid black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 100px;
-    transition: bottom 0.5s ease-in-out;
-    overflow-x: auto;
-    padding: 0 10px;
+    background-color: #000000;
+    color: white;
+    padding: 1rem;
+    z-index: 10; /* z-indexを高く設定 */
+}
+.logo {
+ width: 150px;
+ margin: 0 auto 20px auto;
+ margin-top: 5px;
+ cursor: pointer;
+ font-size: 2rem;
+ font-weight: 450;
+ color: white;
+}
+nav ul {
+  background: #000;
+ width: 100%;
+ margin-top: 10px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 20px 30px;
+
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+nav.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 3%;
+  transition: 0.6s;
+
+
+}
+nav.sticky .logo {
+  margin: 20px 0;
+  
+ }
+ nav.sticky.ul {
+  background-color: transparent;
+  font-size: 1.3rem;
+ }
+ .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: lightgray;
+ }
+
+ body {
+  font-family: Arial, sans-serif;
+}
+.icons {
+  font-size: 22px;
+  padding: 50px;
+  letter-spacing: 1.0em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.white {
+  color: white;
+  text-decoration: none;
+}
+.image-container {
+  position: relative;
+  margin: 10px;
+  width: 200px; /* 固定幅 */
+  height: 200px; /* 固定高さ */
+  overflow: hidden;
+  display: none; /* 初期状態では非表示 */
+}
+.image-container img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 画像をコンテナにフィットさせる */
+  transition: transform 0.3s ease;
+}
+.image-container:hover img {
+  transform: scale(1.1);
+}
+.name {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  transition: bottom 0.3s;
+}
+.image-container:hover .name {
+  bottom: 0;
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.category1 {
+  display: none;
+}
+.category2 {
+  display: none;
+}
+
+@media only screen and (max-width: 480px) {
+
+  * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
+    font-family: 'Noto Sans JP';
+}
+.header {
+  width: 812px;
+  height: 100vh;
+  background-image: url("https://asset.watch.impress.co.jp/img/gmw/docs/1440/838/5_l.jpg");
+  background-position: center;
+  background-size: cover;
+}
+nav {
+    text-align: center;
+    position: fixed; /* 固定位置 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding: 1rem;
+    z-index: 10; /* z-indexを高く設定 */
+}
+.logo {
+  width: 150px;
+  margin: 0 auto 20px auto;
+  margin-top: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 450;
+  color: white;
+ }
+nav ul {
+background: #000;
+ width: 100%;
+ margin-top: 10px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 10px 5px;
+
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
 }
 
-#bottom-bar.show {
-    bottom: 0;
+
+nav.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 3%;
+  transition: 0.6s;
+
+
+}
+nav.sticky .logo {
+  margin: 20px 0;
+  
+ }
+ nav.sticky.ul {
+  background-color: transparent;
+  font-size: 1.3rem;
+ }
+ .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: lightgray;
+ }
+
+
+ body {
+  font-family: Arial, sans-serif;
 }
 
-.bottom-bar-character {
-    width: 80px;
-    height: 80px;
-    margin: 0 10px;
-    cursor: pointer;
+#title1 {
+  width: 520px;
+  margin-left: 120px;
 }
 
-#prev-btn, #next-btn {
-    cursor: pointer;
-    font-size: 24px;
-    user-select: none;
+
+.icons {
+  width: 520px;
+  margin-left: 120px;
+  padding: 50px;
+  letter-spacing: 1.0em;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+.white {
+  color: white;
+  text-decoration: none;
+}
+.image-container {
+  position: relative;
+  left: 185px;
+  margin: 10x;
+  width: 100px; /* 固定幅 */
+  height: 100px; /* 固定高さ */
+  overflow: hidden;
+  display: none; /* 初期状態では非表示 */
+}
+.image-container img {
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: cover; /* 画像をコンテナにフィットさせる */
+  transition: transform 0.2s ease;
+}
+.image-container:hover img {
+  transform: scale(1.1);
+}
+.name {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  font-size: 12px;
+  text-align: center;
+  transition: bottom 0.3s;
+}
+.image-container:hover .name {
+  bottom: 0;
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.category1 {
+  display: none;
+}
+.category2 {
+  display: none;
 }
 
-#prev-btn.disabled {
-    color: lightgray;
-    cursor: not-allowed;
-}
-
-.accordion {
-width: 600px;
-text-align: left;
-}
-
-.accordion-header {
-font-size: 20px;
-background-color: #ffeef1;
-color: rgb(0, 0, 0);
-cursor: pointer;
-padding: 10px;
-text-align: left;
-border: none;
-outline: none;
-transition: background-color 0.3s;
-}
-
-.accordion-header:hover {
-background-color: #edc7c7cf;
-}
-
-.accordion-content {
-background-color: #ffeef1;
-overflow: hidden;
-max-height: 0;
-transition: max-height 0.3s ease-out;
-box-sizing: border-box;
-width: 1200px;
-text-align: left;
-}
-
-.accordion-content p {
-line-height: 20px;
-padding: 5px;
-width: 1200px;
-}
-
-.overlay {
-position: fixed;
-top: 0;
-left: 0;
-width: 100%;
-height: 100%;
-background-color: rgba(0, 0, 0, 0.7);
-display: flex;
-justify-content: center;
-align-items: center;
-z-index: 9999;
-}
-
-.big-image {
-max-width: 90%;
-max-height: 90%;
-}
-
-.small-image {
-width: 600px;
-height: 280px;
-}
-
-.close-button {
-position: absolute;
-top: 10px;
-right: 10px;
-background: none;
-border: none;
-font-size: 24px;
-color: #fff;
-cursor: pointer;
-}
-
-#combo-request-btn , .update-combo-btn {
-margin-top: 380px;
-}
-
-@media (max-width: 375px) {
-    body {
-        padding: 20px;
-        justify-content: flex-start;
-        align-items: flex-start;
-        height: auto;
-    }
-
-    .header {
-        height: 200px;
-    }
-
-    .title {
-        font-size: 30px;
-        top: 10px;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .header-content-title {
-        font-size: 20px;
-        margin-left: 10px;
-        margin-top: 5px;
-    }
-
-    .header-content-left, .header-content-right {
-        margin: 10px;
-    }
-
-    .role {
-        width: 150px;
-        height: 150px;
-        margin: 10px;
-    }
-
-    .info-table {
-        width: 100%;
-        padding: 50px;
-        margin-left: 0;
-        top: 400px;
-    }
-
-    .accordion {
-        width: 100%;
-    }
-
-    .accordion-content {
-        width: 100%;
-    }
-
-    .accordion-content p {
-        width: 100%;
-    }
-
-    #bottom-bar {
-        height: 80px;
-    }
-
-    .bottom-bar-character {
-        width: 60px;
-        height: 60px;
-    }
-
-    #prev-btn, #next-btn {
-        font-size: 20px;
-    }
-
-    .small-image {
-        width: 100%;
-        height: auto;
-    }
-
-    .close-button {
-        font-size: 20px;
-    }
-
-    #combo-request-btn , .update-combo-btn {
-        margin-top: 300px;
-    }
 }

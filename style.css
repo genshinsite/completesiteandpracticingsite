@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Noto Sans JP';
 }
 .header {
   width: 100;
@@ -19,13 +19,14 @@ nav {
   text-align: center;
 }
 .logo {
- width: 150px;
- margin: 0 auto 20px auto;
- cursor: pointer;
- font-size: 3rem;
- font-weight: 450;
- color: white;
-}
+  width: 150px;
+  margin: 0 auto 20px auto;
+  margin-top: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 450;
+  color: white;
+ }
 nav ul {
   background: #000;
  width: 100%;
@@ -72,54 +73,121 @@ nav.sticky .logo {
  }
 
 
-
-
- .title1 {
-  text-align: center;
- }
-
- .title2 {
-  text-align: center;
- }
- .title3{
-  text-align: center;
+ @media only screen and (max-width: 480px) {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP';
 }
-.title4{
+.header {
+  width: 812px;
+  height: 100vh;
+  background-image: url("https://asset.watch.impress.co.jp/img/gmw/docs/1440/838/5_l.jpg");
+  background-position: center;
+  background-size: cover;
+}
+nav {
   text-align: center;
+  position: fixed; /* 固定位置 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  padding: 1rem;
+  z-index: 10; /* z-indexを高く設定 */
+}
+.logo {
+  width: 150px;
+  margin: 0 auto 20px auto;
+  margin-top: 5px;
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 450;
+  color: white;
+ }
+nav ul {
+  background: #000;
+ width: 100%;
+ margin-top: 10px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin:  10px 5px;
+
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
 }
 
 
+nav.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 3%;
+  transition: 0.6s;
 
 
- .text2 {
-text-align: center;
-font-size: 100%;
- }
- .text2-3 {
-  font-size: large;
- }
- .text4-8{
-  font-size: 20px;
- }
- .blade {
-  font-size: 20px;
- }
- .bigblade{
-  font-size: 20px;
- }
- .magic {
-  font-size: 20px;
- }
- .allow {
-  font-size: 20px;
- }
- .spear {
-  font-size: 20px;
- }
-.country1{
-  text-align: center;
-  font-size: 20px;
 }
-.tabel {
-  padding: 0%;
+nav.sticky .logo {
+  margin: 20px 0;
+  
+ }
+ nav.sticky.ul {
+  background-color: transparent;
+  font-size: 1.3rem;
+ }
+ .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: lightgray;
+ }
+
+ #title3 {
+  width: 450px;
+  margin-top: 30px;
+  margin-left: 205px;
+ }
+
+ .text1-1 {
+  width: 700px;
+  margin-left: 80px;
+ }
+
+ .country {
+  width: 610px;
+  margin-left: 40px;
+ }
+
+ .info-table {
+  width: 640px;
+  margin-left: 80px;
+ }
+
+ .info-table table {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 700px;
+ }
+
+ .info-table th {
+  padding: 10px;
 }
+
+ }
+
+
+
+
+
+
+
