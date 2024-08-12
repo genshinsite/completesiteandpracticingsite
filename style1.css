@@ -81,6 +81,13 @@ nav.sticky .logo {
  body {
   font-family: Arial, sans-serif;
 }
+
+.title-bottom {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
 .icons {
   font-size: 22px;
   padding: 50px;
@@ -235,7 +242,6 @@ nav.sticky .logo {
   font-size: 15px;
   margin-bottom: 30px;
 }
-
 
 .icons {
   width: 520px;
