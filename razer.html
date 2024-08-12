@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>レザー</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style2.css" />
     <link rel="stylesheet" href="python"
   </head>
   <body>
@@ -13,86 +13,18 @@
     </div>
 <div class="header">
   <nav class="navbar">
-    <h2 class="logo">原神</h2>
+    <h2 class="logo">Genshin</h2>
     <ul class="menu">
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="character.html">キャラクター</a></li>
-            <li><a href="wepon.html#title2">武器</a></li>
-            <li><a href="materialbooks.html">天賦本</a></li>
-            <li><a href="seiibutu.html">聖遺物</a></li>
-            <li><a href="searchparty.html">パーティ編成</a></li>
-            <li><a href="">tier表</a></li>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="characterlist.html">キャラクター</a></li>
+      <li><a href="weapon.html">武器</a></li>
+      <li><a href="materialbooks.html">天賦本</a></li>
+      <li><a href="seiibutu.html">聖遺物</a></li>
+      <li><a href="inputparty.html">パーティ編成</a></li>
+      <li><a href="tierlist.html">tier表</a></li>
     </ul>
   </nav>
     </div><br><br><br><br><br><br>
-<style>
-    a {
-        color: rgb(114, 77, 32);
-    }
-
-.image-container {
-  text-align: left;
-}
-
-    .image-container img {
-      width: 100px; /* 画像の幅を固定 */
-      height: 100px; /* 画像の高さを固定 */
-    }
-
-    .long-box {
-        width: 300px; /* 枠の幅を指定 */
-        height: 230px; /* 枠の高さを指定 */
-        border: 2px solid black; /* 枠線のスタイルを指定 */
-        padding: 20px; /* 枠内の余白を指定 */
-        text-align: left;
-        margin: auto;
-        display: block;
-    }
-    .characterdetailtitle {
-        width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .statustitle {
-      width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .gifttitle {
-      width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .weapontitle {
-      width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .relictitle {
-        width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .rarity {
-      width: 200px;
-      margin-top: -20px;
-    }
-    
-    .normalatk {
-      text-indent: 10%;
-    }
-    
-</style>
 </head>
 <body>
     <div class="long-box">
@@ -110,6 +42,7 @@
     <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
 </div><br><br><br><br>
 <div class="characterdetail">
+  <div class="info-table">
     <table border="1" style="margin:auto">
         <tr>
             <th colspan="13">レザー</th>
@@ -155,13 +88,14 @@
 <tr>
   <td style="text-align: center;">内山昂輝</td>
 </tr>
-</table><br><br><br><br><br>
+</table></div><br><br><br><br><br>
 </div>
 
 <div class="statustitle">
   <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
 </div><br><br>
 <div class="status">
+<div class="info-table">
 <table border="1" style="margin: auto;">
   <tr>
     <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -190,114 +124,73 @@
   
     
   <tr>
-    <td style="text-align: center;">Lv.2</td>
-    <td style="text-align: center;">102%</td>
-    <td style="text-align: center;">88.3%</td>
-    <td style="text-align: center;">110%</td>
-    <td style="text-align: center;">145%</td>
-    <td style="text-align: center;">67.6%</td>
-    <td style="text-align: center;">122%</td>
-    <td rowspan="9" style="text-align: center;">毎秒40.0</td>
-    <td rowspan="9" style="text-align: center;">5.0s</td>
-    <td style="text-align: center;">88.7%</td>
-    <td style="text-align: center;">177%/222%</td>
+    <th style="text-align: center;">基礎HP</th>
+    <td style="text-align: center;">2577</td>
+    <td style="text-align: center;">3326</td>
+    <td style="text-align: center;">4982</td>
+    <td style="text-align: center;">5514</td>
+    <td style="text-align: center;">6343</td>
+    <td style="text-align: center;">7052</td>
+    <td style="text-align: center;">7881</td>
+    <td style="text-align: center;">8413</td>
+    <td style="text-align: center;">9241</td>
+    <td style="text-align: center;">9773</td>
+    <td style="text-align: center;">10602</td>
+    <td style="text-align: center;">11134</td>
+    <td style="text-align: center;">11962</td>
     </tr>
     
     <tr>
-    <td style="text-align: center;">Lv.3</td>
-    <td style="text-align: center;">109%</td>
-    <td style="text-align: center;">93.9%</td>
-    <td style="text-align: center;">117%</td>
-    <td style="text-align: center;">155%</td>
-    <td style="text-align: center;">72.7%</td>
-    <td style="text-align: center;">132%</td>
-    <td style="text-align: center;">95.4%</td>
-    <td style="text-align: center;">191%/238%</td>
+    <th style="text-align: center;">基礎攻撃力</th>
+    <td style="text-align: center;">50</td>
+    <td style="text-align: center;">65</td>
+    <td style="text-align: center;">97</td>
+    <td style="text-align: center;">108</td>
+    <td style="text-align: center;">123</td>
+    <td style="text-align: center;">138</td>
+    <td style="text-align: center;">154</td>
+    <td style="text-align: center;">164</td>
+    <td style="text-align: center;">180</td>
+    <td style="text-align: center;">191</td>
+    <td style="text-align: center;">207</td>
+    <td style="text-align: center;">218</td>
+    <td style="text-align: center;">234</td>
     </tr>
     
     <tr>
-    <td style="text-align: center;">Lv.4</td>
-    <td style="text-align: center;">118%</td>
-    <td style="text-align: center;">101%</td>
-    <td style="text-align: center;">127%</td>
-    <td style="text-align: center;">167%</td>
-    <td style="text-align: center;">80.0%</td>
-    <td style="text-align: center;">145%</td>
-    <td style="text-align: center;">104.9%</td>
-    <td style="text-align: center;">210%/262%</td>
+    <th style="text-align: center;">基礎防御力</th>
+    <td style="text-align: center;">162</td>
+    <td style="text-align: center;">209</td>
+    <td style="text-align: center;">313</td>
+    <td style="text-align: center;">346</td>
+    <td style="text-align: center;">398</td>
+    <td style="text-align: center;">443</td>
+    <td style="text-align: center;">495</td>
+    <td style="text-align: center;">528</td>
+    <td style="text-align: center;">580</td>
+    <td style="text-align: center;">613</td>
+    <td style="text-align: center;">665</td>
+    <td style="text-align: center;">699</td>
+    <td style="text-align: center;">751</td>
     </tr>
     
     <tr>
-    <td style="text-align: center;">Lv.5</td>
-    <td style="text-align: center;">124%</td>
-    <td style="text-align: center;">107%</td>
-    <td style="text-align: center;">134%</td>
-    <td style="text-align: center;">176%</td>
-    <td style="text-align: center;">85.1%</td>
-    <td style="text-align: center;">154%</td>
-    <td style="text-align: center;">111.6%</td>
-    <td style="text-align: center;">223%/279%</td>
+    <th style="text-align: center;">物理ダメージ</th>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">—</td>
+    <td style="text-align: center;">7.5%</td>
+    <td style="text-align: center;">7.5%</td>
+    <td style="text-align: center;">15.0%</td>
+    <td style="text-align: center;">15.0%</td>
+    <td style="text-align: center;">15.0%</td>
+    <td style="text-align: center;">15.0%</td>
+    <td style="text-align: center;">22.5%</td>
+    <td style="text-align: center;">22.5%</td>
+    <td style="text-align: center;">30.0%</td>
+    <td style="text-align: center;">30.0%</td>
     </tr>
-    
-    <tr>
-    <td style="text-align: center;">Lv.6</td>
-    <td style="text-align: center;">132%</td>
-    <td style="text-align: center;">114%</td>
-    <td style="text-align: center;">142%</td>
-    <td style="text-align: center;">187%</td>
-    <td style="text-align: center;">90.9%</td>
-    <td style="text-align: center;">164%</td>
-    <td style="text-align: center;">119.3%</td>
-    <td style="text-align: center;">238%/298%</td>
-    </tr>
-    
-    <tr>
-    <td style="text-align: center;">Lv.7</td>
-    <td style="text-align: center;">142%</td>
-    <td style="text-align: center;">122%</td>
-    <td style="text-align: center;">153%</td>
-    <td style="text-align: center;">201%</td>
-    <td style="text-align: center;">98.9%</td>
-    <td style="text-align: center;">179%</td>
-    <td style="text-align: center;">129.7%</td>
-    <td style="text-align: center;">259%/324%</td>
-    </tr>
-    
-    <tr>
-    <td style="text-align: center;">Lv.8</td>
-    <td style="text-align: center;">152%</td>
-    <td style="text-align: center;">131%</td>
-    <td style="text-align: center;">163%</td>
-    <td style="text-align: center;">215%</td>
-    <td style="text-align: center;">107%</td>
-    <td style="text-align: center;">193%</td>
-    <td style="text-align: center;">140%</td>
-    <td style="text-align: center;">280%/350%</td>
-    </tr>
-    
-    <tr>
-    <td style="text-align: center;">Lv.9</td>
-    <td style="text-align: center;">161%</td>
-    <td style="text-align: center;">139%</td>
-    <td style="text-align: center;">174%</td>
-    <td style="text-align: center;">229%</td>
-    <td style="text-align: center;">115%</td>
-    <td style="text-align: center;">208%</td>
-    <td style="text-align: center;">150.7%</td>
-    <td style="text-align: center;">301%/376%</td>
-    </tr>
-    
-    <tr>
-    <td style="text-align: center;">Lv.10</td>
-    <td style="text-align: center;">171%</td>
-    <td style="text-align: center;">147%</td>
-    <td style="text-align: center;">184%</td>
-    <td style="text-align: center;">243%</td>
-    <td style="text-align: center;">124%</td>
-    <td style="text-align: center;">224%</td>
-    <td style="text-align: center;">162.2%</td>
-    <td style="text-align: center;">324%/405%</td>
-    </tr></table><br><br><br>
+    </table></div><br><br><br>
     
     
 
@@ -305,6 +198,7 @@
     <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
   </div><br><br>
   <div class="gift">
+    <div class="info-table">
     <table border="1" style="margin: auto;">
   <tr>
     <th>&nbsp;</th>
@@ -446,9 +340,10 @@
     <td style="text-align: center;">224%</td>
     <td style="text-align: center;">162.2%</td>
     <td style="text-align: center;">324%/405%</td>
-    </tr></table><br><br><br>
+    </tr></table></div><br><br><br>
 
 
+  <div class="info-table">
  <table border="1" style="margin: auto;">
    <tr>
      <th>&nbsp;</th>
@@ -535,10 +430,10 @@
                 <td style="text-align: center;">Lv.10</td>
                 <td style="text-align: center;">349%</td>
                 <td style="text-align: center;">531%</td>
-                </tr></table><br><br><br>
+                </tr></table></div><br><br><br>
 
 
-
+              <div class="info-table">
                 <table border="1" style="margin: auto;">
                     <tr>
                       <th>&nbsp;</th>
@@ -640,9 +535,11 @@
                         <td style="text-align: center;">40%</td>
                         </tr>
                         
-                        </table><br><br><br>
+                        </table></div><br><br><br>
                 
 
+
+    <div class="info-table">
     <table border="1" style="margin: auto;">
       <tr>
         <th colspan="16" style="text-align: center;">固有天賦</th>
@@ -669,12 +566,13 @@
             同じ効果を持つ固有天賦との重ね掛け不可。<br>
          <br><br><br>
         </td>
-      </tr></table><br><br><br>
+      </tr></table></div><br><br><br>
 
       <div class="heartstartitle">
         <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
       </div><br><br>
       <div class="heartstar">
+        <div class="info-table">
         <table border="1" style="margin: auto;">
           <tr>
             <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%83%AC%E3%82%B6%E3%83%BC/::ref/Constellation_Wolf%2527s_Instinct.png?rev=f7e0ae1088802669f4905a0537312129&t=20210206003517" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
@@ -715,24 +613,19 @@
                 10秒毎に、レザーの大剣が自動的にエネルギーを溜め、次の通常攻撃に落雷を引き起こし、攻撃力100％分の雷元素ダメージを与える。<br>
                 雷牙状態でない時、落雷が敵に命中すると、レザーに鋭い爪と蒼雷の雷の印を1重付与する。<br><br><br>
             </td>
-          </tr></table><br><br><br></div>
+          </tr></table></div><br><br><br></div>
 
           <div class="weapontitle">
             <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
           </div><br><br>
           <div class="weapon">
-            <div class="wepon-text">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="weapon-text">
               レザーは"アタッカー"という立ち位置なので、メインステータスが攻撃力、会心率/ダメージを盛ることができる武器を選びましょう。<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               また、アタッカーの中でも"元素爆発アタッカー"という、元素爆発を打ってダメージをだすアタッカーなので、その際に効果が発揮される武器を選びましょう。<br><br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
             </div><br>
+            <div class="info-table">
           <table border="1" style="margin: auto;">
             <tr>
               <th>&nbsp;&nbsp;&nbsp;</th>
@@ -757,7 +650,7 @@
                 <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E9%BB%92%E5%B2%A9%E3%81%AE%E6%96%AC%E5%88%80.png.webp?rev=db1989e232257dbb57d050963e4d618f&t=20240103220128" alt="">
                 <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E8%9E%AD%E9%BE%8D%E3%81%AE%E5%89%A3.png.webp?rev=cc81e293a9911f31b0e7c2011fe5e469&t=20210512075755" alt="">
               </div></th>
-            </tr></table><br><br><br>
+            </tr></table></div><br><br><br>
 
 
 
@@ -768,6 +661,7 @@
               <h2 class="relic-text">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </h2>
+              <div class="info-table">
               <table border="1" style="margin: auto;">
 
                 <tr>
@@ -829,7 +723,7 @@
                     <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%AD%E3%83%A3%E3%83%B3%E3%83%87%E3%82%A3%E3%82%B9_s.webp?rev=3b9cd62844015e423c4066519c52553c&t=20240313094422">
                     <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A_s.webp?rev=61ba9a628f26920cdb5f0e822b23af9d&t=20240313095131">
                   </div></td>
-                </tr></table></div><br><br><br><br>
+                </tr></table></div></div><br><br><br><br>
 
 
 
