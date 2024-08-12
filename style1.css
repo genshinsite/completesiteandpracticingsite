@@ -228,6 +228,14 @@ nav.sticky .logo {
   margin-left: 120px;
 }
 
+.title-bottom {
+  width: 575px;
+  margin-left: 110px;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 30px;
+}
+
 
 .icons {
   width: 520px;
