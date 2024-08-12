@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Noto Sans JP';
+    font-family: 'Noto Sans JP', sans-serif;
 }
 .header {
   width: 100;
@@ -78,67 +78,66 @@ nav.sticky .logo {
   background-color: lightgray;
  }
 
- .gacha {
-    margin-top: 30px;
-    margin-left: 10px;
-    margin-bottom: 20px;
- }
- 
- .gacha img {
-  margin-left: 90px;
-  justify-content: space-between;
-  gap: 20px;
-  width: 600px;
-  height: 340px;
- }
-
- .gachatitle {
-  margin-top: 50px;
-  margin-left: 10px;
-  border-bottom: 2px solid black;
-
- }
-
- .noweventtitle {
-  margin-top: 50px;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid black;
- }
- .nowevent img {
-  margin-left: 90px;
-  justify-content: space-between;
-  gap: 20px;
-  width: 600px;
-  height: 340px;
- }
-
- #countdown {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.468);
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-}
-#title1 {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 50px;
+ #title1 {
+  margin-top: 10px;
+  margin-bottom: 1px;
+  font-size: 40px;
+  font-weight: bold;
   text-align: center;
 }
 
-.title1-content {
+.title-bottom {
   text-align: center;
-  font-size: 17px;
+  font-size: 15px;
+  margin-bottom: 30px;
 }
+
+.tier-icons {
+font-size: 18px;
+font-weight: bold;
+word-spacing: 45px;
+cursor: pointer;
+display: flex;
+justify-content: center;
+}
+
+.tier-container {
+display: none;
+}
+
+.info-table table {
+margin: auto;
+border-collapse: collapse;
+width: 1500px;
+margin-bottom: 120px;
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-table th {
+width: 120px;
+border: 1px solid black;
+padding: 5px;
+text-align: center;
+}
+
+.info-table td {
+width: 300px;
+border: 1px solid black;
+padding: 5px;
+text-align: center; 
+}
+
+.info-table td img {
+display: inline-block;
+width: 60px;
+height: auto;
+padding-top: 5px;
+padding-bottom: 5px;
+}
+
 
 
 @media only screen and (max-width: 480px) {
-
   * {
     margin: 0;
     padding: 0;
@@ -153,15 +152,9 @@ nav.sticky .logo {
   background-size: cover;
 }
 nav {
-    text-align: center;
-    position: fixed; /* 固定位置 */
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: #000000;
-    color: white;
-    padding: 1rem;
-    z-index: 10; /* z-indexを高く設定 */
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
 }
 .logo {
   width: 150px;
@@ -173,14 +166,14 @@ nav {
   color: white;
  }
 nav ul {
-background: #000;
+  background: #000;
  width: 100%;
  margin-top: 10px;
 }
 nav ul li {
   display: inline-block;
   list-style: none;
-  margin: 10px 5px;
+  margin:  10px 5px;
 
 }
 nav ul li a {
@@ -217,65 +210,66 @@ nav.sticky .logo {
   background-color: lightgray;
  }
 
- .gacha {
-    margin-top: 30px;
-    margin-left: 10px;
-    margin-bottom: 20px;
- }
- 
- .gacha img {
-  margin-left: 90px;
-  justify-content: space-between;
-  gap: 20px;
-  width: 600px;
-  height: 340px;
- }
-
- .gachatitle {
-  margin-top: 50px;
-  margin-left: 10px;
-  border-bottom: 2px solid black;
-
- }
-
- .noweventtitle {
-  margin-top: 50px;
-  margin-left: 10px;
-  margin-bottom: 20px;
-  border-bottom: 2px solid black;
- }
- .nowevent img {
-  margin-left: 90px;
-  justify-content: space-between;
-  gap: 20px;
-  width: 600px;
-  height: 340px;
- }
-
- #countdown {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-  background-color: rgba(0, 0, 0, 0.468);
-  color: white;
-  padding: 10px;
-  border-radius: 5px;
-  font-family: Arial, sans-serif;
-  font-size: 20px;
-}
-#title1 {
-  width: 280px;
-  margin-left: 250px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  font-size: 30px;
+ #title1 {
+  width: 575px;
+  margin-left: 110px;
+  margin-top: 10px;
+  margin-bottom: 1px;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
 }
 
-.title1-content {
-  white-space: pre-wrap;
-  width: 500px;
-  margin-left: 150px;
-  font-size: 20px;
+.title-bottom {
+  width: 575px;
+  margin-left: 110px;
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 30px;
 }
 
+.tier-icons {
+width: 575px;
+margin-left: 110px;
+font-size: 18px;
+font-weight: bold;
+word-spacing: 45px;
+cursor: pointer;
+display: flex;
+justify-content: center;
+}
+
+.tier-container {
+display: none;
+}
+
+.info-table table {
+margin: auto;
+border-collapse: collapse;
+width: 812px;
+margin-bottom: 120px;
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-table th {
+width: 120px;
+border: 1px solid black;
+padding: 5px;
+text-align: center;
+}
+
+.info-table td {
+width: 200px;
+border: 1px solid black;
+padding: 5px;
+text-align: center; 
+}
+
+.info-table td img {
+display: inline-block;
+width: 60px;
+height: auto;
+padding-top: 5px;
+padding-bottom: 5px;
+}
 }

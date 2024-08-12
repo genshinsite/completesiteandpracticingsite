@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Coptic&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP';
+}
+.header {
+  width: 100;
+  height: 100vh;
+  background-image: url("https://asset.watch.impress.co.jp/img/gmw/docs/1440/838/5_l.jpg");
+  background-position: center;
+  background-size: cover;
+}
+nav {
+    text-align: center;
+    position: fixed; /* 固定位置 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #000000;
+    color: white;
+    padding: 1rem;
+    z-index: 10; /* z-indexを高く設定 */
+}
+.logo {
+    width: 150px;
+    margin: 0 auto 20px auto;
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 450;
+    color: white;
+   }
+nav ul {
+  background: #000;
+ width: 100%;
+ margin-top: 10px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 20px 30px;
+
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+nav.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 3%;
+  transition: 0.6s;
+
+
+}
+nav.sticky .logo {
+  margin: 20px 0;
+  
+ }
+ nav.sticky.ul {
+  background-color: transparent;
+  font-size: 1.3rem;
+ }
+ .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: lightgray;
+ }
+
+.title1 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.title-text1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.long-box {
+    display: block;
+    width: 280px; 
+    height: 60px; 
+    border: 1px solid black; 
+    padding: 2px; 
+    margin: auto;
+    text-align: left;
+}
+
+.long-box-title {
+    text-align: center;
+}
+
+.long-box-content {
+    word-spacing: 15px;
+    margin-left: 25px;
+    margin-top: 15px;
+}
+
+a {
+        color: #a2964b; /* リンクの色設定 */
+    }
+
+
+.title2 {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+
+.info-table table {
+    margin: auto;
+    border-collapse: collapse;
+    width: 1500px;
+    margin-bottom: 120px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info-table td {
+    border: 1px solid black;
+    padding: 2px;
+    text-align: center; 
+}
+
+.info-table td img {
+    width: 60px;
+    height: auto;
+    padding-top: 5px;
+    padding-bottom: 2px;
+}
+
+.weapon-rarerity {
+    font-size: 15px;
+    width: 80px;
+}
+
+.weapon-name {
+    width: 100px;
+    text-align: center;
+}
+
+.weapon-name-claymore {
+    width: 100px;
+    text-align: center;
+}
+
+.weapon-status {
+    width: 160px;
+}
+
+.weapon-power {
+    width: 160px;
+}
+
+.weapon-active {
+    width: 1000px;
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Noto Sans JP';
+    }
+    .header {
+      width: 812px;
+      height: 100vh;
+      background-image: url("https://asset.watch.impress.co.jp/img/gmw/docs/1440/838/5_l.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+    nav {
+        text-align: center;
+        position: fixed; /* 固定位置 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        color: white;
+        padding: 1rem;
+        z-index: 10; /* z-indexを高く設定 */
+    }
+    .logo {
+      width: 150px;
+      margin: 0 auto 20px auto;
+      margin-top: 5px;
+      cursor: pointer;
+      font-size: 2rem;
+      font-weight: 450;
+      color: white;
+     }
+    nav ul {
+    background: #000;
+     width: 100%;
+     margin-top: 10px;
+    }
+    nav ul li {
+      display: inline-block;
+      list-style: none;
+      margin: 10px 5px;
+    
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+    
+    
+    nav.sticky {
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 3%;
+      transition: 0.6s;
+    
+    
+    }
+    nav.sticky .logo {
+      margin: 20px 0;
+      
+     }
+     nav.sticky.ul {
+      background-color: transparent;
+      font-size: 1.3rem;
+     }
+     .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: lightgray;
+     }
+    
+    .title1 {
+        width: 400px;
+        margin-left: 190px;
+        margin-top: 20px;
+        text-align: center;
+    }
+    
+    .title-text1 {
+        width: 580px;
+        margin-left: 130px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .long-box {
+        display: block;
+        width: 280px; 
+        height: 60px; 
+        border: 1px solid black; 
+        padding: 2px; 
+        margin: auto;
+        margin-left: 260px;
+        text-align: left;
+    }
+    
+    .long-box-title {
+        width: 400px;
+        margin-left: 190px;
+        text-align: center;
+    }
+    
+    .long-box-content {
+        width: 400px;
+        word-spacing: 15px;
+        margin-left: 20px;
+        margin-top: 15px;
+    }
+    
+    a {
+            color: #a2964b; /* リンクの色を青に設定 */
+        }
+    
+    
+    .title2 {
+        margin-left: 30px;
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+    
+    .info-table table {
+        margin: auto;
+        border-collapse: collapse;
+        width: 812px;
+        margin-bottom: 120px;
+        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    }
+    
+    .info-table td {
+        border: 1px solid black;
+        padding: 2px;
+        text-align: center; 
+    }
+    
+    .info-table td img {
+        width: 60px;
+        height: auto;
+        padding-top: 5px;
+        padding-bottom: 2px;
+    }
+    
+    .weapon-rarerity {
+        font-size: 15px;
+        width: 100px;
+    }
+    
+    .weapon-name {
+        width: 100px;
+        text-align: center;
+    }
+    
+    .weapon-name-claymore {
+        width: 100px;
+        text-align: center;
+    }
+    
+    .weapon-status {
+        width: 160px;
+    }
+    
+    .weapon-power {
+        width: 110px;
+    }
+    
+    .weapon-active {
+        width: 400px;
+    }
+    
+    
+}

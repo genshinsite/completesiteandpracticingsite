@@ -382,13 +382,14 @@ margin-top: 380px;
     .info-table th, .info-table td {
         border: 1px solid black;
         padding: 5px;
-        font-size: 4px;
+        font-size: 6px;
         text-align: center;
     }
     .table-under {
+        white-space: pre-wrap;
         text-align: left;
         margin-left: 3px;
-        font-size: 5px;
+        font-size: 7px;
     
     }
     
@@ -505,6 +506,7 @@ margin-top: 380px;
     
     #combo-request-btn , .update-combo-btn {
     margin-top: 600px;
+    margin-bottom: 50px;
     }
 }
 
