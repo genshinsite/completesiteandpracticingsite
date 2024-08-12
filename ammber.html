@@ -5,101 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>アンバー</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="python"
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="python">
   </head>
   <body>
     <div class="wrapper">
     </div>
 <div class="header">
   <nav class="navbar">
-    <h2 class="logo">原神</h2>
+    <h2 class="logo">Genshin</h2>
     <ul class="menu">
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="character.html">キャラクター</a></li>
-            <li><a href="wepon.html#title2">武器</a></li>
-            <li><a href="materialbooks.html">天賦本</a></li>
-            <li><a href="seiibutu.html">聖遺物</a></li>
-            <li><a href="searchparty.html">パーティ編成</a></li>
-            <li><a href="">tier表</a></li>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="characterlist.html">キャラクター</a></li>
+      <li><a href="weapon.html">武器</a></li>
+      <li><a href="materialbooks.html">天賦本</a></li>
+      <li><a href="seiibutu.html">聖遺物</a></li>
+      <li><a href="inputparty.html">パーティ編成</a></li>
+      <li><a href="tierlist.html">tier表</a></li>
     </ul>
   </nav>
     </div><br><br><br><br><br><br>
-<style>
-    a {
-        color: rgb(114, 77, 32);
-    }
-
-.image-container {
-  text-align: left;
-}
-
-    .image-container img {
-      width: 100px; /* 画像の幅を固定 */
-      height: 100px; /* 画像の高さを固定 */
-    }
-
-    .long-box {
-        width: 300px; /* 枠の幅を指定 */
-        height: 230px; /* 枠の高さを指定 */
-        border: 2px solid black; /* 枠線のスタイルを指定 */
-        padding: 20px; /* 枠内の余白を指定 */
-        text-align: left;
-        margin: auto;
-        display: block;
-    }
-    .characterdetailtitle {
-        width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .statustitle {
-      width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .gifttitle {
-      width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .weapontitle {
-      width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .relictitle {
-        width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-      .combotitle {
-        width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .rarity {
-      width: 200px;
-      margin-top: -20px;
-    }
-    
-    .normalatk {
-      text-indent: 10%;
-    }
-    
-</style>
 </head>
 <body>
     <div class="long-box">
@@ -117,12 +42,13 @@
     <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
 </div><br><br><br><br>
 <div class="characterdetail">
+<div class="info-table">
     <table border="1" style="margin:auto">
         <tr>
             <th colspan="13">アンバー</th>
         </tr>
         <tr>
-            <td rowspan="1"><img src="https://static.wikia.nocookie.net/gensin-impact/images/6/61/100%25_Outrider_Preview.png/revision/latest/scale-to-width-down/1000?cb=20220216080339"></td>
+            <td class="fix-size" rowspan="1"><img src="https://static.wikia.nocookie.net/gensin-impact/images/6/61/100%25_Outrider_Preview.png/revision/latest/scale-to-width-down/1000?cb=20220216080339"></td>
         </tr>
 <tr>
         <th class="rarity" style="text-align: center;">レアリティ</th>
@@ -162,13 +88,14 @@
 <tr>
   <td style="text-align: center;">石見舞菜香</td>
 </tr>
-</table><br><br><br><br><br>
+</table></div><br><br><br><br><br>
 </div>
 
 <div class="statustitle">
   <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
 </div><br><br>
 <div class="status">
+  <div class="info-table">
 <table border="1" style="margin: auto;">
   <tr>
     <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -257,7 +184,7 @@
         <td style="text-align: center;">18.0%</td>
         <td style="text-align: center;">24.0%</td>
         <td style="text-align: center;">24.0%</td>
-        </tr></table><br><br><br>
+        </tr></table></div><br><br><br>
     
     
 
@@ -265,6 +192,7 @@
     <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
   </div><br><br>
   <div class="gift">
+    <div class="info-table">
     <table border="1" style="margin: auto;">
   <tr>
     <th>&nbsp;</th>
@@ -410,9 +338,9 @@
     <td style="text-align: center;">223%</td>
     <td style="text-align: center;">112%</td>
     <td style="text-align: center;">225%/281%</td>
-    </tr></table><br><br><br>
+    </tr></table></div><br><br><br>
 
-
+<div class="info-table">
  <table border="1" style="margin: auto;">
    <tr>
      <th>&nbsp;</th>
@@ -491,9 +419,9 @@
                 <th style="text-align: center;">Lv.10</th>
                 <td style="text-align: center;">74.4%</td>
                 <td style="text-align: center;">222%</td>
-                </tr></table><br><br><br>
+                </tr></table></div><br><br><br>
 
-
+<div class="info-table">
   <table border="1" style="margin: auto;">
     <tr>
       <th>&nbsp;</th>
@@ -574,8 +502,9 @@
       <td style="text-align: center;">910%</td>
     </tr>
     
-    </tr></table><br><br><br>
+    </tr></table></div><br><br><br>
 
+    <div class="info-table">
     <table border="1" style="margin: auto;">
       <tr>
         <th colspan="16" style="text-align: center;">固有天賦</th>
@@ -597,12 +526,13 @@
         <td colspan="16"><br><br><b>&nbsp;飛行チャンピオン</b><br>&nbsp;&nbsp;チーム内の自身のキャラクター全員が滑翔に消費するスタミナ-20%。<br>
           同じ効果を持つ固有天賦との重ね掛け不可。<br><br><br>
         </td>
-      </tr></table><br><br><br>
+      </tr></table></div><br><br><br>
 
       <div class="heartstartitle">
         <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
       </div><br><br>
       <div class="heartstar">
+        <div class="info-table">
         <table border="1" style="margin: auto;">
           <tr>
             <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%B3%E3%83%90%E3%83%BC/::ref/Constellation_One_Arrow_to_Rule_Them_All_0.png?rev=7c1b795593f0229acf187be7724cc8d6&t=20210131011639" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
@@ -639,27 +569,21 @@
             <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%B3%E3%83%90%E3%83%BC/::ref/Constellation_Wildfire.png?rev=01f6d860bf70b6228c4372efcd6f2857&t=20210131011853" width="50px" height="50px"><p class="heartstar"><p class="heartstar">&nbsp;6凸</p></th>
             <td colspan="16"><br><br><b>&nbsp;野火の如く</b><br>&nbsp;&nbsp;矢の雨を発動した10秒間、チーム全員の移動速度+15%、攻撃力+15%。<br><br><br>
             </td>
-          </tr></table><br><br><br></div>
+          </tr></table></div><br><br><br></div>
 
           <div class="weapontitle">
             <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
           </div><br><br>
           <div class="weapon">
-            <div class="wepon-text">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="weapon-text">
               アンバーは"サブアタッカー"という立ち位置なので、武器のメインステータスは聖遺物と合わせて考えましょう。<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               もし一緒に火力を出したいのであれば攻撃力、会心率/ダメージの武器を選び、炎元素を付着させたり、<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               元素スキルを多く使いたいとかであれば元素チャージ効率や元素熟知がメインステータスの武器を選びましょう<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
 
             </div><br>
+            <div class="info-table">
           <table border="1" style="margin: auto;">
             <tr>
               <th>&nbsp;&nbsp;&nbsp;</th>
@@ -696,7 +620,7 @@
                 <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E7%8E%8B%E3%81%AE%E8%BF%91%E4%BE%8D.png.webp?rev=138aa0971efcacc10cce393cfebd64b4&t=20220830221942" alt="">
                 <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E5%BC%93/::ref/%E8%A5%BF%E9%A2%A8%E7%8C%9F%E5%BC%93.png.webp?rev=4d1ce1a6ed75b9d696e47e22e54bb96d&t=20240426215758" alt="">
               </div></th>
-            </tr></table><br><br><br>
+            </tr></table></div><br><br><br>
 
             <div class="relictitle">
               <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
@@ -705,6 +629,7 @@
               <h2 class="relic-text">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </h2>
+              <div class="info-table">
               <table border="1" style="margin: auto;">
 
                 <tr>
@@ -804,7 +729,7 @@
                     <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%83%AA%E3%83%BC%E3%83%8A_s.webp?rev=79020e2b8491927fd44b8841ae8a1674&t=20231109210243"　width="100px" height="100px">
                     <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A2%E3%83%B3%E3%83%90%E3%83%BC_s.webp?rev=29274837d3c9328ecccb19c3d7e1cf70&t=20240313093833" width="100px" height="100px">
                   </div></td>
-                </tr></table></div><br><br><br><br>
+                </tr></table></div></div><br><br><br><br>
 
 
 

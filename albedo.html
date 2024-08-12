@@ -5,106 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>アルベド</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="python"
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="python">
   </head>
   <body>
     <div class="wrapper">
     </div>
 <div class="header">
   <nav class="navbar">
-    <h2 class="logo">原神</h2>
+    <h2 class="logo">Genshin</h2>
     <ul class="menu">
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="character.html">キャラクター</a></li>
-            <li><a href="wepon.html#title2">武器</a></li>
-            <li><a href="materialbooks.html">天賦本</a></li>
-            <li><a href="seiibutu.html">聖遺物</a></li>
-            <li><a href="searchparty.html">パーティ編成</a></li>
-            <li><a href="">tier表</a></li>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="characterlist.html">キャラクター</a></li>
+      <li><a href="weapon.html">武器</a></li>
+      <li><a href="materialbooks.html">天賦本</a></li>
+      <li><a href="seiibutu.html">聖遺物</a></li>
+      <li><a href="inputparty.html">パーティ編成</a></li>
+      <li><a href="tierlist.html">tier表</a></li>
     </ul>
   </nav>
     </div><br><br><br><br><br><br>
-<style>
-    a {
-        color: rgb(114, 77, 32);
-    }
-
-.image-container {
-  text-align: left;
-}
-
-    .image-container img {
-      width: 100px; /* 画像の幅を固定 */
-      height: 100px; /* 画像の高さを固定 */
-    }
-
-    .long-box {
-        width: 300px; /* 枠の幅を指定 */
-        height: 230px; /* 枠の高さを指定 */
-        border: 2px solid black; /* 枠線のスタイルを指定 */
-        padding: 20px; /* 枠内の余白を指定 */
-        text-align: left;
-        margin: auto;
-        display: block;
-    }
-    .characterdetailtitle {
-        width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .statustitle {
-      width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .gifttitle {
-      width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .weapontitle {
-      width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .relictitle {
-        width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .combotitle {
-        width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .rarity {
-      width: 200px;
-      margin-top: -20px;
-    }
-    
-    .normalatk {
-      text-indent: 10%;
-    }
-    
-</style>
 </head>
 <body>
-    <div class="long-box">
-        <!-- 枠の中に表示する内容を記述 -->
-    目次<br>
+    <div class="long-box">目次<br>
     <a href="#characterdetails">・キャラクター詳細</a><br>
     <a href="#status">・Lvステータス</a><br>
     <a href="#gift">・天賦</a><br>
@@ -170,6 +93,7 @@
   <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
 </div><br><br>
 <div class="status">
+  <div class="info-table">
 <table border="1" style="margin: auto;">
   <tr>
     <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -263,7 +187,7 @@
     <td style="text-align: center;">21.6%</td>
     <td style="text-align: center;">28.8%</td>
     <td style="text-align: center;">28.8%</td>
-    </tr></table><br><br><br>
+    </tr></table></div><br><br><br>
     
     
 
@@ -271,6 +195,7 @@
     <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
   </div><br><br>
   <div class="gift">
+    <div class="info-table">
     <table border="1" style="margin: auto;">
   <tr>
     <th>&nbsp;</th>
@@ -409,9 +334,9 @@
     <td style="text-align: center;">93.5%+119.0%</td>
     <td style="text-align: center;">126.4%</td>
     <td style="text-align: center;">253%/316%</td>
-    </tr></table><br><br><br>
+    </tr></table></div><br><br><br>
 
-
+    <div class="info-table">
  <table border="1" style="margin: auto;">
    <tr>
      <th>&nbsp;</th>
@@ -496,10 +421,10 @@
                 <td style="text-align: center;">Lv.10</td>
                 <td style="text-align: center;">235%</td>
                 <td style="text-align: center;">防御力240%</td>
-                </tr></table><br><br><br>
+                </tr></table></div><br><br><br>
 
 
-
+                <div class="info-table">
                 <table border="1" style="margin: auto;">
                     <tr>
                       <th>&nbsp;</th>
@@ -579,9 +504,9 @@
                         <td style="text-align: center;">Lv.10</td>
                         <td style="text-align: center;">661%</td>
                         <td style="text-align: center;">1につき129.6%</td>
-                        </tr></table><br><br><br>
+                        </tr></table></div><br><br><br>
                 
-
+    <div class="info-table">
     <table border="1" style="margin: auto;">
       <tr>
         <th colspan="16" style="text-align: center;">固有天賦</th>
@@ -606,12 +531,13 @@
           武器突破素材を合成する時、10％の確率でアイテムを2倍獲得する。<br>
          <br><br><br>
         </td>
-      </tr></table><br><br><br>
+      </tr></table></div><br><br><br>
 
       <div class="heartstartitle">
         <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
       </div><br><br>
       <div class="heartstar">
+       <div class="info-table">
         <table border="1" style="margin: auto;">
           <tr>
             <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Constellation_Flower_of_Eden.png?rev=8d7a1247a229a7aaf6be1d4439c025a8&t=20210206171149" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
@@ -655,25 +581,20 @@
               無垢なる土
               陽華のエリア内にいるフィールド上のキャラクターが、結晶反応で生成されたシールド状態にある時、与えるダメージ+17%。<br><br><br>
             </td>
-          </tr></table><br><br><br></div>
+          </tr></table></div><br><br><br></div>
 
           <div class="weapontitle">
             <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
           </div><br><br>
           <div class="weapon">
-            <div class="wepon-text">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              アルベドは"防御力依存サブアタッカー"という立ち位置なので、メインステータスが防御力、会心率/ダメージを盛ることができる武器を選びましょう。<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              また、サブアタッカーの中でも"元素スキル追加ダメージサブアタッカー"という、元素スキル発動後、控えにいてもダメージを出せるので、その際に効果を発揮する武器も視野に入れましょう。<br><br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
+            <div class="weapon-text">
+              アルベドは"防御力依存サブアタッカー"という立ち位置なので、メインステータスが防御力、会心率/ダメージを盛ることができる武器を選びましょう。
+              <br>また、サブアタッカーの中でも"元素スキル追加ダメージサブアタッカー"という、元素スキル発動後、控えにいてもダメージを出せるので、その際に効果を発揮する武器も視野に入れましょう。
+              <br><br>キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ
+              <br>キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。
 
             </div><br>
+            <div class="info-table">
           <table border="1" style="margin: auto;">
             <tr>
               <th>&nbsp;&nbsp;&nbsp;</th>
@@ -698,7 +619,7 @@
                 <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%89%87%E6%89%8B%E5%89%A3/::ref/%E8%85%90%E6%A4%8D%E3%81%AE%E5%89%A3.png.webp?rev=02a71461ecffe36a28777433defa8d77&t=20210217012354" alt="">
               </div></th>
             </tr>
-            <tr></table><br><br><br>
+            <tr></table></div><br><br><br>
 
             <div class="relictitle">
               <h2 id="relic" style="text-align: left;">&nbsp;&nbsp;&nbsp;聖遺物</h2>
@@ -707,6 +628,7 @@
               <h2 class="relic-text">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </h2>
+              <div class="info-table">
               <table border="1" style="margin: auto;">
 
                 <tr>
@@ -727,7 +649,7 @@
                       1層につき防御力+6%、岩元素ダメージ+6%。6秒毎に「問答」効果を獲得していない場合は、1層失う。
                     </td>
                     <td style="width: 400px;">４セット効果を駆使するので、元素スキルを発動したら千織を控えてアタッカーと一緒にダメージを出せるパーティ編成を組みましょう。</td>
-                    <td style="display: flex;"><div width="50px" height="50px">
+                    <td style="text-align: center;"><div width="50px" height="50px">
                       <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%B7%E3%83%A7%E3%82%A6_s.webp?rev=9096515fcfbf33749e65d58723ca19c6&t=20240313100821">
                       <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E4%B8%87%E8%91%89_s.webp?rev=7c5488d515d48d9a661f5af5d9a18a33&t=20240313100904"><br>
                       <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E9%8D%BE%E9%9B%A2_s.webp?rev=ab44a61a332174925072c553966eb001&t=20240313101433">
@@ -743,24 +665,13 @@
                       元素スキルのダメージ+25%。また、装備者が待機中の時、元素スキルのダメージがさらに+25%。この効果は装備キャラクターが登場してから2秒後に解除される <br><br>
                     </td>
                     <td style="width: 400px;">４セット効果を駆使するので、元素スキルを発動したら千織を控えてアタッカーと一緒にダメージを出せるパーティ編成を組みましょう。</td>
-                    <td style="display: flex;"><div width="50px" height="50px">
+                    <td style="text-align: center;"><div width="50px" height="50px">
                       <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%8A%E3%83%B4%E3%82%A3%E3%82%A2_s.webp?rev=1ff65dbf694ab2ebae19e0433d4d2de5&t=20231220212842" width="110px" height="110px">
                       <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E5%A4%9C%E8%98%AD_s.webp?rev=1a18a2576a4120c43bc8244db973b621&t=20240313094633" width="110px" height="110px"><br>
                       <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%95%E3%83%AA%E3%83%BC%E3%83%8A_s.webp?rev=79020e2b8491927fd44b8841ae8a1674&t=20231109210243" width="110px" height="110px">
                       <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89_s.webp?rev=364c50e7496f4819761de2f7556fa8f2&t=20240313101314" width="110px" height="110px">
                     </div></td>
-                  </tr></table></div><br><br><br><br>
-
-                  <div class="combotitle">
-                    <h2 id="combo" style="text-align: left;">&nbsp;&nbsp;&nbsp;コンボ</h2>
-                  </div><br><br>
-                  <div class="combo-text">
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<h3>&nbsp;&nbsp;&nbsp;ダメージコンボ</h3>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    ・元素スキルが「ダメージを与えたら」効果が発動されるので元素スキルから元素爆発を打つことでより多くのダメージを出すことができます。<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Talent_Abiogenesis_-_Solar_Isotoma.png?rev=03441bd1ce04b34b8b18747c739df559&t=20210206170934" alt=""><b>&rightarrow;</b><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A2%E3%83%AB%E3%83%99%E3%83%89/::ref/Talent_Rite_of_Progeniture_-_Tectonic_Tide.png?rev=755b5d1d2fcef85882959eaf9bf1dbb4&t=20210206170947" alt="">
-                    </div><br><br><br><br>
+                  </tr></table></div></div><br><br><br><br>
 
 
 
