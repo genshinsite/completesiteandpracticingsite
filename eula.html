@@ -5,94 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>エウルア</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="python"
+    <link rel="stylesheet" href="style2.css" />
+    <link rel="stylesheet" href="python">
   </head>
   <body>
     <div class="wrapper">
     </div>
 <div class="header">
   <nav class="navbar">
-    <h2 class="logo">原神</h2>
+    <h2 class="logo">Genshin</h2>
     <ul class="menu">
-            <li><a href="index.html">ホーム</a></li>
-            <li><a href="character.html">キャラクター</a></li>
-            <li><a href="wepon.html#title2">武器</a></li>
-            <li><a href="materialbooks.html">天賦本</a></li>
-            <li><a href="seiibutu.html">聖遺物</a></li>
-            <li><a href="searchparty.html">パーティ編成</a></li>
-            <li><a href="">tier表</a></li>
+      <li><a href="index.html">ホーム</a></li>
+      <li><a href="characterlist.html">キャラクター</a></li>
+      <li><a href="weapon.html">武器</a></li>
+      <li><a href="materialbooks.html">天賦本</a></li>
+      <li><a href="seiibutu.html">聖遺物</a></li>
+      <li><a href="inputparty.html">パーティ編成</a></li>
+      <li><a href="tierlist.html">tier表</a></li>
     </ul>
   </nav>
     </div><br><br><br><br><br><br>
-<style>
-    a {
-        color: rgb(114, 77, 32);
-    }
-
-.image-container {
-  text-align: left;
-}
-
-    .image-container img {
-      width: 100px; /* 画像の幅を固定 */
-      height: 100px; /* 画像の高さを固定 */
-    }
-
-    .long-box {
-        width: 300px; /* 枠の幅を指定 */
-        height: 230px; /* 枠の高さを指定 */
-        border: 2px solid black; /* 枠線のスタイルを指定 */
-        padding: 20px; /* 枠内の余白を指定 */
-        text-align: left;
-        margin: auto;
-        display: block;
-    }
-    .characterdetailtitle {
-        width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .statustitle {
-      width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .gifttitle {
-      width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .weapontitle {
-      width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .relictitle {
-        width: 900px; /* 枠の幅を指定 */
-        height: 40px; /* 枠の高さを指定 */
-        border-bottom: 2px solid black; /* 枠線のスタイルを指定 */
-        text-align: left;
-    }
-
-    .rarity {
-      width: 200px;
-      margin-top: -20px;
-    }
-    
-    .normalatk {
-      text-indent: 10%;
-    }
-    
-</style>
 </head>
 <body>
     <div class="long-box">
@@ -111,6 +43,7 @@
     <h2 id="characterdetails" style="text-align: left;">&nbsp;&nbsp;&nbsp;キャラクター詳細</h2>
 </div><br><br><br><br>
 <div class="characterdetail">
+  <div class="info-table">
     <table border="1" style="margin:auto">
         <tr>
             <th colspan="13">エウルア</th>
@@ -156,13 +89,14 @@
 <tr>
   <td style="text-align: center;">佐藤利奈</td>
 </tr>
-</table><br><br><br><br><br>
+</table></div><br><br><br><br><br>
 </div>
 
 <div class="statustitle">
   <h2 id="status" style="text-align: left;">&nbsp;&nbsp;&nbsp;Lvステータス</h2>
 </div><br><br>
 <div class="status">
+  <div class="info-table">
 <table border="1" style="margin: auto;">
   <tr>
     <th rowspan="2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
@@ -256,7 +190,7 @@
         <td style="text-align: center;">28.8%</td>
         <td style="text-align: center;">38.4%</td>
         <td style="text-align: center;">38.4%</td>
-        </tr></table><br><br><br>
+        </tr></table></div><br><br><br>
     
     
 
@@ -264,14 +198,15 @@
     <h2 id="gift">&nbsp;&nbsp;&nbsp;天賦</h2>
   </div><br><br>
   <div class="gift">
-    <table border="1" style="margin: auto;">
+    <div class="info-table">
+    <table class="fix-status eula"  border="1" style="margin: auto;">
   <tr>
     <th>&nbsp;</th>
-    <th colspan="16" style="text-align: center;">天賦詳細</th>
+    <th colspan="11" style="text-align: center;">天賦詳細</th>
   </tr>
   <tr>
     <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A8%E3%82%A6%E3%83%AB%E3%82%A2/::ref/Talent_Favonius_Bladework_-_Edel.png?rev=30c941d704d40871ce1307c52e69ee02&t=20210522233926" width="100px" height="100px"><p class="normalatk">通常攻撃&nbsp;</p></th>
-    <td colspan="16"><br><br><br>&nbsp;
+    <td colspan="11"><br><br><br>&nbsp;
         通常攻撃<br>
         最大５段の連続攻撃を行う。<br><br>
         
@@ -286,7 +221,7 @@
     <th style="width: 200px;">ステータス詳細</th>
     <th style="width: 80px;">1段目</th>
     <th style="width: 80px;">2段目</th>
-    <th style="width: 80px;">3段目</th>
+    <th class="eula" style="width: 80px;">3段目</th>
     <th style="width: 80px;">4段目</th>
     <th style="width: 80px;">5段目</th>
     <th style="width: 80px;">重撃<br>ダメージ</th>
@@ -414,9 +349,9 @@
     <td style="text-align: center;">246%</td>
     <td style="text-align: center;">147%</td>
     <td style="text-align: center;">295%/368%</td>
-    </tr></table><br><br><br>
+    </tr></table></div><br><br><br>
 
-
+<div class="info-table">
  <table border="1" style="margin: auto;">
    <tr>
      <th>&nbsp;</th>
@@ -525,10 +460,10 @@
                 <td style="text-align: center;">442%</td>
                 <td style="text-align: center;">173%</td>
                 <td style="text-align: center;">25%</td>
-                </tr></table><br><br><br>
+                </tr></table></div><br><br><br>
 
 
-
+              <div class="info-table">
                 <table border="1" style="margin: auto;">
                     <tr>
                       <th>&nbsp;</th>
@@ -623,9 +558,9 @@
                         <td style="text-align: center;">148.2%</td>
                         </tr>
                         
-                        </table><br><br><br>
+                        </table></div><br><br><br>
                 
-
+<div class="info-table">
     <table border="1" style="margin: auto;">
       <tr>
         <th colspan="16" style="text-align: center;">固有天賦</th>
@@ -651,12 +586,13 @@
             キャラクター天賦素材を合成する時、10%の確率でアイテムを2倍獲得する。<br>
          <br><br><br>
         </td>
-      </tr></table><br><br><br>
+      </tr></table></div><br><br><br>
 
       <div class="heartstartitle">
         <h2 id="heartstar" style="text-align: left;">&nbsp;&nbsp;&nbsp;命ノ星座</h2>
       </div><br><br>
       <div class="heartstar">
+        <div class="info-table">
         <table border="1" style="margin: auto;">
           <tr>
             <th><img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E3%82%A8%E3%82%A6%E3%83%AB%E3%82%A2/::ref/%E6%BD%AE%E3%81%AE%E5%B9%BB%E5%83%8F.webp?rev=af014d23a6833c866e6cb29ebf5c01f6&t=20240227120901" width="50px" height="50px"><p class="heartstar">&nbsp;1凸</p></th>
@@ -698,24 +634,19 @@
                 氷浪の光剣で創造した光臨の剣は、直ちにエネルギーを5つ獲得する。<br>
                 通常攻撃、元素スキルまたは元素爆発によりエネルギーを獲得する際、50％の確率でさらに1つ獲得する。<br><br><br>
             </td>
-          </tr></table><br><br><br></div>
+          </tr></table></div><br><br><br></div>
 
           <div class="weapontitle">
             <h2 id="weapon" style="text-align: left;">&nbsp;&nbsp;&nbsp;武器</h2>
           </div><br><br>
           <div class="weapon">
-            <div class="wepon-text">
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div class="weapon-text">
               エウルアは"アタッカー"という立ち位置なので、メインステータスが攻撃力、会心率/ダメージを盛ることができる武器を選びましょう。<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               また、アタッカーの中でも"物理アタッカー"という、より通常攻撃による物理攻撃を多く行うアタッカーなので、通常攻撃により効果が発揮される武器を選びましょう。<br><br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               キャラクターがつけている聖遺物の冠のメインステータスが会心率の場合は武器のメインステータスは会心ダメージ<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               キャラクターがつけている聖遺物の冠のメインステータスが会心ダメージの場合は武器のメインステータスは会心率の武器を選ぶことで、バランスよく会心率/ダメージを盛ることができます。<br>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              また、見た目も非常に大切です。見た目がキャラクターに合わないと総合的に弱く感じます。異論は認めます。
             </div><br>
+            <div class="info-table">
           <table border="1" style="margin: auto;">
             <tr>
               <th>&nbsp;&nbsp;&nbsp;</th>
@@ -741,7 +672,7 @@
                 <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E5%A4%A9%E7%A9%BA%E3%81%AE%E5%82%B2.png.webp?rev=26c62385a4869d4c76c26fc68ee30fb5&t=20201122011316" alt="">
                 <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E4%B8%A1%E6%89%8B%E5%89%A3/::ref/%E9%9B%AA%E8%91%AC%E3%81%AE%E6%98%9F%E9%8A%80.png.webp?rev=c97d264998745ed277ce772466037b10&t=20210512075949" alt="">
               </div></th>
-            </tr></table><br><br><br>
+            </tr></table></div><br><br><br>
 
 
 
@@ -752,6 +683,7 @@
               <h2 class="relic-text">
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               </h2>
+              <div class="info-table">
               <table border="1" style="margin: auto;">
 
                 <tr>
@@ -795,7 +727,7 @@
                       <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%87%E3%82%A3%E3%82%AA%E3%83%8A_s.webp?rev=61ba9a628f26920cdb5f0e822b23af9d&t=20240313095131" width="100px" height="100px">
                       <img src="https://cdn.wikiwiki.jp/to/w/genshinwiki/%E7%94%BB%E5%83%8F/::ref/%E3%83%99%E3%83%8D%E3%83%83%E3%83%88_s.webp?rev=d63cebbd77e3d797a9ccd7813239921b&t=20240313093926" width="100px" height="100px">
                   　</td>
-                   </tr></table></div><br><br><br><br>
+                   </tr></table></div></div><br><br><br><br>
 
 
 
