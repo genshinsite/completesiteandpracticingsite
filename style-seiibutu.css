@@ -1,0 +1,389 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Coptic&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP';
+}
+.header {
+  width: 100;
+  height: 100vh;
+  background-image: url("https://asset.watch.impress.co.jp/img/gmw/docs/1440/838/5_l.jpg");
+  background-position: center;
+  background-size: cover;
+}
+nav {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+.logo {
+    width: 150px;
+    margin: 0 auto 20px auto;
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 450;
+    color: white;
+   }
+nav ul {
+  background: #000;
+ width: 100%;
+ margin-top: 10px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 20px 30px;
+
+}
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+nav.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 3%;
+  transition: 0.6s;
+
+
+}
+nav.sticky .logo {
+  margin: 20px 0;
+  
+ }
+ nav.sticky.ul {
+  background-color: transparent;
+  font-size: 1.3rem;
+ }
+ .wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: lightgray;
+ }
+
+ #title1 {
+    font-size: 30px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.text1-1 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text1-2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.text1-3 {
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.text1-4 {
+    font-size: 17px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.text1-5 {
+    font-size: 40px;
+    margin-top: 30px;
+    font-weight: bold;
+    text-align: center;
+    word-spacing: 160px;
+}
+
+.text1-6 {
+    border-bottom: 1px solid black;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.status-content {
+    display: inline-block;
+}
+
+.status1 {
+    font-size: 25px;
+    font-weight: bold;
+    word-spacing: 140px;
+    margin-left: 180px;
+}
+
+.status2 {
+    font-size: 25px;
+    font-weight: bold;
+    word-spacing: 140px;
+    margin-left: 795px;
+}
+
+.status3 {
+    font-size: 25px;
+    font-weight: bold;
+    word-spacing: 112px;
+    margin-left: 700px;
+}
+
+.status4 {
+    font-size: 25px;
+    font-weight: bold;
+    word-spacing: 112px;
+    margin-left: 833px;
+}
+
+.status5 {
+    font-size: 25px;
+    font-weight: bold;
+    word-spacing: 158px;
+    margin-left: 795px;
+}
+
+.status6 {
+    font-size: 25px;
+    font-weight: bold;
+    word-spacing: 140px;
+    margin-left: 1045px;
+}
+
+.status7 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 1294px;
+}
+
+.info-table table {
+margin: auto;
+border-collapse: collapse;
+width: 1500px;
+margin-bottom: 120px;
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+@media only screen and (max-width: 480px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Noto Sans JP';
+    }
+    .header {
+      width: 812px;
+      height: 100vh;
+      background-image: url("https://asset.watch.impress.co.jp/img/gmw/docs/1440/838/5_l.jpg");
+      background-position: center;
+      background-size: cover;
+    }
+    nav {
+        text-align: center;
+        position: fixed; /* 固定位置 */
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000000;
+        color: white;
+        padding: 1rem;
+        z-index: 10; /* z-indexを高く設定 */
+    }
+    .logo {
+      width: 150px;
+      margin: 0 auto 20px auto;
+      margin-top: 5px;
+      cursor: pointer;
+      font-size: 2rem;
+      font-weight: 450;
+      color: white;
+     }
+    nav ul {
+    background: #000;
+     width: 100%;
+     margin-top: 10px;
+    }
+    nav ul li {
+      display: inline-block;
+      list-style: none;
+      margin: 10px 5px;
+    
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+    }
+    
+    
+    nav.sticky {
+      position: fixed;
+      left: 0;
+      top: 0;
+      background: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 3%;
+      transition: 0.6s;
+    
+    
+    }
+    nav.sticky .logo {
+      margin: 20px 0;
+      
+     }
+     nav.sticky.ul {
+      background-color: transparent;
+      font-size: 1.3rem;
+     }
+     .wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: lightgray;
+     }
+
+   #title1 {
+    font-size: 30px;
+    margin-top: 15px;
+    margin-left: 150px;
+    width: 500px;
+    text-align: center;
+}
+
+.text1-1 {
+    margin-bottom: 20px;
+    margin-left: 150px;
+    width: 500px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.text1-2 {
+    margin-top: 20px;
+    margin-left: 150px;
+    width: 500px;
+    text-align: center;
+}
+
+.text1-3 {
+    border-bottom: 1px solid black;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.text1-4 {
+    font-size: 17px;
+    margin-top: 20px;
+    margin-left: 150px;
+    width: 500px;
+    text-align: center;
+}
+
+.text1-5 {
+    font-size: 25px;
+    margin-top: 15px;
+    margin-left: 150px;
+    width: 500px;
+    font-weight: bold;
+    text-align: center;
+    word-spacing: 50px;
+}
+
+.text1-6 {
+    border-bottom: 1px solid black;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+.status-content {
+    display: inline-block;
+}
+
+.status1 {
+    width: 812px;
+    font-size: 16px;
+    font-weight: bold;
+    word-spacing: 40px;
+    margin-left: 125px;
+}
+
+.status2 {
+    width: 812px;
+    font-size: 16px;
+    font-weight: bold;
+    word-spacing: 40px;
+    margin-left: 416px;
+}
+
+.status3 {
+    width: 812px;
+    font-size: 16px;
+    font-weight: bold;
+    word-spacing: 26px;
+    margin-left: 350px;
+}
+
+.status4 {
+    width: 812px;
+    font-size: 16px;
+    font-weight: bold;
+    word-spacing: 23px;
+    margin-left: 440px;
+}
+
+.status5 {
+    font-size: 16px;
+    font-weight: bold;
+    word-spacing: 63px;
+    margin-left: 416px;
+}
+
+.status6 {
+    font-size: 16px;
+    font-weight: bold;
+    word-spacing: 40px;
+    margin-left: 530px;
+}
+
+.status7 {
+    font-size: 16px;
+    font-weight: bold;
+    word-spacing: 40px;
+    margin-left: 635px;
+}
+
+.info-table table {
+margin: auto;
+border-collapse: collapse;
+width: 812px;
+margin-bottom: 120px;
+box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+}
+
+
+
+
+
+
+
